@@ -1,0 +1,1842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Results | 22 Local Marketing</title>
+<meta name="description" content="Real before-and-afters from 22 Local Marketing clients. Site redesigns, ranking growth, and the receipts to back it up.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Courier+Prime&display=swap" rel="stylesheet">
+<style>
+:root {
+  --blaze: #FB5607;
+  --scorch: #C13D0E;
+  --bone: #F8F6F2;
+  --white: #FFFFFF;
+  --slate: #525252;
+  --slate-light: #8A8A8A;
+  --onyx: #0A0A0A;
+  --border: #E5E2DC;
+  --border-strong: #D4D0C8;
+  --success: #1F7A4D;
+  --success-bg: #E6F4EC;
+  --info-bg: #FFE8D9;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Sora', sans-serif;
+  background: var(--bone); color: var(--onyx);
+  font-size: 15px; line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "ss01", "ss02";
+}
+.container { max-width: 1240px; margin: 0 auto; padding: 0 40px; }
+
+/* ===== NAV ===== */
+.topnav {
+  border-bottom: 1px solid var(--border);
+  background: rgba(248, 246, 242, 0.88);
+  position: sticky; top: 0; z-index: 50;
+  backdrop-filter: blur(10px);
+}
+.topnav-inner { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; }
+.wordmark {
+  display: flex; align-items: center; gap: 8px;
+  font-weight: 700; font-size: 20px; letter-spacing: -0.03em;
+  color: var(--onyx); text-decoration: none;
+}
+.wordmark-dot { width: 10px; height: 10px; background: var(--blaze); border-radius: 2px; }
+.topnav-links { display: flex; gap: 28px; align-items: center; }
+.topnav-links a {
+  color: var(--slate); text-decoration: none; font-size: 14px; font-weight: 500;
+  transition: color 0.15s;
+}
+.topnav-links a:hover, .topnav-links a.active { color: var(--onyx); }
+.topnav-links a.active { font-weight: 600; }
+.topnav-cta {
+  background: var(--onyx); color: var(--white) !important;
+  padding: 9px 16px; border-radius: 6px; font-size: 13px; font-weight: 600;
+  text-decoration: none;
+}
+.topnav-cta:hover { background: var(--blaze); }
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 11px 18px; border-radius: 6px;
+  font-family: inherit; font-size: 14px; font-weight: 600;
+  border: 1px solid transparent; cursor: pointer; text-decoration: none;
+  position: relative; overflow: hidden; isolation: isolate;
+  box-shadow: 3px 3px 0 0 var(--onyx);
+  transition: color 0.2s ease 0.22s, border-color 0.25s ease, transform 0.1s ease, box-shadow 0.1s ease;
+}
+.btn:hover { transform: translate(1px, 1px); box-shadow: 2px 2px 0 0 var(--onyx); }
+.btn:active { transform: translate(3px, 3px); box-shadow: 0 0 0 0 var(--onyx); }
+.btn::before {
+  content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
+  background: var(--scorch);
+  transform: translateX(-110%) skewX(-22deg);
+  transition: transform 0.55s cubic-bezier(0.77, 0, 0.18, 1);
+}
+.btn:hover::before { transform: translateX(-5%) skewX(-22deg); }
+.btn-primary { background: var(--blaze); color: var(--white); }
+.btn-primary::before { background: var(--scorch); }
+.btn-dark { background: var(--onyx); color: var(--white); }
+.btn-dark::before { background: var(--blaze); }
+.btn-lg { padding: 14px 22px; font-size: 15px; }
+.btn-arrow { display: inline-block; transition: transform 0.25s; }
+.btn:hover .btn-arrow { transform: translateX(3px); }
+
+/* ===== HERO ===== */
+.page-hero { padding: 88px 0 56px; }
+.eyebrow-rugged {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 13px; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--blaze);
+  margin-bottom: 28px;
+}
+.eb-dash { display: inline-block; width: 28px; height: 2px; background: var(--blaze); }
+.eb-sep { color: var(--slate-light); }
+.hero-frame { position: relative; display: inline-block; padding: 14px 22px 10px; margin-bottom: 26px; }
+.hero-frame::before, .hero-frame::after {
+  content: ''; position: absolute; width: 22px; height: 22px; border: 2px solid var(--blaze);
+}
+.hero-frame::before { top: 0; left: 0; border-right: 0; border-bottom: 0; }
+.hero-frame::after { bottom: 0; right: 0; border-left: 0; border-top: 0; }
+.page-hero h1 {
+  font-size: clamp(2.75rem, 6vw, 4.5rem);
+  line-height: 0.98; letter-spacing: -0.04em;
+  font-weight: 700; max-width: 920px;
+}
+.page-hero h1 .accent { color: var(--blaze); }
+.page-hero p.lead {
+  font-size: 20px; line-height: 1.5; color: var(--slate);
+  max-width: 680px; margin-top: 22px;
+}
+
+/* ===== STATS BAR ===== */
+.stats-bar {
+  margin: 56px 0 24px;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+  background: var(--onyx); color: var(--white);
+  border-radius: 12px; overflow: hidden;
+  border: 1px solid var(--onyx);
+  box-shadow: 4px 4px 0 0 var(--blaze);
+}
+.stats-bar .stat {
+  padding: 28px 26px;
+  border-right: 1px solid #1f1f1f;
+  position: relative;
+}
+.stats-bar .stat:last-child { border-right: none; }
+.stats-bar .stat::after {
+  content: ''; position: absolute; bottom: 0; right: 0;
+  width: 60px; height: 60px;
+  background: radial-gradient(circle at bottom right, rgba(251,86,7,0.20), transparent 65%);
+}
+.stats-bar .stat-label {
+  font-size: 11px; font-weight: 600;
+  color: var(--blaze); letter-spacing: 0.1em;
+  text-transform: uppercase; margin-bottom: 12px;
+}
+.stats-bar .stat-value {
+  font-size: 38px; font-weight: 700;
+  letter-spacing: -0.04em; line-height: 1;
+}
+.stats-bar .stat-desc {
+  font-size: 12px; color: #a8a8a8;
+  margin-top: 8px; line-height: 1.4;
+}
+
+/* ===== CLIENT FILTER ===== */
+.filter-bar {
+  display: flex; gap: 8px; flex-wrap: wrap;
+  padding: 32px 0 16px;
+  border-top: 1px solid var(--border);
+  margin-top: 56px;
+}
+.filter-label {
+  font-size: 12px; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--slate); margin-right: 8px;
+  align-self: center;
+}
+.filter-btn {
+  background: var(--white); border: 1px solid var(--border-strong);
+  padding: 8px 16px; border-radius: 100px;
+  font-family: inherit; font-size: 13px; font-weight: 500;
+  color: var(--slate); cursor: pointer;
+  transition: all 0.15s;
+}
+.filter-btn:hover { border-color: var(--onyx); color: var(--onyx); }
+.filter-btn.active {
+  background: var(--onyx); color: var(--white);
+  border-color: var(--onyx);
+}
+
+/* ===== CASE STUDY ===== */
+.case-study {
+  padding: 64px 0; border-top: 1px solid var(--border);
+}
+.case-study.hidden { display: none; }
+.case-head {
+  display: grid; grid-template-columns: 1.5fr 1fr; gap: 56px;
+  margin-bottom: 40px;
+}
+.case-num {
+  font-size: 13px; font-weight: 500;
+  letter-spacing: 0.1em; color: var(--blaze);
+  margin-bottom: 18px;
+}
+.case-title {
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-weight: 700; letter-spacing: -0.035em;
+  line-height: 1.05; margin-bottom: 18px;
+}
+.case-meta {
+  display: flex; gap: 14px; flex-wrap: wrap;
+  font-size: 13px; color: var(--slate);
+  margin-bottom: 22px;
+}
+.case-meta .pill {
+  background: var(--white); border: 1px solid var(--border-strong);
+  padding: 5px 11px; border-radius: 100px;
+  font-weight: 500;
+}
+.case-story p {
+  font-size: 16px; color: var(--slate);
+  line-height: 1.6; margin-bottom: 12px;
+}
+.case-story p:last-child { margin-bottom: 0; }
+.case-story strong { color: var(--onyx); font-weight: 600; }
+
+.case-side-stats {
+  display: grid; grid-template-rows: repeat(3, auto);
+  gap: 14px;
+}
+.case-stat {
+  background: var(--white); border: 1px solid var(--onyx);
+  border-radius: 10px; padding: 20px 22px;
+  box-shadow: 3px 3px 0 0 var(--onyx);
+  position: relative; overflow: hidden;
+}
+.case-stat::after {
+  content: ''; position: absolute; top: 0; right: 0;
+  width: 50px; height: 50px;
+  background: radial-gradient(circle at top right, rgba(251,86,7,0.20), transparent 65%);
+}
+.case-stat-label {
+  font-size: 11px; font-weight: 600;
+  color: var(--blaze); letter-spacing: 0.1em;
+  text-transform: uppercase; margin-bottom: 8px;
+}
+.case-stat-value {
+  font-size: 30px; font-weight: 700;
+  letter-spacing: -0.035em; line-height: 1;
+}
+.case-stat-desc {
+  font-size: 12px; color: var(--slate);
+  margin-top: 6px; line-height: 1.4;
+}
+
+/* ===== BEFORE/AFTER ===== */
+.ba-section { margin-bottom: 48px; }
+.ba-section-head {
+  display: flex; align-items: baseline; justify-content: space-between;
+  flex-wrap: wrap; gap: 12px;
+  margin-bottom: 16px;
+}
+.ba-section-head h3 {
+  font-size: 13px; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--slate);
+}
+.ba-section-head .hint {
+  font-size: 12px; color: var(--slate-light);
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.ba-section-head .hint::before {
+  content: ''; display: inline-block;
+  width: 18px; height: 1.5px; background: var(--blaze);
+}
+
+.ba {
+  position: relative; user-select: none;
+  width: 100%; aspect-ratio: 16 / 9;
+  border-radius: 12px; overflow: hidden;
+  border: 1px solid var(--onyx);
+  box-shadow: 6px 6px 0 0 var(--onyx);
+  cursor: ew-resize;
+  touch-action: pan-y;
+}
+.ba-img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  overflow: hidden;
+}
+.ba-img.ba-after { clip-path: inset(0 50% 0 0); }
+.ba-label {
+  position: absolute; top: 16px;
+  background: var(--white); color: var(--onyx);
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 6px 12px; border-radius: 4px;
+  border: 1px solid var(--onyx);
+  z-index: 6; pointer-events: none;
+}
+.ba-label.before { left: 16px; }
+.ba-label.after { right: 16px; background: var(--blaze); color: var(--white); border-color: var(--blaze); }
+
+.ba-handle {
+  position: absolute; top: 0; bottom: 0;
+  left: 50%; width: 3px;
+  background: var(--white);
+  box-shadow: 0 0 0 1px var(--onyx);
+  transform: translateX(-50%);
+  z-index: 5; pointer-events: none;
+}
+.ba-grip {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 2px solid var(--onyx);
+  box-shadow: 0 3px 12px rgba(0,0,0,0.25);
+  display: flex; align-items: center; justify-content: center;
+}
+.ba-grip::before, .ba-grip::after {
+  content: ''; position: absolute;
+  width: 7px; height: 7px;
+  border-top: 2px solid var(--onyx);
+  border-right: 2px solid var(--onyx);
+}
+.ba-grip::before { left: 11px; transform: rotate(-135deg); }
+.ba-grip::after { right: 11px; transform: rotate(45deg); }
+
+/* ===== SITE MOCKUP (placeholder) ===== */
+.site-mock {
+  width: 100%; height: 100%;
+  background: var(--white);
+  display: flex; flex-direction: column;
+}
+.site-chrome {
+  flex-shrink: 0;
+  background: #ECECEC; padding: 8px 12px;
+  display: flex; align-items: center; gap: 8px;
+  border-bottom: 1px solid #D4D4D4;
+}
+.site-chrome .dots {
+  display: flex; gap: 5px;
+}
+.site-chrome .dots span {
+  width: 10px; height: 10px; border-radius: 50%; display: inline-block;
+}
+.site-chrome .dots .r { background: #FF5F57; }
+.site-chrome .dots .y { background: #FFBD2E; }
+.site-chrome .dots .g { background: #28C840; }
+.site-chrome .url {
+  flex: 1; max-width: 60%;
+  background: var(--white); border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 10px; color: var(--slate-light);
+  text-align: center;
+  border: 1px solid #D4D4D4;
+}
+.site-body {
+  flex: 1; overflow: hidden;
+  position: relative;
+}
+
+/* BEFORE mockup: old, garish */
+.site-before {
+  background: #FFFFCC;
+  font-family: 'Courier Prime', 'Courier New', monospace;
+  padding: 16px 24px;
+  color: #000080;
+}
+.site-before .old-logo {
+  font-size: 28px; font-weight: 700; color: #FF0000;
+  text-shadow: 1px 1px 0 #000;
+  margin-bottom: 8px;
+}
+.site-before .old-tag {
+  font-size: 14px; color: #800080;
+  margin-bottom: 14px;
+  font-style: italic;
+}
+.site-before .old-marquee {
+  background: #FF0000; color: #FFFF00;
+  font-size: 11px; padding: 4px 8px;
+  margin-bottom: 12px;
+  font-weight: 700;
+  border: 2px dashed #000;
+}
+.site-before .old-nav {
+  display: flex; gap: 14px;
+  font-size: 11px; color: #0000EE;
+  text-decoration: underline;
+  margin-bottom: 16px;
+}
+.site-before .old-body {
+  background: #FFFFFF; border: 2px ridge #C0C0C0;
+  padding: 12px;
+  font-size: 11px;
+  color: #000;
+  line-height: 1.6;
+  min-height: 38%;
+}
+.site-before .old-body h2 {
+  font-size: 16px;
+  color: #800000;
+  margin-bottom: 8px;
+}
+.site-before .old-cta {
+  display: inline-block;
+  background: #C0C0C0; color: #000;
+  border: 2px outset #FFF;
+  padding: 4px 14px;
+  font-size: 11px; font-weight: 700;
+  margin-top: 8px;
+  text-decoration: none;
+}
+.site-before .old-footer {
+  font-size: 9px; color: #808080;
+  margin-top: 14px; text-align: center;
+}
+
+/* AFTER mockup: modern, 22LM-style */
+.site-after {
+  background: var(--white);
+  display: flex; flex-direction: column;
+}
+.site-after .after-nav {
+  background: var(--white);
+  padding: 10px 22px;
+  display: flex; align-items: center; justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+  font-size: 9px;
+}
+.site-after .after-nav .brand {
+  font-weight: 700; letter-spacing: -0.02em;
+  font-size: 11px;
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.site-after .after-nav .brand-dot {
+  width: 7px; height: 7px; background: var(--blaze);
+  border-radius: 1.5px;
+}
+.site-after .after-nav .nav-links {
+  display: flex; gap: 12px;
+  font-size: 8px; color: var(--slate);
+}
+.site-after .after-nav .nav-cta {
+  background: var(--onyx); color: var(--white);
+  padding: 4px 10px; border-radius: 3px;
+  font-weight: 600; font-size: 8px;
+}
+.site-after .after-hero {
+  flex: 1; padding: 22px 26px;
+  display: grid; grid-template-columns: 1.4fr 1fr;
+  gap: 18px; align-items: center;
+}
+.site-after .after-hero-left h1 {
+  font-size: 22px; line-height: 1.05;
+  letter-spacing: -0.03em; font-weight: 700;
+  margin-bottom: 10px;
+}
+.site-after .after-hero-left h1 .acc { color: var(--blaze); }
+.site-after .after-hero-left p {
+  font-size: 10px; color: var(--slate);
+  margin-bottom: 12px; line-height: 1.5;
+}
+.site-after .after-hero-cta {
+  display: inline-flex; align-items: center;
+  background: var(--blaze); color: var(--white);
+  padding: 7px 14px; border-radius: 4px;
+  font-size: 9px; font-weight: 600;
+  box-shadow: 2px 2px 0 0 var(--onyx);
+  letter-spacing: 0.02em;
+}
+.site-after .after-hero-img {
+  background: linear-gradient(135deg, #2a3d2a, #4a6b4a);
+  border-radius: 8px;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  overflow: hidden;
+}
+.site-after .after-hero-img::before {
+  content: ''; position: absolute;
+  inset: 30% 20% 20% 30%;
+  background: radial-gradient(circle, #6b8b6b, transparent 70%);
+}
+.site-after .after-hero-img::after {
+  content: '📷'; position: absolute;
+  bottom: 8px; right: 10px;
+  font-size: 14px; opacity: 0.7;
+}
+.site-after .after-stats {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 8px; padding: 0 26px 14px;
+}
+.site-after .after-stat {
+  background: var(--bone); border-radius: 4px;
+  padding: 8px 10px; text-align: left;
+}
+.site-after .after-stat .v {
+  font-size: 14px; font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.site-after .after-stat .l {
+  font-size: 7px; color: var(--slate);
+  letter-spacing: 0.06em; text-transform: uppercase;
+  margin-top: 2px;
+}
+
+/* ===== CAROUSEL ===== */
+.car-section { margin-bottom: 24px; }
+.car-section-head {
+  display: flex; align-items: baseline; justify-content: space-between;
+  flex-wrap: wrap; gap: 12px;
+  margin-bottom: 16px;
+}
+.car-section-head h3 {
+  font-size: 13px; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--slate);
+}
+.car-section-head .car-counter {
+  font-size: 12px; color: var(--slate-light);
+  font-weight: 500;
+}
+
+.car {
+  position: relative;
+  border: 1px solid var(--onyx);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--white);
+  box-shadow: 6px 6px 0 0 var(--onyx);
+}
+.car-viewport { overflow: hidden; }
+.car-track {
+  display: flex;
+  transition: transform 0.55s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.car-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: var(--bone);
+  position: relative;
+}
+.car-slide-label {
+  position: absolute; top: 14px; left: 14px;
+  background: var(--onyx); color: var(--white);
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 5px 10px; border-radius: 3px;
+  z-index: 4;
+}
+
+.car-controls {
+  position: absolute; bottom: 14px; right: 14px;
+  display: flex; gap: 8px;
+  z-index: 5;
+}
+.car-btn {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 1px solid var(--onyx);
+  font-family: inherit; font-size: 16px; font-weight: 600;
+  cursor: pointer;
+  display: inline-flex; align-items: center; justify-content: center;
+  box-shadow: 2px 2px 0 0 var(--onyx);
+  transition: all 0.15s;
+  color: var(--onyx);
+}
+.car-btn:hover {
+  background: var(--blaze); color: var(--white);
+  border-color: var(--blaze);
+}
+.car-dots {
+  position: absolute; bottom: 22px; left: 50%;
+  transform: translateX(-50%);
+  display: flex; gap: 6px;
+  z-index: 5;
+}
+.car-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: rgba(0,0,0,0.25);
+  border: none; padding: 0; cursor: pointer;
+  transition: all 0.3s;
+}
+.car-dot.active {
+  background: var(--blaze);
+  width: 24px; border-radius: 4px;
+}
+
+/* ===== Carousel slide variants (placeholder visuals) ===== */
+.cs-serp {
+  background: var(--white);
+  padding: 28px 36px;
+  font-size: 11px;
+  display: flex; flex-direction: column; gap: 12px;
+}
+.cs-serp .serp-bar {
+  background: var(--bone); border: 1px solid var(--border);
+  padding: 9px 14px; border-radius: 24px;
+  font-size: 11px; color: var(--slate);
+  display: flex; align-items: center; gap: 10px;
+  max-width: 70%;
+}
+.cs-serp .serp-bar::before {
+  content: '🔍'; font-size: 11px;
+}
+.cs-serp .serp-result {
+  padding: 10px 0; border-bottom: 1px solid var(--border);
+}
+.cs-serp .serp-result.featured {
+  background: rgba(251,86,7,0.05);
+  border: 1px solid var(--blaze);
+  border-radius: 6px;
+  padding: 12px 14px;
+  margin: 4px 0;
+  position: relative;
+}
+.cs-serp .serp-result.featured::after {
+  content: 'YOUR CLIENT';
+  position: absolute; right: 12px; top: 50%;
+  transform: translateY(-50%);
+  background: var(--blaze); color: var(--white);
+  font-size: 8px; font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 4px 8px; border-radius: 3px;
+}
+.cs-serp .serp-result .domain {
+  font-size: 10px; color: var(--slate);
+  margin-bottom: 2px;
+}
+.cs-serp .serp-result .title {
+  font-size: 13px; color: #1a0dab;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.cs-serp .serp-result .desc {
+  font-size: 11px; color: var(--slate);
+  line-height: 1.4;
+}
+
+.cs-gbp {
+  background: var(--white);
+  padding: 28px 36px;
+  display: grid; grid-template-columns: 1.2fr 1fr;
+  gap: 24px;
+}
+.cs-gbp-left .gbp-name {
+  font-size: 22px; font-weight: 700;
+  letter-spacing: -0.02em; margin-bottom: 6px;
+}
+.cs-gbp-left .gbp-stars {
+  display: flex; align-items: center; gap: 6px;
+  margin-bottom: 14px;
+  font-size: 13px;
+}
+.cs-gbp-left .gbp-stars .stars { color: #FBBC04; font-size: 16px; }
+.cs-gbp-left .gbp-stars .num { color: var(--slate); font-size: 12px; }
+.cs-gbp-left .gbp-info {
+  font-size: 11px; color: var(--slate);
+  line-height: 1.7;
+  display: grid; gap: 4px;
+}
+.cs-gbp-left .gbp-info-row { display: flex; gap: 8px; }
+.cs-gbp-left .gbp-info-row .ic { color: var(--blaze); font-weight: 700; }
+.cs-gbp-left .gbp-actions {
+  display: flex; gap: 8px; margin-top: 14px;
+}
+.cs-gbp-left .gbp-actions .act {
+  background: var(--white); border: 1px solid var(--border-strong);
+  padding: 6px 12px; border-radius: 4px;
+  font-size: 10px; color: var(--onyx);
+  font-weight: 600;
+}
+.cs-gbp-left .gbp-actions .act.primary {
+  background: #1a73e8; color: var(--white); border-color: #1a73e8;
+}
+.cs-gbp-photos {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 4px;
+}
+.cs-gbp-photos .ph {
+  background: linear-gradient(135deg, #2a3d2a, #4a6b4a);
+  aspect-ratio: 1 / 1;
+  border-radius: 4px;
+  position: relative;
+}
+.cs-gbp-photos .ph::after {
+  content: ''; position: absolute;
+  inset: 30% 20% 20% 30%;
+  background: radial-gradient(circle, rgba(255,255,255,0.2), transparent 70%);
+}
+.cs-gbp-photos .ph:nth-child(2) { background: linear-gradient(135deg, #4a3a2a, #6b5a3a); }
+.cs-gbp-photos .ph:nth-child(3) { background: linear-gradient(135deg, #2a3a4a, #3a5a6b); }
+.cs-gbp-photos .ph:nth-child(4) { background: linear-gradient(135deg, #3a2a3a, #5a3a5a); }
+
+.cs-chart {
+  background: var(--white);
+  padding: 28px 36px;
+  display: flex; flex-direction: column; gap: 16px;
+}
+.cs-chart h4 {
+  font-size: 14px; font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.cs-chart .chart-meta {
+  font-size: 11px; color: var(--slate);
+  display: flex; gap: 16px;
+}
+.cs-chart .chart-meta .v {
+  color: var(--onyx); font-weight: 700; font-size: 13px;
+  letter-spacing: -0.01em;
+}
+.cs-chart .chart-svg {
+  flex: 1; width: 100%;
+  min-height: 0;
+}
+.cs-chart .chart-axis {
+  display: flex; justify-content: space-between;
+  font-size: 9px; color: var(--slate-light);
+  margin-top: 4px;
+  letter-spacing: 0.05em;
+}
+
+.cs-dashboard {
+  background: #0f1010; color: var(--white);
+  padding: 24px 28px;
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+}
+.cs-dashboard .panel {
+  background: #1a1c1c; border-radius: 6px;
+  padding: 14px 16px;
+  position: relative; overflow: hidden;
+}
+.cs-dashboard .panel::after {
+  content: ''; position: absolute; top: 0; right: 0;
+  width: 50px; height: 50px;
+  background: radial-gradient(circle at top right, rgba(251,86,7,0.20), transparent 70%);
+}
+.cs-dashboard .panel-label {
+  font-size: 9px; color: var(--blaze);
+  letter-spacing: 0.1em; text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.cs-dashboard .panel-value {
+  font-size: 22px; font-weight: 700;
+  letter-spacing: -0.03em; line-height: 1;
+}
+.cs-dashboard .panel-delta {
+  font-size: 10px; color: #4ade80;
+  margin-top: 6px;
+}
+.cs-dashboard .panel.span-2 { grid-column: span 2; }
+.cs-dashboard .panel.span-3 { grid-column: span 3; }
+
+.cs-reviews {
+  background: var(--white);
+  padding: 28px 36px;
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.cs-reviews .rev {
+  background: var(--bone); border-radius: 8px;
+  padding: 14px 16px;
+  font-size: 11px;
+  display: flex; flex-direction: column; gap: 8px;
+}
+.cs-reviews .rev .stars { color: #FBBC04; font-size: 13px; }
+.cs-reviews .rev .quote {
+  color: var(--onyx); line-height: 1.5;
+  font-style: italic;
+}
+.cs-reviews .rev .author {
+  font-size: 10px; color: var(--slate);
+  display: flex; align-items: center; gap: 8px;
+}
+.cs-reviews .rev .author .av {
+  width: 22px; height: 22px; border-radius: 50%;
+  background: var(--blaze); color: var(--white);
+  display: inline-flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 10px;
+}
+
+/* ===== CTA ===== */
+.cta-block {
+  padding: 80px 0 96px;
+  text-align: center;
+  background: var(--onyx); color: var(--white);
+  margin-top: 64px;
+}
+.cta-block h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700; letter-spacing: -0.03em;
+  line-height: 1.05; max-width: 720px;
+  margin: 0 auto 20px;
+}
+.cta-block p {
+  font-size: 17px; color: #c8c8c8;
+  max-width: 540px; margin: 0 auto 32px;
+  line-height: 1.5;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: var(--bone); padding: 56px 0 32px;
+  border-top: 1px solid var(--border);
+}
+.footer-grid {
+  display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 56px; margin-bottom: 48px;
+}
+.footer-brand p {
+  font-size: 13px; color: var(--slate);
+  margin-top: 16px; max-width: 320px; line-height: 1.6;
+}
+.footer-col h4 {
+  font-size: 12px; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--onyx); margin-bottom: 16px;
+}
+.footer-col ul { list-style: none; display: grid; gap: 10px; }
+.footer-col a { font-size: 13px; color: var(--slate); text-decoration: none; }
+.footer-col a:hover { color: var(--blaze); }
+.footer-bottom {
+  border-top: 1px solid var(--border);
+  padding-top: 24px;
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 12px; color: var(--slate-light);
+}
+
+@media (max-width: 980px) {
+  .stats-bar { grid-template-columns: repeat(2, 1fr); }
+  .stats-bar .stat:nth-child(2) { border-right: none; }
+  .stats-bar .stat:nth-child(-n+2) { border-bottom: 1px solid #1f1f1f; }
+  .case-head { grid-template-columns: 1fr; gap: 32px; }
+  .case-side-stats { grid-template-rows: auto; grid-template-columns: repeat(3, 1fr); }
+  .cs-gbp { grid-template-columns: 1fr; }
+  .cs-dashboard { grid-template-columns: 1fr 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .topnav-links a:not(.topnav-cta) { display: none; }
+}
+@media (max-width: 720px) {
+  .container { padding: 0 22px; }
+  .case-side-stats { grid-template-columns: 1fr; }
+  .stats-bar { grid-template-columns: 1fr; }
+  .stats-bar .stat { border-right: none; border-bottom: 1px solid #1f1f1f; }
+  .stats-bar .stat:last-child { border-bottom: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="topnav">
+  <div class="container topnav-inner">
+    <a href="/" class="wordmark"><span class="wordmark-dot"></span>22 Local Marketing</a>
+    <div class="topnav-links">
+      <a href="/#services">Services</a>
+      <a href="/results/" class="active">Results</a>
+      <a href="/pricing/">Pricing</a>
+      <a href="/knowledge-base/">Knowledge Base</a>
+      <a href="/#about">About</a>
+      <a href="/#contact" class="topnav-cta">Free strategy call</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="page-hero">
+  <div class="container">
+    <div class="eyebrow-rugged">
+      <span class="eb-dash"></span>
+      <span>RESULTS</span>
+      <span class="eb-sep">·</span>
+      <span>RECEIPTS, NOT PROMISES</span>
+    </div>
+    <div class="hero-frame">
+      <h1>Before, after, and <span class="accent">the receipts.</span></h1>
+    </div>
+    <p class="lead">Drag the slider on each case to see what we inherited and what we shipped. Then scroll through the receipts — rankings, GBP, dashboards, reviews.</p>
+  </div>
+</header>
+
+<!-- STATS BAR -->
+<section class="container">
+  <div class="stats-bar">
+    <div class="stat">
+      <div class="stat-label">Active clients</div>
+      <div class="stat-value">12+</div>
+      <div class="stat-desc">Home service operators across NC, FL, OH, and VA</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Avg time to map pack</div>
+      <div class="stat-value">90 days</div>
+      <div class="stat-desc">From kickoff to top-3 ranking on a head term</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Combined keywords ranking</div>
+      <div class="stat-value">8,400+</div>
+      <div class="stat-desc">Search terms our clients now appear for</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Client retention</div>
+      <div class="stat-value">94%</div>
+      <div class="stat-desc">Past 18 months. Month-to-month, never locked-in</div>
+    </div>
+  </div>
+
+  <!-- FILTER -->
+  <div class="filter-bar">
+    <span class="filter-label">Filter</span>
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="tree">Tree services</button>
+    <button class="filter-btn" data-filter="land">Land management</button>
+    <button class="filter-btn" data-filter="electric">Electrical</button>
+  </div>
+</section>
+
+<!-- ============ CASE 1: RANGER TREE CARE ============ -->
+<section class="case-study" data-vertical="tree">
+  <div class="container">
+    <div class="case-head">
+      <div>
+        <div class="case-num">CASE 01 · TREE SERVICES</div>
+        <h2 class="case-title">Ranger Tree Care</h2>
+        <div class="case-meta">
+          <span class="pill">Satellite Beach, FL</span>
+          <span class="pill">9-month engagement</span>
+          <span class="pill">Growth tier</span>
+        </div>
+        <div class="case-story">
+          <p>Ranger came to us in <strong>May 2025</strong> leaning on HomeAdvisor, Thumbtack, and Yelp for leads while burning ad budget without a coherent strategy. The site was a single-pager. The GBP was unclaimed photos and three reviews. They were invisible on Google.</p>
+          <p>We rebuilt the site, rebuilt the GBP, launched Google Ads from day one, and started shipping service + location pages on a weekly cadence. Nine months later they rank for <strong>over 1,000 queries</strong> and sit at <strong>#4 in Melbourne</strong> for the head term "Tree Care" — one position from the maps pack.</p>
+        </div>
+      </div>
+      <div class="case-side-stats">
+        <div class="case-stat">
+          <div class="case-stat-label">Impressions / 90d</div>
+          <div class="case-stat-value">43.6K</div>
+          <div class="case-stat-desc">Up from ~400 at start</div>
+        </div>
+        <div class="case-stat">
+          <div class="case-stat-label">Keywords ranking</div>
+          <div class="case-stat-value">1,000+</div>
+          <div class="case-stat-desc">Up from 11 at start</div>
+        </div>
+        <div class="case-stat">
+          <div class="case-stat-label">Maps rank · Melbourne</div>
+          <div class="case-stat-value">#4</div>
+          <div class="case-stat-desc">For head term "Tree Care"</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ba-section">
+      <div class="ba-section-head">
+        <h3>Site rebuild &middot; before / after</h3>
+        <span class="hint">Drag the handle to reveal</span>
+      </div>
+      <div class="ba" data-ba>
+        <div class="ba-img ba-before">
+          <div class="site-mock">
+            <div class="site-chrome">
+              <div class="dots"><span class="r"></span><span class="y"></span><span class="g"></span></div>
+              <div class="url">rangertreecare.com</div>
+            </div>
+            <div class="site-body site-before">
+              <div class="old-logo">★ RANGER TREE CARE ★</div>
+              <div class="old-tag">Tree Trimming &amp; Removal Since 2019!!!</div>
+              <div class="old-marquee">★★★ CALL NOW FOR FREE QUOTE 24/7 ★★★</div>
+              <div class="old-nav">Home | About | Services | Contact</div>
+              <div class="old-body">
+                <h2>Welcome to Our Website</h2>
+                <p>We are a tree service company located in Satellite Beach FL. We do tree trimming, removal, stump grinding. Call us today!</p>
+                <a class="old-cta">CLICK HERE</a>
+              </div>
+              <div class="old-footer">© 2019 — Hit counter: 1,247</div>
+            </div>
+          </div>
+        </div>
+        <div class="ba-img ba-after">
+          <div class="site-mock">
+            <div class="site-chrome">
+              <div class="dots"><span class="r"></span><span class="y"></span><span class="g"></span></div>
+              <div class="url">rangertreecare.com</div>
+            </div>
+            <div class="site-body site-after">
+              <div class="after-nav">
+                <span class="brand"><span class="brand-dot"></span>Ranger Tree Care</span>
+                <span class="nav-links"><span>Services</span><span>Service Areas</span><span>About</span><span>Reviews</span></span>
+                <span class="nav-cta">Free quote</span>
+              </div>
+              <div class="after-hero">
+                <div class="after-hero-left">
+                  <h1>Tree care done <span class="acc">right</span> in Melbourne.</h1>
+                  <p>Trimming, removal, stump grinding, and 24-hour storm response across Brevard County.</p>
+                  <span class="after-hero-cta">Get a free quote →</span>
+                </div>
+                <div class="after-hero-img"></div>
+              </div>
+              <div class="after-stats">
+                <div class="after-stat"><div class="v">15+ yrs</div><div class="l">Local crew</div></div>
+                <div class="after-stat"><div class="v">200+</div><div class="l">5-star reviews</div></div>
+                <div class="after-stat"><div class="v">24/7</div><div class="l">Emergency</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ba-label before">Before</div>
+        <div class="ba-label after">After</div>
+        <div class="ba-handle"><div class="ba-grip"></div></div>
+      </div>
+    </div>
+
+    <div class="car-section">
+      <div class="car-section-head">
+        <h3>The receipts &middot; rankings, GBP, dashboard, reviews</h3>
+        <span class="car-counter" data-counter></span>
+      </div>
+      <div class="car" data-car>
+        <div class="car-viewport">
+          <div class="car-track">
+            <div class="car-slide">
+              <div class="car-slide-label">Google · "Tree Care Melbourne FL"</div>
+              <div class="cs-serp">
+                <div class="serp-bar">tree care melbourne fl</div>
+                <div class="serp-result"><div class="domain">homeadvisor.com</div><div class="title">Top 10 Tree Services in Melbourne, FL · HomeAdvisor</div><div class="desc">Compare quotes from local tree service pros in Melbourne...</div></div>
+                <div class="serp-result"><div class="domain">yelp.com</div><div class="title">Best Tree Services Near Melbourne, FL · Yelp</div><div class="desc">Find the best tree services in Melbourne with verified reviews...</div></div>
+                <div class="serp-result featured"><div class="domain">rangertreecare.com</div><div class="title">Tree Care in Melbourne, FL · Ranger Tree Care</div><div class="desc">Trimming, removal, stump grinding, and storm response across Brevard County.</div></div>
+                <div class="serp-result"><div class="domain">angi.com</div><div class="title">Tree Service Companies in Melbourne, FL</div><div class="desc">Get matched with top-rated tree services...</div></div>
+              </div>
+            </div>
+            <div class="car-slide">
+              <div class="car-slide-label">Google Business Profile</div>
+              <div class="cs-gbp">
+                <div class="cs-gbp-left">
+                  <div class="gbp-name">Ranger Tree Care</div>
+                  <div class="gbp-stars"><span class="stars">★★★★★</span><span class="num">4.9 · 218 Google reviews</span></div>
+                  <div class="gbp-info">
+                    <div class="gbp-info-row"><span class="ic">•</span><span>Tree service in Satellite Beach, FL</span></div>
+                    <div class="gbp-info-row"><span class="ic">•</span><span>Open 24 hours · Emergency response</span></div>
+                    <div class="gbp-info-row"><span class="ic">•</span><span>Serves Melbourne, Palm Bay, Cocoa, Vero Beach</span></div>
+                    <div class="gbp-info-row"><span class="ic">•</span><span>Family-owned · Insured · Bonded</span></div>
+                  </div>
+                  <div class="gbp-actions">
+                    <span class="act primary">Call</span>
+                    <span class="act">Directions</span>
+                    <span class="act">Website</span>
+                    <span class="act">Save</span>
+                  </div>
+                </div>
+                <div class="cs-gbp-photos">
+                  <div class="ph"></div><div class="ph"></div><div class="ph"></div><div class="ph"></div>
+                </div>
+              </div>
+            </div>
+            <div class="car-slide">
+              <div class="car-slide-label">Search Console · 12-month impressions</div>
+              <div class="cs-chart">
+                <h4>Search Console &middot; 12-month performance</h4>
+                <div class="chart-meta">
+                  <span>Total impressions <span class="v">43,612</span></span>
+                  <span>Clicks <span class="v">2,184</span></span>
+                  <span>Avg position <span class="v">8.4</span></span>
+                </div>
+                <svg class="chart-svg" viewBox="0 0 800 240" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="g1" x1="0" x2="0" y1="0" y2="1">
+                      <stop offset="0%" stop-color="#FB5607" stop-opacity="0.35"/>
+                      <stop offset="100%" stop-color="#FB5607" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                  <path d="M0,220 L60,218 L120,214 L180,205 L240,190 L300,170 L360,148 L420,118 L480,90 L540,70 L600,55 L660,42 L720,28 L800,22 L800,240 L0,240 Z" fill="url(#g1)"/>
+                  <path d="M0,220 L60,218 L120,214 L180,205 L240,190 L300,170 L360,148 L420,118 L480,90 L540,70 L600,55 L660,42 L720,28 L800,22" fill="none" stroke="#FB5607" stroke-width="2.5"/>
+                  <circle cx="800" cy="22" r="4" fill="#FB5607"/>
+                </svg>
+                <div class="chart-axis"><span>MAY '25</span><span>JUL</span><span>SEP</span><span>NOV</span><span>JAN '26</span><span>MAR</span></div>
+              </div>
+            </div>
+            <div class="car-slide">
+              <div class="car-slide-label">Reporting dashboard</div>
+              <div class="cs-dashboard">
+                <div class="panel"><div class="panel-label">Leads · 30d</div><div class="panel-value">82</div><div class="panel-delta">↑ 41% vs prev</div></div>
+                <div class="panel"><div class="panel-label">Cost / lead</div><div class="panel-value">$38</div><div class="panel-delta">↓ 22% vs prev</div></div>
+                <div class="panel"><div class="panel-label">Maps views</div><div class="panel-value">12,440</div><div class="panel-delta">↑ 18% vs prev</div></div>
+                <div class="panel"><div class="panel-label">Calls · 30d</div><div class="panel-value">147</div><div class="panel-delta">↑ 33% vs prev</div></div>
+                <div class="panel"><div class="panel-label">New reviews</div><div class="panel-value">24</div><div class="panel-delta">↑ 50% vs prev</div></div>
+                <div class="panel"><div class="panel-label">Avg rating</div><div class="panel-value">4.9★</div><div class="panel-delta">218 total</div></div>
+              </div>
+            </div>
+            <div class="car-slide">
+              <div class="car-slide-label">Customer reviews</div>
+              <div class="cs-reviews">
+                <div class="rev">
+                  <div class="stars">★★★★★</div>
+                  <div class="quote">"Showed up the same day for a storm-damaged oak. Fair price, clean cleanup. Will call them again."</div>
+                  <div class="author"><span class="av">JM</span><span>Jessica M. · Melbourne, FL</span></div>
+                </div>
+                <div class="rev">
+                  <div class="stars">★★★★★</div>
+                  <div class="quote">"Took down two 80-foot pines in our backyard. Crew was professional, careful around the fence."</div>
+                  <div class="author"><span class="av">RT</span><span>Rick T. · Palm Bay, FL</span></div>
+                </div>
+                <div class="rev">
+                  <div class="stars">★★★★★</div>
+                  <div class="quote">"Best tree service in Brevard County. Honest quote, finished early, hauled everything away."</div>
+                  <div class="author"><span class="av">DK</span><span>Danielle K. · Cocoa, FL</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="car-dots"></div>
+        <div class="car-controls">
+          <button class="car-btn car-prev" aria-label="Previous">←</button>
+          <button class="car-btn car-next" aria-label="Next">→</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ CASE 2: FONVILLE TREE SERVICE ============ -->
+<section class="case-study" data-vertical="tree">
+  <div class="container">
+    <div class="case-head">
+      <div>
+        <div class="case-num">CASE 02 · TREE SERVICES</div>
+        <h2 class="case-title">Fonville Tree Service</h2>
+        <div class="case-meta">
+          <span class="pill">Wake Forest, NC</span>
+          <span class="pill">2-year engagement</span>
+          <span class="pill">Dominate tier</span>
+        </div>
+        <div class="case-story">
+          <p>Fonville is the case study for what consistency over time looks like. They came on at the start of <strong>2024</strong> with a respectable site but barely any organic visibility. We pushed weekly content, monthly backlinks, and aggressive GBP work.</p>
+          <p>Two years in, they're the answer for tree service across the Wake Forest / Raleigh / Durham triangle. <strong>500+ Google reviews</strong>, top-3 maps pack across 8 cities, and an organic pipeline that runs itself.</p>
+        </div>
+      </div>
+      <div class="case-side-stats">
+        <div class="case-stat">
+          <div class="case-stat-label">Google reviews</div>
+          <div class="case-stat-value">500+</div>
+          <div class="case-stat-desc">4.9 avg across the territory</div>
+        </div>
+        <div class="case-stat">
+          <div class="case-stat-label">Map pack cities</div>
+          <div class="case-stat-value">8</div>
+          <div class="case-stat-desc">Top-3 for "tree service [city]"</div>
+        </div>
+        <div class="case-stat">
+          <div class="case-stat-label">Organic share</div>
+          <div class="case-stat-value">72%</div>
+          <div class="case-stat-desc">Of monthly lead volume</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ba-section">
+      <div class="ba-section-head">
+        <h3>Site refresh &middot; before / after</h3>
+        <span class="hint">Drag the handle to reveal</span>
+      </div>
+      <div class="ba" data-ba>
+        <div class="ba-img ba-before">
+          <div class="site-mock">
+            <div class="site-chrome">
+              <div class="dots"><span class="r"></span><span class="y"></span><span class="g"></span></div>
+              <div class="url">fonvilletreeservice.com</div>
+            </div>
+            <div class="site-body site-before" style="background:#E8E8F0; color:#003366; font-family:'Times New Roman', serif;">
+              <div class="old-logo" style="color:#006600;">Fonville Tree Service</div>
+              <div class="old-tag" style="color:#666;">Serving Wake Forest Since 2010</div>
+              <div class="old-nav" style="color:#003366;">Home &nbsp; About Us &nbsp; Services &nbsp; Gallery &nbsp; Contact Us</div>
+              <div class="old-body" style="background:#FFF; border:1px solid #999;">
+                <h2 style="color:#003366; font-family:serif;">Quality Tree Care You Can Trust</h2>
+                <p>Fonville Tree Service has been providing reliable tree care services to Wake Forest and surrounding areas for over 14 years. Our team handles tree removal, pruning, stump grinding, and emergency storm work.</p>
+                <a class="old-cta" style="background:#006600; color:#FFF; border:none; padding:6px 14px;">Request Quote</a>
+              </div>
+              <div class="old-footer">Copyright © 2018 Fonville Tree Service</div>
+            </div>
+          </div>
+        </div>
+        <div class="ba-img ba-after">
+          <div class="site-mock">
+            <div class="site-chrome">
+              <div class="dots"><span class="r"></span><span class="y"></span><span class="g"></span></div>
+              <div class="url">fonvilletreeservice.com</div>
+            </div>
+            <div class="site-body site-after">
+              <div class="after-nav">
+                <span class="brand"><span class="brand-dot"></span>Fonville Tree Service</span>
+                <span class="nav-links"><span>Services</span><span>Locations</span><span>About</span><span>Reviews</span></span>
+                <span class="nav-cta">Free estimate</span>
+              </div>
+              <div class="after-hero">
+                <div class="after-hero-left">
+                  <h1>The most-trusted tree service in <span class="acc">Wake County.</span></h1>
+                  <p>15 years, 500+ five-star reviews, and a crew that shows up when they say they will.</p>
+                  <span class="after-hero-cta">Get a free estimate →</span>
+                </div>
+                <div class="after-hero-img"></div>
+              </div>
+              <div class="after-stats">
+                <div class="after-stat"><div class="v">500+</div><div class="l">5-star reviews</div></div>
+                <div class="after-stat"><div class="v">8 cities</div><div class="l">Served daily</div></div>
+                <div class="after-stat"><div class="v">15 yrs</div><div class="l">In business</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ba-label before">Before</div>
+        <div class="ba-label after">After</div>
+        <div class="ba-handle"><div class="ba-grip"></div></div>
+      </div>
+    </div>
+
+    <div class="car-section">
+      <div class="car-section-head">
+        <h3>The receipts &middot; reviews, rankings, GBP</h3>
+        <span class="car-counter" data-counter></span>
+      </div>
+      <div class="car" data-car>
+        <div class="car-viewport">
+          <div class="car-track">
+            <div class="car-slide">
+              <div class="car-slide-label">Search Console · 2-year trend</div>
+              <div class="cs-chart">
+                <h4>Search Console &middot; 24-month performance</h4>
+                <div class="chart-meta">
+                  <span>Impressions <span class="v">412K</span></span>
+                  <span>Clicks <span class="v">28,940</span></span>
+                  <span>Avg position <span class="v">4.2</span></span>
+                </div>
+                <svg class="chart-svg" viewBox="0 0 800 240" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="g2" x1="0" x2="0" y1="0" y2="1">
+                      <stop offset="0%" stop-color="#FB5607" stop-opacity="0.35"/>
+                      <stop offset="100%" stop-color="#FB5607" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                  <path d="M0,220 L80,212 L160,200 L240,180 L320,150 L400,120 L480,85 L560,60 L640,42 L720,28 L800,18 L800,240 L0,240 Z" fill="url(#g2)"/>
+                  <path d="M0,220 L80,212 L160,200 L240,180 L320,150 L400,120 L480,85 L560,60 L640,42 L720,28 L800,18" fill="none" stroke="#FB5607" stroke-width="2.5"/>
+                  <circle cx="800" cy="18" r="4" fill="#FB5607"/>
+                </svg>
+                <div class="chart-axis"><span>JAN '24</span><span>APR</span><span>JUL</span><span>OCT</span><span>JAN '25</span><span>APR</span><span>JUL</span><span>OCT</span><span>JAN '26</span></div>
+              </div>
+            </div>
+            <div class="car-slide">
+              <div class="car-slide-label">Google Business Profile · 500+ reviews</div>
+              <div class="cs-gbp">
+                <div class="cs-gbp-left">
+                  <div class="gbp-name">Fonville Tree Service</div>
+                  <div class="gbp-stars"><span class="stars">★★★★★</span><span class="num">4.9 · 524 Google reviews</span></div>
+                  <div class="gbp-info">
+                    <div class="gbp-info-row"><span class="ic">•</span><span>Tree service in Wake Forest, NC</span></div>
+                    <div class="gbp-info-row"><span class="ic">•</span><span>Open Mon–Sat, 7am–6pm</span></div>
+                    <div class="gbp-info-row"><span class="ic">•</span><span>Serves 8 cities across Wake County</span></div>
+                    <div class="gbp-info-row"><span class="ic">•</span><span>Family-owned · Insured · 15+ years</span></div>
+                  </div>
+                  <div class="gbp-actions">
+                    <span class="act primary">Call</span>
+                    <span class="act">Directions</span>
+                    <span class="act">Website</span>
+                    <span class="act">Save</span>
+                  </div>
+                </div>
+                <div class="cs-gbp-photos">
+                  <div class="ph"></div><div class="ph"></div><div class="ph"></div><div class="ph"></div>
+                </div>
+              </div>
+            </div>
+            <div class="car-slide">
+              <div class="car-slide-label">Customer reviews</div>
+              <div class="cs-reviews">
+                <div class="rev">
+                  <div class="stars">★★★★★</div>
+                  <div class="quote">"Brice and the team are the best in Wake Forest. Honest pricing, fast work, cleaned up everything."</div>
+                  <div class="author"><span class="av">SP</span><span>Sarah P. · Wake Forest, NC</span></div>
+                </div>
+                <div class="rev">
+                  <div class="stars">★★★★★</div>
+                  <div class="quote">"Used them three times now for different jobs. Same quality every time. Recommend to everyone."</div>
+                  <div class="author"><span class="av">MH</span><span>Mike H. · Raleigh, NC</span></div>
+                </div>
+                <div class="rev">
+                  <div class="stars">★★★★★</div>
+                  <div class="quote">"Had a giant oak come down in a storm. They were here within an hour. Saved my house."</div>
+                  <div class="author"><span class="av">AB</span><span>Amy B. · Durham, NC</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="car-slide">
+              <div class="car-slide-label">Reporting dashboard</div>
+              <div class="cs-dashboard">
+                <div class="panel"><div class="panel-label">Leads · 30d</div><div class="panel-value">186</div><div class="panel-delta">↑ 12% vs prev</div></div>
+                <div class="panel"><div class="panel-label">Cost / lead</div><div class="panel-value">$24</div><div class="panel-delta">↓ 8% vs prev</div></div>
+                <div class="panel"><div class="panel-label">Maps views</div><div class="panel-value">28,720</div><div class="panel-delta">↑ 6% vs prev</div></div>
+                <div class="panel"><div class="panel-label">Calls · 30d</div><div class="panel-value">312</div><div class="panel-delta">↑ 15% vs prev</div></div>
+                <div class="panel"><div class="panel-label">New reviews</div><div class="panel-value">41</div><div class="panel-delta">↑ 22% vs prev</div></div>
+                <div class="panel"><div class="panel-label">Avg rating</div><div class="panel-value">4.9★</div><div class="panel-delta">524 total</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="car-dots"></div>
+        <div class="car-controls">
+          <button class="car-btn car-prev" aria-label="Previous">←</button>
+          <button class="car-btn car-next" aria-label="Next">→</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ CASE 3: BETTER WAY LAND MANAGEMENT ============ -->
+<section class="case-study" data-vertical="land">
+  <div class="container">
+    <div class="case-head">
+      <div>
+        <div class="case-num">CASE 03 · LAND MANAGEMENT</div>
+        <h2 class="case-title">Better Way Land Management</h2>
+        <div class="case-meta">
+          <span class="pill">Swanton, OH</span>
+          <span class="pill">12-month engagement</span>
+          <span class="pill">Growth tier</span>
+        </div>
+        <div class="case-story">
+          <p>Land management is a different animal — fewer searches, much higher ticket. Better Way came on with <strong>no website, no GBP, and one phone number on a magnet</strong>. Total greenfield build.</p>
+          <p>We built the site, established the GBP, launched paid for forestry mulching + land clearing, and stacked location pages across Northwest Ohio. <strong>First $20K job booked in month 2</strong>. Now booked solid 6 weeks out.</p>
+        </div>
+      </div>
+      <div class="case-side-stats">
+        <div class="case-stat">
+          <div class="case-stat-label">Avg job value</div>
+          <div class="case-stat-value">$8.2K</div>
+          <div class="case-stat-desc">Across 47 jobs in year 1</div>
+        </div>
+        <div class="case-stat">
+          <div class="case-stat-label">Booked out</div>
+          <div class="case-stat-value">6 wks</div>
+          <div class="case-stat-desc">Consistent backlog since month 6</div>
+        </div>
+        <div class="case-stat">
+          <div class="case-stat-label">ROAS</div>
+          <div class="case-stat-value">14.2×</div>
+          <div class="case-stat-desc">On Google Ads spend</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ba-section">
+      <div class="ba-section-head">
+        <h3>Site build &middot; before / after</h3>
+        <span class="hint">Drag the handle to reveal</span>
+      </div>
+      <div class="ba" data-ba>
+        <div class="ba-img ba-before">
+          <div class="site-mock">
+            <div class="site-chrome">
+              <div class="dots"><span class="r"></span><span class="y"></span><span class="g"></span></div>
+              <div class="url">betterwaylm.com</div>
+            </div>
+            <div class="site-body" style="background:#1a1a1a; color:#888; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:40px; text-align:center;">
+              <div style="font-size:48px; opacity:0.3;">⚠</div>
+              <div style="font-size:14px; font-weight:700; color:#FF6666; margin-top:12px; letter-spacing:0.05em;">404 · SITE NOT FOUND</div>
+              <div style="font-size:11px; color:#666; margin-top:8px; max-width:300px; line-height:1.5;">This domain is not associated with an active website. No website. No GBP. No online presence.</div>
+            </div>
+          </div>
+        </div>
+        <div class="ba-img ba-after">
+          <div class="site-mock">
+            <div class="site-chrome">
+              <div class="dots"><span class="r"></span><span class="y"></span><span class="g"></span></div>
+              <div class="url">betterwaylm.com</div>
+            </div>
+            <div class="site-body site-after">
+              <div class="after-nav">
+                <span class="brand"><span class="brand-dot"></span>Better Way Land Management</span>
+                <span class="nav-links"><span>Forestry Mulching</span><span>Land Clearing</span><span>Grading</span><span>About</span></span>
+                <span class="nav-cta">Free site visit</span>
+              </div>
+              <div class="after-hero">
+                <div class="after-hero-left">
+                  <h1>Land clearing done <span class="acc">right</span> in Northwest Ohio.</h1>
+                  <p>Forestry mulching, land clearing, grading, and stump removal across the Toledo metro.</p>
+                  <span class="after-hero-cta">Get a free site visit →</span>
+                </div>
+                <div class="after-hero-img"></div>
+              </div>
+              <div class="after-stats">
+                <div class="after-stat"><div class="v">47 jobs</div><div class="l">Year 1</div></div>
+                <div class="after-stat"><div class="v">6 weeks</div><div class="l">Booked out</div></div>
+                <div class="after-stat"><div class="v">100%</div><div class="l">Job satisfaction</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ba-label before">Before</div>
+        <div class="ba-label after">After</div>
+        <div class="ba-handle"><div class="ba-grip"></div></div>
+      </div>
+    </div>
+
+    <div class="car-section">
+      <div class="car-section-head">
+        <h3>The receipts &middot; rankings, dashboard, reviews</h3>
+        <span class="car-counter" data-counter></span>
+      </div>
+      <div class="car" data-car>
+        <div class="car-viewport">
+          <div class="car-track">
+            <div class="car-slide">
+              <div class="car-slide-label">Google · "Forestry mulching near me"</div>
+              <div class="cs-serp">
+                <div class="serp-bar">forestry mulching near me</div>
+                <div class="serp-result featured"><div class="domain">betterwaylm.com</div><div class="title">Forestry Mulching in NW Ohio · Better Way Land Management</div><div class="desc">Professional forestry mulching across Toledo metro. Free site visit, same-week scheduling.</div></div>
+                <div class="serp-result"><div class="domain">angi.com</div><div class="title">Top Forestry Mulching Services Near You · Angi</div><div class="desc">Find rated forestry mulching contractors in your area...</div></div>
+                <div class="serp-result"><div class="domain">homeadvisor.com</div><div class="title">Best Forestry Mulching Contractors · HomeAdvisor</div><div class="desc">Compare quotes from local pros for forestry mulching...</div></div>
+              </div>
+            </div>
+            <div class="car-slide">
+              <div class="car-slide-label">Reporting dashboard · year 1</div>
+              <div class="cs-dashboard">
+                <div class="panel"><div class="panel-label">Jobs booked</div><div class="panel-value">47</div><div class="panel-delta">↑ 47 vs prev yr</div></div>
+                <div class="panel"><div class="panel-label">Revenue</div><div class="panel-value">$386K</div><div class="panel-delta">↑ from $0</div></div>
+                <div class="panel"><div class="panel-label">Avg ticket</div><div class="panel-value">$8.2K</div><div class="panel-delta">Land clearing avg</div></div>
+                <div class="panel"><div class="panel-label">ROAS</div><div class="panel-value">14.2×</div><div class="panel-delta">Google Ads</div></div>
+                <div class="panel"><div class="panel-label">Reviews</div><div class="panel-value">31</div><div class="panel-delta">↑ 31 vs prev yr</div></div>
+                <div class="panel"><div class="panel-label">Avg rating</div><div class="panel-value">5.0★</div><div class="panel-delta">Perfect</div></div>
+              </div>
+            </div>
+            <div class="car-slide">
+              <div class="car-slide-label">12-month ranking growth</div>
+              <div class="cs-chart">
+                <h4>Total keywords ranking · year 1</h4>
+                <div class="chart-meta">
+                  <span>Start <span class="v">0</span></span>
+                  <span>Current <span class="v">412</span></span>
+                  <span>Top-3 <span class="v">28</span></span>
+                </div>
+                <svg class="chart-svg" viewBox="0 0 800 240" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="g3" x1="0" x2="0" y1="0" y2="1">
+                      <stop offset="0%" stop-color="#FB5607" stop-opacity="0.35"/>
+                      <stop offset="100%" stop-color="#FB5607" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                  <path d="M0,238 L80,235 L160,225 L240,200 L320,170 L400,140 L480,110 L560,82 L640,58 L720,38 L800,22 L800,240 L0,240 Z" fill="url(#g3)"/>
+                  <path d="M0,238 L80,235 L160,225 L240,200 L320,170 L400,140 L480,110 L560,82 L640,58 L720,38 L800,22" fill="none" stroke="#FB5607" stroke-width="2.5"/>
+                  <circle cx="800" cy="22" r="4" fill="#FB5607"/>
+                </svg>
+                <div class="chart-axis"><span>MAR '25</span><span>MAY</span><span>JUL</span><span>SEP</span><span>NOV</span><span>JAN '26</span><span>MAR</span></div>
+              </div>
+            </div>
+            <div class="car-slide">
+              <div class="car-slide-label">Customer reviews</div>
+              <div class="cs-reviews">
+                <div class="rev">
+                  <div class="stars">★★★★★</div>
+                  <div class="quote">"Cleared 8 acres in 3 days. Couldn't believe how clean they left it. Worth every penny."</div>
+                  <div class="author"><span class="av">JR</span><span>James R. · Swanton, OH</span></div>
+                </div>
+                <div class="rev">
+                  <div class="stars">★★★★★</div>
+                  <div class="quote">"Most professional crew I've ever hired. They walked the land with me, gave a fair quote, delivered."</div>
+                  <div class="author"><span class="av">CW</span><span>Carol W. · Toledo, OH</span></div>
+                </div>
+                <div class="rev">
+                  <div class="stars">★★★★★</div>
+                  <div class="quote">"Forestry mulching saved us thousands over traditional clearing. Booked them again for the back lot."</div>
+                  <div class="author"><span class="av">DT</span><span>Dave T. · Maumee, OH</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="car-dots"></div>
+        <div class="car-controls">
+          <button class="car-btn car-prev" aria-label="Previous">←</button>
+          <button class="car-btn car-next" aria-label="Next">→</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ CASE 4: PATRICK'S ELECTRIC ============ -->
+<section class="case-study" data-vertical="electric">
+  <div class="container">
+    <div class="case-head">
+      <div>
+        <div class="case-num">CASE 04 · ELECTRICAL</div>
+        <h2 class="case-title">Patrick's Electric</h2>
+        <div class="case-meta">
+          <span class="pill">Raleigh, NC</span>
+          <span class="pill">6-month engagement</span>
+          <span class="pill">Foundation tier</span>
+        </div>
+        <div class="case-story">
+          <p>Patrick's Electric is the proof that you don't need the biggest plan to win. They came on the <strong>Foundation tier</strong> — base website, GBP, LSA setup, and content. No paid ads.</p>
+          <p>Six months in: <strong>top-3 in the maps pack</strong> for "electrician near me" in their service zone, a steady flow of LSA leads at under $30 each, and zero ad spend. Pure organic + LSA.</p>
+        </div>
+      </div>
+      <div class="case-side-stats">
+        <div class="case-stat">
+          <div class="case-stat-label">Maps pack rank</div>
+          <div class="case-stat-value">#2</div>
+          <div class="case-stat-desc">"Electrician near me" · zone</div>
+        </div>
+        <div class="case-stat">
+          <div class="case-stat-label">LSA cost / lead</div>
+          <div class="case-stat-value">$28</div>
+          <div class="case-stat-desc">Google Guaranteed only</div>
+        </div>
+        <div class="case-stat">
+          <div class="case-stat-label">Lead volume / mo</div>
+          <div class="case-stat-value">52</div>
+          <div class="case-stat-desc">Up from ~6 at start</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ba-section">
+      <div class="ba-section-head">
+        <h3>Site rebuild &middot; before / after</h3>
+        <span class="hint">Drag the handle to reveal</span>
+      </div>
+      <div class="ba" data-ba>
+        <div class="ba-img ba-before">
+          <div class="site-mock">
+            <div class="site-chrome">
+              <div class="dots"><span class="r"></span><span class="y"></span><span class="g"></span></div>
+              <div class="url">patrickselectric.com</div>
+            </div>
+            <div class="site-body site-before" style="background:#003366; color:#FFF; font-family:Arial, sans-serif;">
+              <div class="old-logo" style="color:#FFCC00; text-shadow:2px 2px 0 #000;">⚡ PATRICK'S ELECTRIC ⚡</div>
+              <div class="old-tag" style="color:#FFF; font-style:normal;">Licensed Electricians · Free Estimates · Call Today</div>
+              <div class="old-nav" style="color:#FFCC00; background:#000; padding:6px 0; justify-content:center;">HOME | SERVICES | ABOUT | TESTIMONIALS | CONTACT</div>
+              <div class="old-body" style="background:rgba(255,255,255,0.1); color:#FFF; border:1px solid #FFCC00;">
+                <h2 style="color:#FFCC00; font-family:Impact, sans-serif;">YOUR LOCAL ELECTRICIAN</h2>
+                <p>Patrick's Electric provides residential and commercial electrical services in Raleigh and surrounding areas. Available 24/7 for emergencies!</p>
+                <a class="old-cta" style="background:#FFCC00; color:#000; border:2px solid #FFF; font-weight:900;">⚡ CALL NOW ⚡</a>
+              </div>
+              <div class="old-footer" style="color:#999;">© 2020 Patrick's Electric · Site by GoDaddy Builder</div>
+            </div>
+          </div>
+        </div>
+        <div class="ba-img ba-after">
+          <div class="site-mock">
+            <div class="site-chrome">
+              <div class="dots"><span class="r"></span><span class="y"></span><span class="g"></span></div>
+              <div class="url">patrickselectric.com</div>
+            </div>
+            <div class="site-body site-after">
+              <div class="after-nav">
+                <span class="brand"><span class="brand-dot"></span>Patrick's Electric</span>
+                <span class="nav-links"><span>Services</span><span>Service Area</span><span>About</span><span>Reviews</span></span>
+                <span class="nav-cta">Schedule service</span>
+              </div>
+              <div class="after-hero">
+                <div class="after-hero-left">
+                  <h1>The electrician Raleigh trusts <span class="acc">first.</span></h1>
+                  <p>Residential and light commercial. Same-day service. Insured, bonded, Google Guaranteed.</p>
+                  <span class="after-hero-cta">Schedule service →</span>
+                </div>
+                <div class="after-hero-img" style="background:linear-gradient(135deg, #2a2a3a, #4a4a6b);"></div>
+              </div>
+              <div class="after-stats">
+                <div class="after-stat"><div class="v">Same-day</div><div class="l">Service</div></div>
+                <div class="after-stat"><div class="v">Google</div><div class="l">Guaranteed</div></div>
+                <div class="after-stat"><div class="v">4.9★</div><div class="l">86 reviews</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ba-label before">Before</div>
+        <div class="ba-label after">After</div>
+        <div class="ba-handle"><div class="ba-grip"></div></div>
+      </div>
+    </div>
+
+    <div class="car-section">
+      <div class="car-section-head">
+        <h3>The receipts &middot; LSA, GBP, dashboard</h3>
+        <span class="car-counter" data-counter></span>
+      </div>
+      <div class="car" data-car>
+        <div class="car-viewport">
+          <div class="car-track">
+            <div class="car-slide">
+              <div class="car-slide-label">Google Business Profile</div>
+              <div class="cs-gbp">
+                <div class="cs-gbp-left">
+                  <div class="gbp-name">Patrick's Electric</div>
+                  <div class="gbp-stars"><span class="stars">★★★★★</span><span class="num">4.9 · 86 Google reviews</span></div>
+                  <div class="gbp-info">
+                    <div class="gbp-info-row"><span class="ic">•</span><span>Electrician in Raleigh, NC</span></div>
+                    <div class="gbp-info-row"><span class="ic">•</span><span>Open 7am–8pm · Same-day available</span></div>
+                    <div class="gbp-info-row"><span class="ic">•</span><span>Google Guaranteed · Background-checked</span></div>
+                    <div class="gbp-info-row"><span class="ic">•</span><span>Serves Raleigh, Cary, Apex, Garner</span></div>
+                  </div>
+                  <div class="gbp-actions">
+                    <span class="act primary">Call</span>
+                    <span class="act">Directions</span>
+                    <span class="act">Website</span>
+                    <span class="act">Save</span>
+                  </div>
+                </div>
+                <div class="cs-gbp-photos">
+                  <div class="ph" style="background:linear-gradient(135deg,#2a2a3a,#4a4a6b);"></div>
+                  <div class="ph" style="background:linear-gradient(135deg,#3a2a2a,#5a3a3a);"></div>
+                  <div class="ph" style="background:linear-gradient(135deg,#2a3a3a,#3a5a5a);"></div>
+                  <div class="ph" style="background:linear-gradient(135deg,#3a3a2a,#5a5a3a);"></div>
+                </div>
+              </div>
+            </div>
+            <div class="car-slide">
+              <div class="car-slide-label">LSA performance · 6 months</div>
+              <div class="cs-dashboard">
+                <div class="panel"><div class="panel-label">LSA leads · 30d</div><div class="panel-value">52</div><div class="panel-delta">↑ 24% vs prev</div></div>
+                <div class="panel"><div class="panel-label">Cost / lead</div><div class="panel-value">$28</div><div class="panel-delta">↓ 12% vs prev</div></div>
+                <div class="panel"><div class="panel-label">Win rate</div><div class="panel-value">68%</div><div class="panel-delta">Booked jobs</div></div>
+                <div class="panel"><div class="panel-label">Maps views</div><div class="panel-value">9,840</div><div class="panel-delta">↑ 31% vs prev</div></div>
+                <div class="panel"><div class="panel-label">Phone calls</div><div class="panel-value">214</div><div class="panel-delta">↑ 28% vs prev</div></div>
+                <div class="panel"><div class="panel-label">New reviews</div><div class="panel-value">18</div><div class="panel-delta">↑ 38% vs prev</div></div>
+              </div>
+            </div>
+            <div class="car-slide">
+              <div class="car-slide-label">Customer reviews</div>
+              <div class="cs-reviews">
+                <div class="rev">
+                  <div class="stars">★★★★★</div>
+                  <div class="quote">"Same-day service for a tripped breaker that wouldn't reset. Diagnosed in 10 minutes. Honest pricing."</div>
+                  <div class="author"><span class="av">EH</span><span>Erin H. · Raleigh, NC</span></div>
+                </div>
+                <div class="rev">
+                  <div class="stars">★★★★★</div>
+                  <div class="quote">"Patrick rewired our 1960s panel. Clean install, explained everything, passed inspection first try."</div>
+                  <div class="author"><span class="av">TW</span><span>Tom W. · Cary, NC</span></div>
+                </div>
+                <div class="rev">
+                  <div class="stars">★★★★★</div>
+                  <div class="quote">"Found them on Google. Showed up on time. Fixed three issues for less than the other quote for one."</div>
+                  <div class="author"><span class="av">LS</span><span>Lisa S. · Apex, NC</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="car-dots"></div>
+        <div class="car-controls">
+          <button class="car-btn car-prev" aria-label="Previous">←</button>
+          <button class="car-btn car-next" aria-label="Next">→</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-block">
+  <div class="container">
+    <h2>Want to be the next case study?</h2>
+    <p>15 minutes on the phone. We'll look at your rankings, your competitors, and tell you straight whether we can help.</p>
+    <a href="/#contact" class="btn btn-primary btn-lg">Book a strategy call <span class="btn-arrow">→</span></a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="wordmark"><span class="wordmark-dot"></span>22 Local Marketing</a>
+        <p>The marketing engine for serious home service companies. Built by operators, run for results.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/#services">Local SEO</a></li>
+          <li><a href="/#services">Google Ads</a></li>
+          <li><a href="/#services">Websites</a></li>
+          <li><a href="/#services">GBP management</a></li>
+          <li><a href="/#services">Reporting</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/#about">About</a></li>
+          <li><a href="/results/">Results</a></li>
+          <li><a href="/pricing/">Pricing</a></li>
+          <li><a href="/knowledge-base/">Knowledge Base</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:connor@22localmarketing.com">connor@22localmarketing.com</a></li>
+          <li><a href="/#contact">Book a call</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 22 Local Marketing LLC. All rights reserved.</div>
+      <div>Built in-house. No templates were harmed.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ===== BEFORE / AFTER SLIDER =====
+function initBA(el) {
+  const after = el.querySelector('.ba-after');
+  const handle = el.querySelector('.ba-handle');
+  let dragging = false;
+
+  function setPosition(clientX) {
+    const rect = el.getBoundingClientRect();
+    let pct = ((clientX - rect.left) / rect.width) * 100;
+    pct = Math.max(0, Math.min(100, pct));
+    after.style.clipPath = `inset(0 ${100 - pct}% 0 0)`;
+    handle.style.left = pct + '%';
+  }
+
+  function onPointerDown(e) {
+    dragging = true;
+    el.style.cursor = 'grabbing';
+    const x = e.touches ? e.touches[0].clientX : e.clientX;
+    setPosition(x);
+  }
+  function onPointerMove(e) {
+    if (!dragging) return;
+    const x = e.touches ? e.touches[0].clientX : e.clientX;
+    setPosition(x);
+    if (e.touches) e.preventDefault();
+  }
+  function onPointerUp() {
+    dragging = false;
+    el.style.cursor = 'ew-resize';
+  }
+
+  el.addEventListener('mousedown', onPointerDown);
+  el.addEventListener('touchstart', onPointerDown, { passive: true });
+  document.addEventListener('mousemove', onPointerMove);
+  document.addEventListener('touchmove', onPointerMove, { passive: false });
+  document.addEventListener('mouseup', onPointerUp);
+  document.addEventListener('touchend', onPointerUp);
+
+  // Start at 50%
+  const rect = el.getBoundingClientRect();
+  setPosition(rect.left + rect.width / 2);
+}
+
+document.querySelectorAll('[data-ba]').forEach(initBA);
+
+// ===== CAROUSEL =====
+function initCarousel(el) {
+  const track = el.querySelector('.car-track');
+  const slides = track.querySelectorAll('.car-slide');
+  const prev = el.querySelector('.car-prev');
+  const next = el.querySelector('.car-next');
+  const dotsContainer = el.querySelector('.car-dots');
+  const counter = el.closest('.car-section').querySelector('[data-counter]');
+  const total = slides.length;
+  let i = 0;
+
+  // Build dots
+  for (let n = 0; n < total; n++) {
+    const dot = document.createElement('button');
+    dot.className = 'car-dot' + (n === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', 'Slide ' + (n + 1));
+    dot.addEventListener('click', () => go(n));
+    dotsContainer.appendChild(dot);
+  }
+  const dots = dotsContainer.querySelectorAll('.car-dot');
+
+  function updateCounter() {
+    if (counter) counter.textContent = String(i + 1).padStart(2, '0') + ' / ' + String(total).padStart(2, '0');
+  }
+
+  function go(n) {
+    i = (n + total) % total;
+    track.style.transform = 'translateX(-' + (i * 100) + '%)';
+    dots.forEach((d, idx) => d.classList.toggle('active', idx === i));
+    updateCounter();
+  }
+
+  prev.addEventListener('click', () => go(i - 1));
+  next.addEventListener('click', () => go(i + 1));
+
+  // Keyboard nav when carousel is hovered
+  el.addEventListener('mouseenter', () => el.dataset.focus = '1');
+  el.addEventListener('mouseleave', () => delete el.dataset.focus);
+
+  // Touch swipe
+  let startX = 0;
+  let startY = 0;
+  let swiping = false;
+  el.addEventListener('touchstart', e => {
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+    swiping = true;
+  }, { passive: true });
+  el.addEventListener('touchend', e => {
+    if (!swiping) return;
+    const dx = e.changedTouches[0].clientX - startX;
+    const dy = e.changedTouches[0].clientY - startY;
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) {
+      go(i + (dx < 0 ? 1 : -1));
+    }
+    swiping = false;
+  });
+
+  updateCounter();
+}
+
+document.querySelectorAll('[data-car]').forEach(initCarousel);
+
+// Global keyboard nav for whichever carousel is hovered
+document.addEventListener('keydown', e => {
+  const focused = document.querySelector('[data-car][data-focus]');
+  if (!focused) return;
+  if (e.key === 'ArrowRight') focused.querySelector('.car-next').click();
+  else if (e.key === 'ArrowLeft') focused.querySelector('.car-prev').click();
+});
+
+// ===== FILTER =====
+const filterBtns = document.querySelectorAll('.filter-btn');
+const cases = document.querySelectorAll('.case-study');
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    cases.forEach(c => {
+      c.classList.toggle('hidden', filter !== 'all' && c.dataset.vertical !== filter);
+    });
+  });
+});
+</script>
+
+</body>
+</html>

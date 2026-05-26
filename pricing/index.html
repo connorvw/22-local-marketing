@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing | 22 Local Marketing</title>
+<meta name="description" content="Three monthly tiers from $1,000 to $2,000. Month-to-month. No long contracts. The full breakdown of what's in each plan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --blaze: #FB5607;
+  --scorch: #C13D0E;
+  --bone: #F8F6F2;
+  --white: #FFFFFF;
+  --slate: #525252;
+  --slate-light: #8A8A8A;
+  --onyx: #0A0A0A;
+  --border: #E5E2DC;
+  --border-strong: #D4D0C8;
+  --success: #1F7A4D;
+  --success-bg: #E6F4EC;
+  --info-bg: #FFE8D9;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Sora', sans-serif;
+  background: var(--bone); color: var(--onyx);
+  font-size: 15px; line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "ss01", "ss02";
+}
+.container { max-width: 1180px; margin: 0 auto; padding: 0 40px; }
+
+/* ===== TOP NAV ===== */
+.topnav {
+  border-bottom: 1px solid var(--border);
+  background: rgba(248, 246, 242, 0.88);
+  position: sticky; top: 0; z-index: 50;
+  backdrop-filter: blur(10px);
+}
+.topnav-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 0;
+}
+.wordmark {
+  display: flex; align-items: center; gap: 8px;
+  font-weight: 700; font-size: 20px; letter-spacing: -0.03em;
+  color: var(--onyx); text-decoration: none;
+}
+.wordmark-dot { width: 10px; height: 10px; background: var(--blaze); border-radius: 2px; }
+.topnav-links { display: flex; gap: 28px; align-items: center; }
+.topnav-links a {
+  color: var(--slate); text-decoration: none; font-size: 14px; font-weight: 500;
+  transition: color 0.15s;
+}
+.topnav-links a:hover, .topnav-links a.active { color: var(--onyx); }
+.topnav-links a.active { font-weight: 600; }
+.topnav-cta {
+  background: var(--onyx); color: var(--white) !important;
+  padding: 9px 16px; border-radius: 6px; font-size: 13px; font-weight: 600;
+  text-decoration: none;
+}
+.topnav-cta:hover { background: var(--blaze); }
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 11px 18px; border-radius: 6px;
+  font-family: inherit; font-size: 14px; font-weight: 600;
+  border: 1px solid transparent; cursor: pointer;
+  text-decoration: none;
+  position: relative; overflow: hidden; isolation: isolate;
+  box-shadow: 3px 3px 0 0 var(--onyx);
+  transition: color 0.2s ease 0.22s, border-color 0.25s ease,
+              transform 0.1s ease, box-shadow 0.1s ease;
+}
+.btn:hover { transform: translate(1px, 1px); box-shadow: 2px 2px 0 0 var(--onyx); }
+.btn:active { transform: translate(3px, 3px); box-shadow: 0 0 0 0 var(--onyx); }
+.btn::before {
+  content: ''; position: absolute; top: 0; left: 0;
+  width: 100%; height: 100%; z-index: -1;
+  background: var(--scorch);
+  transform: translateX(-110%) skewX(-22deg);
+  transition: transform 0.55s cubic-bezier(0.77, 0, 0.18, 1);
+}
+.btn:hover::before { transform: translateX(-5%) skewX(-22deg); }
+.btn-primary { background: var(--blaze); color: var(--white); }
+.btn-primary::before { background: var(--scorch); }
+.btn-dark { background: var(--onyx); color: var(--white); }
+.btn-dark::before { background: var(--blaze); }
+.btn-secondary {
+  background: var(--white); color: var(--onyx);
+  border-color: var(--border-strong);
+}
+.btn-secondary::before { background: var(--blaze); }
+.btn-secondary:hover { border-color: var(--onyx); color: var(--white); }
+.btn-lg { padding: 14px 22px; font-size: 15px; }
+.btn-arrow { display: inline-block; transition: transform 0.25s; }
+.btn:hover .btn-arrow { transform: translateX(3px); }
+
+/* ===== HERO ===== */
+.page-hero { padding: 88px 0 56px; }
+.eyebrow-rugged {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: 'Sora', sans-serif; font-weight: 500;
+  font-size: 13px; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--blaze);
+  margin-bottom: 28px;
+}
+.eb-dash { display: inline-block; width: 28px; height: 2px; background: var(--blaze); }
+.eb-sep { color: var(--slate-light); }
+.hero-frame {
+  position: relative; display: inline-block;
+  padding: 14px 22px 10px;
+  margin-bottom: 26px;
+}
+.hero-frame::before, .hero-frame::after {
+  content: ''; position: absolute;
+  width: 22px; height: 22px;
+  border: 2px solid var(--blaze);
+}
+.hero-frame::before { top: 0; left: 0; border-right: 0; border-bottom: 0; }
+.hero-frame::after { bottom: 0; right: 0; border-left: 0; border-top: 0; }
+.page-hero h1 {
+  font-size: clamp(2.75rem, 6vw, 4.5rem);
+  line-height: 0.98; letter-spacing: -0.04em;
+  font-weight: 700; max-width: 920px;
+}
+.page-hero h1 .accent { color: var(--blaze); }
+.page-hero p.lead {
+  font-size: 20px; line-height: 1.5; color: var(--slate);
+  max-width: 680px; margin-top: 22px;
+}
+
+/* ===== PRICING CARDS ===== */
+.pricing-cards {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
+  margin: 48px 0 64px;
+}
+.plan {
+  background: var(--white); border: 1px solid var(--onyx);
+  border-radius: 14px; padding: 32px 28px;
+  position: relative;
+  display: flex; flex-direction: column;
+  box-shadow: 4px 4px 0 0 var(--onyx);
+}
+.plan.featured {
+  background: var(--onyx); color: var(--white);
+  border-color: var(--onyx);
+  box-shadow: 4px 4px 0 0 var(--blaze);
+  transform: translateY(-12px);
+}
+.plan-tag {
+  position: absolute; top: -14px; left: 28px;
+  background: var(--blaze); color: var(--white);
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 6px 12px; border-radius: 4px;
+  border: 1px solid var(--onyx);
+}
+.plan-name {
+  font-size: 13px; font-weight: 600;
+  color: var(--blaze); letter-spacing: 0.1em;
+  text-transform: uppercase; margin-bottom: 10px;
+}
+.plan-headline {
+  font-size: 24px; font-weight: 700;
+  letter-spacing: -0.025em; margin-bottom: 6px;
+}
+.plan.featured .plan-headline { color: var(--white); }
+.plan-price {
+  display: flex; align-items: baseline; gap: 6px;
+  margin: 18px 0 4px;
+}
+.plan-price .amt {
+  font-size: 52px; font-weight: 700;
+  letter-spacing: -0.04em; line-height: 1;
+}
+.plan-price .per {
+  font-size: 14px; color: var(--slate); font-weight: 500;
+}
+.plan.featured .plan-price .per { color: var(--slate-light); }
+.plan-blurb {
+  font-size: 14px; color: var(--slate);
+  line-height: 1.55; margin-bottom: 22px;
+}
+.plan.featured .plan-blurb { color: #c8c8c8; }
+.plan-cta {
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: 8px;
+  padding: 12px 18px; border-radius: 6px;
+  font-size: 14px; font-weight: 600;
+  text-decoration: none;
+  border: 1px solid var(--onyx);
+  background: var(--white); color: var(--onyx);
+  box-shadow: 3px 3px 0 0 var(--onyx);
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.15s ease;
+}
+.plan-cta:hover {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0 0 var(--blaze);
+  background: var(--blaze); color: var(--white);
+  border-color: var(--blaze);
+}
+.plan.featured .plan-cta {
+  background: var(--blaze); color: var(--white);
+  border-color: var(--blaze);
+  box-shadow: 3px 3px 0 0 var(--white);
+}
+.plan.featured .plan-cta:hover {
+  background: var(--white); color: var(--onyx);
+  border-color: var(--white);
+  box-shadow: 2px 2px 0 0 var(--white);
+}
+.plan-included {
+  list-style: none; margin-top: 22px;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.plan-included li {
+  font-size: 13px; line-height: 1.5;
+  display: flex; gap: 9px; align-items: flex-start;
+}
+.plan-included li::before {
+  content: '✓'; color: var(--blaze);
+  font-weight: 700; flex-shrink: 0;
+}
+
+/* ===== COMPARE GRID ===== */
+.compare-section { padding: 72px 0 96px; border-top: 1px solid var(--border); }
+.compare-head {
+  display: flex; align-items: baseline; gap: 16px;
+  margin-bottom: 32px;
+}
+.compare-head h2 {
+  font-size: 32px; font-weight: 700;
+  letter-spacing: -0.03em;
+  position: relative; padding: 2px 0 0;
+}
+.compare-head h2::before, .compare-head h2::after {
+  content: ''; position: absolute;
+  width: 12px; height: 12px; border: 2px solid var(--blaze);
+}
+.compare-head h2::before { top: 0; left: -20px; border-right: 0; border-bottom: 0; }
+.compare-head h2::after { bottom: 0; right: -20px; border-left: 0; border-top: 0; }
+.compare-head .desc {
+  font-size: 14px; color: var(--slate); margin-left: auto;
+}
+
+.compare-table {
+  width: 100%; border-collapse: collapse;
+  background: var(--white);
+  border: 1px solid var(--onyx);
+  border-radius: 10px; overflow: hidden;
+  box-shadow: 4px 4px 0 0 var(--onyx);
+}
+.compare-table thead tr {
+  background: var(--bone);
+  border-bottom: 2px solid var(--blaze);
+}
+.compare-table th {
+  text-align: left; padding: 18px 22px;
+  font-size: 13px; font-weight: 700;
+  color: var(--onyx);
+  letter-spacing: 0.04em;
+}
+.compare-table th.plan-th {
+  text-align: center;
+  font-family: 'Sora', sans-serif;
+  text-transform: uppercase; letter-spacing: 0.1em;
+  font-size: 12px; color: var(--blaze);
+  font-weight: 700;
+  width: 18%;
+}
+.compare-table th.plan-th.featured-col {
+  color: var(--white); background: var(--onyx);
+  position: relative;
+}
+.compare-table th.plan-th.featured-col::after {
+  content: 'Most popular';
+  position: absolute; top: 6px; left: 50%; transform: translateX(-50%);
+  font-size: 9px; color: var(--blaze);
+  font-weight: 700; letter-spacing: 0.1em;
+}
+.compare-table th.plan-th .plan-th-price {
+  display: block; font-size: 22px; font-weight: 700;
+  color: var(--onyx); letter-spacing: -0.02em;
+  margin-top: 6px;
+}
+.compare-table th.plan-th.featured-col .plan-th-price { color: var(--white); }
+
+.compare-table tbody tr {
+  border-bottom: 1px solid var(--border);
+}
+.compare-table tbody tr:last-child { border-bottom: none; }
+.compare-table tbody tr.section-row td {
+  background: var(--bone);
+  font-weight: 700; font-size: 11px;
+  color: var(--blaze);
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 12px 22px;
+}
+.compare-table td {
+  padding: 14px 22px; font-size: 13.5px;
+  vertical-align: middle;
+}
+.compare-table td.feature-name {
+  font-weight: 500; color: var(--onyx);
+}
+.compare-table td.plan-cell {
+  text-align: center;
+  color: var(--slate);
+  font-size: 12.5px;
+}
+.compare-table td.featured-cell {
+  background: rgba(251, 86, 7, 0.04);
+  font-weight: 500; color: var(--onyx);
+}
+.check { color: var(--blaze); font-size: 18px; font-weight: 700; }
+.x { color: var(--border-strong); font-size: 16px; }
+
+/* ===== TIMELINE ===== */
+.timeline-section { padding: 72px 0 96px; border-top: 1px solid var(--border); background: var(--white); }
+.timeline-head { margin-bottom: 48px; }
+.timeline-head h2 {
+  font-size: 32px; font-weight: 700;
+  letter-spacing: -0.03em;
+  position: relative;
+  padding: 2px 0 0;
+  display: inline-block;
+}
+.timeline-head h2::before, .timeline-head h2::after {
+  content: ''; position: absolute;
+  width: 12px; height: 12px; border: 2px solid var(--blaze);
+}
+.timeline-head h2::before { top: 0; left: -20px; border-right: 0; border-bottom: 0; }
+.timeline-head h2::after { bottom: 0; right: -20px; border-left: 0; border-top: 0; }
+.timeline-head .desc {
+  font-size: 14px; color: var(--slate);
+  margin-top: 10px; max-width: 580px;
+}
+
+.timeline-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
+}
+.tl-card {
+  background: var(--bone); border: 1px solid var(--onyx);
+  border-radius: 12px; padding: 28px;
+  box-shadow: 4px 4px 0 0 var(--onyx);
+}
+.tl-when {
+  font-size: 12px; font-weight: 700;
+  color: var(--blaze); letter-spacing: 0.1em;
+  text-transform: uppercase; margin-bottom: 12px;
+}
+.tl-title {
+  font-size: 22px; font-weight: 700;
+  letter-spacing: -0.02em; line-height: 1.15;
+  margin-bottom: 10px;
+}
+.tl-body {
+  font-size: 13.5px; color: var(--slate);
+  line-height: 1.55;
+}
+
+.accel-note {
+  margin-top: 36px;
+  padding: 22px 26px;
+  background: var(--onyx); color: var(--white);
+  border-radius: 10px;
+  display: flex; align-items: flex-start; gap: 18px;
+  border: 1px solid var(--onyx);
+  box-shadow: 4px 4px 0 0 var(--blaze);
+}
+.accel-note .label {
+  font-family: 'Sora', sans-serif; font-weight: 700;
+  font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--blaze);
+  padding: 6px 10px; border: 1px solid var(--blaze);
+  border-radius: 4px; white-space: nowrap;
+}
+.accel-note .text {
+  font-size: 14px; line-height: 1.55; color: #c8c8c8;
+}
+.accel-note .text strong { color: var(--white); font-weight: 600; }
+
+/* ===== AD BUDGET NOTE ===== */
+.ad-note {
+  margin: 48px 0 0;
+  padding: 28px 32px;
+  background: var(--info-bg);
+  border: 1px solid var(--blaze);
+  border-radius: 10px;
+}
+.ad-note h3 {
+  font-size: 18px; font-weight: 700;
+  letter-spacing: -0.01em; margin-bottom: 8px;
+  color: var(--scorch);
+}
+.ad-note p {
+  font-size: 14px; color: var(--onyx);
+  line-height: 1.6; max-width: 720px;
+}
+
+/* ===== CTA BLOCK ===== */
+.cta-block {
+  padding: 80px 0 96px;
+  text-align: center;
+  background: var(--onyx); color: var(--white);
+}
+.cta-block h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700; letter-spacing: -0.03em;
+  line-height: 1.05; max-width: 720px;
+  margin: 0 auto 20px;
+}
+.cta-block p {
+  font-size: 17px; color: #c8c8c8;
+  max-width: 540px; margin: 0 auto 32px;
+  line-height: 1.5;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: var(--bone); padding: 56px 0 32px;
+  border-top: 1px solid var(--border);
+}
+.footer-grid {
+  display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 56px; margin-bottom: 48px;
+}
+.footer-brand p {
+  font-size: 13px; color: var(--slate);
+  margin-top: 16px; max-width: 320px; line-height: 1.6;
+}
+.footer-col h4 {
+  font-size: 12px; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--onyx); margin-bottom: 16px;
+}
+.footer-col ul { list-style: none; display: grid; gap: 10px; }
+.footer-col a {
+  font-size: 13px; color: var(--slate); text-decoration: none;
+}
+.footer-col a:hover { color: var(--blaze); }
+.footer-bottom {
+  border-top: 1px solid var(--border);
+  padding-top: 24px;
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 12px; color: var(--slate-light);
+}
+
+@media (max-width: 980px) {
+  .pricing-cards { grid-template-columns: 1fr; }
+  .plan.featured { transform: none; }
+  .compare-table { font-size: 12px; }
+  .compare-table th, .compare-table td { padding: 10px 12px; }
+  .timeline-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .topnav-links a:not(.topnav-cta) { display: none; }
+  .compare-head h2::after { display: none; }
+}
+@media (max-width: 720px) {
+  .container { padding: 0 22px; }
+  .compare-table thead th.plan-th { font-size: 10px; }
+  .compare-table thead th.plan-th .plan-th-price { font-size: 16px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="topnav">
+  <div class="container topnav-inner">
+    <a href="/" class="wordmark"><span class="wordmark-dot"></span>22 Local Marketing</a>
+    <div class="topnav-links">
+      <a href="/#services">Services</a>
+      <a href="/results/">Results</a>
+      <a href="/pricing/" class="active">Pricing</a>
+      <a href="/knowledge-base/">Knowledge Base</a>
+      <a href="/#about">About</a>
+      <a href="/#contact" class="topnav-cta">Free strategy call</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="page-hero">
+  <div class="container">
+    <div class="eyebrow-rugged">
+      <span class="eb-dash"></span>
+      <span>PRICING</span>
+      <span class="eb-sep">·</span>
+      <span>MONTH TO MONTH</span>
+    </div>
+    <div class="hero-frame">
+      <h1>Three plans. <span class="accent">No long contracts.</span></h1>
+    </div>
+    <p class="lead">Pick the plan that matches where you are. Ramp up when you're ready. Cancel any time. Ad spend is billed separately and goes straight to Google.</p>
+  </div>
+</header>
+
+<!-- PRICING CARDS -->
+<section class="container">
+  <div class="pricing-cards">
+
+    <div class="plan">
+      <div class="plan-name">Foundation</div>
+      <div class="plan-headline">Get the foundation right.</div>
+      <div class="plan-price"><span class="amt">$1,000</span><span class="per">/ month</span></div>
+      <div class="plan-blurb">For owners who need a real website, an optimized GBP, and a steady drip of content. The base every campaign needs.</div>
+      <a href="/#contact" class="plan-cta">Get started <span class="btn-arrow">→</span></a>
+      <ul class="plan-included">
+        <li>Website hosting, security, speed, unlimited updates</li>
+        <li>GBP optimization + 4 posts / month</li>
+        <li>2 service or location pages / month</li>
+        <li>1 blog post / month</li>
+        <li>Foundational citation cleanup</li>
+        <li>LSA (Google Guaranteed) setup</li>
+        <li>Lead CRM + spam filter + call tracking</li>
+        <li>Monthly PDF lead report</li>
+      </ul>
+    </div>
+
+    <div class="plan featured">
+      <div class="plan-tag">Most popular</div>
+      <div class="plan-name">Growth</div>
+      <div class="plan-headline">Where most of our clients live.</div>
+      <div class="plan-price"><span class="amt">$1,500</span><span class="per">/ month</span></div>
+      <div class="plan-blurb">Everything in Foundation, plus paid acquisition, faster content cadence, and a real reporting dashboard you can check any time.</div>
+      <a href="/#contact" class="plan-cta">Get started <span class="btn-arrow">→</span></a>
+      <ul class="plan-included">
+        <li>Everything in Foundation</li>
+        <li>Google Ads management</li>
+        <li>GBP posts: 8 / month</li>
+        <li>4 service or location pages / month</li>
+        <li>2 blog posts / month</li>
+        <li>3–5 backlinks / month</li>
+        <li>Annual photo &amp; video capture day</li>
+        <li>Real-time reporting dashboard</li>
+        <li>Quarterly strategy call</li>
+      </ul>
+    </div>
+
+    <div class="plan">
+      <div class="plan-name">Dominate</div>
+      <div class="plan-headline">Own your market.</div>
+      <div class="plan-price"><span class="amt">$2,000</span><span class="per">/ month</span></div>
+      <div class="plan-blurb">For owners who want to be the obvious answer. Multi-channel paid, aggressive content, topical authority, and a monthly seat at the strategy table.</div>
+      <a href="/#contact" class="plan-cta">Get started <span class="btn-arrow">→</span></a>
+      <ul class="plan-included">
+        <li>Everything in Growth</li>
+        <li>Meta Ads (Facebook + Instagram)</li>
+        <li>GBP posts: 12 / month</li>
+        <li>8 service or location pages / month</li>
+        <li>4 blog posts / month</li>
+        <li>8–10 backlinks / month</li>
+        <li>2x annual photo &amp; video capture days</li>
+        <li>Topical clusters + hub-and-spoke linking</li>
+        <li>Monthly strategy call</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- COMPARE -->
+<section class="compare-section">
+  <div class="container">
+    <div class="compare-head">
+      <h2>Full feature breakdown.</h2>
+      <span class="desc">Everything in every plan. No fine print.</span>
+    </div>
+
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th class="plan-th">Foundation<span class="plan-th-price">$1,000</span></th>
+          <th class="plan-th featured-col">Growth<span class="plan-th-price">$1,500</span></th>
+          <th class="plan-th">Dominate<span class="plan-th-price">$2,000</span></th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr class="section-row"><td colspan="4">Paid ads</td></tr>
+        <tr>
+          <td class="feature-name">Local Service Ads (LSA) · Google Guaranteed</td>
+          <td class="plan-cell"><span class="check">✓</span></td>
+          <td class="plan-cell featured-cell"><span class="check">✓</span></td>
+          <td class="plan-cell"><span class="check">✓</span></td>
+        </tr>
+        <tr>
+          <td class="feature-name">Google Ads management</td>
+          <td class="plan-cell"><span class="x">—</span></td>
+          <td class="plan-cell featured-cell"><span class="check">✓</span></td>
+          <td class="plan-cell"><span class="check">✓</span></td>
+        </tr>
+        <tr>
+          <td class="feature-name">Meta Ads (Facebook + Instagram)</td>
+          <td class="plan-cell"><span class="x">—</span></td>
+          <td class="plan-cell featured-cell"><span class="x">—</span></td>
+          <td class="plan-cell"><span class="check">✓</span></td>
+        </tr>
+        <tr>
+          <td class="feature-name">Apple Maps Ads</td>
+          <td class="plan-cell">Roadmap</td>
+          <td class="plan-cell featured-cell">Roadmap</td>
+          <td class="plan-cell">Roadmap, priority</td>
+        </tr>
+
+        <tr class="section-row"><td colspan="4">Google Business Profile</td></tr>
+        <tr>
+          <td class="feature-name">Initial &amp; ongoing optimization</td>
+          <td class="plan-cell"><span class="check">✓</span></td>
+          <td class="plan-cell featured-cell"><span class="check">✓</span></td>
+          <td class="plan-cell"><span class="check">✓</span></td>
+        </tr>
+        <tr>
+          <td class="feature-name">Review management</td>
+          <td class="plan-cell"><span class="check">✓</span></td>
+          <td class="plan-cell featured-cell"><span class="check">✓</span></td>
+          <td class="plan-cell"><span class="check">✓</span></td>
+        </tr>
+        <tr>
+          <td class="feature-name">GBP posts</td>
+          <td class="plan-cell">4 / month</td>
+          <td class="plan-cell featured-cell">8 / month</td>
+          <td class="plan-cell">12 / month</td>
+        </tr>
+        <tr>
+          <td class="feature-name">Description &amp; service optimization</td>
+          <td class="plan-cell"><span class="x">—</span></td>
+          <td class="plan-cell featured-cell"><span class="check">✓</span></td>
+          <td class="plan-cell"><span class="check">✓</span></td>
+        </tr>
+        <tr>
+          <td class="feature-name">Citation cleanup &amp; building</td>
+          <td class="plan-cell">Cleanup · NAP sweep</td>
+          <td class="plan-cell featured-cell">Cleanup + monthly placements</td>
+          <td class="plan-cell">Premium cleanup + high-authority</td>
+        </tr>
+
+        <tr class="section-row"><td colspan="4">Website</td></tr>
+        <tr>
+          <td class="feature-name">Managed hosting</td>
+          <td class="plan-cell"><span class="check">✓</span></td>
+          <td class="plan-cell featured-cell"><span class="check">✓</span></td>
+          <td class="plan-cell"><span class="check">✓</span></td>
+        </tr>
+        <tr>
+          <td class="feature-name">Security &amp; maintenance</td>
+          <td class="plan-cell"><span class="check">✓</span></td>
+          <td class="plan-cell featured-cell"><span class="check">✓</span></td>
+          <td class="plan-cell"><span class="check">✓</span></td>
+        </tr>
+        <tr>
+          <td class="feature-name">Speed optimization</td>
+          <td class="plan-cell"><span class="check">✓</span></td>
+          <td class="plan-cell featured-cell"><span class="check">✓</span></td>
+          <td class="plan-cell"><span class="check">✓</span></td>
+        </tr>
+        <tr>
+          <td class="feature-name">Unlimited site updates</td>
+          <td class="plan-cell"><span class="check">✓</span></td>
+          <td class="plan-cell featured-cell"><span class="check">✓</span></td>
+          <td class="plan-cell"><span class="check">✓</span></td>
+        </tr>
+
+        <tr class="section-row"><td colspan="4">Content &amp; SEO</td></tr>
+        <tr>
+          <td class="feature-name">Service &amp; location pages</td>
+          <td class="plan-cell">2 / month</td>
+          <td class="plan-cell featured-cell">4 / month</td>
+          <td class="plan-cell">8 / month</td>
+        </tr>
+        <tr>
+          <td class="feature-name">Blog content</td>
+          <td class="plan-cell">1 / month</td>
+          <td class="plan-cell featured-cell">2 / month</td>
+          <td class="plan-cell">4 / month</td>
+        </tr>
+        <tr>
+          <td class="feature-name">Internal linking</td>
+          <td class="plan-cell">Basic install</td>
+          <td class="plan-cell featured-cell">Monthly optimization</td>
+          <td class="plan-cell">Topical clusters + hubs</td>
+        </tr>
+        <tr>
+          <td class="feature-name">Pro photo &amp; video capture</td>
+          <td class="plan-cell"><span class="x">—</span></td>
+          <td class="plan-cell featured-cell">1× / year</td>
+          <td class="plan-cell">2× / year</td>
+        </tr>
+        <tr>
+          <td class="feature-name">Keyword research &amp; targeting</td>
+          <td class="plan-cell"><span class="check">✓</span></td>
+          <td class="plan-cell featured-cell"><span class="check">✓</span></td>
+          <td class="plan-cell"><span class="check">✓</span></td>
+        </tr>
+        <tr>
+          <td class="feature-name">Backlink building</td>
+          <td class="plan-cell"><span class="x">—</span></td>
+          <td class="plan-cell featured-cell">3–5 / month</td>
+          <td class="plan-cell">8–10 / month</td>
+        </tr>
+        <tr>
+          <td class="feature-name">AI search optimization</td>
+          <td class="plan-cell"><span class="check">✓</span></td>
+          <td class="plan-cell featured-cell"><span class="check">✓</span></td>
+          <td class="plan-cell"><span class="check">✓</span></td>
+        </tr>
+
+        <tr class="section-row"><td colspan="4">Lead management &amp; reporting</td></tr>
+        <tr>
+          <td class="feature-name">Lead Management System (CRM)</td>
+          <td class="plan-cell"><span class="check">✓</span></td>
+          <td class="plan-cell featured-cell"><span class="check">✓</span></td>
+          <td class="plan-cell"><span class="check">✓</span></td>
+        </tr>
+        <tr>
+          <td class="feature-name">Lead follow-up automations</td>
+          <td class="plan-cell">Standard templates</td>
+          <td class="plan-cell featured-cell">Per-service intake</td>
+          <td class="plan-cell">+ custom workflows</td>
+        </tr>
+        <tr>
+          <td class="feature-name">AI spam filter</td>
+          <td class="plan-cell"><span class="check">✓</span></td>
+          <td class="plan-cell featured-cell"><span class="check">✓</span></td>
+          <td class="plan-cell"><span class="check">✓</span></td>
+        </tr>
+        <tr>
+          <td class="feature-name">Review funnel</td>
+          <td class="plan-cell"><span class="check">✓</span></td>
+          <td class="plan-cell featured-cell"><span class="check">✓</span></td>
+          <td class="plan-cell"><span class="check">✓</span></td>
+        </tr>
+        <tr>
+          <td class="feature-name">Call tracking</td>
+          <td class="plan-cell"><span class="check">✓</span></td>
+          <td class="plan-cell featured-cell"><span class="check">✓</span></td>
+          <td class="plan-cell"><span class="check">✓</span></td>
+        </tr>
+        <tr>
+          <td class="feature-name">Monthly PDF lead report</td>
+          <td class="plan-cell"><span class="check">✓</span></td>
+          <td class="plan-cell featured-cell"><span class="check">✓</span></td>
+          <td class="plan-cell"><span class="check">✓</span></td>
+        </tr>
+        <tr>
+          <td class="feature-name">Real-time reporting dashboard</td>
+          <td class="plan-cell"><span class="x">—</span></td>
+          <td class="plan-cell featured-cell"><span class="check">✓</span></td>
+          <td class="plan-cell"><span class="check">✓</span></td>
+        </tr>
+        <tr>
+          <td class="feature-name">Strategy call cadence</td>
+          <td class="plan-cell">Async (email / SMS)</td>
+          <td class="plan-cell featured-cell">Quarterly</td>
+          <td class="plan-cell">Monthly</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="ad-note">
+      <h3>A straight note on ad spend.</h3>
+      <p>Results vary based on competition, market, and budget. Google Ads spend is <strong>not included</strong> in the management fee — it's paid directly to Google. For most home service markets we recommend at least <strong>$1,500 / month</strong> in ad budget to see meaningful return. We'll set expectations honestly on the strategy call.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="timeline-section">
+  <div class="container">
+    <div class="timeline-head">
+      <h2>Honest timeline expectations.</h2>
+      <p class="desc">SEO compounds. Paid is faster. Here's roughly how the first year shakes out.</p>
+    </div>
+
+    <div class="timeline-grid">
+      <div class="tl-card">
+        <div class="tl-when">Months 1–3</div>
+        <div class="tl-title">Early momentum.</div>
+        <div class="tl-body">Foundation goes in — new site, fresh GBP, tracking, baseline content. Leads start flowing from LSA, GBP, and paid (if on Growth or Dominate) while organic indexes.</div>
+      </div>
+      <div class="tl-card">
+        <div class="tl-when">Months 3–6</div>
+        <div class="tl-title">Noticeable growth.</div>
+        <div class="tl-body">Service and location pages start ranking. Reviews stack up. Organic traffic kicks in. Paid efficiency improves as data accrues and we cut what doesn't work.</div>
+      </div>
+      <div class="tl-card">
+        <div class="tl-when">Months 6–12+</div>
+        <div class="tl-title">Market domination.</div>
+        <div class="tl-body">You're in the map pack. You're answering questions buyers ask before they call. Organic dominates lead volume, paid plays defense, cost per lead drops.</div>
+      </div>
+    </div>
+
+    <div class="accel-note">
+      <span class="label">Accelerated track</span>
+      <div class="text"><strong>Want results faster?</strong> Growth and Dominate include managed Google Ads from day one. Paid lead flow starts in week one while SEO works in the background. Most clients see their first qualified lead inside 14 days.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-block">
+  <div class="container">
+    <h2>Not sure which plan?<br>That's what the call is for.</h2>
+    <p>15 minutes. We'll look at your current rankings, your competitors, and your goals. Then we'll tell you straight which tier fits.</p>
+    <a href="/#contact" class="btn btn-primary btn-lg">Book a strategy call <span class="btn-arrow">→</span></a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="wordmark"><span class="wordmark-dot"></span>22 Local Marketing</a>
+        <p>The marketing engine for serious home service companies. Built by operators, run for results.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/#services">Local SEO</a></li>
+          <li><a href="/#services">Google Ads</a></li>
+          <li><a href="/#services">Websites</a></li>
+          <li><a href="/#services">GBP management</a></li>
+          <li><a href="/#services">Reporting</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/#about">About</a></li>
+          <li><a href="/results/">Results</a></li>
+          <li><a href="/pricing/">Pricing</a></li>
+          <li><a href="/knowledge-base/">Knowledge Base</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:connor@22localmarketing.com">connor@22localmarketing.com</a></li>
+          <li><a href="/#contact">Book a call</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 22 Local Marketing LLC. All rights reserved.</div>
+      <div>Built in-house. No templates were harmed.</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
