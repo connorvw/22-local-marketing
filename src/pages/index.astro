@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import QuoteForm from '../components/QuoteForm.astro';
 ---
 
 <BaseLayout title="22 Local Marketing | Home services marketing that grows revenue">
@@ -19,41 +20,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
       <p class="hero-sub">We build the websites, SEO, and paid campaigns that move trades businesses from booked-out-by-luck to booked-out-by-system. Every dollar tied back to revenue.</p>
       <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary btn-lg">Get a free audit <span class="btn-arrow">→</span></a>
+        <a href="#contact" class="btn btn-primary btn-lg" data-quote>Get a free audit <span class="btn-arrow">→</span></a>
         <a href="#services" class="btn btn-secondary btn-lg">See what we do</a>
       </div>
     </div>
 
-    <form class="hero-form" onsubmit="event.preventDefault(); alert('Demo form. Wire to your CRM.');">
-      <div class="hero-form-eyebrow">→ Start here</div>
-      <h3>Get a free site audit</h3>
-      <p class="hero-form-desc">We review your site, GBP, and ads. You get a 1-page action list within 48 hours.</p>
-      <div class="field-row">
-        <div class="field"><label class="field-label">First name</label><input class="input" type="text" placeholder="Jane"></div>
-        <div class="field"><label class="field-label">Last name</label><input class="input" type="text" placeholder="Doe"></div>
-      </div>
-      <div class="field-row">
-        <div class="field"><label class="field-label">Email</label><input class="input" type="email" placeholder="you@company.com"></div>
-        <div class="field"><label class="field-label">Phone</label><input class="input" type="tel" placeholder="(555) 555-5555"></div>
-      </div>
-      <div class="field-row">
-        <div class="field"><label class="field-label">Business name</label><input class="input" type="text" placeholder="Acme Tree Service"></div>
-        <div class="field"><label class="field-label">City</label><input class="input" type="text" placeholder="Raleigh, NC"></div>
-      </div>
-      <div class="field-row">
-        <div class="field"><label class="field-label">Website</label><input class="input" type="url" placeholder="https://..."></div>
-        <div class="field">
-          <label class="field-label">Service category</label>
-          <select class="select">
-            <option>Tree services</option><option>Land clearing</option><option>Electrical</option>
-            <option>Plumbing</option><option>HVAC</option><option>Landscaping</option><option>Other trades</option>
-          </select>
-        </div>
-      </div>
-      <button type="submit" class="btn btn-dark btn-lg" style="width:100%; justify-content:center; margin-top:8px;">
-        Request my audit <span class="btn-arrow">→</span>
-      </button>
-    </form>
+    <QuoteForm />
   </div>
 </header>
 
@@ -159,7 +131,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <h3 class="tp-name" id="tp-name">Tree services</h3>
         <p class="tp-tagline" id="tp-tagline">Highest-intent vertical in home services. Emergency work alone usually pays for the marketing.</p>
         <div class="tp-services" id="tp-services"></div>
-        <a href="#contact" class="btn btn-primary tp-cta">Build a campaign <span class="btn-arrow">→</span></a>
+        <a href="#contact" class="btn btn-primary tp-cta" data-quote>Build a campaign <span class="btn-arrow">→</span></a>
       </div>
       <div class="trade-list" id="trade-list">
         <button type="button" class="trade-row active" data-trade="tree-services"><span class="trade-row-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L6 10h3l-4 6h4l-4 6h14l-4-6h4l-4-6h3z"/><line x1="12" y1="22" x2="12" y2="18"/></svg></span><span class="trade-row-content"><span class="trade-row-name">Tree services</span><span class="trade-row-meta">Removal, pruning, stump grinding, emergency</span></span><span class="trade-row-arrow">→</span></button>
@@ -227,7 +199,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="review-sum-score">5.0</div>
         <div><div class="review-sum-stars">★★★★★</div><div class="review-sum-text">Across 36 verified 5-star Google reviews</div></div>
       </div>
-      <a href="#contact" class="btn btn-secondary">Talk to a client →</a>
+      <a href="#contact" class="btn btn-secondary" data-quote>Talk to a client →</a>
     </div>
   </div>
 </section>
@@ -266,7 +238,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div class="about-bullet"><div class="about-bullet-tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></div><div>Real photos, real copy, no templates.</div></div>
           <div class="about-bullet"><div class="about-bullet-tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></div><div>One direct line of contact. Not a ticket queue.</div></div>
         </div>
-        <a href="#contact" class="btn btn-primary btn-lg">Book a strategy call <span class="btn-arrow">→</span></a>
+        <a href="#contact" class="btn btn-primary btn-lg" data-quote>Book a strategy call <span class="btn-arrow">→</span></a>
       </div>
       <div class="about-card">
         <div class="about-card-eyebrow">→ Founder</div>
@@ -305,16 +277,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="cta-eyebrow">→ Free 30-minute call</div>
         <h2>Let's see if the numbers work.</h2>
         <p>One call, no pitch deck. We look at your business, your market, and tell you straight whether we can move the needle. If not, we point you at someone who can.</p>
-        <div class="cta-actions">
-          <a href="mailto:connor@22localmarketing.com" class="btn btn-primary btn-lg">Book the call <span class="btn-arrow">→</span></a>
-          <a href="#services" class="btn btn-secondary btn-lg">See services</a>
+        <div class="cta-points">
+          <div class="cta-point"><div class="cta-point-num">→</div><div><div class="cta-point-title">No pitch deck</div><div class="cta-point-desc">We come ready to talk about your business, not ours.</div></div></div>
+          <div class="cta-point"><div class="cta-point-num">→</div><div><div class="cta-point-title">Honest answer</div><div class="cta-point-desc">If we can't help, we say so on the call.</div></div></div>
+          <div class="cta-point"><div class="cta-point-num">→</div><div><div class="cta-point-title">Audit included</div><div class="cta-point-desc">You leave with a 1-page action list whether you hire us or not.</div></div></div>
         </div>
       </div>
-      <div class="cta-points">
-        <div class="cta-point"><div class="cta-point-num">→</div><div><div class="cta-point-title">No pitch deck</div><div class="cta-point-desc">We come ready to talk about your business, not ours.</div></div></div>
-        <div class="cta-point"><div class="cta-point-num">→</div><div><div class="cta-point-title">Honest answer</div><div class="cta-point-desc">If we can't help, we say so on the call.</div></div></div>
-        <div class="cta-point"><div class="cta-point-num">→</div><div><div class="cta-point-title">Audit included</div><div class="cta-point-desc">You leave with a 1-page action list whether you hire us or not.</div></div></div>
-      </div>
+      <QuoteForm />
     </div>
   </div>
 </section>
@@ -502,7 +471,7 @@ button.video-thumb-yt .video-play { position: relative; z-index: 2; }
 .yt-iframe { width: 100%; aspect-ratio: 16 / 9; border: 0; display: block; }
 
 /* ===== CTA BLOCK ===== */
-.cta-block { background: var(--onyx); color: var(--white); border-radius: 14px; padding: 64px 56px; position: relative; overflow: hidden; display: grid; grid-template-columns: 1.3fr 1fr; gap: 56px; align-items: center; }
+.cta-block { background: var(--onyx); color: var(--white); border-radius: 14px; padding: 56px 48px; position: relative; overflow: hidden; display: grid; grid-template-columns: 1fr 1.05fr; gap: 48px; align-items: center; }
 .cta-block::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 90% 30%, rgba(251,86,7,0.18), transparent 60%); }
 .cta-block > * { position: relative; z-index: 1; }
 .cta-eyebrow { font-family: 'Sora', sans-serif; font-size: 11px; color: var(--blaze); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 18px; font-weight: 700; }

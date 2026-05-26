@@ -1,0 +1,120 @@
+---
+interface Props {
+  variant?: 'card' | 'plain';
+  eyebrow?: string;
+  title?: string;
+  description?: string;
+  submitLabel?: string;
+}
+const {
+  variant = 'card',
+  eyebrow = '→ Start here',
+  title = 'Get a free site audit',
+  description = "We review your site, GBP, and ads. You get a 1-page action list within 48 hours.",
+  submitLabel = 'Request my audit',
+} = Astro.props;
+---
+
+<form class={`quote-form quote-form-${variant}`} onsubmit="event.preventDefault(); alert('Demo form. Wire to your CRM.');">
+  <div class="qf-eyebrow">{eyebrow}</div>
+  <h3 class="qf-title">{title}</h3>
+  <p class="qf-desc">{description}</p>
+  <div class="qf-row">
+    <div class="qf-field"><label class="qf-label">First name</label><input class="qf-input" type="text" placeholder="Jane"></div>
+    <div class="qf-field"><label class="qf-label">Last name</label><input class="qf-input" type="text" placeholder="Doe"></div>
+  </div>
+  <div class="qf-row">
+    <div class="qf-field"><label class="qf-label">Email</label><input class="qf-input" type="email" placeholder="you@company.com"></div>
+    <div class="qf-field"><label class="qf-label">Phone</label><input class="qf-input" type="tel" placeholder="(555) 555-5555"></div>
+  </div>
+  <div class="qf-row">
+    <div class="qf-field"><label class="qf-label">Business name</label><input class="qf-input" type="text" placeholder="Acme Tree Service"></div>
+    <div class="qf-field"><label class="qf-label">City</label><input class="qf-input" type="text" placeholder="Raleigh, NC"></div>
+  </div>
+  <div class="qf-row">
+    <div class="qf-field"><label class="qf-label">Website</label><input class="qf-input" type="url" placeholder="https://..."></div>
+    <div class="qf-field">
+      <label class="qf-label">Service category</label>
+      <select class="qf-select">
+        <option>Tree services</option>
+        <option>Land clearing</option>
+        <option>Electrical</option>
+        <option>Plumbing</option>
+        <option>HVAC</option>
+        <option>Landscaping</option>
+        <option>Other trades</option>
+      </select>
+    </div>
+  </div>
+  <button type="submit" class="qf-submit">{submitLabel} <span class="qf-arrow">→</span></button>
+</form>
+
+<style>
+.quote-form { font-family: 'Sora', sans-serif; color: var(--onyx); }
+.quote-form-card {
+  background: var(--white);
+  border: 1px solid var(--onyx);
+  border-radius: 10px;
+  padding: 22px;
+  box-shadow: 6px 6px 0 0 var(--onyx);
+}
+.qf-eyebrow {
+  font-size: 11px; color: var(--blaze);
+  letter-spacing: 0.1em; text-transform: uppercase;
+  margin-bottom: 8px; font-weight: 700;
+}
+.qf-title {
+  font-size: 20px; letter-spacing: -0.02em; font-weight: 700;
+  margin-bottom: 4px;
+}
+.qf-desc {
+  font-size: 12px; color: var(--slate);
+  margin-bottom: 16px; line-height: 1.4;
+}
+.qf-row {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+}
+.qf-field { margin-bottom: 10px; }
+.qf-label {
+  display: block; font-size: 11px; font-weight: 600;
+  margin-bottom: 4px; color: var(--onyx);
+}
+.qf-input, .qf-select {
+  width: 100%; padding: 8px 11px;
+  border: 1px solid var(--border-strong); background: var(--white);
+  border-radius: 6px; font-family: inherit; font-size: 13px;
+  color: var(--onyx); transition: border-color 0.15s, box-shadow 0.15s;
+}
+.qf-input:focus, .qf-select:focus {
+  outline: none; border-color: var(--blaze);
+  box-shadow: 0 0 0 3px rgba(251, 86, 7, 0.15);
+}
+.qf-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1L6 6L11 1' stroke='%23525252' stroke-width='1.5' fill='none' stroke-linecap='round'/></svg>");
+  background-repeat: no-repeat; background-position: right 14px center;
+  padding-right: 36px;
+}
+.qf-submit {
+  width: 100%; margin-top: 8px;
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 14px 22px; border-radius: 6px;
+  font-family: inherit; font-size: 15px; font-weight: 600;
+  border: 1px solid transparent; cursor: pointer;
+  background: var(--onyx); color: var(--white);
+  position: relative; overflow: hidden; isolation: isolate;
+  box-shadow: 3px 3px 0 0 var(--onyx);
+  transition: color 0.2s ease 0.22s, transform 0.1s ease, box-shadow 0.1s ease;
+}
+.qf-submit:hover { transform: translate(1px, 1px); box-shadow: 2px 2px 0 0 var(--onyx); }
+.qf-submit:active { transform: translate(3px, 3px); box-shadow: 0 0 0 0 var(--onyx); }
+.qf-submit::before {
+  content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
+  background: var(--blaze);
+  transform: translateX(-110%) skewX(-22deg);
+  transition: transform 0.55s cubic-bezier(0.77, 0, 0.18, 1);
+}
+.qf-submit:hover::before { transform: translateX(-5%) skewX(-22deg); }
+.qf-arrow { display: inline-block; transition: transform 0.25s; }
+.qf-submit:hover .qf-arrow { transform: translateX(3px); }
+</style>
