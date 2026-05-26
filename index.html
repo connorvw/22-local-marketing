@@ -566,15 +566,14 @@ section.flush { border-top: 0; }
 .about-card-eyebrow { font-family: 'Sora', sans-serif; font-size: 11px; color: var(--blaze); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 18px; }
 .about-photo {
   width: 100%; aspect-ratio: 1/1;
-  background: linear-gradient(135deg, var(--blaze), var(--scorch));
+  background: var(--bone);
   border-radius: 8px; margin-bottom: 18px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 72px; font-weight: 700; color: var(--white); letter-spacing: -0.04em;
   position: relative; overflow: hidden;
 }
-.about-photo::after {
-  content: ''; position: absolute; inset: 0;
-  background: repeating-linear-gradient(45deg, transparent 0 10px, rgba(255,255,255,0.04) 10px 20px);
+.about-photo img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center top;
+  display: block;
 }
 .about-name { font-size: 20px; font-weight: 700; letter-spacing: -0.02em; }
 .about-role { font-size: 13px; color: var(--slate); margin-bottom: 14px; }
@@ -1369,8 +1368,8 @@ footer { border-top: 1px solid var(--border); padding: 56px 0 32px; background: 
 
       <div class="about-card">
         <div class="about-card-eyebrow">→ Founder</div>
-        <div class="about-photo">CV</div>
-        <div class="about-name">Connor V.</div>
+        <div class="about-photo"><img src="founder.png" alt="Connor Dann, founder of 22 Local Marketing" loading="lazy"></div>
+        <div class="about-name">Connor Dann</div>
         <div class="about-role">Founder · 22 Local Marketing</div>
         <div class="about-quote">"Most agencies sell hours. We sell outcomes. The difference shows up in the work, and you'll feel it in the first 30 days."</div>
       </div>
