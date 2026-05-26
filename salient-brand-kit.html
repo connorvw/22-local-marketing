@@ -5,7 +5,7 @@
 <title>22 Local Marketing — Brand Kit</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root {
   --blaze: #FB5607;
@@ -31,7 +31,7 @@ body {
   font-family: 'Sora', sans-serif;
   background: var(--bone);
   color: var(--onyx);
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
   font-feature-settings: "ss01", "ss02";
@@ -50,21 +50,21 @@ body {
   padding: 18px 0;
 }
 .wordmark {
-  display: flex; align-items: center; gap: 8px;
-  font-weight: 700; font-size: 20px; letter-spacing: -0.03em;
+  display: flex; align-items: center; gap: 9px;
+  font-weight: 700; font-size: 22px; letter-spacing: -0.03em;
 }
 .wordmark-dot {
   width: 10px; height: 10px; background: var(--blaze); border-radius: 2px;
 }
 .topnav-links { display: flex; gap: 32px; align-items: center; }
 .topnav-links a {
-  color: var(--slate); text-decoration: none; font-size: 14px; font-weight: 500;
+  color: var(--slate); text-decoration: none; font-size: 15px; font-weight: 500;
   transition: color 0.15s;
 }
 .topnav-links a:hover { color: var(--onyx); }
 .topnav-cta {
   background: var(--onyx); color: var(--white);
-  padding: 9px 16px; border-radius: 6px; font-size: 13px; font-weight: 600;
+  padding: 10px 18px; border-radius: 6px; font-size: 15px; font-weight: 600;
   text-decoration: none;
 }
 
@@ -72,8 +72,8 @@ body {
 .hero { padding: 96px 0 80px; }
 .eyebrow-rugged {
   display: inline-flex; align-items: center; gap: 10px;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px; font-weight: 500; letter-spacing: 0.1em;
+  font-family: 'Sora', sans-serif; font-weight: 500;
+  font-size: 13px; letter-spacing: 0.1em;
   text-transform: uppercase; color: var(--blaze);
   margin-bottom: 28px;
 }
@@ -81,7 +81,7 @@ body {
 .eb-sep { color: var(--slate-light); }
 .eyebrow {
   display: inline-block;
-  font-size: 12px; font-weight: 600; letter-spacing: 0.12em;
+  font-size: 14px; font-weight: 600; letter-spacing: 0.12em;
   text-transform: uppercase; color: var(--blaze);
   margin-bottom: 24px;
 }
@@ -105,7 +105,7 @@ body {
 }
 .hero h1 .accent { color: var(--blaze); }
 .hero p {
-  font-size: 19px; line-height: 1.5; color: var(--slate);
+  font-size: 21px; line-height: 1.5; color: var(--slate);
   max-width: 580px; margin-bottom: 40px; font-weight: 400;
 }
 .hero-actions { display: flex; gap: 12px; }
@@ -115,15 +115,8 @@ section { padding: 64px 0; border-top: 1px solid var(--border); }
 .section-head {
   display: flex; align-items: baseline; gap: 16px; margin-bottom: 40px;
 }
-.section-num {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 13px; color: var(--blaze); font-weight: 500;
-  letter-spacing: 0.03em;
-}
-.section-num::before { content: '['; }
-.section-num::after { content: ']'; }
 .section-head h2 {
-  font-size: 32px; font-weight: 700; letter-spacing: -0.03em;
+  font-size: 36px; font-weight: 700; letter-spacing: -0.03em;
   position: relative;
   padding: 2px 0 0;
 }
@@ -136,7 +129,7 @@ section { padding: 64px 0; border-top: 1px solid var(--border); }
 .section-head h2::before { top: 0; left: -22px; border-right: 0; border-bottom: 0; }
 .section-head h2::after { bottom: 0; right: -22px; border-left: 0; border-top: 0; }
 .section-head .desc {
-  font-size: 14px; color: var(--slate); margin-left: auto;
+  font-size: 16px; color: var(--slate); margin-left: auto;
 }
 
 /* ===== COLORS ===== */
@@ -149,45 +142,45 @@ section { padding: 64px 0; border-top: 1px solid var(--border); }
 }
 .swatch-color { height: 140px; }
 .swatch-meta { padding: 14px 14px 16px; }
-.swatch-name { font-weight: 600; font-size: 14px; margin-bottom: 2px; }
+.swatch-name { font-weight: 600; font-size: 16px; margin-bottom: 2px; }
 .swatch-hex {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 12px; color: var(--slate); margin-bottom: 8px;
+  font-family: 'Sora', sans-serif; font-weight: 500;
+  font-size: 14px; color: var(--slate); margin-bottom: 8px;
 }
-.swatch-role { font-size: 11px; color: var(--slate-light); }
+.swatch-role { font-size: 13px; color: var(--slate-light); }
 
 /* ===== TYPOGRAPHY ===== */
 .type-row {
-  display: grid; grid-template-columns: 140px 1fr;
+  display: grid; grid-template-columns: 160px 1fr;
   gap: 32px; padding: 20px 0; border-bottom: 1px solid var(--border);
   align-items: baseline;
 }
 .type-row:last-child { border-bottom: none; }
 .type-spec {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 12px; color: var(--slate); padding-top: 8px;
+  font-family: 'Sora', sans-serif; font-weight: 500;
+  font-size: 14px; color: var(--slate); padding-top: 8px;
 }
 .type-display { font-size: 64px; font-weight: 700; letter-spacing: -0.04em; line-height: 1; }
-.type-h1 { font-size: 44px; font-weight: 700; letter-spacing: -0.03em; line-height: 1.1; }
-.type-h2 { font-size: 32px; font-weight: 600; letter-spacing: -0.02em; }
-.type-h3 { font-size: 22px; font-weight: 600; letter-spacing: -0.01em; }
-.type-h4 { font-size: 17px; font-weight: 600; }
-.type-body { font-size: 15px; font-weight: 400; color: var(--slate); }
-.type-small { font-size: 13px; color: var(--slate); }
+.type-h1 { font-size: 48px; font-weight: 700; letter-spacing: -0.03em; line-height: 1.1; }
+.type-h2 { font-size: 36px; font-weight: 600; letter-spacing: -0.02em; }
+.type-h3 { font-size: 24px; font-weight: 600; letter-spacing: -0.01em; }
+.type-h4 { font-size: 19px; font-weight: 600; }
+.type-body { font-size: 17px; font-weight: 400; color: var(--slate); }
+.type-small { font-size: 15px; color: var(--slate); }
 .type-caps {
-  font-size: 12px; font-weight: 600; letter-spacing: 0.12em;
+  font-size: 14px; font-weight: 600; letter-spacing: 0.12em;
   text-transform: uppercase; color: var(--onyx);
 }
 .type-mono {
-  font-family: 'JetBrains Mono', monospace; font-size: 14px;
+  font-family: 'Sora', sans-serif; font-weight: 500; font-size: 16px;
   color: var(--onyx);
 }
 
 /* ===== BUTTONS ===== */
 .btn {
   display: inline-flex; align-items: center; gap: 8px;
-  padding: 11px 18px; border-radius: 6px;
-  font-family: inherit; font-size: 14px; font-weight: 600;
+  padding: 12px 20px; border-radius: 6px;
+  font-family: inherit; font-size: 16px; font-weight: 600;
   border: 1px solid transparent; cursor: pointer;
   text-decoration: none;
   position: relative; overflow: hidden; isolation: isolate;
@@ -240,26 +233,26 @@ section { padding: 64px 0; border-top: 1px solid var(--border); }
   border-color: var(--border); cursor: not-allowed;
 }
 .btn-arrow { display: inline-block; position: relative; }
-.btn-sm { padding: 7px 12px; font-size: 13px; }
-.btn-lg { padding: 14px 22px; font-size: 15px; }
+.btn-sm { padding: 8px 14px; font-size: 14px; }
+.btn-lg { padding: 15px 24px; font-size: 17px; }
 .btn-row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-bottom: 16px; }
 .btn-row-label {
-  font-size: 12px; font-weight: 500; color: var(--slate);
-  font-family: 'JetBrains Mono', monospace; min-width: 80px;
+  font-size: 14px; font-weight: 500; color: var(--slate);
+  font-family: 'Sora', sans-serif; min-width: 80px;
 }
 
 /* ===== FORMS ===== */
 .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
 .field { margin-bottom: 18px; }
 .field-label {
-  display: block; font-size: 13px; font-weight: 600;
+  display: block; font-size: 15px; font-weight: 600;
   margin-bottom: 6px; color: var(--onyx);
 }
-.field-hint { font-size: 12px; color: var(--slate); margin-top: 6px; }
+.field-hint { font-size: 14px; color: var(--slate); margin-top: 6px; }
 .input, .textarea, .select {
-  width: 100%; padding: 10px 14px;
+  width: 100%; padding: 11px 14px;
   border: 1px solid var(--border-strong); background: var(--white);
-  border-radius: 6px; font-family: inherit; font-size: 14px;
+  border-radius: 6px; font-family: inherit; font-size: 16px;
   color: var(--onyx); transition: border-color 0.15s, box-shadow 0.15s;
 }
 .input:focus, .textarea:focus, .select:focus {
@@ -268,7 +261,7 @@ section { padding: 64px 0; border-top: 1px solid var(--border); }
 }
 .textarea { min-height: 90px; resize: vertical; font-family: inherit; }
 .select { appearance: none; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1L6 6L11 1' stroke='%23525252' stroke-width='1.5' fill='none' stroke-linecap='round'/></svg>"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
-.checkbox-row, .radio-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-size: 14px; }
+.checkbox-row, .radio-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-size: 16px; }
 .checkbox, .radio {
   appearance: none; width: 18px; height: 18px;
   border: 1.5px solid var(--border-strong); background: var(--white);
@@ -295,27 +288,27 @@ section { padding: 64px 0; border-top: 1px solid var(--border); }
 .card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .card {
   background: var(--white); border: 1px solid var(--onyx);
-  border-radius: 10px; padding: 24px;
+  border-radius: 10px; padding: 26px;
   box-shadow: 3px 3px 0 0 var(--onyx);
 }
-.card-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blaze); margin-bottom: 14px; }
-.card-title { font-size: 18px; font-weight: 600; margin-bottom: 8px; letter-spacing: -0.01em; }
-.card-body { font-size: 14px; color: var(--slate); line-height: 1.55; margin-bottom: 16px; }
-.card-link { font-size: 13px; font-weight: 600; color: var(--onyx); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+.card-eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blaze); margin-bottom: 14px; }
+.card-title { font-size: 20px; font-weight: 600; margin-bottom: 8px; letter-spacing: -0.01em; }
+.card-body { font-size: 16px; color: var(--slate); line-height: 1.55; margin-bottom: 16px; }
+.card-link { font-size: 15px; font-weight: 600; color: var(--onyx); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
 .card-link:hover { color: var(--blaze); }
 
-.metric-card { background: var(--white); border: 1px solid var(--onyx); border-radius: 10px; padding: 22px; box-shadow: 3px 3px 0 0 var(--onyx); }
-.metric-label { font-size: 12px; font-weight: 600; color: var(--slate); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 12px; }
-.metric-value { font-size: 36px; font-weight: 700; letter-spacing: -0.03em; line-height: 1; margin-bottom: 8px; }
-.metric-change { font-size: 13px; font-weight: 500; }
+.metric-card { background: var(--white); border: 1px solid var(--onyx); border-radius: 10px; padding: 24px; box-shadow: 3px 3px 0 0 var(--onyx); }
+.metric-label { font-size: 14px; font-weight: 600; color: var(--slate); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 12px; }
+.metric-value { font-size: 40px; font-weight: 700; letter-spacing: -0.03em; line-height: 1; margin-bottom: 8px; }
+.metric-change { font-size: 15px; font-weight: 500; }
 .metric-change.up { color: var(--success); }
 .metric-change.down { color: var(--danger); }
 
 /* ===== BADGES ===== */
 .badge {
   display: inline-flex; align-items: center; gap: 6px;
-  padding: 4px 10px; border-radius: 4px;
-  font-size: 12px; font-weight: 600; letter-spacing: 0.01em;
+  padding: 5px 12px; border-radius: 4px;
+  font-size: 14px; font-weight: 600; letter-spacing: 0.01em;
 }
 .badge-dot { width: 6px; height: 6px; border-radius: 50%; }
 .badge-brand { background: var(--info-bg); color: var(--scorch); }
@@ -334,7 +327,7 @@ section { padding: 64px 0; border-top: 1px solid var(--border); }
 .alert {
   display: grid; grid-template-columns: auto 1fr;
   align-items: start; gap: 16px;
-  padding: 16px 20px 16px 24px;
+  padding: 18px 22px 18px 26px;
   background: var(--white);
   border: 1px solid var(--onyx);
   border-radius: 6px;
@@ -347,26 +340,24 @@ section { padding: 64px 0; border-top: 1px solid var(--border); }
   width: 6px;
 }
 .alert-tag {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10px; font-weight: 700;
+  font-family: 'Sora', sans-serif;
+  font-size: 12px; font-weight: 500;
   letter-spacing: 0.1em; text-transform: uppercase;
-  padding: 5px 9px;
+  padding: 5px 10px;
   color: var(--white);
   border-radius: 3px;
   white-space: nowrap;
   margin-top: 1px;
 }
-.alert-tag::before { content: '['; margin-right: 1px; }
-.alert-tag::after { content: ']'; margin-left: 1px; }
 .alert-body { min-width: 0; }
 .alert-title {
-  font-size: 14px; font-weight: 700;
+  font-size: 16px; font-weight: 700;
   letter-spacing: -0.005em;
   color: var(--onyx);
   margin-bottom: 3px;
 }
 .alert-msg {
-  font-size: 13px; color: var(--slate); line-height: 1.5;
+  font-size: 15px; color: var(--slate); line-height: 1.5;
 }
 .alert-info::before, .alert-info .alert-tag { background: var(--blaze); }
 .alert-success::before, .alert-success .alert-tag { background: var(--success); }
@@ -386,22 +377,14 @@ section { padding: 64px 0; border-top: 1px solid var(--border); }
 }
 table { width: 100%; border-collapse: collapse; }
 th {
-  text-align: left; font-size: 11px; font-weight: 700;
+  text-align: left; font-size: 13px; font-weight: 700;
   letter-spacing: 0.08em; text-transform: uppercase;
   color: var(--onyx); padding: 14px 20px;
   background: var(--bone); border-bottom: 2px solid var(--blaze);
 }
-th .th-num {
-  display: inline-block; margin-right: 8px;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10px; font-weight: 500;
-  color: var(--blaze); letter-spacing: 0;
-}
-th .th-num::before { content: '['; }
-th .th-num::after { content: ']'; }
-td { padding: 16px 20px; font-size: 14px; border-bottom: 1px solid var(--border); }
+td { padding: 16px 20px; font-size: 16px; border-bottom: 1px solid var(--border); }
 tr:last-child td { border-bottom: none; }
-td.mono { font-family: 'JetBrains Mono', monospace; font-size: 13px; }
+td.mono { font-family: 'Sora', sans-serif; font-weight: 500; font-size: 15px; }
 
 /* ===== LINKS / INLINE / CODE / QUOTE ===== */
 .prose-block { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 28px 32px; }
@@ -409,7 +392,7 @@ td.mono { font-family: 'JetBrains Mono', monospace; font-size: 13px; }
 .prose-block p:last-child { margin-bottom: 0; }
 .link { color: var(--onyx); text-decoration: none; border-bottom: 1.5px solid var(--blaze); font-weight: 500; transition: color 0.15s; }
 .link:hover { color: var(--blaze); }
-code.inline { font-family: 'JetBrains Mono', monospace; font-size: 13px; background: var(--bone); padding: 2px 6px; border-radius: 4px; border: 1px solid var(--border); color: var(--onyx); }
+code.inline { font-family: 'Sora', sans-serif; font-weight: 500; font-size: 15px; background: var(--bone); padding: 2px 6px; border-radius: 4px; border: 1px solid var(--border); color: var(--onyx); }
 .codeblock-wrap {
   background: var(--onyx); border-radius: 8px;
   overflow: hidden; margin: 8px 0;
@@ -427,30 +410,30 @@ code.inline { font-family: 'JetBrains Mono', monospace; font-size: 13px; backgro
 .ck-circle.g { background: #28C840; }
 .codeblock-filename {
   margin-left: 12px;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 12px; color: #8A8A8A; letter-spacing: 0.02em;
+  font-family: 'Sora', sans-serif; font-weight: 500;
+  font-size: 14px; color: #8A8A8A; letter-spacing: 0.02em;
 }
 .codeblock-wrap .codeblock {
   border-radius: 0; margin: 0; border: 0;
 }
-.codeblock { font-family: 'JetBrains Mono', monospace; font-size: 13px; background: var(--onyx); color: #E8E8E8; padding: 18px 22px; border-radius: 8px; overflow-x: auto; line-height: 1.6; }
+.codeblock { font-family: 'Sora', sans-serif; font-weight: 500; font-size: 15px; background: var(--onyx); color: #E8E8E8; padding: 20px 24px; border-radius: 8px; overflow-x: auto; line-height: 1.65; }
 .codeblock .ck-key { color: #FB5607; }
 .codeblock .ck-str { color: #B8E986; }
 .codeblock .ck-comment { color: #6B6B6B; }
 blockquote {
-  font-size: 19px; font-weight: 500; letter-spacing: -0.01em; line-height: 1.45;
+  font-size: 21px; font-weight: 500; letter-spacing: -0.01em; line-height: 1.45;
   color: var(--onyx); border-left: 3px solid var(--blaze);
   padding-left: 20px; margin: 16px 0;
 }
-blockquote cite { display: block; font-size: 13px; font-weight: 500; color: var(--slate); margin-top: 10px; font-style: normal; letter-spacing: 0; }
+blockquote cite { display: block; font-size: 15px; font-weight: 500; color: var(--slate); margin-top: 10px; font-style: normal; letter-spacing: 0; }
 hr { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
 
 /* ===== FOOTER ===== */
 footer { border-top: 1px solid var(--border); padding: 48px 0 64px; margin-top: 48px; }
 .footer-inner { display: flex; justify-content: space-between; align-items: center; }
-.footer-meta { font-size: 13px; color: var(--slate); }
+.footer-meta { font-size: 15px; color: var(--slate); }
 .footer-links { display: flex; gap: 24px; }
-.footer-links a { font-size: 13px; color: var(--slate); text-decoration: none; font-weight: 500; }
+.footer-links a { font-size: 15px; color: var(--slate); text-decoration: none; font-weight: 500; }
 .footer-links a:hover { color: var(--onyx); }
 
 /* ===== UTIL ===== */
@@ -482,8 +465,6 @@ footer { border-top: 1px solid var(--border); padding: 48px 0 64px; margin-top: 
     <span>BRAND_KIT</span>
     <span class="eb-sep">·</span>
     <span>V2.0</span>
-    <span class="eb-sep">·</span>
-    <span>2026.05</span>
   </div>
   <div class="hero-frame">
     <h1>The home services marketing agency<br>built for <span class="accent">growth.</span></h1>
@@ -495,7 +476,7 @@ footer { border-top: 1px solid var(--border); padding: 48px 0 64px; margin-top: 
   </div>
 </header>
 
-<!-- 01 COLORS -->
+<!-- COLORS -->
 <section id="colors">
   <div class="container">
     <div class="section-head">
@@ -513,7 +494,7 @@ footer { border-top: 1px solid var(--border); padding: 48px 0 64px; margin-top: 
   </div>
 </section>
 
-<!-- 02 TYPOGRAPHY -->
+<!-- TYPOGRAPHY -->
 <section id="typography">
   <div class="container">
     <div class="section-head">
@@ -522,18 +503,18 @@ footer { border-top: 1px solid var(--border); padding: 48px 0 64px; margin-top: 
     </div>
 
     <div class="type-row"><div class="type-spec">Display / 64 / 700</div><div class="type-display">Build louder.</div></div>
-    <div class="type-row"><div class="type-spec">H1 / 44 / 700</div><div class="type-h1">Home services, sharpened</div></div>
-    <div class="type-row"><div class="type-spec">H2 / 32 / 600</div><div class="type-h2">Built for the trades</div></div>
-    <div class="type-row"><div class="type-spec">H3 / 22 / 600</div><div class="type-h3">A system for growth</div></div>
-    <div class="type-row"><div class="type-spec">H4 / 17 / 600</div><div class="type-h4">Subsection heading</div></div>
-    <div class="type-row"><div class="type-spec">Body / 15 / 400</div><div class="type-body">22 Local Marketing designs and runs the marketing engine for serious home service companies. The work is sharp, the systems are tight, and the results show up where they should: revenue.</div></div>
-    <div class="type-row"><div class="type-spec">Small / 13 / 400</div><div class="type-small">Supporting text and meta information.</div></div>
-    <div class="type-row"><div class="type-spec">Caps / 12 / 600</div><div class="type-caps">Section eyebrow label</div></div>
-    <div class="type-row"><div class="type-spec">Mono / 14 / 400</div><div class="type-mono">function buildBrand() { return 'sharp'; }</div></div>
+    <div class="type-row"><div class="type-spec">H1 / 48 / 700</div><div class="type-h1">Home services, sharpened</div></div>
+    <div class="type-row"><div class="type-spec">H2 / 36 / 600</div><div class="type-h2">Built for the trades</div></div>
+    <div class="type-row"><div class="type-spec">H3 / 24 / 600</div><div class="type-h3">A system for growth</div></div>
+    <div class="type-row"><div class="type-spec">H4 / 19 / 600</div><div class="type-h4">Subsection heading</div></div>
+    <div class="type-row"><div class="type-spec">Body / 17 / 400</div><div class="type-body">22 Local Marketing designs and runs the marketing engine for serious home service companies. The work is sharp, the systems are tight, and the results show up where they should: revenue.</div></div>
+    <div class="type-row"><div class="type-spec">Small / 15 / 400</div><div class="type-small">Supporting text and meta information.</div></div>
+    <div class="type-row"><div class="type-spec">Caps / 14 / 600</div><div class="type-caps">Section eyebrow label</div></div>
+    <div class="type-row"><div class="type-spec">Medium / 16 / 500</div><div class="type-mono">function buildBrand() { return 'sharp'; }</div></div>
   </div>
 </section>
 
-<!-- 03 BUTTONS -->
+<!-- BUTTONS -->
 <section id="components">
   <div class="container">
     <div class="section-head">
@@ -556,7 +537,7 @@ footer { border-top: 1px solid var(--border); padding: 48px 0 64px; margin-top: 
   </div>
 </section>
 
-<!-- 04 FORMS -->
+<!-- FORMS -->
 <section>
   <div class="container">
     <div class="section-head">
@@ -610,7 +591,7 @@ footer { border-top: 1px solid var(--border); padding: 48px 0 64px; margin-top: 
   </div>
 </section>
 
-<!-- 05 CARDS -->
+<!-- CARDS -->
 <section>
   <div class="container">
     <div class="section-head">
@@ -664,7 +645,7 @@ footer { border-top: 1px solid var(--border); padding: 48px 0 64px; margin-top: 
   </div>
 </section>
 
-<!-- 06 BADGES -->
+<!-- BADGES -->
 <section>
   <div class="container">
     <div class="section-head">
@@ -684,7 +665,7 @@ footer { border-top: 1px solid var(--border); padding: 48px 0 64px; margin-top: 
   </div>
 </section>
 
-<!-- 07 ALERTS -->
+<!-- ALERTS -->
 <section>
   <div class="container">
     <div class="section-head">
@@ -722,7 +703,7 @@ footer { border-top: 1px solid var(--border); padding: 48px 0 64px; margin-top: 
   </div>
 </section>
 
-<!-- 08 TABLE -->
+<!-- TABLE -->
 <section>
   <div class="container">
     <div class="section-head">
@@ -737,7 +718,7 @@ footer { border-top: 1px solid var(--border); padding: 48px 0 64px; margin-top: 
         <span class="codeblock-filename">clients.tsv · 4 rows · live</span>
       </div>
       <table>
-        <thead><tr><th><span class="th-num">01</span>Client</th><th><span class="th-num">02</span>Service</th><th><span class="th-num">03</span>Status</th><th><span class="th-num">04</span>MRR</th></tr></thead>
+        <thead><tr><th>Client</th><th>Service</th><th>Status</th><th>MRR</th></tr></thead>
         <tbody>
           <tr><td><strong>Patrick's Electric</strong></td><td>Full retainer</td><td><span class="badge badge-success"><span class="badge-dot"></span>Live</span></td><td class="mono">$2,500</td></tr>
           <tr><td><strong>Fonville Tree Service</strong></td><td>SEO + Ads</td><td><span class="badge badge-success"><span class="badge-dot"></span>Live</span></td><td class="mono">$1,800</td></tr>
@@ -749,7 +730,7 @@ footer { border-top: 1px solid var(--border); padding: 48px 0 64px; margin-top: 
   </div>
 </section>
 
-<!-- 09 TEXT BLOCKS -->
+<!-- TEXT BLOCKS -->
 <section>
   <div class="container">
     <div class="section-head">
@@ -757,7 +738,7 @@ footer { border-top: 1px solid var(--border); padding: 48px 0 64px; margin-top: 
       <span class="desc">Links, code, quotes</span>
     </div>
     <div class="prose-block">
-      <p>This is body copy in Sora 15px. It uses <a href="#" class="link">underlined links in Blaze</a> for emphasis without breaking the reading rhythm. Inline code looks like <code class="inline">npm install salient</code> and feels at home in the same paragraph.</p>
+      <p>This is body copy in Sora 17px. It uses <a href="#" class="link">underlined links in Blaze</a> for emphasis without breaking the reading rhythm. Inline code looks like <code class="inline">npm install salient</code> and feels at home in the same paragraph.</p>
       <hr>
       <div class="codeblock-wrap">
         <div class="codeblock-header">
