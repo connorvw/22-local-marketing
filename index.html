@@ -669,6 +669,26 @@ section.flush { border-top: 0; }
   letter-spacing: 0.14em; text-transform: uppercase;
   position: relative; z-index: 1;
 }
+button.video-thumb-yt {
+  border: 0; padding: 0; margin: 0; cursor: pointer;
+  width: 100%; background: #000;
+  font: inherit;
+}
+button.video-thumb-yt::after { display: none; }
+button.video-thumb-yt::before { z-index: 1; }
+.yt-poster {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+  opacity: 0.78;
+  transition: opacity 0.25s ease, transform 0.5s ease;
+}
+button.video-thumb-yt:hover .yt-poster { opacity: 0.94; transform: scale(1.02); }
+button.video-thumb-yt .video-play { position: relative; z-index: 2; }
+.yt-iframe {
+  width: 100%; aspect-ratio: 16 / 9;
+  border: 0; display: block;
+}
 
 /* ===== CTA BLOCK ===== */
 .cta-block {
@@ -1318,13 +1338,12 @@ footer { border-top: 1px solid var(--border); padding: 56px 0 32px; background: 
       <span class="desc">An unscripted look at what it's like to work with us, straight from an owner we serve.</span>
     </div>
     <div class="video-placeholder">
-      <div class="video-thumb">
-        <div class="video-play">
+      <button type="button" class="video-thumb video-thumb-yt" data-video-id="WAsSn4930ew" data-start="1" aria-label="Play client testimonial video">
+        <img class="yt-poster" src="https://i.ytimg.com/vi/WAsSn4930ew/maxresdefault.jpg" alt="" loading="lazy">
+        <span class="video-play">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"/></svg>
-        </div>
-        <div class="video-hint">Client testimonial goes here</div>
-        <div class="video-meta">Video slot 03 · 16:9 · placeholder</div>
-      </div>
+        </span>
+      </button>
     </div>
   </div>
 </section>
@@ -1612,6 +1631,22 @@ footer { border-top: 1px solid var(--border); padding: 56px 0 32px; background: 
 
   // Initial population
   setTrade('tree-services');
+})();
+
+(function(){
+  document.querySelectorAll('.video-thumb-yt').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.dataset.videoId;
+      const start = btn.dataset.start || '0';
+      const iframe = document.createElement('iframe');
+      iframe.className = 'yt-iframe';
+      iframe.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&start=' + start + '&rel=0';
+      iframe.title = 'Client testimonial video';
+      iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+      iframe.setAttribute('allowfullscreen', '');
+      btn.parentNode.replaceChild(iframe, btn);
+    }, { once: true });
+  });
 })();
 </script>
 
