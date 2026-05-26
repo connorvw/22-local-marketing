@@ -1,0 +1,92 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="wordmark"><span class="wordmark-dot"></span>22 Local Marketing</a>
+        <p>The marketing engine for serious home service companies. Built by operators, run for results.</p>
+      </div>
+      <div class="footer-col">
+        <h4>What We Do</h4>
+        <ul>
+          <li><a href="/#services">Local SEO</a></li>
+          <li><a href="/#services">Google Ads</a></li>
+          <li><a href="/#services">Websites</a></li>
+          <li><a href="/#services">GBP management</a></li>
+          <li><a href="/#services">Reporting</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/knowledge-base/">Knowledge Base</a></li>
+          <li><a href="/results/">Results</a></li>
+          <li><a href="/pricing/">Pricing</a></li>
+          <li><a href="/#reviews">Reviews</a></li>
+          <li><a href="/#about">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:connor@22localmarketing.com">connor@22localmarketing.com</a></li>
+          <li><a href="/#contact">Book a call</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© {year} 22 Local Marketing LLC. All rights reserved.</div>
+      <div>Built in-house. No templates were harmed.</div>
+    </div>
+  </div>
+</footer>
+
+<style>
+footer {
+  border-top: 1px solid var(--border);
+  padding: 56px 0 32px;
+  background: var(--white);
+}
+.footer-grid {
+  display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 56px; margin-bottom: 48px;
+}
+.footer-brand .wordmark {
+  display: flex; align-items: center; gap: 8px;
+  font-weight: 700; font-size: 20px; letter-spacing: -0.03em;
+  color: var(--onyx); text-decoration: none;
+}
+.footer-brand .wordmark-dot {
+  width: 10px; height: 10px; background: var(--blaze); border-radius: 2px;
+}
+.footer-brand p {
+  font-size: 13px; color: var(--slate);
+  margin-top: 16px; max-width: 320px; line-height: 1.6;
+}
+.footer-col h4 {
+  font-size: 12px; font-weight: 800;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--onyx); margin-bottom: 16px;
+  font-family: 'Sora', sans-serif;
+}
+.footer-col ul { list-style: none; display: grid; gap: 10px; }
+.footer-col a {
+  font-size: 13px; color: var(--slate); text-decoration: none;
+}
+.footer-col a:hover { color: var(--blaze); }
+.footer-bottom {
+  border-top: 1px solid var(--border); padding-top: 24px;
+  display: flex; align-items: center; justify-content: space-between;
+  font-size: 12px; color: var(--slate);
+}
+@media (max-width: 1000px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+}
+@media (max-width: 600px) {
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
+}
+</style>

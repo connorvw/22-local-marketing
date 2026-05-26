@@ -1,0 +1,130 @@
+:root {
+  --blaze: #FB5607;
+  --scorch: #C13D0E;
+  --bone: #F8F6F2;
+  --white: #FFFFFF;
+  --slate: #525252;
+  --slate-light: #8A8A8A;
+  --onyx: #0A0A0A;
+  --border: #E5E2DC;
+  --border-strong: #D4D0C8;
+  --success: #1F7A4D;
+  --success-bg: #E6F4EC;
+  --warning: #8A5A00;
+  --warning-bg: #FFF4D9;
+  --danger: #C42017;
+  --danger-bg: #FBE5DF;
+  --info-bg: #FFE8D9;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Sora', sans-serif;
+  background: var(--bone);
+  color: var(--onyx);
+  font-size: 15px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "ss01", "ss02";
+}
+.container { max-width: 1180px; margin: 0 auto; padding: 0 40px; }
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 11px 18px; border-radius: 6px;
+  font-family: inherit; font-size: 14px; font-weight: 600;
+  border: 1px solid transparent; cursor: pointer;
+  text-decoration: none;
+  position: relative; overflow: hidden; isolation: isolate;
+  box-shadow: 3px 3px 0 0 var(--onyx);
+  transition: color 0.2s ease 0.22s, border-color 0.25s ease,
+              transform 0.1s ease, box-shadow 0.1s ease;
+}
+.btn:hover { transform: translate(1px, 1px); box-shadow: 2px 2px 0 0 var(--onyx); }
+.btn:active { transform: translate(3px, 3px); box-shadow: 0 0 0 0 var(--onyx); }
+.btn::before {
+  content: ''; position: absolute; top: 0; left: 0;
+  width: 100%; height: 100%; z-index: -1;
+  background: var(--scorch);
+  transform: translateX(-110%) skewX(-22deg);
+  transition: transform 0.55s cubic-bezier(0.77, 0, 0.18, 1);
+}
+.btn:hover::before { transform: translateX(-5%) skewX(-22deg); }
+.btn-primary { background: var(--blaze); color: var(--white); }
+.btn-primary::before { background: var(--scorch); }
+.btn-dark { background: var(--onyx); color: var(--white); }
+.btn-dark::before { background: var(--blaze); }
+.btn-secondary {
+  background: var(--white); color: var(--onyx); border-color: var(--border-strong);
+}
+.btn-secondary::before { background: var(--blaze); }
+.btn-secondary:hover { border-color: var(--onyx); color: var(--white); }
+.btn-lg { padding: 14px 22px; font-size: 15px; }
+.btn-arrow { display: inline-block; transition: transform 0.25s; }
+.btn:hover .btn-arrow { transform: translateX(3px); }
+
+/* ===== SHARED EYEBROW ===== */
+.eyebrow-rugged {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: 'Sora', sans-serif;
+  font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--blaze);
+  margin-bottom: 28px;
+}
+.eb-dash { display: inline-block; width: 28px; height: 2px; background: var(--blaze); }
+.eb-sep { color: var(--slate-light); }
+
+/* ===== HERO FRAME (used across pages) ===== */
+.hero-frame {
+  position: relative; display: inline-block;
+  padding: 14px 0 8px;
+  margin-bottom: 24px;
+}
+.hero-frame::before, .hero-frame::after {
+  content: ''; position: absolute;
+  width: 22px; height: 22px;
+  border: 2px solid var(--blaze);
+}
+.hero-frame::before { top: 0; left: -20px; border-right: 0; border-bottom: 0; }
+.hero-frame::after { bottom: 0; right: -20px; border-left: 0; border-top: 0; }
+
+/* ===== SECTION HEAD ===== */
+section { padding: 88px 0; border-top: 1px solid var(--border); position: relative; }
+section.flush { border-top: 0; }
+.section-head {
+  display: flex; align-items: baseline; gap: 16px; margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+.section-head h2 {
+  font-size: 38px; font-weight: 700; letter-spacing: -0.03em;
+  position: relative;
+  padding: 2px 0 0;
+  max-width: 640px;
+  line-height: 1.05;
+}
+.section-head h2::before,
+.section-head h2::after {
+  content: ''; position: absolute;
+  width: 14px; height: 14px;
+  border: 2px solid var(--blaze);
+}
+.section-head h2::before { top: 0; left: -22px; border-right: 0; border-bottom: 0; }
+.section-head h2::after { bottom: 0; right: -22px; border-left: 0; border-top: 0; }
+.section-head .desc {
+  font-size: 14px; color: var(--slate); margin-left: auto;
+  max-width: 320px; text-align: right;
+}
+.dark { background: var(--onyx); color: var(--white); border-top: 1px solid #1f1f1f; }
+.dark .section-head h2 { color: var(--white); }
+.dark .section-head .desc { color: var(--slate-light); }
+
+@media (max-width: 1000px) {
+  .container { padding: 0 24px; }
+  .section-head h2 { font-size: 28px; }
+  .section-head .desc { margin-left: 0; text-align: left; }
+}
+@media (max-width: 600px) {
+  .container { padding: 0 18px; }
+  section { padding: 64px 0; }
+}

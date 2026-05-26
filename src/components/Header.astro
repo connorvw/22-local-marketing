@@ -1,0 +1,66 @@
+---
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+function isActive(href: string): boolean {
+  if (href.startsWith('#')) return false;
+  const target = href.replace(/\/$/, '') || '/';
+  if (target === '/') return path === '/';
+  return path === target || path.startsWith(target + '/');
+}
+const links = [
+  { href: '/#services', label: 'What We Do' },
+  { href: '/knowledge-base/', label: 'Knowledge Base' },
+  { href: '/results/', label: 'Results' },
+  { href: '/pricing/', label: 'Pricing' },
+  { href: '/#reviews', label: 'Reviews' },
+];
+---
+
+<nav class="topnav">
+  <div class="container topnav-inner">
+    <a href="/" class="wordmark"><span class="wordmark-dot"></span>22 Local Marketing</a>
+    <div class="topnav-links">
+      {links.map(l => (
+        <a href={l.href} class={isActive(l.href) ? 'active' : ''}>{l.label}</a>
+      ))}
+      <a href="/#contact" class="topnav-cta">Free strategy call</a>
+    </div>
+  </div>
+</nav>
+
+<style>
+.topnav {
+  border-bottom: 1px solid var(--border);
+  background: rgba(248, 246, 242, 0.88);
+  position: sticky; top: 0; z-index: 50;
+  backdrop-filter: blur(10px);
+}
+.topnav-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 0;
+}
+.wordmark {
+  display: flex; align-items: center; gap: 8px;
+  font-weight: 700; font-size: 20px; letter-spacing: -0.03em;
+  color: var(--onyx); text-decoration: none;
+}
+.wordmark-dot {
+  width: 10px; height: 10px; background: var(--blaze); border-radius: 2px;
+}
+.topnav-links { display: flex; gap: 28px; align-items: center; }
+.topnav-links a {
+  color: var(--slate); text-decoration: none; font-size: 14px; font-weight: 500;
+  transition: color 0.15s;
+}
+.topnav-links a:hover, .topnav-links a.active { color: var(--onyx); }
+.topnav-links a.active { font-weight: 600; }
+.topnav-cta {
+  background: var(--onyx); color: var(--white) !important;
+  padding: 9px 16px; border-radius: 6px; font-size: 13px; font-weight: 600;
+  text-decoration: none;
+}
+.topnav-cta:hover { background: var(--blaze); }
+@media (max-width: 1000px) {
+  .topnav-links a:not(.topnav-cta) { display: none; }
+  .topnav-links a.topnav-cta { display: inline-block; }
+}
+</style>

@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "22lm-static",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "50502", "--directory", "C:/22 Local Marketing/dist"],
+      "port": 50502
+    }
+  ]
+}
