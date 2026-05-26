@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>22 Local Marketing Business Card</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --blaze: #FB5607;
+  --scorch: #C13D0E;
+  --bone: #F8F6F2;
+  --white: #FFFFFF;
+  --slate: #525252;
+  --slate-light: #8A8A8A;
+  --onyx: #0A0A0A;
+  --border: #E5E2DC;
+  --border-strong: #D4D0C8;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  gap: 32px;
+  padding: 48px;
+  background: var(--bone);
+  color: var(--onyx);
+  font-family: "Sora", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.sheet {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(320px, 3.5in));
+  gap: 32px;
+  align-items: start;
+}
+
+.preview-label {
+  margin: 0 0 10px;
+  color: var(--slate);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.card {
+  position: relative;
+  width: 3.5in;
+  height: 2in;
+  overflow: hidden;
+  border: 1px solid var(--onyx);
+  border-radius: 8px;
+  box-shadow: 6px 6px 0 var(--onyx);
+}
+
+.card-front {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  padding: 0.23in 0.25in 0.22in;
+  background:
+    linear-gradient(90deg, transparent 0 72%, rgba(251, 86, 7, 0.08) 72% 100%),
+    var(--white);
+}
+
+.brand-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+}
+
+.wordmark {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.wordmark-dot {
+  width: 9px;
+  height: 9px;
+  flex: 0 0 auto;
+  border-radius: 2px;
+  background: var(--blaze);
+}
+
+.tagline {
+  max-width: 1.88in;
+  margin: 0;
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 0.98;
+}
+
+.tagline span { color: var(--blaze); }
+
+.contact-panel {
+  align-self: stretch;
+  width: 1.22in;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 7px;
+  padding-left: 0.18in;
+  border-left: 2px solid var(--blaze);
+}
+
+.name {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+.role {
+  margin: 2px 0 8px;
+  color: var(--scorch);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.contact {
+  display: grid;
+  gap: 4px;
+  color: var(--slate);
+  font-size: 8.5px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.corner {
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  border: 2px solid var(--blaze);
+}
+
+.corner.tl {
+  top: 0.12in;
+  left: 0.12in;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.corner.br {
+  right: 0.12in;
+  bottom: 0.12in;
+  border-left: 0;
+  border-top: 0;
+}
+
+.card-back {
+  display: grid;
+  place-items: center;
+  padding: 0.25in;
+  background:
+    linear-gradient(90deg, var(--blaze) 0 0.06in, transparent 0.06in),
+    linear-gradient(180deg, rgba(251, 86, 7, 0.10) 0 0.38in, transparent 0.38in),
+    var(--onyx);
+  color: var(--white);
+}
+
+.back-lockup {
+  width: 100%;
+  display: grid;
+  gap: 18px;
+}
+
+.back-wordmark {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.055em;
+}
+
+.back-dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 3px;
+  background: var(--blaze);
+}
+
+.back-line {
+  width: 0.78in;
+  height: 3px;
+  background: var(--blaze);
+}
+
+.back-copy {
+  max-width: 2.05in;
+  margin: 0;
+  color: rgba(255,255,255,0.82);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.42;
+}
+
+.back-url {
+  color: var(--white);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.notes {
+  max-width: 760px;
+  margin: 0;
+  color: var(--slate);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+@media print {
+  @page { size: letter; margin: 0.45in; }
+  body {
+    display: block;
+    min-height: auto;
+    padding: 0;
+    background: white;
+  }
+  .sheet {
+    grid-template-columns: 3.5in 3.5in;
+    gap: 0.35in;
+  }
+  .preview-label,
+  .notes { display: none; }
+  .card { box-shadow: none; }
+}
+</style>
+</head>
+<body>
+  <main>
+    <section class="sheet" aria-label="Business card front and back">
+      <div>
+        <p class="preview-label">Front</p>
+        <article class="card card-front">
+          <span class="corner tl" aria-hidden="true"></span>
+          <div class="brand-block">
+            <div class="wordmark"><span class="wordmark-dot"></span>22 Local Marketing</div>
+            <p class="tagline">Home services marketing built for <span>growth.</span></p>
+          </div>
+          <aside class="contact-panel" aria-label="Contact details">
+            <div>
+              <h1 class="name">Connor<br>Dann</h1>
+              <p class="role">Founder</p>
+            </div>
+            <div class="contact">
+              <span>connor@22local.com</span>
+              <span>(555) 022-0022</span>
+              <span>22localmarketing.com</span>
+              <span>Kernersville, NC</span>
+            </div>
+          </aside>
+        </article>
+      </div>
+
+      <div>
+        <p class="preview-label">Back</p>
+        <article class="card card-back">
+          <span class="corner br" aria-hidden="true"></span>
+          <div class="back-lockup">
+            <div class="back-wordmark"><span class="back-dot"></span>22 Local</div>
+            <div class="back-line"></div>
+            <p class="back-copy">Sharp websites, local SEO, and paid acquisition systems for serious home service companies.</p>
+            <div class="back-url">22localmarketing.com</div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <p class="notes">Print size is standard 3.5 in x 2 in. Contact details are placeholders and can be edited directly in this HTML file before exporting or printing.</p>
+  </main>
+</body>
+</html>

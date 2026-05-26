@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>22 Local Marketing Collateral Templates</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --blaze: #FB5607;
+  --bone: #F8F6F2;
+  --white: #FFFFFF;
+  --slate: #525252;
+  --onyx: #0A0A0A;
+  --border: #E5E2DC;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 48px;
+  background: var(--bone);
+  color: var(--onyx);
+  font-family: "Sora", Arial, sans-serif;
+}
+.wrap { max-width: 1180px; margin: 0 auto; }
+.top { margin-bottom: 28px; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 20px; letter-spacing: -0.04em; }
+.dot { width: 12px; height: 12px; border-radius: 3px; background: var(--blaze); flex: 0 0 auto; }
+h1 { margin: 22px 0 0; font-size: 46px; line-height: 1; letter-spacing: -0.05em; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; align-items: start; }
+.sheet {
+  aspect-ratio: 8.5 / 11;
+  position: relative;
+  overflow: hidden;
+  padding: 9%;
+  background: var(--white);
+  border: 1px solid var(--onyx);
+  border-radius: 8px;
+  box-shadow: 4px 4px 0 var(--onyx);
+}
+.sheet.dark { background: var(--onyx); color: var(--white); }
+.sheet::before,
+.sheet::after {
+  content: "";
+  position: absolute;
+  width: 12%;
+  height: 8%;
+  border: 3px solid var(--blaze);
+}
+.sheet::before { top: 5%; left: 5%; border-right: 0; border-bottom: 0; }
+.sheet::after { right: 5%; bottom: 5%; border-left: 0; border-top: 0; }
+.content { position: relative; z-index: 1; min-height: 100%; display: flex; flex-direction: column; justify-content: space-between; }
+.label { color: var(--blaze); font-size: 11px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
+h2 { margin: 16px 0 0; font-size: clamp(28px, 3vw, 46px); line-height: 0.98; letter-spacing: -0.055em; }
+p { color: var(--slate); font-size: 13px; line-height: 1.5; }
+.dark p { color: rgba(255,255,255,0.72); }
+.kpis { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 20px; }
+.kpi { padding: 12px; border: 1px solid var(--border); border-radius: 6px; }
+.kpi b { display: block; font-size: 26px; letter-spacing: -0.05em; }
+.kpi span { color: var(--slate); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
+.list { display: grid; gap: 10px; margin-top: 22px; }
+.item { padding: 12px 0; border-bottom: 1px solid var(--border); font-size: 13px; font-weight: 700; }
+.footer { display: flex; justify-content: space-between; align-items: center; color: var(--slate); font-size: 11px; font-weight: 700; }
+.dark .footer { color: rgba(255,255,255,0.66); }
+@media (max-width: 980px) {
+  body { padding: 30px; }
+  .grid { grid-template-columns: 1fr; }
+}
+@media print {
+  body { background: white; padding: 0.25in; }
+  .grid { grid-template-columns: repeat(3, 1fr); gap: 0.2in; }
+  .sheet { box-shadow: none; }
+}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="top">
+    <div class="brand"><span class="dot"></span>22 Local Marketing</div>
+    <h1>Collateral templates</h1>
+  </header>
+
+  <section class="grid">
+    <article class="sheet dark">
+      <div class="content">
+        <div>
+          <div class="label">Proposal Cover</div>
+          <h2>Growth system for Patrick's Electric.</h2>
+          <p>Website, local SEO, and acquisition plan built to increase qualified calls across priority service areas.</p>
+        </div>
+        <div class="footer"><span>Prepared by 22 Local</span><span>2026</span></div>
+      </div>
+    </article>
+
+    <article class="sheet">
+      <div class="content">
+        <div>
+          <div class="label">Service Sheet</div>
+          <h2>Local SEO for booked jobs.</h2>
+          <p>Designed for home service companies that need stronger map visibility, better service pages, and more local trust.</p>
+          <div class="list">
+            <div class="item">GBP optimization and tracking</div>
+            <div class="item">Service-area landing pages</div>
+            <div class="item">Review and citation systems</div>
+            <div class="item">Monthly call and ranking reporting</div>
+          </div>
+        </div>
+        <div class="footer"><span>22localmarketing.com</span><span>Service</span></div>
+      </div>
+    </article>
+
+    <article class="sheet">
+      <div class="content">
+        <div>
+          <div class="label">Monthly Report</div>
+          <h2>What changed this month.</h2>
+          <div class="kpis">
+            <div class="kpi"><b>247</b><span>Leads</span></div>
+            <div class="kpi"><b>8.4%</b><span>CVR</span></div>
+            <div class="kpi"><b>$42</b><span>CPL</span></div>
+            <div class="kpi"><b>6.2x</b><span>ROAS</span></div>
+          </div>
+          <p>Focus the report on movement, meaning, and next actions. Keep charts secondary to the business readout.</p>
+        </div>
+        <div class="footer"><span>Client report</span><span>Q2</span></div>
+      </div>
+    </article>
+  </section>
+</main>
+</body>
+</html>

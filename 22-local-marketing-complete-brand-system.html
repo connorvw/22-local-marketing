@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>22 Local Marketing Complete Brand System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --blaze: #FB5607;
+  --scorch: #C13D0E;
+  --bone: #F8F6F2;
+  --white: #FFFFFF;
+  --slate: #525252;
+  --slate-light: #8A8A8A;
+  --onyx: #0A0A0A;
+  --border: #E5E2DC;
+  --border-strong: #D4D0C8;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bone);
+  color: var(--onyx);
+  font-family: "Sora", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; }
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 42px; }
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  border-bottom: 1px solid var(--border);
+  background: rgba(248,246,242,0.91);
+  backdrop-filter: blur(12px);
+}
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 72px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: -0.045em;
+}
+.dot { width: 12px; height: 12px; border-radius: 3px; background: var(--blaze); flex: 0 0 auto; }
+.nav-links { display: flex; gap: 22px; color: var(--slate); font-size: 13px; font-weight: 700; }
+.nav-links a { text-decoration: none; }
+.hero { padding: 86px 0 72px; }
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+  color: var(--blaze);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.dash { width: 28px; height: 2px; background: var(--blaze); }
+h1 {
+  max-width: 860px;
+  margin: 0 0 26px;
+  font-size: clamp(48px, 7vw, 84px);
+  line-height: 0.96;
+  letter-spacing: -0.058em;
+}
+.accent { color: var(--blaze); }
+.intro { max-width: 650px; margin: 0; color: var(--slate); font-size: 20px; }
+.section { padding: 58px 0; border-top: 1px solid var(--border); }
+.section-head {
+  display: grid;
+  grid-template-columns: 0.75fr 1fr;
+  gap: 40px;
+  margin-bottom: 28px;
+}
+h2 {
+  position: relative;
+  width: fit-content;
+  margin: 0;
+  font-size: 34px;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+h2::before,
+h2::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--blaze);
+}
+h2::before { top: -8px; left: -20px; border-right: 0; border-bottom: 0; }
+h2::after { right: -20px; bottom: -8px; border-left: 0; border-top: 0; }
+.section-copy { margin: 0; color: var(--slate); max-width: 620px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.card {
+  background: var(--white);
+  border: 1px solid var(--onyx);
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 3px 3px 0 var(--onyx);
+}
+.card.dark { background: var(--onyx); color: var(--white); }
+.card h3 { margin: 0 0 10px; font-size: 19px; letter-spacing: -0.02em; }
+.card p { margin: 0; color: var(--slate); font-size: 14px; }
+.dark p { color: rgba(255,255,255,0.72); }
+.caps { color: var(--blaze); font-size: 12px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 14px; }
+.logo-spec {
+  min-height: 180px;
+  display: grid;
+  place-items: center;
+  background: var(--white);
+  border: 1px solid var(--onyx);
+  border-radius: 8px;
+}
+.wordmark {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: clamp(26px, 3.4vw, 42px);
+  font-weight: 800;
+  letter-spacing: -0.055em;
+}
+.wordmark .dot { width: 16px; height: 16px; border-radius: 4px; }
+.swatches { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; }
+.swatch { overflow: hidden; background: var(--white); border: 1px solid var(--border); border-radius: 8px; }
+.color { height: 98px; }
+.swatch p { margin: 0; padding: 12px; color: var(--slate); font-size: 12px; font-weight: 700; line-height: 1.35; }
+.type-sample { display: grid; gap: 14px; }
+.display { font-size: clamp(42px, 5.6vw, 72px); font-weight: 800; line-height: 0.96; letter-spacing: -0.055em; }
+.h-sample { font-size: 34px; font-weight: 700; letter-spacing: -0.035em; }
+.body-sample { max-width: 630px; color: var(--slate); font-size: 17px; }
+.deliverables { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.deliverable {
+  display: grid;
+  min-height: 112px;
+  align-content: space-between;
+  padding: 18px;
+  background: var(--white);
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  text-decoration: none;
+}
+.deliverable b { font-size: 15px; }
+.deliverable span { color: var(--slate); font-size: 12px; font-weight: 600; }
+.frame-demo {
+  aspect-ratio: 1 / 1;
+  position: relative;
+  display: grid;
+  align-content: space-between;
+  padding: 10%;
+  background: var(--white);
+  border: 1px solid var(--onyx);
+  border-radius: 8px;
+}
+.frame-demo::before,
+.frame-demo::after {
+  content: "";
+  position: absolute;
+  width: 12%;
+  height: 12%;
+  border: 3px solid var(--blaze);
+}
+.frame-demo::before { top: 6%; left: 6%; border-right: 0; border-bottom: 0; }
+.frame-demo::after { right: 6%; bottom: 6%; border-left: 0; border-top: 0; }
+.frame-demo h3 { margin: 0; max-width: 80%; font-size: clamp(28px, 4vw, 52px); line-height: 0.96; letter-spacing: -0.055em; }
+.footer { padding: 46px 0 64px; border-top: 1px solid var(--border); color: var(--slate); font-size: 14px; }
+@media (max-width: 900px) {
+  .wrap { padding: 0 28px; }
+  .nav-links { display: none; }
+  .section-head,
+  .grid-3,
+  .grid-2,
+  .deliverables,
+  .swatches { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="wrap nav-inner">
+    <div class="brand"><span class="dot"></span>22 Local Marketing</div>
+    <div class="nav-links">
+      <a href="#strategy">Strategy</a>
+      <a href="#identity">Identity</a>
+      <a href="#voice">Voice</a>
+      <a href="#applications">Applications</a>
+      <a href="#deliverables">Deliverables</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <header class="hero wrap">
+    <div class="eyebrow"><span class="dash"></span>Complete Brand System</div>
+    <h1>The home services marketing agency built for <span class="accent">growth.</span></h1>
+    <p class="intro">A practical identity system for a sharp, results-minded local marketing brand: simple logo, loud orange, tight typography, useful messaging, and templates for the places the brand actually shows up.</p>
+  </header>
+
+  <section class="section" id="strategy">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Strategy</h2>
+        <p class="section-copy">22 Local Marketing should feel like an operating partner for serious home service businesses. The brand is not cute, trendy, or agency-fluffy. It is confident, useful, and revenue-aware.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card"><div class="caps">Positioning</div><h3>Local growth systems</h3><p>Websites, local SEO, and paid acquisition for home service companies that want more qualified calls and booked jobs.</p></div>
+        <div class="card"><div class="caps">Audience</div><h3>Owner-operators</h3><p>Trades business owners who care about revenue, phone calls, reviews, service area visibility, and practical marketing.</p></div>
+        <div class="card"><div class="caps">Personality</div><h3>Sharp, direct, grounded</h3><p>Confident without being slick. Modern without looking like generic SaaS. Useful before decorative.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="identity">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Identity</h2>
+        <p class="section-copy">The logo is intentionally simple: a Blaze rounded square and a Sora wordmark. The square acts as a small signal of the system. Do not add icons, pins, initials, gradients, or extra marks inside it.</p>
+      </div>
+      <div class="grid-2">
+        <div class="logo-spec"><div class="wordmark"><span class="dot"></span>22 Local Marketing</div></div>
+        <div class="card dark"><div class="caps">Logo Rule</div><h3>Simple wins.</h3><p>Use the full wordmark whenever possible. The square mark alone is acceptable for favicons, app icons, avatars, and small watermarks.</p></div>
+      </div>
+      <div style="height:18px"></div>
+      <div class="swatches">
+        <div class="swatch"><div class="color" style="background:#FB5607"></div><p>Blaze<br>#FB5607</p></div>
+        <div class="swatch"><div class="color" style="background:#C13D0E"></div><p>Scorch<br>#C13D0E</p></div>
+        <div class="swatch"><div class="color" style="background:#F8F6F2;border-bottom:1px solid var(--border)"></div><p>Bone<br>#F8F6F2</p></div>
+        <div class="swatch"><div class="color" style="background:#FFFFFF;border-bottom:1px solid var(--border)"></div><p>White<br>#FFFFFF</p></div>
+        <div class="swatch"><div class="color" style="background:#525252"></div><p>Slate<br>#525252</p></div>
+        <div class="swatch"><div class="color" style="background:#0A0A0A"></div><p>Onyx<br>#0A0A0A</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Typography</h2>
+        <p class="section-copy">Sora carries the whole system. It should feel geometric, practical, and confident. Use tight headline tracking and spacious body copy.</p>
+      </div>
+      <div class="card type-sample">
+        <div class="display">Build louder.</div>
+        <div class="h-sample">Home services marketing, sharpened.</div>
+        <p class="body-sample">22 Local Marketing builds the website, local search, and acquisition systems that help serious home service companies get found, get trusted, and get booked.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="voice">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Voice</h2>
+        <p class="section-copy">The voice should sound like a sharp operator, not a motivational marketer. Say what matters. Tie claims to outcomes. Keep copy concrete.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card"><div class="caps">Say</div><h3>More qualified calls.</h3><p>Use tangible business outcomes: calls, booked jobs, reviews, rankings, revenue, service areas.</p></div>
+        <div class="card"><div class="caps">Avoid</div><h3>Vague agency claims.</h3><p>Avoid empty language like game-changing, full-service solutions, next-level growth, or cutting-edge strategies.</p></div>
+        <div class="card"><div class="caps">CTA</div><h3>Make the next step clear.</h3><p>Use direct CTAs: Book a call, Get a local audit, See the system, Build your growth engine.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="applications">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Applications</h2>
+        <p class="section-copy">The brand should be recognizable across social posts, ads, proposals, sales one-pagers, websites, reports, and business cards. Use orange frames, crisp type, and quiet structure.</p>
+      </div>
+      <div class="grid-3">
+        <div class="frame-demo"><div class="caps">Social</div><h3>One idea per square<span class="accent">.</span></h3><div class="brand"><span class="dot"></span>22 Local</div></div>
+        <div class="card"><div class="caps">Collateral</div><h3>Sales materials</h3><p>Use Bone or White surfaces, black borders, orange section tags, and KPI-led proof. Avoid decorative clutter.</p></div>
+        <div class="card"><div class="caps">Website</div><h3>Operational, not fluffy</h3><p>Dense but clean layouts, direct headlines, strong forms, proof blocks, service-area content, and conversion-focused CTAs.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="deliverables">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Deliverables</h2>
+        <p class="section-copy">This package includes the working files, rules, and templates a designer or marketer needs to keep the brand consistent across launch materials.</p>
+      </div>
+      <div class="deliverables">
+        <a class="deliverable" href="22-local-marketing-logo-kit.html"><b>Logo Kit</b><span>Lockups + SVG exports</span></a>
+        <a class="deliverable" href="22-local-marketing-social-post-guidelines.html"><b>Social Guidelines</b><span>1:1 posts + frame system</span></a>
+        <a class="deliverable" href="brand-deliverables/voice-guide.md"><b>Voice Guide</b><span>Tone, copy, CTAs</span></a>
+        <a class="deliverable" href="brand-deliverables/logo-usage-guide.md"><b>Logo Usage</b><span>Clear space + rules</span></a>
+        <a class="deliverable" href="brand-deliverables/photography-art-direction.md"><b>Photo Direction</b><span>Imagery rules</span></a>
+        <a class="deliverable" href="brand-deliverables/ad-creative-guidelines.md"><b>Ad Creative</b><span>Meta + Google rules</span></a>
+        <a class="deliverable" href="brand-deliverables/website-system.md"><b>Website System</b><span>Sections + components</span></a>
+        <a class="deliverable" href="brand-deliverables/collateral-templates.html"><b>Collateral Templates</b><span>Proposal + service sheet</span></a>
+        <a class="deliverable" href="brand-deliverables/brand-tokens.css"><b>Brand Tokens</b><span>CSS variables + utilities</span></a>
+        <a class="deliverable" href="brand-deliverables/launch-checklist.md"><b>Launch Checklist</b><span>QA before publishing</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">22 Local Marketing Brand System. Built for consistent, practical launch execution.</div>
+</footer>
+</body>
+</html>

@@ -15,27 +15,27 @@ const {
 } = Astro.props;
 ---
 
-<form class={`quote-form quote-form-${variant}`} onsubmit="event.preventDefault(); alert('Demo form. Wire to your CRM.');">
+<form class={`quote-form quote-form-${variant}`} data-quote-form>
   <div class="qf-eyebrow">{eyebrow}</div>
   <h3 class="qf-title">{title}</h3>
   <p class="qf-desc">{description}</p>
   <div class="qf-row">
-    <div class="qf-field"><label class="qf-label">First name</label><input class="qf-input" type="text" placeholder="Jane"></div>
-    <div class="qf-field"><label class="qf-label">Last name</label><input class="qf-input" type="text" placeholder="Doe"></div>
+    <div class="qf-field"><label class="qf-label">First name</label><input class="qf-input" type="text" name="firstName" placeholder="Jane" required></div>
+    <div class="qf-field"><label class="qf-label">Last name</label><input class="qf-input" type="text" name="lastName" placeholder="Doe" required></div>
   </div>
   <div class="qf-row">
-    <div class="qf-field"><label class="qf-label">Email</label><input class="qf-input" type="email" placeholder="you@company.com"></div>
-    <div class="qf-field"><label class="qf-label">Phone</label><input class="qf-input" type="tel" placeholder="(555) 555-5555"></div>
+    <div class="qf-field"><label class="qf-label">Email</label><input class="qf-input" type="email" name="email" placeholder="you@company.com" required></div>
+    <div class="qf-field"><label class="qf-label">Phone</label><input class="qf-input" type="tel" name="phone" placeholder="(555) 555-5555" required></div>
   </div>
   <div class="qf-row">
-    <div class="qf-field"><label class="qf-label">Business name</label><input class="qf-input" type="text" placeholder="Acme Tree Service"></div>
-    <div class="qf-field"><label class="qf-label">City</label><input class="qf-input" type="text" placeholder="Raleigh, NC"></div>
+    <div class="qf-field"><label class="qf-label">Business name</label><input class="qf-input" type="text" name="businessName" placeholder="Acme Tree Service" required></div>
+    <div class="qf-field"><label class="qf-label">City</label><input class="qf-input" type="text" name="city" placeholder="Raleigh, NC" required></div>
   </div>
   <div class="qf-row">
-    <div class="qf-field"><label class="qf-label">Website</label><input class="qf-input" type="url" placeholder="https://..."></div>
+    <div class="qf-field"><label class="qf-label">Website</label><input class="qf-input" type="url" name="websiteUrl" placeholder="https://..."></div>
     <div class="qf-field">
       <label class="qf-label">Service category</label>
-      <select class="qf-select">
+      <select class="qf-select" name="serviceCategory">
         <option>Tree services</option>
         <option>Land clearing</option>
         <option>Electrical</option>
@@ -46,7 +46,8 @@ const {
       </select>
     </div>
   </div>
-  <button type="submit" class="qf-submit">{submitLabel} <span class="qf-arrow">→</span></button>
+  <button type="submit" class="qf-submit"><span class="qf-submit-label">{submitLabel}</span> <span class="qf-arrow">→</span></button>
+  <div class="qf-status" hidden></div>
 </form>
 
 <style>
@@ -108,6 +109,7 @@ const {
 }
 .qf-submit:hover { transform: translate(1px, 1px); box-shadow: 2px 2px 0 0 var(--onyx); }
 .qf-submit:active { transform: translate(3px, 3px); box-shadow: 0 0 0 0 var(--onyx); }
+.qf-submit:disabled { cursor: wait; opacity: 0.85; }
 .qf-submit::before {
   content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
   background: var(--blaze);
@@ -117,4 +119,97 @@ const {
 .qf-submit:hover::before { transform: translateX(-5%) skewX(-22deg); }
 .qf-arrow { display: inline-block; transition: transform 0.25s; }
 .qf-submit:hover .qf-arrow { transform: translateX(3px); }
+
+.qf-status {
+  margin-top: 12px;
+  padding: 12px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.qf-status.is-success {
+  background: rgba(31, 122, 77, 0.08);
+  border: 1px solid var(--success);
+  color: var(--success);
+}
+.qf-status.is-error {
+  background: rgba(196, 32, 23, 0.06);
+  border: 1px solid var(--danger);
+  color: var(--danger);
+}
+.quote-form.is-sent .qf-eyebrow,
+.quote-form.is-sent .qf-title,
+.quote-form.is-sent .qf-desc,
+.quote-form.is-sent .qf-row,
+.quote-form.is-sent .qf-submit {
+  display: none;
+}
+.quote-form.is-sent .qf-status {
+  margin-top: 0;
+}
 </style>
+
+<script is:inline>
+(function(){
+  if (window.__qf_init) return;
+  window.__qf_init = true;
+  const WEBHOOK = 'https://connorvw.app.n8n.cloud/webhook/22lm-contact-form';
+
+  function bind(form) {
+    if (form.dataset.qfBound) return;
+    form.dataset.qfBound = '1';
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('.qf-submit');
+      const label = form.querySelector('.qf-submit-label');
+      const status = form.querySelector('.qf-status');
+      const originalLabel = label ? label.textContent : '';
+      const fd = new FormData(form);
+      const payload = Object.fromEntries(fd.entries());
+      payload.pageUrl = window.location.href;
+      payload.submittedAt = new Date().toISOString();
+      payload.referrer = document.referrer || '';
+
+      if (btn) btn.disabled = true;
+      if (label) label.textContent = 'Sending...';
+      if (status) { status.hidden = true; status.className = 'qf-status'; status.textContent = ''; }
+
+      try {
+        const res = await fetch(WEBHOOK, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        form.classList.add('is-sent');
+        if (status) {
+          status.hidden = false;
+          status.className = 'qf-status is-success';
+          status.innerHTML = "<strong>Got it.</strong> We'll be in touch within one business day. Look for an email confirmation in your inbox.";
+        }
+      } catch (err) {
+        if (status) {
+          status.hidden = false;
+          status.className = 'qf-status is-error';
+          status.innerHTML = "Something went wrong on our end. Email <a href='mailto:connor@22localmarketing.com' style='color:inherit;text-decoration:underline;'>connor@22localmarketing.com</a> and we'll pick it up directly.";
+        }
+        if (btn) btn.disabled = false;
+        if (label) label.textContent = originalLabel;
+      }
+    });
+  }
+
+  function bindAll() {
+    document.querySelectorAll('form.quote-form[data-quote-form]').forEach(bind);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bindAll);
+  } else {
+    bindAll();
+  }
+  // Re-bind any forms added later (e.g. modal contents are present from page load
+  // but if anything ever swaps them, this catches it).
+  new MutationObserver(bindAll).observe(document.body, { childList: true, subtree: true });
+})();
+</script>

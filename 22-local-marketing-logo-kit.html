@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>22 Local Marketing Logo Kit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --blaze: #FB5607;
+  --bone: #F8F6F2;
+  --white: #FFFFFF;
+  --slate: #525252;
+  --slate-light: #8A8A8A;
+  --onyx: #0A0A0A;
+  --border: #E5E2DC;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 54px;
+  background: var(--bone);
+  color: var(--onyx);
+  font-family: "Sora", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.top {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 34px;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  color: var(--blaze);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.dash {
+  width: 28px;
+  height: 2px;
+  background: var(--blaze);
+}
+
+h1 {
+  margin: 0;
+  font-size: 48px;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.meta {
+  max-width: 330px;
+  margin: 0;
+  color: var(--slate);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.section {
+  margin-top: 18px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.section-title {
+  margin: 0 0 16px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.tile {
+  min-height: 220px;
+  display: grid;
+  align-content: center;
+  gap: 18px;
+  padding: 28px;
+  background: var(--white);
+  border: 1px solid var(--onyx);
+  border-radius: 8px;
+  box-shadow: 4px 4px 0 var(--onyx);
+}
+
+.tile.dark {
+  background: var(--onyx);
+  color: var(--white);
+}
+
+.tile.bone {
+  background: var(--bone);
+}
+
+.label {
+  margin: 0;
+  color: var(--slate);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.dark .label { color: rgba(255,255,255,0.62); }
+
+.dark .wordmark {
+  color: var(--blaze);
+}
+
+.logo-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.mark {
+  flex: 0 0 auto;
+  width: 22px;
+  height: 22px;
+  border-radius: 4px;
+  background: var(--blaze);
+}
+
+.mark.small {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+}
+
+.wordmark {
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -0.055em;
+  line-height: 0.95;
+}
+
+.wordmark.sm { font-size: 22px; }
+.wordmark.xs { font-size: 16px; }
+
+.stack {
+  display: grid;
+  gap: 18px;
+  justify-items: start;
+}
+
+.stack-title {
+  display: grid;
+  gap: 6px;
+}
+
+.stack-main {
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: -0.055em;
+  line-height: 0.92;
+}
+
+.stack-sub {
+  color: var(--onyx);
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.one-color .mark,
+.one-color-mark {
+  background: var(--onyx);
+}
+
+.sizes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.size-card {
+  min-height: 152px;
+  display: grid;
+  place-items: center;
+  gap: 12px;
+  padding: 18px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.size-card span {
+  color: var(--slate);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.mark-128 { width: 64px; height: 64px; border-radius: 12px; background: var(--blaze); }
+.mark-64 { width: 48px; height: 48px; border-radius: 9px; background: var(--blaze); }
+.mark-32 { width: 32px; height: 32px; border-radius: 6px; background: var(--blaze); }
+.mark-16 { width: 16px; height: 16px; border-radius: 3px; background: var(--blaze); }
+
+.files {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.file {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 56px;
+  padding: 13px 14px;
+  color: var(--onyx);
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.file::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  flex: 0 0 auto;
+  border-radius: 2px;
+  background: var(--blaze);
+}
+
+.palette {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.swatch {
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.color {
+  height: 70px;
+}
+
+.swatch p {
+  margin: 0;
+  padding: 12px;
+  color: var(--slate);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+  body { padding: 32px; }
+  .top { display: grid; }
+  .grid,
+  .sizes,
+  .files,
+  .palette { grid-template-columns: 1fr; }
+}
+
+@media print {
+  body { background: white; padding: 0.35in; }
+  .tile,
+  .size-card,
+  .file,
+  .swatch { box-shadow: none; }
+}
+</style>
+</head>
+<body>
+  <main>
+    <header class="top">
+      <div>
+        <div class="eyebrow"><span class="dash"></span>Logo kit</div>
+        <h1>22 Local Marketing</h1>
+      </div>
+      <p class="meta">Built from option 1: one Blaze rounded square and a tight Sora wordmark. Simple enough to work on cards, websites, invoices, hats, trucks, and favicons.</p>
+    </header>
+
+    <section class="section">
+      <h2 class="section-title">Primary Versions</h2>
+      <div class="grid">
+        <article class="tile">
+          <p class="label">Primary / light</p>
+          <div class="logo-row">
+            <span class="mark"></span>
+            <span class="wordmark">22 Local Marketing</span>
+          </div>
+        </article>
+        <article class="tile dark">
+          <p class="label">Primary / dark</p>
+          <div class="logo-row">
+            <span class="mark"></span>
+            <span class="wordmark">22 Local Marketing</span>
+          </div>
+        </article>
+        <article class="tile one-color">
+          <p class="label">One color</p>
+          <div class="logo-row">
+            <span class="mark"></span>
+            <span class="wordmark">22 Local Marketing</span>
+          </div>
+        </article>
+        <article class="tile bone">
+          <p class="label">Small horizontal</p>
+          <div class="logo-row">
+            <span class="mark small"></span>
+            <span class="wordmark sm">22 Local Marketing</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Alternate Lockups</h2>
+      <div class="grid">
+        <article class="tile">
+          <p class="label">Stacked</p>
+          <div class="stack">
+            <span class="mark"></span>
+            <div class="stack-title">
+              <span class="stack-main">22 Local</span>
+              <span class="stack-sub">Marketing</span>
+            </div>
+          </div>
+        </article>
+        <article class="tile">
+          <p class="label">Compact</p>
+          <div class="logo-row">
+            <span class="mark"></span>
+            <span class="wordmark">22 Local</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Icon Sizes</h2>
+      <div class="sizes">
+        <div class="size-card"><div class="mark-128"></div><span>128 px</span></div>
+        <div class="size-card"><div class="mark-64"></div><span>64 px</span></div>
+        <div class="size-card"><div class="mark-32"></div><span>32 px</span></div>
+        <div class="size-card"><div class="mark-16"></div><span>16 px</span></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Export Files</h2>
+      <div class="files">
+        <a class="file" href="logo-kit/22lm-primary.svg">22lm-primary.svg</a>
+        <a class="file" href="logo-kit/22lm-primary-reversed.svg">22lm-primary-reversed.svg</a>
+        <a class="file" href="logo-kit/22lm-primary-one-color.svg">22lm-primary-one-color.svg</a>
+        <a class="file" href="logo-kit/22lm-stacked.svg">22lm-stacked.svg</a>
+        <a class="file" href="logo-kit/22lm-mark.svg">22lm-mark.svg</a>
+        <a class="file" href="logo-kit/22lm-favicon.svg">22lm-favicon.svg</a>
+        <a class="file" href="logo-kit/22lm-social-avatar.svg">22lm-social-avatar.svg</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Logo Colors</h2>
+      <div class="palette">
+        <div class="swatch"><div class="color" style="background:#FB5607"></div><p>Blaze<br>#FB5607</p></div>
+        <div class="swatch"><div class="color" style="background:#0A0A0A"></div><p>Onyx<br>#0A0A0A</p></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

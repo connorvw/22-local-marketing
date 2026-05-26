@@ -1,0 +1,84 @@
+:root {
+  /* 22 Local Marketing color tokens */
+  --color-blaze: #FB5607;
+  --color-scorch: #C13D0E;
+  --color-bone: #F8F6F2;
+  --color-white: #FFFFFF;
+  --color-slate: #525252;
+  --color-slate-light: #8A8A8A;
+  --color-onyx: #0A0A0A;
+  --color-border: #E5E2DC;
+  --color-border-strong: #D4D0C8;
+
+  /* Typography */
+  --font-brand: "Sora", Arial, sans-serif;
+  --tracking-tight: -0.04em;
+  --tracking-label: 0.12em;
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+
+  /* Borders and shadows */
+  --border-brand: 1px solid var(--color-onyx);
+  --shadow-brand: 3px 3px 0 var(--color-onyx);
+  --shadow-brand-lg: 4px 4px 0 var(--color-onyx);
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+}
+
+.brand-wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55em;
+  color: var(--color-onyx);
+  font-family: var(--font-brand);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1;
+}
+
+.brand-mark {
+  width: 0.72em;
+  height: 0.72em;
+  border-radius: 0.18em;
+  background: var(--color-blaze);
+  flex: 0 0 auto;
+}
+
+.brand-frame {
+  position: relative;
+}
+
+.brand-frame::before,
+.brand-frame::after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--color-blaze);
+  pointer-events: none;
+}
+
+.brand-frame::before {
+  top: 0;
+  left: 0;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.brand-frame::after {
+  right: 0;
+  bottom: 0;
+  border-left: 0;
+  border-top: 0;
+}

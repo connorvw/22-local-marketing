@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="180" viewBox="0 0 360 180" role="img" aria-labelledby="title desc">
+  <title id="title">22 Local Marketing stacked logo</title>
+  <desc id="desc">Orange rounded square mark above stacked black 22 Local Marketing wordmark.</desc>
+  <rect width="360" height="180" fill="none"/>
+  <rect x="36" y="28" width="22" height="22" rx="4" fill="#FB5607"/>
+  <text x="36" y="91" fill="#0A0A0A" font-family="Sora, Arial, sans-serif" font-size="38" font-weight="800" letter-spacing="-2">22 Local</text>
+  <text x="36" y="130" fill="#0A0A0A" font-family="Sora, Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="2.8">MARKETING</text>
+</svg>
