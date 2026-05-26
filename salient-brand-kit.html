@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>22 Local Marketing — Brand Kit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --blaze: #FB5607;
+  --scorch: #C13D0E;
+  --bone: #F8F6F2;
+  --white: #FFFFFF;
+  --slate: #525252;
+  --slate-light: #8A8A8A;
+  --onyx: #0A0A0A;
+  --border: #E5E2DC;
+  --border-strong: #D4D0C8;
+  --success: #1F7A4D;
+  --success-bg: #E6F4EC;
+  --warning: #8A5A00;
+  --warning-bg: #FFF4D9;
+  --danger: #C42017;
+  --danger-bg: #FBE5DF;
+  --info-bg: #FFE8D9;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Sora', sans-serif;
+  background: var(--bone);
+  color: var(--onyx);
+  font-size: 15px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "ss01", "ss02";
+}
+.container { max-width: 1080px; margin: 0 auto; padding: 0 40px; }
+
+/* ===== TOP NAV ===== */
+.topnav {
+  border-bottom: 1px solid var(--border);
+  background: rgba(248, 246, 242, 0.88);
+  position: sticky; top: 0; z-index: 10;
+  backdrop-filter: blur(10px);
+}
+.topnav-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 0;
+}
+.wordmark {
+  display: flex; align-items: center; gap: 8px;
+  font-weight: 700; font-size: 20px; letter-spacing: -0.03em;
+}
+.wordmark-dot {
+  width: 10px; height: 10px; background: var(--blaze); border-radius: 2px;
+}
+.topnav-links { display: flex; gap: 32px; align-items: center; }
+.topnav-links a {
+  color: var(--slate); text-decoration: none; font-size: 14px; font-weight: 500;
+  transition: color 0.15s;
+}
+.topnav-links a:hover { color: var(--onyx); }
+.topnav-cta {
+  background: var(--onyx); color: var(--white);
+  padding: 9px 16px; border-radius: 6px; font-size: 13px; font-weight: 600;
+  text-decoration: none;
+}
+
+/* ===== HERO ===== */
+.hero { padding: 96px 0 80px; }
+.eyebrow-rugged {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; font-weight: 500; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--blaze);
+  margin-bottom: 28px;
+}
+.eb-dash { display: inline-block; width: 28px; height: 2px; background: var(--blaze); }
+.eb-sep { color: var(--slate-light); }
+.eyebrow {
+  display: inline-block;
+  font-size: 12px; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--blaze);
+  margin-bottom: 24px;
+}
+.hero-frame {
+  position: relative; display: block;
+  width: fit-content;
+  padding: 14px 0 8px;
+  margin-bottom: 24px;
+}
+.hero-frame::before, .hero-frame::after {
+  content: ''; position: absolute;
+  width: 22px; height: 22px;
+  border: 2px solid var(--blaze);
+}
+.hero-frame::before { top: 0; left: -20px; border-right: 0; border-bottom: 0; }
+.hero-frame::after { bottom: 0; right: -20px; border-left: 0; border-top: 0; }
+.hero h1 {
+  font-size: 72px; line-height: 0.98; letter-spacing: -0.04em;
+  font-weight: 700; max-width: 820px;
+  margin: 0;
+}
+.hero h1 .accent { color: var(--blaze); }
+.hero p {
+  font-size: 19px; line-height: 1.5; color: var(--slate);
+  max-width: 580px; margin-bottom: 40px; font-weight: 400;
+}
+.hero-actions { display: flex; gap: 12px; }
+
+/* ===== SECTION STRUCTURE ===== */
+section { padding: 64px 0; border-top: 1px solid var(--border); }
+.section-head {
+  display: flex; align-items: baseline; gap: 16px; margin-bottom: 40px;
+}
+.section-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px; color: var(--blaze); font-weight: 500;
+  letter-spacing: 0.03em;
+}
+.section-num::before { content: '['; }
+.section-num::after { content: ']'; }
+.section-head h2 {
+  font-size: 32px; font-weight: 700; letter-spacing: -0.03em;
+  position: relative;
+  padding: 2px 0 0;
+}
+.section-head h2::before,
+.section-head h2::after {
+  content: ''; position: absolute;
+  width: 14px; height: 14px;
+  border: 2px solid var(--blaze);
+}
+.section-head h2::before { top: 0; left: -22px; border-right: 0; border-bottom: 0; }
+.section-head h2::after { bottom: 0; right: -22px; border-left: 0; border-top: 0; }
+.section-head .desc {
+  font-size: 14px; color: var(--slate); margin-left: auto;
+}
+
+/* ===== COLORS ===== */
+.color-grid {
+  display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px;
+}
+.swatch {
+  background: var(--white); border: 1px solid var(--border); border-radius: 8px;
+  overflow: hidden;
+}
+.swatch-color { height: 140px; }
+.swatch-meta { padding: 14px 14px 16px; }
+.swatch-name { font-weight: 600; font-size: 14px; margin-bottom: 2px; }
+.swatch-hex {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px; color: var(--slate); margin-bottom: 8px;
+}
+.swatch-role { font-size: 11px; color: var(--slate-light); }
+
+/* ===== TYPOGRAPHY ===== */
+.type-row {
+  display: grid; grid-template-columns: 140px 1fr;
+  gap: 32px; padding: 20px 0; border-bottom: 1px solid var(--border);
+  align-items: baseline;
+}
+.type-row:last-child { border-bottom: none; }
+.type-spec {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px; color: var(--slate); padding-top: 8px;
+}
+.type-display { font-size: 64px; font-weight: 700; letter-spacing: -0.04em; line-height: 1; }
+.type-h1 { font-size: 44px; font-weight: 700; letter-spacing: -0.03em; line-height: 1.1; }
+.type-h2 { font-size: 32px; font-weight: 600; letter-spacing: -0.02em; }
+.type-h3 { font-size: 22px; font-weight: 600; letter-spacing: -0.01em; }
+.type-h4 { font-size: 17px; font-weight: 600; }
+.type-body { font-size: 15px; font-weight: 400; color: var(--slate); }
+.type-small { font-size: 13px; color: var(--slate); }
+.type-caps {
+  font-size: 12px; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--onyx);
+}
+.type-mono {
+  font-family: 'JetBrains Mono', monospace; font-size: 14px;
+  color: var(--onyx);
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 11px 18px; border-radius: 6px;
+  font-family: inherit; font-size: 14px; font-weight: 600;
+  border: 1px solid transparent; cursor: pointer;
+  text-decoration: none;
+  position: relative; overflow: hidden; isolation: isolate;
+  box-shadow: 3px 3px 0 0 var(--onyx);
+  transition:
+    color 0.2s ease 0.22s,
+    border-color 0.25s ease,
+    transform 0.1s ease,
+    box-shadow 0.1s ease;
+}
+.btn:hover {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0 0 var(--onyx);
+}
+.btn:active {
+  transform: translate(3px, 3px);
+  box-shadow: 0 0 0 0 var(--onyx);
+}
+.btn-disabled, .btn:disabled, .btn[disabled] { box-shadow: none; }
+.btn-disabled:hover, .btn:disabled:hover, .btn[disabled]:hover {
+  transform: none; box-shadow: none;
+}
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: -1;
+  background: var(--scorch);
+  transform: translateX(-110%) skewX(-22deg);
+  transition: transform 0.55s cubic-bezier(0.77, 0, 0.18, 1);
+}
+.btn:hover::before { transform: translateX(-15%) skewX(-22deg); }
+.btn-disabled:hover::before,
+.btn:disabled:hover::before,
+.btn[disabled]:hover::before { transform: translateX(-110%) skewX(-22deg); }
+.btn-primary { background: var(--blaze); color: var(--white); }
+.btn-primary::before { background: var(--scorch); }
+.btn-dark { background: var(--onyx); color: var(--white); }
+.btn-dark::before { background: var(--blaze); }
+.btn-secondary {
+  background: var(--white); color: var(--onyx); border-color: var(--border-strong);
+}
+.btn-secondary::before { background: var(--blaze); }
+.btn-secondary:hover { border-color: var(--onyx); }
+.btn-ghost { background: transparent; color: var(--onyx); }
+.btn-ghost::before { background: var(--blaze); }
+.btn-disabled {
+  background: var(--white); color: var(--slate-light);
+  border-color: var(--border); cursor: not-allowed;
+}
+.btn-arrow { display: inline-block; position: relative; }
+.btn-sm { padding: 7px 12px; font-size: 13px; }
+.btn-lg { padding: 14px 22px; font-size: 15px; }
+.btn-row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-bottom: 16px; }
+.btn-row-label {
+  font-size: 12px; font-weight: 500; color: var(--slate);
+  font-family: 'JetBrains Mono', monospace; min-width: 80px;
+}
+
+/* ===== FORMS ===== */
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+.field { margin-bottom: 18px; }
+.field-label {
+  display: block; font-size: 13px; font-weight: 600;
+  margin-bottom: 6px; color: var(--onyx);
+}
+.field-hint { font-size: 12px; color: var(--slate); margin-top: 6px; }
+.input, .textarea, .select {
+  width: 100%; padding: 10px 14px;
+  border: 1px solid var(--border-strong); background: var(--white);
+  border-radius: 6px; font-family: inherit; font-size: 14px;
+  color: var(--onyx); transition: border-color 0.15s, box-shadow 0.15s;
+}
+.input:focus, .textarea:focus, .select:focus {
+  outline: none; border-color: var(--blaze);
+  box-shadow: 0 0 0 3px rgba(251, 86, 7, 0.15);
+}
+.textarea { min-height: 90px; resize: vertical; font-family: inherit; }
+.select { appearance: none; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1L6 6L11 1' stroke='%23525252' stroke-width='1.5' fill='none' stroke-linecap='round'/></svg>"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
+.checkbox-row, .radio-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-size: 14px; }
+.checkbox, .radio {
+  appearance: none; width: 18px; height: 18px;
+  border: 1.5px solid var(--border-strong); background: var(--white);
+  cursor: pointer; position: relative;
+}
+.checkbox { border-radius: 4px; }
+.radio { border-radius: 50%; }
+.checkbox:checked, .radio:checked { background: var(--blaze); border-color: var(--blaze); }
+.checkbox:checked::after {
+  content: ''; position: absolute; left: 4px; top: 1px;
+  width: 5px; height: 9px; border: solid var(--white);
+  border-width: 0 2px 2px 0; transform: rotate(45deg);
+}
+.radio:checked::after {
+  content: ''; position: absolute; top: 4px; left: 4px;
+  width: 6px; height: 6px; background: var(--white); border-radius: 50%;
+}
+.toggle { position: relative; width: 38px; height: 22px; background: var(--border-strong); border-radius: 11px; cursor: pointer; transition: background 0.15s; flex-shrink: 0; }
+.toggle::after { content: ''; position: absolute; top: 2px; left: 2px; width: 18px; height: 18px; background: var(--white); border-radius: 50%; transition: transform 0.15s; }
+.toggle.on { background: var(--blaze); }
+.toggle.on::after { transform: translateX(16px); }
+
+/* ===== CARDS ===== */
+.card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.card {
+  background: var(--white); border: 1px solid var(--onyx);
+  border-radius: 10px; padding: 24px;
+  box-shadow: 3px 3px 0 0 var(--onyx);
+}
+.card-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blaze); margin-bottom: 14px; }
+.card-title { font-size: 18px; font-weight: 600; margin-bottom: 8px; letter-spacing: -0.01em; }
+.card-body { font-size: 14px; color: var(--slate); line-height: 1.55; margin-bottom: 16px; }
+.card-link { font-size: 13px; font-weight: 600; color: var(--onyx); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+.card-link:hover { color: var(--blaze); }
+
+.metric-card { background: var(--white); border: 1px solid var(--onyx); border-radius: 10px; padding: 22px; box-shadow: 3px 3px 0 0 var(--onyx); }
+.metric-label { font-size: 12px; font-weight: 600; color: var(--slate); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 12px; }
+.metric-value { font-size: 36px; font-weight: 700; letter-spacing: -0.03em; line-height: 1; margin-bottom: 8px; }
+.metric-change { font-size: 13px; font-weight: 500; }
+.metric-change.up { color: var(--success); }
+.metric-change.down { color: var(--danger); }
+
+/* ===== BADGES ===== */
+.badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 4px 10px; border-radius: 4px;
+  font-size: 12px; font-weight: 600; letter-spacing: 0.01em;
+}
+.badge-dot { width: 6px; height: 6px; border-radius: 50%; }
+.badge-brand { background: var(--info-bg); color: var(--scorch); }
+.badge-brand .badge-dot { background: var(--blaze); }
+.badge-success { background: var(--success-bg); color: var(--success); }
+.badge-success .badge-dot { background: var(--success); }
+.badge-warning { background: var(--warning-bg); color: var(--warning); }
+.badge-warning .badge-dot { background: var(--warning); }
+.badge-danger { background: var(--danger-bg); color: var(--danger); }
+.badge-danger .badge-dot { background: var(--danger); }
+.badge-neutral { background: var(--bone); color: var(--slate); border: 1px solid var(--border); }
+.badge-neutral .badge-dot { background: var(--slate); }
+.badge-solid { background: var(--onyx); color: var(--white); }
+
+/* ===== ALERTS ===== */
+.alert {
+  display: grid; grid-template-columns: auto 1fr;
+  align-items: start; gap: 16px;
+  padding: 16px 20px 16px 24px;
+  background: var(--white);
+  border: 1px solid var(--onyx);
+  border-radius: 6px;
+  margin-bottom: 12px;
+  position: relative; overflow: hidden;
+}
+.alert::before {
+  content: ''; position: absolute;
+  top: 0; bottom: 0; left: 0;
+  width: 6px;
+}
+.alert-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 5px 9px;
+  color: var(--white);
+  border-radius: 3px;
+  white-space: nowrap;
+  margin-top: 1px;
+}
+.alert-tag::before { content: '['; margin-right: 1px; }
+.alert-tag::after { content: ']'; margin-left: 1px; }
+.alert-body { min-width: 0; }
+.alert-title {
+  font-size: 14px; font-weight: 700;
+  letter-spacing: -0.005em;
+  color: var(--onyx);
+  margin-bottom: 3px;
+}
+.alert-msg {
+  font-size: 13px; color: var(--slate); line-height: 1.5;
+}
+.alert-info::before, .alert-info .alert-tag { background: var(--blaze); }
+.alert-success::before, .alert-success .alert-tag { background: var(--success); }
+.alert-warning::before, .alert-warning .alert-tag { background: var(--warning); }
+.alert-danger::before, .alert-danger .alert-tag { background: var(--danger); }
+
+/* ===== TABLE ===== */
+.table-wrap {
+  background: var(--white); border: 1px solid var(--onyx);
+  border-radius: 6px; overflow: hidden;
+}
+.table-terminal {
+  display: flex; align-items: center; gap: 7px;
+  padding: 10px 14px;
+  background: #161616;
+  border-bottom: 1px solid #232323;
+}
+table { width: 100%; border-collapse: collapse; }
+th {
+  text-align: left; font-size: 11px; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--onyx); padding: 14px 20px;
+  background: var(--bone); border-bottom: 2px solid var(--blaze);
+}
+th .th-num {
+  display: inline-block; margin-right: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; font-weight: 500;
+  color: var(--blaze); letter-spacing: 0;
+}
+th .th-num::before { content: '['; }
+th .th-num::after { content: ']'; }
+td { padding: 16px 20px; font-size: 14px; border-bottom: 1px solid var(--border); }
+tr:last-child td { border-bottom: none; }
+td.mono { font-family: 'JetBrains Mono', monospace; font-size: 13px; }
+
+/* ===== LINKS / INLINE / CODE / QUOTE ===== */
+.prose-block { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 28px 32px; }
+.prose-block p { margin-bottom: 14px; color: var(--slate); }
+.prose-block p:last-child { margin-bottom: 0; }
+.link { color: var(--onyx); text-decoration: none; border-bottom: 1.5px solid var(--blaze); font-weight: 500; transition: color 0.15s; }
+.link:hover { color: var(--blaze); }
+code.inline { font-family: 'JetBrains Mono', monospace; font-size: 13px; background: var(--bone); padding: 2px 6px; border-radius: 4px; border: 1px solid var(--border); color: var(--onyx); }
+.codeblock-wrap {
+  background: var(--onyx); border-radius: 8px;
+  overflow: hidden; margin: 8px 0;
+  border: 1px solid #1F1F1F;
+}
+.codeblock-header {
+  display: flex; align-items: center; gap: 7px;
+  padding: 10px 14px;
+  background: #161616;
+  border-bottom: 1px solid #232323;
+}
+.ck-circle { width: 10px; height: 10px; border-radius: 50%; }
+.ck-circle.r { background: #FF5F57; }
+.ck-circle.y { background: #FFBD2E; }
+.ck-circle.g { background: #28C840; }
+.codeblock-filename {
+  margin-left: 12px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px; color: #8A8A8A; letter-spacing: 0.02em;
+}
+.codeblock-wrap .codeblock {
+  border-radius: 0; margin: 0; border: 0;
+}
+.codeblock { font-family: 'JetBrains Mono', monospace; font-size: 13px; background: var(--onyx); color: #E8E8E8; padding: 18px 22px; border-radius: 8px; overflow-x: auto; line-height: 1.6; }
+.codeblock .ck-key { color: #FB5607; }
+.codeblock .ck-str { color: #B8E986; }
+.codeblock .ck-comment { color: #6B6B6B; }
+blockquote {
+  font-size: 19px; font-weight: 500; letter-spacing: -0.01em; line-height: 1.45;
+  color: var(--onyx); border-left: 3px solid var(--blaze);
+  padding-left: 20px; margin: 16px 0;
+}
+blockquote cite { display: block; font-size: 13px; font-weight: 500; color: var(--slate); margin-top: 10px; font-style: normal; letter-spacing: 0; }
+hr { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
+
+/* ===== FOOTER ===== */
+footer { border-top: 1px solid var(--border); padding: 48px 0 64px; margin-top: 48px; }
+.footer-inner { display: flex; justify-content: space-between; align-items: center; }
+.footer-meta { font-size: 13px; color: var(--slate); }
+.footer-links { display: flex; gap: 24px; }
+.footer-links a { font-size: 13px; color: var(--slate); text-decoration: none; font-weight: 500; }
+.footer-links a:hover { color: var(--onyx); }
+
+/* ===== UTIL ===== */
+.row-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.row-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.cluster { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.stack-tight > * + * { margin-top: 12px; }
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="topnav">
+  <div class="container topnav-inner">
+    <div class="wordmark"><span class="wordmark-dot"></span>22 Local Marketing</div>
+    <div class="topnav-links">
+      <a href="#colors">Colors</a>
+      <a href="#typography">Typography</a>
+      <a href="#components">Components</a>
+      <a href="#" class="topnav-cta">Book a call</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero container">
+  <div class="eyebrow-rugged">
+    <span class="eb-dash"></span>
+    <span>BRAND_KIT</span>
+    <span class="eb-sep">·</span>
+    <span>V2.0</span>
+    <span class="eb-sep">·</span>
+    <span>2026.05</span>
+  </div>
+  <div class="hero-frame">
+    <h1>The home services marketing agency<br>built for <span class="accent">growth.</span></h1>
+  </div>
+  <p>22 Local Marketing is a brand identity system designed for trades agencies that compete on results, not promises. Sharp, confident, and built to scale.</p>
+  <div class="hero-actions">
+    <a href="#" class="btn btn-primary btn-lg">Start a project <span class="btn-arrow">→</span></a>
+    <a href="#" class="btn btn-secondary btn-lg">View the system</a>
+  </div>
+</header>
+
+<!-- 01 COLORS -->
+<section id="colors">
+  <div class="container">
+    <div class="section-head">
+      <h2>Color</h2>
+      <span class="desc">Six-color system. Orange does the talking.</span>
+    </div>
+    <div class="color-grid">
+      <div class="swatch"><div class="swatch-color" style="background:#FB5607"></div><div class="swatch-meta"><div class="swatch-name">Blaze</div><div class="swatch-hex">#FB5607</div><div class="swatch-role">Primary brand</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#C13D0E"></div><div class="swatch-meta"><div class="swatch-name">Scorch</div><div class="swatch-hex">#C13D0E</div><div class="swatch-role">Hover · pressed</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#F8F6F2; border-bottom:1px solid var(--border)"></div><div class="swatch-meta"><div class="swatch-name">Bone</div><div class="swatch-hex">#F8F6F2</div><div class="swatch-role">Background</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#FFFFFF; border-bottom:1px solid var(--border)"></div><div class="swatch-meta"><div class="swatch-name">Pure white</div><div class="swatch-hex">#FFFFFF</div><div class="swatch-role">Surface · cards</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#525252"></div><div class="swatch-meta"><div class="swatch-name">Slate</div><div class="swatch-hex">#525252</div><div class="swatch-role">Muted text</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#0A0A0A"></div><div class="swatch-meta"><div class="swatch-name">Onyx</div><div class="swatch-hex">#0A0A0A</div><div class="swatch-role">Primary text</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 TYPOGRAPHY -->
+<section id="typography">
+  <div class="container">
+    <div class="section-head">
+      <h2>Typography</h2>
+      <span class="desc">Sora. Tight, geometric, confident.</span>
+    </div>
+
+    <div class="type-row"><div class="type-spec">Display / 64 / 700</div><div class="type-display">Build louder.</div></div>
+    <div class="type-row"><div class="type-spec">H1 / 44 / 700</div><div class="type-h1">Home services, sharpened</div></div>
+    <div class="type-row"><div class="type-spec">H2 / 32 / 600</div><div class="type-h2">Built for the trades</div></div>
+    <div class="type-row"><div class="type-spec">H3 / 22 / 600</div><div class="type-h3">A system for growth</div></div>
+    <div class="type-row"><div class="type-spec">H4 / 17 / 600</div><div class="type-h4">Subsection heading</div></div>
+    <div class="type-row"><div class="type-spec">Body / 15 / 400</div><div class="type-body">22 Local Marketing designs and runs the marketing engine for serious home service companies. The work is sharp, the systems are tight, and the results show up where they should: revenue.</div></div>
+    <div class="type-row"><div class="type-spec">Small / 13 / 400</div><div class="type-small">Supporting text and meta information.</div></div>
+    <div class="type-row"><div class="type-spec">Caps / 12 / 600</div><div class="type-caps">Section eyebrow label</div></div>
+    <div class="type-row"><div class="type-spec">Mono / 14 / 400</div><div class="type-mono">function buildBrand() { return 'sharp'; }</div></div>
+  </div>
+</section>
+
+<!-- 03 BUTTONS -->
+<section id="components">
+  <div class="container">
+    <div class="section-head">
+      <h2>Buttons</h2>
+      <span class="desc">Variants, sizes, and states</span>
+    </div>
+
+    <div class="btn-row"><span class="btn-row-label">Variants</span>
+      <button class="btn btn-primary">Primary action <span class="btn-arrow">→</span></button>
+      <button class="btn btn-dark">Dark</button>
+      <button class="btn btn-secondary">Secondary</button>
+      <button class="btn btn-ghost">Ghost</button>
+      <button class="btn btn-disabled" disabled>Disabled</button>
+    </div>
+    <div class="btn-row"><span class="btn-row-label">Sizes</span>
+      <button class="btn btn-primary btn-sm">Small</button>
+      <button class="btn btn-primary">Default</button>
+      <button class="btn btn-primary btn-lg">Large</button>
+    </div>
+  </div>
+</section>
+
+<!-- 04 FORMS -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <h2>Form elements</h2>
+      <span class="desc">Inputs, selects, choices, toggles</span>
+    </div>
+
+    <div class="form-grid">
+      <div>
+        <div class="field">
+          <label class="field-label">Company name</label>
+          <input class="input" type="text" placeholder="22 Local Marketing Home Services" value="Patrick's Electric">
+          <div class="field-hint">Shown publicly on your profile.</div>
+        </div>
+        <div class="field">
+          <label class="field-label">Service category</label>
+          <select class="select">
+            <option>Electrical</option>
+            <option>Plumbing</option>
+            <option>Tree services</option>
+            <option>HVAC</option>
+          </select>
+        </div>
+        <div class="field">
+          <label class="field-label">Project notes</label>
+          <textarea class="textarea" placeholder="Tell us what you're working on...">Looking to scale to $1M before Q3. Need website, SEO, and paid.</textarea>
+        </div>
+      </div>
+
+      <div>
+        <div class="field">
+          <label class="field-label" style="margin-bottom:10px">Service interest</label>
+          <div class="checkbox-row"><input type="checkbox" class="checkbox" checked> Website redesign</div>
+          <div class="checkbox-row"><input type="checkbox" class="checkbox" checked> Local SEO</div>
+          <div class="checkbox-row"><input type="checkbox" class="checkbox"> Google Ads</div>
+          <div class="checkbox-row"><input type="checkbox" class="checkbox"> Apple Maps Ads</div>
+        </div>
+        <div class="field">
+          <label class="field-label" style="margin-bottom:10px">Engagement type</label>
+          <div class="radio-row"><input type="radio" class="radio" name="r" checked> Monthly retainer</div>
+          <div class="radio-row"><input type="radio" class="radio" name="r"> Project-based</div>
+          <div class="radio-row"><input type="radio" class="radio" name="r"> Performance</div>
+        </div>
+        <div class="field">
+          <label class="field-label" style="margin-bottom:10px">Toggles</label>
+          <div class="checkbox-row" style="justify-content:space-between"><span>Email reports</span><div class="toggle on" onclick="this.classList.toggle('on')"></div></div>
+          <div class="checkbox-row" style="justify-content:space-between"><span>Slack notifications</span><div class="toggle" onclick="this.classList.toggle('on')"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 CARDS -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <h2>Cards &amp; metrics</h2>
+      <span class="desc">Content containers and KPI displays</span>
+    </div>
+
+    <div class="card-grid" style="margin-bottom: 16px">
+      <div class="card">
+        <div class="card-eyebrow">Service</div>
+        <div class="card-title">Local SEO</div>
+        <div class="card-body">Map pack rankings, GBP optimization, and content built to win in your service area.</div>
+        <a href="#" class="card-link">Learn more →</a>
+      </div>
+      <div class="card">
+        <div class="card-eyebrow">Service</div>
+        <div class="card-title">Paid acquisition</div>
+        <div class="card-body">Google Ads, Apple Maps Ads, and Meta campaigns measured against revenue, not clicks.</div>
+        <a href="#" class="card-link">Learn more →</a>
+      </div>
+      <div class="card">
+        <div class="card-eyebrow">Service</div>
+        <div class="card-title">Website builds</div>
+        <div class="card-body">Fast, conversion-focused sites built on the design system you'll keep using for years.</div>
+        <a href="#" class="card-link">Learn more →</a>
+      </div>
+    </div>
+
+    <div class="row-4">
+      <div class="metric-card">
+        <div class="metric-label">Leads this month</div>
+        <div class="metric-value">247</div>
+        <div class="metric-change up">↑ 32% vs last month</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Conversion rate</div>
+        <div class="metric-value">8.4%</div>
+        <div class="metric-change up">↑ 1.2 pts</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Cost per lead</div>
+        <div class="metric-value">$42</div>
+        <div class="metric-change down">↓ 18%</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">ROAS</div>
+        <div class="metric-value">6.2x</div>
+        <div class="metric-change up">↑ 0.8x</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 BADGES -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <h2>Badges &amp; tags</h2>
+      <span class="desc">Status, category, and labels</span>
+    </div>
+    <div class="cluster">
+      <span class="badge badge-brand"><span class="badge-dot"></span>New</span>
+      <span class="badge badge-success"><span class="badge-dot"></span>Live</span>
+      <span class="badge badge-warning"><span class="badge-dot"></span>Pending</span>
+      <span class="badge badge-danger"><span class="badge-dot"></span>Failed</span>
+      <span class="badge badge-neutral"><span class="badge-dot"></span>Draft</span>
+      <span class="badge badge-solid">Featured</span>
+      <span class="badge badge-brand">Retainer</span>
+      <span class="badge badge-neutral">Q2 2026</span>
+    </div>
+  </div>
+</section>
+
+<!-- 07 ALERTS -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <h2>Alerts</h2>
+      <span class="desc">Inline feedback messages</span>
+    </div>
+    <div class="alert alert-info">
+      <span class="alert-tag">Info</span>
+      <div class="alert-body">
+        <div class="alert-title">New feature available</div>
+        <div class="alert-msg">Apple Maps Ads launched this week. Eligible clients can opt in from the dashboard.</div>
+      </div>
+    </div>
+    <div class="alert alert-success">
+      <span class="alert-tag">OK</span>
+      <div class="alert-body">
+        <div class="alert-title">Campaign launched successfully</div>
+        <div class="alert-msg">Your Google Ads campaign is live and serving impressions. First report available in 7 days.</div>
+      </div>
+    </div>
+    <div class="alert alert-warning">
+      <span class="alert-tag">Warn</span>
+      <div class="alert-body">
+        <div class="alert-title">Budget approaching limit</div>
+        <div class="alert-msg">You've used 82% of this month's ad budget with 9 days remaining.</div>
+      </div>
+    </div>
+    <div class="alert alert-danger">
+      <span class="alert-tag">Error</span>
+      <div class="alert-body">
+        <div class="alert-title">Action required</div>
+        <div class="alert-msg">Your billing method failed. Please update payment to keep campaigns running.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 08 TABLE -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <h2>Tables</h2>
+      <span class="desc">Structured data</span>
+    </div>
+    <div class="table-wrap">
+      <div class="table-terminal">
+        <span class="ck-circle r"></span>
+        <span class="ck-circle y"></span>
+        <span class="ck-circle g"></span>
+        <span class="codeblock-filename">clients.tsv · 4 rows · live</span>
+      </div>
+      <table>
+        <thead><tr><th><span class="th-num">01</span>Client</th><th><span class="th-num">02</span>Service</th><th><span class="th-num">03</span>Status</th><th><span class="th-num">04</span>MRR</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Patrick's Electric</strong></td><td>Full retainer</td><td><span class="badge badge-success"><span class="badge-dot"></span>Live</span></td><td class="mono">$2,500</td></tr>
+          <tr><td><strong>Fonville Tree Service</strong></td><td>SEO + Ads</td><td><span class="badge badge-success"><span class="badge-dot"></span>Live</span></td><td class="mono">$1,800</td></tr>
+          <tr><td><strong>ZC Grading</strong></td><td>Full retainer</td><td><span class="badge badge-warning"><span class="badge-dot"></span>Onboarding</span></td><td class="mono">$1,500</td></tr>
+          <tr><td><strong>Better Way Land</strong></td><td>SEO only</td><td><span class="badge badge-success"><span class="badge-dot"></span>Live</span></td><td class="mono">$950</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 09 TEXT BLOCKS -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <h2>Text blocks</h2>
+      <span class="desc">Links, code, quotes</span>
+    </div>
+    <div class="prose-block">
+      <p>This is body copy in Sora 15px. It uses <a href="#" class="link">underlined links in Blaze</a> for emphasis without breaking the reading rhythm. Inline code looks like <code class="inline">npm install salient</code> and feels at home in the same paragraph.</p>
+      <hr>
+      <div class="codeblock-wrap">
+        <div class="codeblock-header">
+          <span class="ck-circle r"></span>
+          <span class="ck-circle y"></span>
+          <span class="ck-circle g"></span>
+          <span class="codeblock-filename">salient.config.js</span>
+        </div>
+        <pre class="codeblock"><span class="ck-comment">// salient.config.js</span>
+<span class="ck-key">export default</span> {
+  brand: <span class="ck-str">'22 Local Marketing'</span>,
+  primary: <span class="ck-str">'#FB5607'</span>,
+  font: <span class="ck-str">'Sora'</span>,
+}</pre>
+      </div>
+      <hr>
+      <blockquote>
+        Most agencies sell hours. We sell outcomes. The difference shows up in the work.
+        <cite>— 22 Local Marketing brand voice</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container footer-inner">
+    <div style="display:flex;align-items:center;gap:16px">
+      <div class="wordmark"><span class="wordmark-dot"></span>22 Local Marketing</div>
+      <span class="footer-meta">Brand Kit · v2.0</span>
+    </div>
+    <div class="footer-links">
+      <a href="#">Guidelines</a>
+      <a href="#">Logo files</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
