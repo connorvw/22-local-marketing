@@ -9,6 +9,7 @@ const categories = Array.from(new Set(posts.map(p => p.category)));
 const postCountByCat = Object.fromEntries(
   categories.map(c => [c, posts.filter(p => p.category === c).length])
 );
+// Featured post is rendered first; other posts continue numbering after it (but numbers themselves are not displayed).
 ---
 
 <BaseLayout
@@ -19,52 +20,29 @@ const postCountByCat = Object.fromEntries(
   <!-- ============ HERO ============ -->
   <header class="blog-hero">
     <div class="container">
-      <div class="blog-hero-grid">
-
-        <div class="blog-hero-left">
-          <div class="eyebrow-rugged">
-            <span class="eb-dash"></span>
-            <span>The 22LM journal</span>
-            <span class="eb-sep">·</span>
-            <span>{posts.length} articles</span>
-          </div>
-
-          <div class="blog-hero-frame">
-            <h1>
-              Marketing that <span class="accent">actually</span><br>
-              moves home service businesses.
-            </h1>
-          </div>
-
-          <p class="blog-hero-sub">Real playbooks from the trenches. SEO, Google Business Profile, paid acquisition, and the operator-level decisions that make or break a local home service company.</p>
-
-          <div class="blog-hero-actions">
-            <a href="#latest" class="btn btn-primary btn-lg">Read the latest <span class="btn-arrow">→</span></a>
-            <a href="/#contact" class="btn btn-secondary btn-lg" data-quote>Talk to us</a>
-          </div>
+      <div class="blog-hero-inner">
+        <div class="eyebrow-rugged">
+          <span class="eb-dash"></span>
+          <span>The 22LM journal</span>
+          <span class="eb-sep">·</span>
+          <span>{posts.length} articles</span>
+          <span class="eb-sep">·</span>
+          <span>Last update {featuredPost.date}</span>
         </div>
 
-        <div class="blog-hero-right">
-          <div class="hero-stat-card">
-            <div class="hero-stat-eyebrow">→ Topic mix</div>
-            <ul class="hero-stat-list">
-              {categories.map(cat => (
-                <li>
-                  <span class="hero-stat-name">{cat}</span>
-                  <span class="hero-stat-bar">
-                    <span class="hero-stat-fill" style={`width:${(postCountByCat[cat] / posts.length) * 100}%`}></span>
-                  </span>
-                  <span class="hero-stat-count">{String(postCountByCat[cat]).padStart(2, '0')}</span>
-                </li>
-              ))}
-            </ul>
-            <div class="hero-stat-footer">
-              <span>Last update</span>
-              <strong>{featuredPost.date}</strong>
-            </div>
-          </div>
+        <div class="blog-hero-frame">
+          <h1>
+            Marketing that <span class="accent">actually</span><br>
+            moves home service businesses.
+          </h1>
         </div>
 
+        <p class="blog-hero-sub">Real playbooks from the trenches. SEO, Google Business Profile, paid acquisition, and the operator-level decisions that make or break a local home service company.</p>
+
+        <div class="blog-hero-actions">
+          <a href="#latest" class="btn btn-primary btn-lg">Read the latest <span class="btn-arrow">→</span></a>
+          <a href="/#contact" class="btn btn-secondary btn-lg" data-quote>Talk to us</a>
+        </div>
       </div>
     </div>
   </header>
@@ -111,10 +89,9 @@ const postCountByCat = Object.fromEntries(
       </div>
 
       <div class="post-grid">
-        {otherPosts.map((post, i) => (
+        {otherPosts.map((post) => (
           <a href={`/blog/${post.slug}/`} class="post-card">
             <div class="post-card-top">
-              <span class="post-card-num">{String(i + 2).padStart(2, '0')}</span>
               <span class="post-card-cat">{post.category}</span>
             </div>
             <h3>{post.title}</h3>
@@ -191,12 +168,9 @@ const postCountByCat = Object.fromEntries(
     background: radial-gradient(circle, rgba(251, 86, 7, 0.10), transparent 60%);
     pointer-events: none;
   }
-  .blog-hero-grid {
-    display: grid;
-    grid-template-columns: 1.4fr 1fr;
-    gap: 56px;
-    align-items: center;
+  .blog-hero-inner {
     position: relative; z-index: 1;
+    max-width: 880px;
   }
   .blog-hero-frame {
     position: relative; display: inline-block;
@@ -227,72 +201,6 @@ const postCountByCat = Object.fromEntries(
   }
   .blog-hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
 
-  /* ============ HERO STAT CARD ============ */
-  .hero-stat-card {
-    background: var(--onyx);
-    color: var(--white);
-    border-radius: 12px;
-    padding: 28px;
-    border: 1px solid var(--onyx);
-    box-shadow: 8px 8px 0 0 var(--blaze);
-    position: relative;
-    overflow: hidden;
-  }
-  .hero-stat-card::after {
-    content: '';
-    position: absolute; top: 0; right: 0;
-    width: 140px; height: 140px;
-    background: radial-gradient(circle at top right, rgba(251, 86, 7, 0.35), transparent 60%);
-    pointer-events: none;
-  }
-  .hero-stat-eyebrow {
-    font-family: 'Sora', sans-serif;
-    font-size: 11px;
-    color: var(--blaze);
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    margin-bottom: 22px;
-    font-weight: 700;
-  }
-  .hero-stat-list { list-style: none; display: grid; gap: 14px; position: relative; z-index: 1; }
-  .hero-stat-list li {
-    display: grid;
-    grid-template-columns: 1.4fr 1.6fr auto;
-    align-items: center;
-    gap: 14px;
-    font-size: 13px;
-  }
-  .hero-stat-name { color: var(--white); font-weight: 500; }
-  .hero-stat-bar {
-    height: 8px;
-    background: rgba(255,255,255,0.08);
-    border-radius: 2px;
-    overflow: hidden;
-    position: relative;
-  }
-  .hero-stat-fill {
-    position: absolute;
-    inset: 0 auto 0 0;
-    background: var(--blaze);
-    border-radius: 2px;
-  }
-  .hero-stat-count {
-    font-family: 'Sora', sans-serif;
-    font-size: 13px;
-    color: var(--blaze);
-    font-weight: 700;
-    letter-spacing: 0.05em;
-  }
-  .hero-stat-footer {
-    margin-top: 22px;
-    padding-top: 18px;
-    border-top: 1px solid rgba(255,255,255,0.12);
-    display: flex; align-items: center; justify-content: space-between;
-    font-size: 12px;
-    color: var(--slate-light);
-  }
-  .hero-stat-footer strong { color: var(--white); font-weight: 600; }
-
   /* ============ FEATURED ============ */
   .blog-featured { padding-top: 64px !important; padding-bottom: 88px !important; }
   .featured-meta-row {
@@ -322,9 +230,9 @@ const postCountByCat = Object.fromEntries(
     box-shadow: 8px 8px 0 0 var(--onyx);
     text-decoration: none;
     color: inherit;
-    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    transition: transform 0.15s, box-shadow 0.15s;
   }
-  .featured-card:hover { transform: translate(-2px, -2px); box-shadow: 10px 10px 0 0 var(--onyx); }
+  .featured-card:hover { transform: translate(-2px, -2px); box-shadow: 11px 11px 0 0 var(--onyx); }
 
   .featured-card-cover {
     background: var(--onyx);
@@ -427,35 +335,19 @@ const postCountByCat = Object.fromEntries(
     text-decoration: none;
     color: inherit;
     display: flex; flex-direction: column;
-    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    transition: transform 0.15s, box-shadow 0.15s;
     position: relative;
     overflow: hidden;
   }
-  .post-card::after {
-    content: '';
-    position: absolute;
-    left: 0; bottom: 0;
-    width: 0; height: 3px;
-    background: var(--blaze);
-    transition: width 0.3s ease;
-  }
   .post-card:hover {
     transform: translate(-2px, -2px);
-    box-shadow: 6px 6px 0 0 var(--onyx);
+    box-shadow: 7px 7px 0 0 var(--onyx);
   }
-  .post-card:hover::after { width: 100%; }
 
   .post-card-top {
-    display: flex; align-items: center; justify-content: space-between;
+    display: flex; align-items: center;
     margin-bottom: 18px;
     gap: 10px;
-  }
-  .post-card-num {
-    font-family: 'Sora', sans-serif;
-    font-size: 13px;
-    color: var(--blaze);
-    font-weight: 700;
-    letter-spacing: 0.06em;
   }
   .post-card-cat {
     font-family: 'Sora', sans-serif;
@@ -612,7 +504,6 @@ const postCountByCat = Object.fromEntries(
   }
   @media (max-width: 1000px) {
     .blog-hero h1 { font-size: 48px; }
-    .blog-hero-grid { grid-template-columns: 1fr; gap: 40px; }
     .featured-card { grid-template-columns: 1fr; }
     .featured-card-cover { min-height: 200px; }
     .featured-card-body { padding: 32px; }
@@ -625,6 +516,5 @@ const postCountByCat = Object.fromEntries(
     .cat-grid  { grid-template-columns: repeat(2, 1fr); }
     .blog-hero { padding: 56px 0; }
     .blog-hero h1 { font-size: 36px; }
-    .hero-stat-card { padding: 22px; }
   }
 </style>

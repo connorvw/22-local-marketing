@@ -188,8 +188,10 @@ import QuoteForm from '../../components/QuoteForm.astro';
 .page-hero p.lead { font-size: 20px; line-height: 1.5; color: var(--slate); max-width: 680px; margin-top: 22px; }
 
 .pricing-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin: 48px 0 64px; }
-.plan { background: var(--white); border: 1px solid var(--onyx); border-radius: 14px; padding: 32px 28px; position: relative; display: flex; flex-direction: column; box-shadow: 4px 4px 0 0 var(--onyx); }
+.plan { background: var(--white); border: 1px solid var(--onyx); border-radius: 14px; padding: 32px 28px; position: relative; display: flex; flex-direction: column; box-shadow: 4px 4px 0 0 var(--onyx); transition: transform 0.15s, box-shadow 0.15s; }
+.plan:hover { transform: translate(-2px, -2px); box-shadow: 7px 7px 0 0 var(--onyx); }
 .plan.featured { background: var(--onyx); color: var(--white); border-color: var(--onyx); box-shadow: 4px 4px 0 0 var(--blaze); transform: translateY(-12px); }
+.plan.featured:hover { transform: translateY(-12px) translate(-2px, -2px); box-shadow: 7px 7px 0 0 var(--blaze); }
 .plan-tag { position: absolute; top: -14px; left: 28px; background: var(--blaze); color: var(--white); font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 6px 12px; border-radius: 4px; border: 1px solid var(--onyx); }
 .plan-name { font-size: 13px; font-weight: 600; color: var(--blaze); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px; }
 .plan-headline { font-size: 24px; font-weight: 700; letter-spacing: -0.025em; margin-bottom: 6px; }
@@ -242,11 +244,13 @@ import QuoteForm from '../../components/QuoteForm.astro';
 .timeline-head h2::after { bottom: 0; right: -20px; border-left: 0; border-top: 0; }
 .timeline-head .desc { font-size: 14px; color: var(--slate); margin-top: 10px; max-width: 580px; }
 .timeline-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-.tl-card { background: var(--bone); border: 1px solid var(--onyx); border-radius: 12px; padding: 28px; box-shadow: 4px 4px 0 0 var(--onyx); }
+.tl-card { background: var(--bone); border: 1px solid var(--onyx); border-radius: 12px; padding: 28px; box-shadow: 4px 4px 0 0 var(--onyx); transition: transform 0.15s, box-shadow 0.15s; }
+.tl-card:hover { transform: translate(-2px, -2px); box-shadow: 7px 7px 0 0 var(--onyx); }
 .tl-when { font-size: 12px; font-weight: 700; color: var(--blaze); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px; }
 .tl-title { font-size: 22px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 10px; }
 .tl-body { font-size: 13.5px; color: var(--slate); line-height: 1.55; }
-.accel-note { margin-top: 36px; padding: 22px 26px; background: var(--onyx); color: var(--white); border-radius: 10px; display: flex; align-items: flex-start; gap: 18px; border: 1px solid var(--onyx); box-shadow: 4px 4px 0 0 var(--blaze); }
+.accel-note { margin-top: 36px; padding: 22px 26px; background: var(--onyx); color: var(--white); border-radius: 10px; display: flex; align-items: flex-start; gap: 18px; border: 1px solid var(--onyx); box-shadow: 4px 4px 0 0 var(--blaze); transition: transform 0.15s, box-shadow 0.15s; }
+.accel-note:hover { transform: translate(-2px, -2px); box-shadow: 7px 7px 0 0 var(--blaze); }
 .accel-note .label { font-family: 'Sora', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blaze); padding: 6px 10px; border: 1px solid var(--blaze); border-radius: 4px; white-space: nowrap; }
 .accel-note .text { font-size: 14px; line-height: 1.55; color: #c8c8c8; }
 .accel-note .text strong { color: var(--white); font-weight: 600; }

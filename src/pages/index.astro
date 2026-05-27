@@ -301,7 +301,8 @@ import QuoteForm from '../components/QuoteForm.astro';
 .trust-bar { width: 2px; height: 18px; background: var(--blaze); }
 
 /* ===== HERO FORM ===== */
-.hero-form { background: var(--white); border: 1px solid var(--onyx); border-radius: 10px; padding: 22px; box-shadow: 6px 6px 0 0 var(--onyx); position: relative; }
+.hero-form { background: var(--white); border: 1px solid var(--onyx); border-radius: 10px; padding: 22px; box-shadow: 6px 6px 0 0 var(--onyx); position: relative; transition: transform 0.15s, box-shadow 0.15s; }
+.hero-form:hover { transform: translate(-2px, -2px); box-shadow: 9px 9px 0 0 var(--onyx); }
 .hero-form-eyebrow { font-family: 'Sora', sans-serif; font-size: 11px; color: var(--blaze); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; font-weight: 700; }
 .hero-form h3 { font-size: 20px; letter-spacing: -0.02em; font-weight: 700; margin-bottom: 4px; }
 .hero-form-desc { font-size: 12px; color: var(--slate); margin-bottom: 16px; line-height: 1.4; }
@@ -327,7 +328,8 @@ import QuoteForm from '../components/QuoteForm.astro';
 
 /* ===== STATS ===== */
 .stats-row { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: stretch; }
-.stats { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--onyx); background: var(--white); border-radius: 10px; box-shadow: 6px 6px 0 0 var(--onyx); overflow: hidden; }
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--onyx); background: var(--white); border-radius: 10px; box-shadow: 6px 6px 0 0 var(--onyx); overflow: hidden; transition: transform 0.15s, box-shadow 0.15s; }
+.stats:hover { transform: translate(-2px, -2px); box-shadow: 9px 9px 0 0 var(--onyx); }
 .stats-2x2 { grid-template-columns: repeat(2, 1fr); grid-template-rows: 1fr 1fr; }
 .stats-2x2 .stat:nth-child(2) { border-right: 0; }
 .stats-2x2 .stat:nth-child(1), .stats-2x2 .stat:nth-child(2) { border-bottom: 1px solid var(--border); }
@@ -361,7 +363,8 @@ import QuoteForm from '../components/QuoteForm.astro';
 
 /* ===== TRADES ===== */
 .trades-showcase { display: grid; grid-template-columns: 1fr 1.15fr; gap: 28px; align-items: stretch; }
-.trade-preview { background: var(--onyx); color: var(--white); border-radius: 14px; padding: 44px; position: relative; overflow: hidden; display: flex; flex-direction: column; border: 1px solid var(--onyx); box-shadow: 6px 6px 0 0 var(--onyx); min-height: 520px; }
+.trade-preview { background: var(--onyx); color: var(--white); border-radius: 14px; padding: 44px; position: relative; overflow: hidden; display: flex; flex-direction: column; border: 1px solid var(--onyx); box-shadow: 6px 6px 0 0 var(--onyx); min-height: 520px; transition: transform 0.15s, box-shadow 0.15s; }
+.trade-preview:hover { transform: translate(-2px, -2px); box-shadow: 9px 9px 0 0 var(--onyx); }
 .trade-preview::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 85% 12%, rgba(251, 86, 7, 0.28), transparent 55%); pointer-events: none; }
 .trade-preview::after { content: ''; position: absolute; inset: 0; background-image: repeating-linear-gradient(45deg, transparent 0 24px, rgba(255,255,255,0.018) 24px 25px); pointer-events: none; }
 .trade-preview > * { position: relative; z-index: 1; }
@@ -375,7 +378,8 @@ import QuoteForm from '../components/QuoteForm.astro';
 .tp-services span { font-size: 12px; font-weight: 500; padding: 7px 14px; border: 1px solid rgba(255,255,255,0.18); border-radius: 100px; color: var(--white); background: rgba(255,255,255,0.03); }
 .tp-cta { margin-top: auto; align-self: flex-start; }
 .trade-preview.fading .tp-name, .trade-preview.fading .tp-tagline, .trade-preview.fading .tp-services { opacity: 0; }
-.trade-list { border: 1px solid var(--onyx); border-radius: 14px; background: var(--white); overflow: hidden; box-shadow: 6px 6px 0 0 var(--onyx); }
+.trade-list { border: 1px solid var(--onyx); border-radius: 14px; background: var(--white); overflow: hidden; box-shadow: 6px 6px 0 0 var(--onyx); transition: transform 0.15s, box-shadow 0.15s; }
+.trade-list:hover { transform: translate(-2px, -2px); box-shadow: 9px 9px 0 0 var(--onyx); }
 .trade-row { display: grid; grid-template-columns: 24px 1fr auto; gap: 16px; align-items: center; padding: 18px 22px; border: 0; background: transparent; border-bottom: 1px solid var(--border); cursor: pointer; width: 100%; text-align: left; font-family: inherit; color: inherit; transition: background 0.22s ease, padding-left 0.22s ease; position: relative; }
 .trade-row:last-child { border-bottom: 0; }
 .trade-row::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--blaze); transform: scaleY(0); transition: transform 0.25s ease; }
@@ -398,7 +402,8 @@ import QuoteForm from '../components/QuoteForm.astro';
 .metric-label { font-family: 'Sora', sans-serif; font-size: 11px; color: var(--blaze); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px; font-weight: 700; }
 .metric-value { font-size: 42px; font-weight: 700; letter-spacing: -0.04em; line-height: 1; }
 .metric-desc { font-size: 13px; color: var(--slate-light); margin-top: 8px; }
-.case-card { background: var(--white); border: 1px solid var(--onyx); border-radius: 10px; padding: 36px; box-shadow: 6px 6px 0 0 var(--onyx); display: flex; flex-direction: column; }
+.case-card { background: var(--white); border: 1px solid var(--onyx); border-radius: 10px; padding: 36px; box-shadow: 6px 6px 0 0 var(--onyx); display: flex; flex-direction: column; transition: transform 0.15s, box-shadow 0.15s; }
+.case-card:hover { transform: translate(-2px, -2px); box-shadow: 9px 9px 0 0 var(--onyx); }
 .case-eyebrow { font-family: 'Sora', sans-serif; font-size: 11px; color: var(--blaze); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px; font-weight: 700; }
 .case-title { font-size: 26px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 8px; }
 .case-meta { font-size: 13px; color: var(--slate); margin-bottom: 22px; }
@@ -433,7 +438,8 @@ import QuoteForm from '../components/QuoteForm.astro';
 .about-bullets { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 28px; }
 .about-bullet { display: flex; gap: 10px; align-items: flex-start; font-size: 13px; color: var(--onyx); }
 .about-bullet-tick { width: 16px; height: 16px; background: var(--blaze); border-radius: 3px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--white); margin-top: 2px; }
-.about-card { background: var(--white); border: 1px solid var(--onyx); border-radius: 12px; padding: 32px; box-shadow: 6px 6px 0 0 var(--onyx); position: relative; }
+.about-card { background: var(--white); border: 1px solid var(--onyx); border-radius: 12px; padding: 32px; box-shadow: 6px 6px 0 0 var(--onyx); position: relative; transition: transform 0.15s, box-shadow 0.15s; }
+.about-card:hover { transform: translate(-2px, -2px); box-shadow: 9px 9px 0 0 var(--onyx); }
 .about-card::before { content: ''; position: absolute; top: -1px; left: 28px; right: 28px; height: 4px; background: var(--blaze); border-radius: 0 0 4px 4px; }
 .about-card-eyebrow { font-family: 'Sora', sans-serif; font-size: 11px; color: var(--blaze); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 18px; font-weight: 700; }
 .about-photo { width: 100%; aspect-ratio: 1/1; background: var(--bone); border-radius: 8px; margin-bottom: 18px; position: relative; overflow: hidden; }
@@ -445,7 +451,7 @@ import QuoteForm from '../components/QuoteForm.astro';
 /* ===== FAQ ===== */
 .faq-list { display: grid; gap: 12px; max-width: 880px; margin: 0 auto; }
 .faq-item { background: var(--white); border: 1px solid var(--onyx); border-radius: 8px; overflow: hidden; box-shadow: 3px 3px 0 0 var(--onyx); transition: transform 0.15s, box-shadow 0.15s; }
-.faq-item:hover { transform: translate(-1px, -1px); box-shadow: 4px 4px 0 0 var(--onyx); }
+.faq-item:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 0 var(--onyx); }
 .faq-q { width: 100%; text-align: left; background: none; border: 0; cursor: pointer; padding: 20px 24px; font-family: inherit; font-size: 16px; font-weight: 600; letter-spacing: -0.01em; color: var(--onyx); display: flex; align-items: center; justify-content: space-between; gap: 16px; }
 .faq-q::after { content: '+'; font-family: 'Sora', sans-serif; font-size: 22px; color: var(--blaze); transition: transform 0.2s; line-height: 1; }
 .faq-item.open .faq-q::after { content: '–'; }
@@ -453,7 +459,8 @@ import QuoteForm from '../components/QuoteForm.astro';
 .faq-item.open .faq-a { display: block; }
 
 /* ===== VIDEO PLACEHOLDER ===== */
-.video-placeholder { position: relative; border-radius: 14px; overflow: hidden; border: 1px solid var(--onyx); box-shadow: 6px 6px 0 0 var(--onyx); background: var(--onyx); }
+.video-placeholder { position: relative; border-radius: 14px; overflow: hidden; border: 1px solid var(--onyx); box-shadow: 6px 6px 0 0 var(--onyx); background: var(--onyx); transition: transform 0.15s, box-shadow 0.15s; }
+.video-placeholder:hover { transform: translate(-2px, -2px); box-shadow: 9px 9px 0 0 var(--onyx); }
 .video-thumb { aspect-ratio: 16 / 9; background: radial-gradient(circle at 25% 30%, rgba(251, 86, 7, 0.18), transparent 45%), radial-gradient(circle at 80% 75%, rgba(251, 86, 7, 0.12), transparent 50%), linear-gradient(135deg, #161616, #0a0a0a); display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; color: var(--white); cursor: pointer; }
 .video-thumb::before { content: ''; position: absolute; inset: 0; background-image: repeating-linear-gradient(45deg, transparent 0 22px, rgba(255,255,255,0.025) 22px 23px); pointer-events: none; }
 .video-thumb::after { content: ''; position: absolute; inset: 16px; border: 1px dashed rgba(255,255,255,0.12); border-radius: 8px; pointer-events: none; }

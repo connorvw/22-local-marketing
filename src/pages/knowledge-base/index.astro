@@ -372,17 +372,13 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       text-decoration: none;
       color: var(--onyx);
       box-shadow: 3px 3px 0 0 var(--onyx);
-      transition: transform 0.1s ease, box-shadow 0.1s ease, border-color 0.15s ease;
+      transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s ease;
       position: relative;
     }
     a.topic.built:hover {
-      transform: translate(1px, 1px);
-      box-shadow: 2px 2px 0 0 var(--blaze);
-      border-color: var(--blaze);
-    }
-    a.topic.built:active {
-      transform: translate(3px, 3px);
-      box-shadow: 0 0 0 0 var(--blaze);
+      transform: translate(-2px, -2px);
+      box-shadow: 6px 6px 0 0 var(--onyx);
+      border-color: var(--onyx);
     }
     .topic.coming-soon {
       background: var(--bone);
