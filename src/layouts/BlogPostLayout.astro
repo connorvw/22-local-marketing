@@ -122,6 +122,9 @@ const pageDescription = metaDescription ?? excerpt;
 </article>
 
 <style is:global>
+  /* ============ POST CONTAINER OVERRIDE ============ */
+  .post .container { max-width: 1440px; }
+
   /* ============ POST HERO ============ */
   .post-hero {
     background: var(--onyx);
@@ -144,7 +147,7 @@ const pageDescription = metaDescription ?? excerpt;
     background-image: repeating-linear-gradient(45deg, transparent 0 24px, rgba(255,255,255,0.018) 24px 25px);
     pointer-events: none;
   }
-  .post-hero-inner { position: relative; z-index: 1; max-width: 880px; }
+  .post-hero-inner { position: relative; z-index: 1; }
 
   .post-breadcrumb {
     display: flex; align-items: center; flex-wrap: wrap; gap: 10px;
@@ -171,14 +174,13 @@ const pageDescription = metaDescription ?? excerpt;
     letter-spacing: -0.04em;
     font-weight: 700;
     margin-bottom: 22px;
-    max-width: 820px;
   }
 
   .post-excerpt {
     font-size: 19px;
     line-height: 1.55;
     color: rgba(255,255,255,0.78);
-    max-width: 700px;
+    max-width: 880px;
     font-weight: 400;
   }
 
@@ -187,7 +189,6 @@ const pageDescription = metaDescription ?? excerpt;
     margin-top: 30px;
     padding-top: 26px;
     border-top: 1px solid rgba(255,255,255,0.12);
-    max-width: 700px;
   }
   .post-byline-avatar {
     width: 42px; height: 42px;
