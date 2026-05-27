@@ -100,7 +100,7 @@ const postCountByCat = Object.fromEntries(
               <span class="post-card-date">{post.date}</span>
               <span class="post-card-sep">·</span>
               <span class="post-card-read">{post.readTime}</span>
-              <span class="post-card-arrow">→</span>
+              <span class="post-card-more">Read more <span class="post-card-arrow">→</span></span>
             </div>
           </a>
         ))}
@@ -386,12 +386,24 @@ const postCountByCat = Object.fromEntries(
     letter-spacing: 0.02em;
   }
   .post-card-sep { color: var(--border-strong); }
-  .post-card-arrow {
+  .post-card-more {
     margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--blaze);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-family: 'Sora', sans-serif;
+  }
+  .post-card-arrow {
     color: var(--blaze);
     font-size: 16px;
     font-weight: 700;
     transition: transform 0.2s;
+    display: inline-block;
   }
   .post-card:hover .post-card-arrow { transform: translateX(4px); }
 
