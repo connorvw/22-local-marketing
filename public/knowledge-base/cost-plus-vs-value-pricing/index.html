@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cost-plus vs value-based pricing &middot; 22 Local Marketing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blaze: #FB5607;
+      --scorch: #C13D0E;
+      --bone: #F8F6F2;
+      --white: #FFFFFF;
+      --slate: #525252;
+      --slate-light: #8A8A8A;
+      --onyx: #0A0A0A;
+      --border: #E5E2DC;
+      --border-strong: #D4D0C8;
+      --info-bg: #FFE8D9;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; overflow: hidden; }
+    body {
+      background: var(--bone);
+      color: var(--onyx);
+      font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      font-feature-settings: "ss01", "ss02";
+    }
+    .deck { width: 100vw; height: 100vh; position: relative; overflow: hidden; }
+    .slides { display: flex; height: 100vh; transition: transform 0.65s cubic-bezier(0.65, 0, 0.35, 1); }
+    .slide {
+      min-width: 100vw; width: 100vw; height: 100vh;
+      flex-shrink: 0;
+      display: flex; flex-direction: column;
+      justify-content: center;
+      padding: 12vh 9vw 16vh;
+      position: relative;
+    }
+    .slide-title { align-items: center; text-align: center; justify-content: center; }
+
+    .eyebrow {
+      font-family: 'Sora', sans-serif; font-weight: 500;
+      font-size: 14px; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--blaze);
+      margin-bottom: 2.5rem;
+      display: inline-flex; align-items: center; gap: 0.75rem;
+    }
+    .eyebrow::before {
+      content: ''; display: inline-block;
+      width: 28px; height: 2px; background: var(--blaze);
+    }
+
+    .slide-title h1 {
+      font-size: clamp(2.75rem, 7vw, 6rem);
+      font-weight: 700; letter-spacing: -0.04em;
+      line-height: 0.98; max-width: 95%;
+      position: relative; display: inline-block;
+      padding: 14px 0 10px;
+    }
+    .slide-title h1::before, .slide-title h1::after {
+      content: ''; position: absolute;
+      width: 22px; height: 22px;
+      border: 2px solid var(--blaze);
+    }
+    .slide-title h1::before { top: 0; left: -22px; border-right: 0; border-bottom: 0; }
+    .slide-title h1::after { bottom: 0; right: -22px; border-left: 0; border-top: 0; }
+    .slide-title h1 .accent { color: var(--blaze); }
+    .slide-title .sub {
+      margin-top: 2.25rem;
+      font-size: clamp(1.125rem, 1.55vw, 1.5rem);
+      color: var(--slate); max-width: 800px;
+      line-height: 1.5;
+    }
+
+    .slide h2 {
+      font-size: clamp(2.25rem, 5vw, 4.5rem);
+      font-weight: 700; letter-spacing: -0.03em;
+      line-height: 1.05; margin-bottom: 1.5rem;
+      max-width: 1200px; color: var(--onyx);
+    }
+    .slide h2 .accent { color: var(--blaze); }
+    .slide .body {
+      font-size: clamp(1.125rem, 1.65vw, 1.5rem);
+      color: var(--slate); max-width: 920px;
+      line-height: 1.55;
+    }
+    .slide .body + .body { margin-top: 1rem; }
+
+    .slide-section-label {
+      font-family: 'Sora', sans-serif; font-weight: 500;
+      font-size: 13px; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--blaze);
+      margin-bottom: 1.5rem;
+      display: inline-flex; align-items: center; gap: 10px;
+    }
+    .slide-section-label::before {
+      content: ''; width: 28px; height: 2px;
+      background: var(--blaze); display: inline-block;
+    }
+
+    /* Numbered list */
+    .slide-list ul { list-style: none; margin-top: 1rem; max-width: 1100px; }
+    .slide-list li {
+      display: flex; align-items: baseline; gap: 1.5rem;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .slide-list li:last-child { border-bottom: none; }
+    .slide-list .num {
+      font-family: 'Sora', sans-serif;
+      color: var(--blaze); font-weight: 500;
+      font-size: clamp(1rem, 1.25vw, 1.125rem);
+      letter-spacing: 0.04em; min-width: 2.5rem;
+      line-height: 1; padding-top: 0.4rem;
+    }
+    .slide-list .item-title {
+      font-size: clamp(1.375rem, 2.2vw, 1.875rem);
+      font-weight: 700; line-height: 1.15;
+      letter-spacing: -0.02em; color: var(--onyx);
+    }
+    .slide-list .item-sub {
+      display: block;
+      font-size: clamp(1.0625rem, 1.35vw, 1.1875rem);
+      color: var(--slate); font-weight: 400;
+      margin-top: 0.5rem; line-height: 1.5;
+    }
+
+    /* 2-column compare */
+    .compare-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+      max-width: 1200px; margin-top: 1.5rem;
+    }
+    .compare-card {
+      padding: 2rem 1.875rem 2.25rem;
+      background: var(--white); border: 1px solid var(--onyx);
+      border-radius: 12px; box-shadow: 4px 4px 0 0 var(--onyx);
+    }
+    .compare-card .ctitle {
+      font-size: clamp(1.25rem, 1.75vw, 1.625rem);
+      font-weight: 700; letter-spacing: -0.015em;
+      margin-bottom: 0.75rem; color: var(--onyx);
+    }
+    .compare-card .csub {
+      font-size: clamp(1rem, 1.3vw, 1.1875rem);
+      color: var(--slate); line-height: 1.55;
+    }
+    .compare-card.accent { border-color: var(--blaze); box-shadow: 4px 4px 0 0 var(--blaze); }
+    .compare-card.accent .ctitle { color: var(--blaze); }
+
+    /* 3-column stat row */
+    .stat-row {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
+      max-width: 1200px; margin-top: 1.5rem;
+    }
+    .stat-card {
+      padding: 2rem 1.75rem;
+      background: var(--white); border: 1px solid var(--onyx);
+      border-radius: 12px; box-shadow: 4px 4px 0 0 var(--onyx);
+    }
+    .stat-card .big {
+      font-size: clamp(2.5rem, 4.5vw, 3.75rem);
+      font-weight: 700; color: var(--blaze);
+      letter-spacing: -0.04em; line-height: 1;
+      margin-bottom: 0.75rem;
+    }
+    .stat-card .label {
+      font-size: clamp(1rem, 1.25vw, 1.1875rem);
+      color: var(--onyx); font-weight: 600;
+      line-height: 1.4; margin-bottom: 0.5rem;
+    }
+    .stat-card .desc {
+      font-size: clamp(0.95rem, 1.1vw, 1.0625rem);
+      color: var(--slate); line-height: 1.55;
+    }
+
+    /* Tag chips for examples / lists */
+    .chip-row {
+      display: flex; flex-wrap: wrap; gap: 10px;
+      max-width: 1100px; margin-top: 1.25rem;
+    }
+    .chip {
+      padding: 10px 16px;
+      background: var(--white); border: 1px solid var(--onyx);
+      border-radius: 100px; box-shadow: 2px 2px 0 0 var(--onyx);
+      font-size: clamp(0.95rem, 1.1vw, 1.0625rem);
+      font-weight: 500; color: var(--onyx);
+    }
+    .chip.bad { background: var(--bone); color: var(--slate); border-style: dashed; box-shadow: none; }
+    .chip.good { border-color: var(--blaze); color: var(--blaze); }
+
+    /* Pull quote */
+    .pull-quote {
+      max-width: 1100px; margin-top: 1rem;
+      padding-left: 1.5rem;
+      border-left: 3px solid var(--blaze);
+    }
+    .pull-quote .q {
+      font-size: clamp(1.5rem, 2.4vw, 2.125rem);
+      font-weight: 700; letter-spacing: -0.02em;
+      line-height: 1.25; color: var(--onyx);
+    }
+    .pull-quote .qsub {
+      margin-top: 0.875rem;
+      font-size: clamp(1rem, 1.25vw, 1.1875rem);
+      color: var(--slate); line-height: 1.55;
+    }
+
+    .takeaway {
+      max-width: 1100px; margin-top: 1.25rem;
+      padding: 1.5rem 1.875rem;
+      background: var(--info-bg);
+      border: 1px solid var(--scorch);
+      border-radius: 10px;
+      color: var(--scorch);
+      font-size: clamp(1.0625rem, 1.4vw, 1.3125rem);
+      font-weight: 500; line-height: 1.5;
+    }
+
+    /* Fixed UI */
+    .home {
+      position: fixed; top: 3vh; left: 3vw;
+      text-decoration: none; color: var(--onyx);
+      font-family: 'Sora', sans-serif;
+      font-size: 13px; font-weight: 500;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 10px 16px;
+      border: 1px solid var(--onyx); background: var(--white);
+      border-radius: 6px; box-shadow: 3px 3px 0 0 var(--onyx);
+      transition: transform 0.1s ease, box-shadow 0.1s ease, color 0.15s ease, border-color 0.15s ease;
+      z-index: 20;
+    }
+    .home:hover {
+      transform: translate(1px, 1px);
+      box-shadow: 2px 2px 0 0 var(--blaze);
+      border-color: var(--blaze); color: var(--blaze);
+    }
+    .topic-label {
+      position: fixed; top: 3vh; right: 3vw;
+      color: var(--slate);
+      font-family: 'Sora', sans-serif;
+      font-size: 13px; font-weight: 500;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      z-index: 20; padding: 10px 0;
+    }
+
+    .nav {
+      position: fixed; bottom: 3.5vh; left: 50%;
+      transform: translateX(-50%);
+      display: flex; align-items: center; gap: 0.625rem;
+      background: var(--white); border: 1px solid var(--onyx);
+      padding: 8px 11px; border-radius: 100px;
+      z-index: 20; box-shadow: 3px 3px 0 0 var(--onyx);
+    }
+    .nav button {
+      width: 40px; height: 40px; border-radius: 50%;
+      border: 1px solid var(--border-strong);
+      background: var(--white); color: var(--onyx);
+      cursor: pointer; font-size: 16px; font-weight: 600;
+      display: inline-flex; align-items: center; justify-content: center;
+      transition: all 0.15s ease; font-family: inherit;
+    }
+    .nav button:hover:not(:disabled) {
+      background: var(--blaze); color: var(--white); border-color: var(--blaze);
+    }
+    .nav button:disabled { opacity: 0.3; cursor: not-allowed; }
+    .dots { display: flex; gap: 0.45rem; padding: 0 0.5rem; }
+    .dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--border-strong);
+      transition: all 0.3s ease; cursor: pointer;
+      border: none; padding: 0;
+    }
+    .dot.active { background: var(--blaze); width: 24px; border-radius: 4px; }
+
+    .progress {
+      position: fixed; top: 0; left: 0; right: 0;
+      height: 3px; background: var(--border); z-index: 20;
+    }
+    .progress-fill {
+      height: 100%; background: var(--blaze);
+      width: 0; transition: width 0.65s cubic-bezier(0.65, 0, 0.35, 1);
+    }
+
+    @media (max-width: 900px) {
+      .compare-grid { grid-template-columns: 1fr; }
+      .stat-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="deck">
+    <div class="progress"><div class="progress-fill" id="progress"></div></div>
+    <a class="home" href="/knowledge-base/">&larr; Knowledge Base</a>
+    <div class="topic-label">Cost-Plus vs Value Pricing</div>
+
+    <div class="slides" id="slides">
+      <section class="slide slide-title">
+        <div class="eyebrow">Pricing & Margin</div>
+        <h1>Cost-plus is a floor. <span class="accent">Value-based</span> is the ceiling.</h1>
+        <p class="sub">Most home service shops cost-plus everything. They leave 30 to 50% margin on the table every time a job has real stakes.</p>
+      </section>
+
+      <section class="slide">
+        <div class="slide-section-label">Two methods</div>
+        <h2>Two ways to set a price.</h2>
+        <div class="compare-grid">
+          <div class="compare-card">
+            <div class="ctitle">Cost-plus</div>
+            <div class="csub">Add up labor, materials, equipment, overhead. Tack on a target margin. That&rsquo;s your price. Predictable. Defensible. Repeatable.</div>
+          </div>
+          <div class="compare-card accent">
+            <div class="ctitle">Value-based</div>
+            <div class="csub">Price the outcome the customer is buying. The dollar value of the problem you&rsquo;re solving, not the dollar cost of solving it.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide">
+        <div class="slide-section-label">Example one</div>
+        <h2>Routine pruning. <span class="accent">Cost-plus wins.</span></h2>
+        <p class="body">A $400 tree pruning costs you $180 to deliver. Cost-plus at 50% margin gets you to $360. The customer is shopping three quotes. Outcome value is low. Trying to charge $700 just loses the job to a competitor who priced it like a normal pruning.</p>
+        <div class="takeaway">When scope is routine and the customer is comparing apples to apples, cost-plus is the right tool.</div>
+      </section>
+
+      <section class="slide">
+        <div class="slide-section-label">Example two</div>
+        <h2>60-ft pine, 8 ft from the roof, storm warning. <span class="accent">Value wins.</span></h2>
+        <p class="body">Cost to deliver: $1,400. Cost-plus at 50% margin: $2,800. Value to the homeowner: roughly $30k of roof damage avoided. A $4,500 price is still a no-brainer for them, and it nearly doubles your gross margin on the job. Same crew, same truck, same day, twice the profit.</p>
+      </section>
+
+      <section class="slide slide-title">
+        <div class="eyebrow">The bottom line</div>
+        <h1>Use cost-plus by default. Use value-based when the <span class="accent">stakes</span> earn it.</h1>
+        <p class="sub">Every emergency, every high-stakes outcome job, every job with no real comparison. Price the value, not the hours.</p>
+      </section>
+    </div>
+
+    <nav class="nav">
+      <button id="prev" aria-label="Previous slide">&larr;</button>
+      <div class="dots" id="dots"></div>
+      <button id="next" aria-label="Next slide">&rarr;</button>
+    </nav>
+  </div>
+
+  <script>
+    const slidesEl = document.getElementById('slides');
+    const slides = slidesEl.querySelectorAll('.slide');
+    const total = slides.length;
+    const prevBtn = document.getElementById('prev');
+    const nextBtn = document.getElementById('next');
+    const dotsEl = document.getElementById('dots');
+    const progress = document.getElementById('progress');
+    let i = 0;
+    for (let n = 0; n < total; n++) {
+      const d = document.createElement('button');
+      d.className = 'dot' + (n === 0 ? ' active' : '');
+      d.setAttribute('aria-label', 'Slide ' + (n + 1));
+      d.addEventListener('click', () => go(n));
+      dotsEl.appendChild(d);
+    }
+    const dots = dotsEl.querySelectorAll('.dot');
+    function go(n) {
+      i = Math.max(0, Math.min(total - 1, n));
+      slidesEl.style.transform = 'translateX(-' + (i * 100) + 'vw)';
+      dots.forEach((d, idx) => d.classList.toggle('active', idx === i));
+      prevBtn.disabled = i === 0;
+      nextBtn.disabled = i === total - 1;
+      progress.style.width = (((i + 1) / total) * 100) + '%';
+    }
+    prevBtn.addEventListener('click', () => go(i - 1));
+    nextBtn.addEventListener('click', () => go(i + 1));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); go(i + 1); }
+      else if (e.key === 'ArrowLeft') { e.preventDefault(); go(i - 1); }
+      else if (e.key === 'Home') go(0);
+      else if (e.key === 'End') go(total - 1);
+    });
+    go(0);
+  </script>
+</body>
+</html>
