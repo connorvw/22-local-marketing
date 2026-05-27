@@ -1,0 +1,475 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import { posts } from '../data/posts.js';
+
+interface Props {
+  title: string;
+  excerpt: string;
+  slug: string;
+  date: string;
+  dateISO: string;
+  readTime: string;
+  category: string;
+  metaTitle?: string;
+  metaDescription?: string;
+}
+
+const { title, excerpt, slug, date, dateISO, readTime, category, metaTitle, metaDescription } = Astro.props;
+
+const recentPosts = posts.filter(p => p.slug !== slug).slice(0, 3);
+const allCategories = Array.from(new Set(posts.map(p => p.category)));
+const pageTitle = metaTitle ?? `${title} | 22 Local Marketing`;
+const pageDescription = metaDescription ?? excerpt;
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+
+<article class="post">
+
+  <!-- ============ POST HERO ============ -->
+  <header class="post-hero">
+    <div class="container post-hero-inner">
+      <nav class="post-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="post-bc-sep">/</span>
+        <a href="/blog/">Blog</a>
+        <span class="post-bc-sep">/</span>
+        <span>Article</span>
+      </nav>
+
+      <div class="eyebrow-rugged">
+        <span class="eb-dash"></span>
+        <span>{category}</span>
+        <span class="eb-sep">·</span>
+        <time datetime={dateISO}>{date}</time>
+        <span class="eb-sep">·</span>
+        <span>{readTime}</span>
+      </div>
+
+      <h1 class="post-title">{title}</h1>
+
+      <p class="post-excerpt">{excerpt}</p>
+    </div>
+  </header>
+
+  <!-- ============ POST BODY ============ -->
+  <section class="post-body-section flush">
+    <div class="container post-body-grid">
+
+      <div class="post-body">
+        <slot />
+
+        <div class="post-end-rule"></div>
+
+        <div class="post-cta-card">
+          <div class="post-cta-eyebrow">→ Free strategy call</div>
+          <h3>Want this kind of work for your business?</h3>
+          <p>22 Local Marketing builds the marketing engine for serious home service companies. Websites, SEO, Google Ads, and reporting tied to revenue. If anything you just read sounded like a problem you have, let's talk.</p>
+          <a href="/#contact" class="btn btn-primary btn-lg" data-quote>Book a 30-minute call <span class="btn-arrow">→</span></a>
+        </div>
+      </div>
+
+      <aside class="post-aside">
+        <div class="post-aside-sticky">
+
+          <div class="aside-card aside-toc">
+            <div class="aside-eyebrow">→ Article</div>
+            <h4>What's in here</h4>
+            <ul class="aside-meta-list">
+              <li><span>Category</span><strong>{category}</strong></li>
+              <li><span>Published</span><strong>{date}</strong></li>
+              <li><span>Read time</span><strong>{readTime}</strong></li>
+            </ul>
+          </div>
+
+          <div class="aside-card aside-recent">
+            <div class="aside-eyebrow">→ Keep reading</div>
+            <h4>Recent posts</h4>
+            <ul class="aside-recent-list">
+              {recentPosts.map((p) => (
+                <li>
+                  <a href={`/blog/${p.slug}/`}>
+                    <span class="aside-recent-cat">{p.category}</span>
+                    <span class="aside-recent-title">{p.title}</span>
+                    <span class="aside-recent-date">{p.date}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div class="aside-card aside-cta">
+            <div class="aside-eyebrow">→ Talk to us</div>
+            <h4>Get a free audit</h4>
+            <p>One call. One page of action items. Yours whether you hire us or not.</p>
+            <a href="/#contact" class="btn btn-secondary" data-quote>Start the conversation <span class="btn-arrow">→</span></a>
+          </div>
+
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+</article>
+
+<style is:global>
+  /* ============ POST HERO ============ */
+  .post-hero {
+    background: var(--onyx);
+    color: var(--white);
+    padding: 56px 0 72px;
+    position: relative;
+    overflow: hidden;
+  }
+  .post-hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(circle at 88% 14%, rgba(251, 86, 7, 0.22), transparent 55%),
+      radial-gradient(circle at 8% 92%, rgba(251, 86, 7, 0.15), transparent 60%);
+    pointer-events: none;
+  }
+  .post-hero::after {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: repeating-linear-gradient(45deg, transparent 0 24px, rgba(255,255,255,0.018) 24px 25px);
+    pointer-events: none;
+  }
+  .post-hero-inner { position: relative; z-index: 1; max-width: 880px; }
+
+  .post-breadcrumb {
+    display: flex; align-items: center; flex-wrap: wrap; gap: 10px;
+    font-size: 12px;
+    color: var(--slate-light);
+    margin-bottom: 36px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+  .post-breadcrumb a {
+    color: var(--slate-light);
+    text-decoration: none;
+    transition: color 0.18s;
+  }
+  .post-breadcrumb a:hover { color: var(--blaze); }
+  .post-bc-sep { color: rgba(255,255,255,0.25); }
+
+  .post-hero .eyebrow-rugged { color: var(--blaze); margin-bottom: 26px; }
+  .post-hero .eb-sep { color: rgba(255,255,255,0.35); }
+
+  .post-title {
+    font-size: 56px;
+    line-height: 1.02;
+    letter-spacing: -0.04em;
+    font-weight: 700;
+    margin-bottom: 22px;
+    max-width: 820px;
+  }
+
+  .post-excerpt {
+    font-size: 19px;
+    line-height: 1.55;
+    color: rgba(255,255,255,0.78);
+    max-width: 700px;
+    font-weight: 400;
+  }
+
+  /* ============ POST BODY ============ */
+  .post-body-section { padding-top: 64px !important; padding-bottom: 96px !important; }
+
+  .post-body-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 320px;
+    gap: 64px;
+    align-items: start;
+  }
+
+  .post-body {
+    max-width: 720px;
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--onyx);
+  }
+
+  .post-body > p,
+  .post-body > h2,
+  .post-body > h3,
+  .post-body > h4,
+  .post-body > ul,
+  .post-body > ol,
+  .post-body > blockquote,
+  .post-body > .post-callout {
+    margin-bottom: 22px;
+  }
+
+  .post-body > h2 {
+    font-size: 30px;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+    font-weight: 700;
+    color: var(--onyx);
+    margin-top: 44px;
+    padding-left: 18px;
+    position: relative;
+  }
+  .post-body > h2::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 8px; bottom: 8px;
+    width: 4px;
+    background: var(--blaze);
+    border-radius: 2px;
+  }
+  .post-body > h2:first-child { margin-top: 0; }
+
+  .post-body > h3 {
+    font-size: 22px;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    color: var(--onyx);
+    margin-top: 32px;
+  }
+
+  .post-body > p {
+    color: #1d1d1d;
+  }
+
+  .post-body p strong,
+  .post-body li strong {
+    color: var(--onyx);
+    font-weight: 700;
+    background: linear-gradient(transparent 62%, rgba(251, 86, 7, 0.18) 62%);
+    padding: 0 2px;
+  }
+
+  .post-body a {
+    color: var(--blaze);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1.5px;
+    transition: color 0.18s;
+  }
+  .post-body a:hover { color: var(--scorch); }
+
+  .post-body > ul,
+  .post-body > ol {
+    padding-left: 22px;
+  }
+  .post-body > ul li,
+  .post-body > ol li {
+    margin-bottom: 10px;
+    padding-left: 6px;
+  }
+  .post-body > ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .post-body > ul > li {
+    position: relative;
+    padding-left: 26px;
+  }
+  .post-body > ul > li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 14px;
+    height: 2px;
+    background: var(--blaze);
+  }
+
+  .post-body blockquote {
+    border-left: 4px solid var(--blaze);
+    background: var(--bone);
+    padding: 22px 26px;
+    font-size: 19px;
+    line-height: 1.55;
+    color: var(--onyx);
+    font-style: normal;
+    font-weight: 500;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .post-callout {
+    background: var(--onyx);
+    color: var(--white);
+    border-radius: 10px;
+    padding: 26px 28px;
+    border-left: 4px solid var(--blaze);
+  }
+  .post-callout strong { color: var(--blaze); }
+
+  .post-end-rule {
+    height: 2px;
+    background:
+      linear-gradient(to right, var(--blaze) 0 60px, transparent 60px 64px,
+      var(--border-strong) 64px 100%);
+    margin: 48px 0 36px;
+  }
+
+  .post-cta-card {
+    background: var(--white);
+    border: 1px solid var(--onyx);
+    border-radius: 12px;
+    padding: 32px 32px 36px;
+    box-shadow: 6px 6px 0 0 var(--onyx);
+    position: relative;
+    overflow: hidden;
+  }
+  .post-cta-card::before {
+    content: '';
+    position: absolute;
+    top: -1px; left: 28px; right: 28px;
+    height: 4px;
+    background: var(--blaze);
+    border-radius: 0 0 4px 4px;
+  }
+  .post-cta-eyebrow {
+    font-family: 'Sora', sans-serif;
+    font-size: 11px;
+    color: var(--blaze);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    font-weight: 700;
+  }
+  .post-cta-card h3 {
+    font-size: 24px;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .post-cta-card p {
+    color: var(--slate);
+    font-size: 15px;
+    margin-bottom: 22px;
+    line-height: 1.6;
+  }
+
+  /* ============ POST ASIDE ============ */
+  .post-aside { position: relative; }
+  .post-aside-sticky {
+    position: sticky;
+    top: 96px;
+    display: grid;
+    gap: 14px;
+  }
+  .aside-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px;
+    transition: border-color 0.15s, transform 0.15s;
+  }
+  .aside-card:hover { border-color: var(--onyx); }
+  .aside-eyebrow {
+    font-family: 'Sora', sans-serif;
+    font-size: 11px;
+    color: var(--blaze);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  .aside-card h4 {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 14px;
+  }
+  .aside-meta-list {
+    list-style: none;
+    display: grid;
+    gap: 8px;
+  }
+  .aside-meta-list li {
+    display: flex; align-items: baseline; justify-content: space-between;
+    font-size: 13px;
+    color: var(--slate);
+    padding-bottom: 8px;
+    border-bottom: 1px dashed var(--border);
+  }
+  .aside-meta-list li:last-child { border-bottom: 0; padding-bottom: 0; }
+  .aside-meta-list strong { color: var(--onyx); font-weight: 600; }
+
+  .aside-recent { background: var(--bone); border-color: var(--border-strong); }
+  .aside-recent-list { list-style: none; display: grid; gap: 4px; }
+  .aside-recent-list a {
+    display: grid;
+    gap: 4px;
+    padding: 12px 0;
+    border-top: 1px solid var(--border-strong);
+    text-decoration: none;
+    color: inherit;
+    transition: padding-left 0.18s;
+  }
+  .aside-recent-list li:first-child a { border-top: 0; padding-top: 0; }
+  .aside-recent-list a:hover { padding-left: 6px; }
+  .aside-recent-cat {
+    font-family: 'Sora', sans-serif;
+    font-size: 10px;
+    color: var(--blaze);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .aside-recent-title {
+    font-size: 14px;
+    color: var(--onyx);
+    font-weight: 600;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+  }
+  .aside-recent-date {
+    font-size: 11px;
+    color: var(--slate);
+  }
+
+  .aside-cta {
+    background: var(--onyx);
+    color: var(--white);
+    border-color: var(--onyx);
+    box-shadow: 4px 4px 0 0 var(--blaze);
+  }
+  .aside-cta h4 { color: var(--white); }
+  .aside-cta p {
+    color: var(--slate-light);
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+  .aside-cta .btn-secondary {
+    background: transparent;
+    color: var(--white);
+    border-color: rgba(255,255,255,0.3);
+    box-shadow: 3px 3px 0 0 var(--blaze);
+  }
+  .aside-cta .btn-secondary:hover { border-color: var(--white); }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width: 1000px) {
+    .post-title { font-size: 42px; }
+    .post-excerpt { font-size: 17px; }
+    .post-body-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    .post-aside-sticky { position: static; }
+  }
+
+  @media (max-width: 600px) {
+    .post-hero { padding: 40px 0 56px; }
+    .post-title { font-size: 32px; }
+    .post-excerpt { font-size: 16px; }
+    .post-body { font-size: 16px; line-height: 1.7; }
+    .post-body > h2 { font-size: 24px; }
+    .post-body > h3 { font-size: 19px; }
+    .post-body > blockquote { font-size: 17px; padding: 18px 22px; }
+    .post-cta-card { padding: 26px 22px; }
+    .post-cta-card h3 { font-size: 20px; }
+  }
+</style>
+
+</BaseLayout>
