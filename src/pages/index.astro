@@ -127,7 +127,6 @@ import QuoteForm from '../components/QuoteForm.astro';
     <div class="trades-showcase">
       <div class="trade-preview" id="trade-preview">
         <div class="tp-icon" id="tp-icon"></div>
-        <div class="tp-eyebrow">Service vertical <span class="tp-counter" id="tp-counter">01 / 12</span></div>
         <h3 class="tp-name" id="tp-name">Tree services</h3>
         <p class="tp-tagline" id="tp-tagline">Highest-intent vertical in home services. Emergency work alone usually pays for the marketing.</p>
         <div class="tp-services" id="tp-services"></div>
@@ -369,8 +368,6 @@ import QuoteForm from '../components/QuoteForm.astro';
 .trade-preview > * { position: relative; z-index: 1; }
 .tp-icon { width: 68px; height: 68px; color: var(--blaze); margin-bottom: 32px; transition: transform 0.35s cubic-bezier(0.65, 0, 0.35, 1), color 0.25s; }
 .tp-icon svg { width: 100%; height: 100%; }
-.tp-eyebrow { font-size: 11px; color: var(--blaze); letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 14px; font-weight: 700; }
-.tp-eyebrow .tp-counter { color: rgba(255,255,255,0.5); margin-left: 8px; font-weight: 400; letter-spacing: 0.08em; }
 .tp-name { font-size: 40px; font-weight: 700; letter-spacing: -0.035em; line-height: 1; margin-bottom: 18px; color: var(--white); transition: opacity 0.2s ease; }
 .tp-tagline { font-size: 16px; line-height: 1.55; color: rgba(255,255,255,0.72); margin-bottom: 30px; max-width: 460px; transition: opacity 0.2s ease; }
 .tp-services { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 36px; transition: opacity 0.2s ease; }
@@ -547,7 +544,6 @@ button.video-thumb-yt .video-play { position: relative; z-index: 2; }
   const tpName = document.getElementById('tp-name');
   const tpTagline = document.getElementById('tp-tagline');
   const tpServices = document.getElementById('tp-services');
-  const tpCounter = document.getElementById('tp-counter');
   const list = document.getElementById('trade-list');
   if (!list) return;
   let current = null;
@@ -562,7 +558,6 @@ button.video-thumb-yt .video-play { position: relative; z-index: 2; }
       tpName.textContent = t.name;
       tpTagline.textContent = t.tagline;
       tpServices.innerHTML = t.services.map(s => '<span>' + s + '</span>').join('');
-      tpCounter.textContent = String(t.n).padStart(2, '0') + ' / 12';
       list.querySelectorAll('.trade-row').forEach(r => { r.classList.toggle('active', r.dataset.trade === key); });
       preview.classList.remove('fading');
     }, 140);
