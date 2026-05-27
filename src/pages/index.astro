@@ -405,7 +405,7 @@ const tradesRow3 = [...trades.slice(8), ...trades.slice(0, 8)];
   margin: 32px 0 40px;
   overflow: hidden;
   position: relative;
-  padding: 8px 0;
+  padding: 12px 0;
 }
 .marquee-d::before, .marquee-d::after {
   content: ''; position: absolute; top: 0; bottom: 0; width: 200px; z-index: 2; pointer-events: none;
@@ -414,9 +414,9 @@ const tradesRow3 = [...trades.slice(8), ...trades.slice(0, 8)];
 .marquee-d::after  { right: 0; background: linear-gradient(to left, var(--onyx), transparent); }
 
 .md-row {
-  display: flex; gap: 16px;
+  display: flex; gap: 14px;
   width: max-content;
-  padding: 10px 0;
+  padding: 8px 0;
 }
 .md-row-1 { animation: md-l 160s linear infinite; }
 .md-row-2 { animation: md-r 190s linear infinite; }
@@ -430,41 +430,44 @@ const tradesRow3 = [...trades.slice(8), ...trades.slice(0, 8)];
 
 .md-tile {
   display: inline-flex; align-items: center; gap: 14px;
-  padding: 16px 22px;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 12px;
+  padding: 14px 20px;
+  background: #141414;
+  border: 1px solid #2A2A2A;
+  border-radius: 6px;
   color: var(--white);
   text-decoration: none;
   cursor: pointer;
   flex-shrink: 0;
   text-align: left;
-  transition: background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  transition:
+    border-color 0.15s ease,
+    transform 0.1s ease,
+    box-shadow 0.1s ease;
 }
 .md-tile:hover {
-  background: rgba(251,86,7,0.10);
   border-color: var(--blaze);
-  transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 8px 24px rgba(251,86,7,0.25);
+  transform: translate(1px, 1px);
+  box-shadow: 3px 3px 0 0 var(--blaze);
 }
 .md-tile-icon {
   width: 36px; height: 36px;
-  border-radius: 8px;
-  background: rgba(251,86,7,0.16);
-  color: var(--blaze);
+  border-radius: 6px;
+  background: var(--blaze);
+  color: var(--white);
   display: inline-flex; align-items: center; justify-content: center;
   flex-shrink: 0;
 }
 .md-tile-icon svg { width: 20px; height: 20px; }
-.md-tile-text { display: flex; flex-direction: column; gap: 2px; }
-.md-tile-name { font-size: 15px; font-weight: 700; letter-spacing: -0.01em; color: var(--white); }
+.md-tile-text { display: flex; flex-direction: column; gap: 4px; }
+.md-tile-name { font-size: 15px; font-weight: 700; letter-spacing: -0.005em; color: var(--white); line-height: 1; }
 .md-tile-services {
   font-family: 'Sora', sans-serif;
   font-size: 11px;
-  color: rgba(255,255,255,0.55);
-  letter-spacing: 0.04em;
-  font-weight: 500;
+  color: var(--slate-light);
+  letter-spacing: 0.1em;
+  font-weight: 600;
   text-transform: uppercase;
+  line-height: 1;
 }
 
 .industries-foot { display: flex; justify-content: center; padding-top: 16px; }
