@@ -289,7 +289,7 @@ const pageDescription = metaDescription ?? excerpt;
     padding: 0 2px;
   }
 
-  .post-body a {
+  .post-body a:not(.btn) {
     color: var(--blaze);
     font-weight: 600;
     text-decoration: underline;
@@ -297,7 +297,7 @@ const pageDescription = metaDescription ?? excerpt;
     text-decoration-thickness: 1.5px;
     transition: color 0.18s;
   }
-  .post-body a:hover { color: var(--scorch); }
+  .post-body a:not(.btn):hover { color: var(--scorch); }
 
   .post-body > ul,
   .post-body > ol {

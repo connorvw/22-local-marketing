@@ -61,14 +61,20 @@ const postCountByCat = Object.fromEntries(
       </div>
 
       <a href={`/blog/${featuredPost.slug}/`} class="featured-card">
-        <div class="featured-card-cover">
-          <div class="featured-cover-tag">{featuredPost.category}</div>
-          <div class="featured-cover-meta">
-            <span>{featuredPost.date}</span>
-            <span class="featured-cover-sep">·</span>
-            <span>{featuredPost.readTime}</span>
-          </div>
-          <div class="featured-cover-pattern"></div>
+        <div class={`featured-card-cover ${featuredPost.image ? 'has-image' : ''}`}>
+          {featuredPost.image ? (
+            <img src={featuredPost.image} alt={featuredPost.title} class="featured-cover-img" loading="eager" />
+          ) : (
+            <>
+              <div class="featured-cover-tag">{featuredPost.category}</div>
+              <div class="featured-cover-meta">
+                <span>{featuredPost.date}</span>
+                <span class="featured-cover-sep">·</span>
+                <span>{featuredPost.readTime}</span>
+              </div>
+              <div class="featured-cover-pattern"></div>
+            </>
+          )}
         </div>
         <div class="featured-card-body">
           <div class="featured-eyebrow">→ Long read</div>
@@ -243,6 +249,16 @@ const postCountByCat = Object.fromEntries(
     display: flex; flex-direction: column;
     justify-content: space-between;
     min-height: 360px;
+  }
+  .featured-card-cover.has-image { padding: 0; display: block; }
+  .featured-card-cover.has-image::before { display: none; }
+  .featured-cover-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
   .featured-card-cover::before {
     content: ''; position: absolute; inset: 0;

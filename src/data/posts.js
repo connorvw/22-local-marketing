@@ -11,6 +11,7 @@ export const posts = [
     readTime: "7 min read",
     category: "SEO",
     featured: true,
+    image: "/blog/google-ai-agents-local-search.png",
   },
   {
     title: "Google Just Changed Its Review Policy.",
