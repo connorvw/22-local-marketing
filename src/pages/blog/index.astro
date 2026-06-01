@@ -114,26 +114,6 @@ const postCountByCat = Object.fromEntries(
     </div>
   </section>
 
-  <!-- ============ CATEGORIES STRIP ============ -->
-  <section class="cat-strip dark">
-    <div class="container">
-      <div class="section-head">
-        <h2 style="color: var(--white)">Browse by topic.</h2>
-        <span class="desc">Pick the part of the marketing engine you care about most.</span>
-      </div>
-      <div class="cat-grid">
-        {categories.map((cat, i) => (
-          <div class="cat-tile" style={`--cat-i:${i}`}>
-            <div class="cat-tile-index">{String(i + 1).padStart(2, '0')}</div>
-            <div class="cat-tile-name">{cat}</div>
-            <div class="cat-tile-count">{postCountByCat[cat]} {postCountByCat[cat] === 1 ? 'article' : 'articles'}</div>
-            <div class="cat-tile-rule"></div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
   <!-- ============ CTA ============ -->
   <section class="blog-cta">
     <div class="container">
