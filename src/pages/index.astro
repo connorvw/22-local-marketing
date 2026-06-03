@@ -588,9 +588,11 @@ button.video-thumb-yt .video-play { position: relative; z-index: 2; }
   .cta-block { padding: 40px 28px; }
 }
 @media (max-width: 600px) {
-  .stats, .svc-grid, .review-grid, .process { grid-template-columns: 1fr; }
-  .stat { border-right: 0; border-bottom: 1px solid var(--border); }
-  .stat:last-child { border-bottom: 0; }
+  .svc-grid, .review-grid, .process { grid-template-columns: 1fr; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .stat { border-right: 0; border-bottom: 0; }
+  .stat:nth-child(odd) { border-right: 1px solid var(--border); }
+  .stat:nth-child(1), .stat:nth-child(2) { border-bottom: 1px solid var(--border); }
   .hero h1 { font-size: 36px; }
   .hero { padding: 64px 0 48px; }
   .hero-actions .btn, .cta-actions .btn { width: 100%; justify-content: center; }
