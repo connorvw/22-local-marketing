@@ -52,6 +52,7 @@ const tradesRow3 = [...trades.slice(8), ...trades.slice(0, 8)];
 <section class="flush" style="padding-top: 0; border-top: 0;">
   <div class="container">
     <div class="stats-row">
+      <div class="stats-tag">Average per client, every month</div>
       <div class="stats">
         <div class="stat"><div class="stat-label">Phone calls</div><div class="stat-value">60+</div><div class="stat-desc">Per client each month, across Google, ads, and search</div></div>
         <div class="stat"><div class="stat-label">Form leads</div><div class="stat-value">40+</div><div class="stat-desc">Web form submissions per client, every month</div></div>
@@ -362,7 +363,8 @@ const tradesRow3 = [...trades.slice(8), ...trades.slice(0, 8)];
 .dark .section-head h2 { color: var(--white); }
 
 /* ===== STATS ===== */
-.stats-row { display: grid; grid-template-columns: 1fr; gap: 24px; align-items: stretch; }
+.stats-row { display: grid; grid-template-columns: 1fr; gap: 24px; align-items: stretch; position: relative; }
+.stats-tag { position: absolute; top: -14px; left: 28px; z-index: 2; background: var(--blaze); color: var(--white); font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 6px 12px; border-radius: 4px; border: 1px solid var(--onyx); }
 .stats { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--onyx); background: var(--white); border-radius: 10px; box-shadow: 6px 6px 0 0 var(--onyx); overflow: hidden; transition: transform 0.15s, box-shadow 0.15s; }
 .stats:hover { transform: translate(-2px, -2px); box-shadow: 9px 9px 0 0 var(--onyx); }
 .stats-2x2 { grid-template-columns: repeat(2, 1fr); grid-template-rows: 1fr 1fr; }
