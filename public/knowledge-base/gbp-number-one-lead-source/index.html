@@ -142,6 +142,45 @@
       letter-spacing: 0.04em;
     }
 
+    /* ===== Split: text + side stat ===== */
+    .slide-split .split-wrap {
+      display: flex;
+      align-items: center;
+      gap: 6vw;
+      width: 100%;
+    }
+    .slide-split .split-text { flex: 1 1 58%; }
+    .slide-split .split-stat {
+      flex: 0 0 auto;
+      max-width: 36%;
+      text-align: right;
+    }
+    .slide-split .split-stat .big {
+      font-size: clamp(5rem, 13vw, 11rem);
+      font-weight: 700;
+      color: var(--blaze);
+      letter-spacing: -0.06em;
+      line-height: 0.85;
+    }
+    .slide-split .split-stat .big-context {
+      margin-top: 1.5rem;
+      font-size: clamp(1rem, 1.4vw, 1.3125rem);
+      color: var(--onyx);
+      font-weight: 500;
+      line-height: 1.4;
+      letter-spacing: -0.01em;
+    }
+    .slide-split .split-stat .big-cite {
+      margin-top: 1.25rem;
+      font-size: 13px;
+      color: var(--slate-light);
+      letter-spacing: 0.04em;
+    }
+    @media (max-width: 768px) {
+      .slide-split .split-wrap { flex-direction: column; align-items: flex-start; gap: 2.5rem; }
+      .slide-split .split-stat { text-align: left; max-width: 100%; }
+    }
+
     /* ===== Card grid ===== */
     .grid-4 {
       display: grid;
@@ -302,10 +341,19 @@
         <p class="sub">The single biggest lever most home service companies ignore.</p>
       </section>
 
-      <section class="slide">
-        <div class="slide-section-label">The map pack</div>
-        <h2>It drives more local leads than your website does.</h2>
-        <p class="body">The map pack sits above organic results and above the ads on every &ldquo;near me&rdquo; search. If you&rsquo;re not in those three pins, you&rsquo;re fighting for scraps.</p>
+      <section class="slide slide-split">
+        <div class="split-wrap">
+          <div class="split-text">
+            <div class="slide-section-label">The map pack</div>
+            <h2>It drives more local leads than your website does.</h2>
+            <p class="body">The map pack sits above organic results and above the ads on every &ldquo;near me&rdquo; search. If you&rsquo;re not in those three pins, you&rsquo;re fighting for scraps.</p>
+          </div>
+          <div class="split-stat">
+            <div class="big">53%</div>
+            <div class="big-context">of profile engagement is calls and direction requests, not website clicks. Most local buyers act on the profile and never reach your site.</div>
+            <div class="big-cite">Birdeye, State of Google Business Profiles 2026</div>
+          </div>
+        </div>
       </section>
 
       <section class="slide">
@@ -336,10 +384,10 @@
       </section>
 
       <section class="slide slide-stat">
-        <div class="slide-section-label">The reviews multiplier</div>
-        <div class="stat">3 &ndash; 5&times;</div>
-        <div class="stat-context">More clicks for profiles with 50+ reviews and a 4.7+ star average over competitors with under 20.</div>
-        <div class="stat-cite"><span class="placeholder">[INSERT source citation or remove if speaking from client data]</span></div>
+        <div class="slide-section-label">It lifts everything</div>
+        <div class="stat">36%</div>
+        <div class="stat-context">of what decides the local pack comes down to your profile. It&rsquo;s the single biggest ranking factor, ahead of your website, your links, and your content. Get it right and every other signal counts for more.</div>
+        <div class="stat-cite">Whitespark Local Search Ranking Factors, 2026</div>
       </section>
 
       <section class="slide slide-title">
