@@ -1,0 +1,1571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proposal — Vivid Tree Service · 22 Local Marketing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+:root{
+  --blaze:#FB5607; --scorch:#C13D0E; --bone:#F8F6F2; --white:#fff;
+  --slate:#525252; --slate-light:#8A8A8A; --onyx:#0A0A0A;
+  --border:#E5E2DC; --border-strong:#D4D0C8;
+  --success:#1F7A4D; --success-bg:#E6F4EC;
+  --warning:#8A5A00; --warning-bg:#FFF4D9;
+  --danger:#C42017; --danger-bg:#FBE5DF;
+  --info-bg:#FFE8D9;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Sora',sans-serif;background:var(--bone);color:var(--onyx);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;font-feature-settings:"ss01","ss02"}
+.container{max-width:1140px;margin:0 auto;padding:0 40px}
+img{max-width:100%;display:block}
+a{color:inherit}
+
+/* ===== NAV ===== */
+.topnav{border-bottom:1px solid var(--border);background:rgba(248,246,242,.9);position:sticky;top:0;z-index:50;backdrop-filter:blur(10px)}
+.topnav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:16px}
+.wordmark{display:flex;align-items:center;gap:9px;font-weight:700;font-size:20px;letter-spacing:-.03em;white-space:nowrap}
+.wordmark-dot{width:10px;height:10px;background:var(--blaze);border-radius:2px}
+.wordmark small{font-weight:500;font-size:12px;color:var(--slate-light);letter-spacing:0}
+/* tab switch */
+.tabs{display:flex;gap:4px;background:var(--white);border:1px solid var(--border-strong);border-radius:8px;padding:4px}
+.tab-btn{appearance:none;border:0;background:transparent;font-family:inherit;font-size:14px;font-weight:600;color:var(--slate);padding:8px 18px;border-radius:6px;cursor:pointer;transition:.15s;display:flex;align-items:center;gap:7px}
+.tab-btn .dot{width:6px;height:6px;border-radius:50%;background:var(--slate-light)}
+.tab-btn.active{background:var(--onyx);color:#fff}
+.tab-btn.active .dot{background:var(--blaze)}
+.nav-cta{background:var(--blaze);color:#fff;padding:9px 16px;border-radius:6px;font-size:14px;font-weight:600;text-decoration:none;box-shadow:3px 3px 0 0 var(--onyx);white-space:nowrap}
+
+/* ===== TAB PANELS ===== */
+.panel{display:none}
+.panel.active{display:block}
+
+/* ===== SHARED ===== */
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--blaze);margin-bottom:20px}
+.eyebrow .eb-dash{width:28px;height:2px;background:var(--blaze)}
+section{padding:62px 0;border-top:1px solid var(--border)}
+.section-head{display:flex;align-items:baseline;gap:16px;margin-bottom:38px;flex-wrap:wrap}
+.section-head h2{font-size:34px;font-weight:700;letter-spacing:-.03em;position:relative;padding:2px 0 0}
+.section-head h2::before,.section-head h2::after{content:'';position:absolute;width:14px;height:14px;border:2px solid var(--blaze)}
+.section-head h2::before{top:0;left:-22px;border-right:0;border-bottom:0}
+.section-head h2::after{bottom:0;right:-22px;border-left:0;border-top:0}
+.section-head .desc{font-size:15px;color:var(--slate);margin-left:auto;max-width:420px;text-align:right}
+.card{background:var(--white);border:1px solid var(--onyx);border-radius:12px;padding:26px;box-shadow:4px 4px 0 0 var(--onyx)}
+.soft{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:24px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:6px;font-family:inherit;font-size:16px;font-weight:600;border:1px solid transparent;cursor:pointer;text-decoration:none;box-shadow:3px 3px 0 0 var(--onyx);transition:transform .1s,box-shadow .1s}
+.btn:hover{transform:translate(1px,1px);box-shadow:2px 2px 0 0 var(--onyx)}
+.btn-primary{background:var(--blaze);color:#fff}
+.btn-dark{background:var(--onyx);color:#fff}
+.btn-secondary{background:#fff;color:var(--onyx);border-color:var(--border-strong)}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.badge{display:inline-flex;align-items:center;gap:6px;padding:5px 11px;border-radius:5px;font-size:13px;font-weight:600}
+.badge .bd{width:6px;height:6px;border-radius:50%}
+.b-success{background:var(--success-bg);color:var(--success)} .b-success .bd{background:var(--success)}
+.b-warn{background:var(--warning-bg);color:var(--warning)} .b-warn .bd{background:var(--warning)}
+.b-danger{background:var(--danger-bg);color:var(--danger)} .b-danger .bd{background:var(--danger)}
+.b-brand{background:var(--info-bg);color:var(--scorch)} .b-brand .bd{background:var(--blaze)}
+
+/* ===== HERO ===== */
+.hero{padding:78px 0 56px;border-top:0}
+.hero-frame{position:relative;width:fit-content;padding:14px 0 8px;margin-bottom:22px}
+.hero-frame::before,.hero-frame::after{content:'';position:absolute;width:22px;height:22px;border:2px solid var(--blaze)}
+.hero-frame::before{top:0;left:-20px;border-right:0;border-bottom:0}
+.hero-frame::after{bottom:0;right:-20px;border-left:0;border-top:0}
+.hero-headrow{display:flex;align-items:center;justify-content:space-between;gap:48px;margin-bottom:8px}
+.hero-headrow .hero-frame{margin-bottom:0}
+.hero-headrow .hero-logo{margin-bottom:0;flex-shrink:0}
+.hero-headrow .hero-logo img{height:84px}
+.hero-headrow .hero-logo .cl-ph{height:76px;min-width:150px}
+.hero h1{font-size:46px;line-height:1.04;letter-spacing:-.035em;font-weight:700;max-width:600px}
+.hero h1 .accent{color:var(--blaze)}
+.hero p.lead{font-size:20px;color:var(--slate);max-width:620px;margin:22px 0 32px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:48px}
+.prepared{display:flex;align-items:center;gap:14px;font-size:13px;color:var(--slate-light);margin-bottom:30px;letter-spacing:.02em}
+.prepared b{color:var(--onyx);font-weight:600}
+
+/* ===== STAT TILES ===== */
+.stat{background:var(--white);border:1px solid var(--onyx);border-radius:12px;padding:22px;box-shadow:4px 4px 0 0 var(--onyx)}
+.stat .lab{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--slate);margin-bottom:12px}
+.stat .val{font-size:38px;font-weight:700;letter-spacing:-.03em;line-height:1}
+.stat .sub{font-size:14px;font-weight:500;margin-top:8px}
+.up{color:var(--success)} .down{color:var(--danger)} .neutral{color:var(--slate)}
+
+/* ===== WINNING FORMULA (equation) ===== */
+.equation{display:flex;align-items:stretch;justify-content:center;gap:14px;flex-wrap:wrap}
+.term{flex:1 1 180px;background:#fff;border:1px solid var(--onyx);border-radius:14px;padding:26px 20px;box-shadow:4px 4px 0 0 var(--onyx);text-align:center;display:flex;flex-direction:column;justify-content:flex-start}
+.term .ic{width:52px;height:52px;border-radius:12px;background:var(--info-bg);display:grid;place-items:center;font-size:25px;margin:0 auto 14px}
+.term .tl{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blaze);margin-bottom:6px}
+.term h3{font-size:19px;font-weight:700;margin-bottom:8px;letter-spacing:-.01em}
+.term p{font-size:13px;color:var(--slate)}
+.op{flex:0 0 auto;align-self:center;width:52px;height:52px;border-radius:50%;background:var(--info-bg);color:var(--blaze);display:grid;place-items:center;font-size:34px;font-weight:800;line-height:1;box-shadow:3px 3px 0 0 var(--onyx)}
+.op.eq{background:var(--blaze);color:#fff}
+.result{flex:1 1 200px;background:var(--onyx);color:#fff;border-radius:14px;padding:26px 20px;box-shadow:4px 4px 0 0 var(--blaze);text-align:center;display:grid;place-content:center;gap:6px}
+.result .ic{font-size:30px}
+.result .rg{font-size:32px;font-weight:700;letter-spacing:-.02em;color:var(--blaze)}
+.result small{font-size:13px;color:#9a9a9a}
+
+/* ===== LOOM / PERSONAL VIDEO BAND ===== */
+.loom-band{background:var(--onyx);border-radius:16px;padding:40px;display:grid;grid-template-columns:1.2fr 1fr;gap:34px;align-items:center}
+.loom-band .lt .eyebrow{margin-bottom:14px}
+.loom-band h2{color:#fff;font-size:30px;font-weight:700;letter-spacing:-.03em;margin-bottom:12px}
+.loom-band h2 .accent{color:var(--blaze)}
+.loom-band p{color:#9a9a9a;font-size:16px}
+.loom-frame{position:relative;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#1d1d1d,#3a3a3a);display:grid;place-items:center;cursor:pointer;border:1px solid #2a2a2a}
+.loom-frame .play{width:70px;height:70px;border-radius:50%;background:var(--blaze);display:grid;place-items:center}
+.loom-frame .play::after{content:'';border-left:22px solid #fff;border-top:13px solid transparent;border-bottom:13px solid transparent;margin-left:6px}
+.loom-frame .badge-loom{position:absolute;top:14px;left:14px;background:rgba(0,0,0,.5);color:#fff;font-size:12px;font-weight:600;padding:5px 10px;border-radius:6px}
+
+/* ===== LOCAL FALCON SCREENSHOT SLOT ===== */
+.lf-shot{border:1px solid var(--onyx);border-radius:14px;box-shadow:4px 4px 0 0 var(--onyx);overflow:hidden;background:#fff}
+.lf-shot img{width:100%;display:block}
+.lf-shot .ph{aspect-ratio:1/1;display:grid;place-items:center;text-align:center;color:var(--slate-light);font-size:14px;background:repeating-linear-gradient(45deg,#fafafa,#fafafa 12px,#f2f0ec 12px,#f2f0ec 24px);padding:24px}
+
+/* ===== FEATURED REVIEW LAYOUT ===== */
+.rev-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:18px;align-items:stretch}
+.rev-featured{background:var(--onyx);color:#fff;border-radius:14px;padding:32px;box-shadow:5px 5px 0 0 var(--blaze);display:flex;flex-direction:column;justify-content:center}
+.rev-featured .stars{font-size:22px}
+.rev-featured p{font-size:21px;font-weight:500;line-height:1.45;letter-spacing:-.01em;margin:16px 0;color:#fff}
+.rev-featured .who{display:flex;align-items:center;gap:12px}
+.rev-featured .avatar{background:var(--blaze);color:#fff}
+.rev-col{display:grid;gap:18px}
+
+/* ===== ROADMAP (timeline) ===== */
+.roadmap{display:grid;grid-template-columns:repeat(4,1fr);margin-top:24px}
+.rstep{position:relative;text-align:center;padding:0 16px}
+.rstep::before{content:'';position:absolute;top:23px;left:0;right:0;height:3px;background:var(--border-strong);z-index:0}
+.rstep:first-child::before{left:50%}
+.rstep:last-child::before{right:50%}
+.rnode{position:relative;z-index:1;width:48px;height:48px;border-radius:50%;background:var(--blaze);color:#fff;display:grid;place-items:center;font-weight:700;font-size:18px;margin:0 auto 18px;box-shadow:0 0 0 6px var(--bone),4px 4px 0 0 var(--onyx)}
+.rstep .day{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blaze);margin-bottom:8px}
+.rstep h4{font-size:17px;font-weight:700;margin-bottom:6px}
+.rstep p{font-size:13px;color:var(--slate)}
+
+/* ===== LOCAL FALCON HEATMAP ===== */
+.lf-wrap{display:grid;grid-template-columns:minmax(0,420px) 1fr;gap:34px;align-items:stretch}
+.lf-shot{align-self:start}
+.lf-shot img{width:100%;height:auto;max-width:100%}
+.heatmap{display:grid;grid-template-columns:repeat(7,46px);grid-auto-rows:46px;gap:7px;padding:18px;background:var(--onyx);border-radius:14px}
+.cell{border-radius:8px;display:grid;place-items:center;font-size:14px;font-weight:700;color:#fff}
+.r1{background:#1F7A4D}.r2{background:#5BA85F}.r3{background:#E0A100;color:#1a1a1a}.r4{background:#E2641E}.r5{background:#C42017}.rx{background:#3a3a3a;color:#8A8A8A}
+.lf-side .lf-kw{font-size:14px;color:var(--slate);margin-bottom:18px}
+.lf-side .lf-kw b{color:var(--onyx)}
+.lf-metrics{display:grid;gap:12px}
+.lf-metric{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 18px;background:var(--white);border:1px solid var(--border);border-radius:10px}
+.lf-metric .m-lab{font-size:14px;color:var(--slate);font-weight:500}
+.lf-metric .m-val{font-size:26px;font-weight:700;letter-spacing:-.02em}
+.lf-legend{display:flex;gap:14px;flex-wrap:wrap;margin-top:18px;font-size:12px;color:var(--slate)}
+.lf-legend span{display:inline-flex;align-items:center;gap:6px}
+.lf-legend i{width:12px;height:12px;border-radius:3px;display:inline-block}
+
+/* ===== GAUGE ===== */
+.gauge{--val:50;--gc:var(--blaze);width:148px;height:148px;border-radius:50%;background:conic-gradient(var(--gc) calc(var(--val)*3.6deg),var(--border) 0);display:grid;place-items:center}
+.gauge .inner{width:112px;height:112px;border-radius:50%;background:var(--white);display:grid;place-items:center;text-align:center}
+.gauge .g-val{font-size:34px;font-weight:700;letter-spacing:-.03em;line-height:1}
+.gauge .g-lab{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--slate);margin-top:3px}
+
+/* ===== RANKINGS ===== */
+.rank-row{display:flex;align-items:center;gap:16px;padding:14px 18px;border:1px solid var(--border);border-radius:10px;background:#fff;margin-bottom:10px}
+.pos-pill{width:46px;height:46px;border-radius:10px;display:grid;place-items:center;font-weight:700;font-size:18px;flex-shrink:0;color:#fff}
+.rank-row .kw{font-weight:600;font-size:16px}
+.rank-row .vol{font-size:13px;color:var(--slate)}
+.rank-row .trend{margin-left:auto;font-size:14px;font-weight:600}
+
+/* ===== TABLE ===== */
+.tbl-wrap{border:1px solid var(--onyx);border-radius:12px;overflow:hidden;box-shadow:4px 4px 0 0 var(--onyx);background:#fff}
+table{width:100%;border-collapse:collapse}
+th{text-align:left;font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#fff;padding:15px 18px;background:var(--onyx);border-bottom:2px solid var(--blaze)}
+td{padding:15px 18px;font-size:15px;border-bottom:1px solid var(--border)}
+tr:last-child td{border-bottom:0}
+td.you{background:var(--info-bg);font-weight:600}
+.mini-bar{height:8px;border-radius:4px;background:var(--border);overflow:hidden}
+.mini-bar i{display:block;height:100%;background:var(--blaze)}
+
+/* ===== VIDEO ===== */
+.video-card{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--onyx);box-shadow:4px 4px 0 0 var(--onyx);aspect-ratio:16/9;background:linear-gradient(135deg,#1a1a1a,#333);display:grid;place-items:center;cursor:pointer}
+.play{width:78px;height:78px;border-radius:50%;background:var(--blaze);display:grid;place-items:center;box-shadow:0 8px 30px rgba(0,0,0,.4)}
+.play::after{content:'';border-left:24px solid #fff;border-top:15px solid transparent;border-bottom:15px solid transparent;margin-left:6px}
+.video-meta{position:absolute;left:18px;bottom:16px;color:#fff}
+.video-meta .vt{font-size:18px;font-weight:700} .video-meta .vd{font-size:13px;opacity:.8}
+
+/* ===== REVIEWS ===== */
+.rev-banner{display:flex;align-items:center;gap:18px;margin-bottom:22px;flex-wrap:wrap}
+.rev-banner .big{font-size:44px;font-weight:700;letter-spacing:-.03em}
+.stars{color:#E0A100;font-size:20px;letter-spacing:2px}
+.review{background:#fff;border:1px solid var(--border);border-radius:12px;padding:22px}
+.review .rh{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.avatar{width:42px;height:42px;border-radius:50%;background:var(--info-bg);color:var(--scorch);display:grid;place-items:center;font-weight:700}
+.review .nm{font-weight:600;font-size:15px} .review .src{font-size:12px;color:var(--slate-light)}
+.review p{font-size:14px;color:var(--slate)}
+.gicon{margin-left:auto;font-weight:700;font-size:18px}
+.gicon b1{color:#4285F4}
+
+/* ===== DESIGN GALLERY ===== */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.shot{border:1px solid var(--onyx);border-radius:12px;overflow:hidden;box-shadow:4px 4px 0 0 var(--onyx);background:#fff}
+.shot .img{aspect-ratio:4/3;background:linear-gradient(135deg,var(--info-bg),#fff);display:grid;place-items:center;color:var(--slate-light);font-size:13px;border-bottom:1px solid var(--border);overflow:hidden}
+.shot .img img{width:100%;height:100%;object-fit:fill}
+.shot .cap{padding:12px 16px;font-size:14px;font-weight:600;display:flex;justify-content:space-between;align-items:center}
+
+/* ===== ROI ===== */
+.roi{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
+.roi-inputs{background:#fff;border:1px solid var(--border);border-radius:14px;padding:30px;display:flex;flex-direction:column;justify-content:space-between}
+.roi-inputs .field{margin-bottom:0}
+.roi-inputs label{display:flex;justify-content:space-between;font-size:14px;font-weight:600;margin-bottom:8px}
+.roi-inputs label span{color:var(--blaze)}
+.roi-inputs input[type=range]{width:100%;accent-color:var(--blaze)}
+.roi-out{background:var(--onyx);border-radius:14px;padding:30px;color:#fff;display:grid;gap:18px;align-content:center}
+.roi-out .ro{border-bottom:1px solid #2a2a2a;padding-bottom:16px}
+.roi-out .ro:last-child{border-bottom:0;padding-bottom:0}
+.roi-out .ro-lab{font-size:13px;color:#9a9a9a;text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
+.roi-out .ro-val{font-size:36px;font-weight:700;letter-spacing:-.03em;color:var(--blaze)}
+.roi-note{font-size:12px;color:var(--slate-light);margin-top:14px}
+
+/* ===== TIMELINE ===== */
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:step}
+.tl-step{background:#fff;border:1px solid var(--onyx);border-radius:12px;padding:24px;box-shadow:4px 4px 0 0 var(--onyx);position:relative}
+.tl-step .day{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blaze);margin-bottom:10px}
+.tl-step h4{font-size:17px;font-weight:700;margin-bottom:6px}
+.tl-step p{font-size:13px;color:var(--slate)}
+
+/* ===== PRICING ===== */
+.price-wrap{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
+.tier-table td:first-child,.tier-table th:first-child{text-align:left}
+.tier-table td,.tier-table th{text-align:center}
+.tier-table td:first-child{font-weight:600}
+.tier-table .yes{color:var(--success);font-weight:700}
+.tier-table .no{color:var(--slate-light)}
+.tier-table .prow td{font-size:20px;font-weight:700;letter-spacing:-.02em;color:var(--onyx)}
+.tier-table td.hot{background:var(--bone)}
+.tier-pop{display:inline-block;background:var(--blaze);color:#fff;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:20px;margin-left:6px;vertical-align:middle}
+.price-card{background:var(--onyx);color:#fff;border-radius:16px;padding:36px;box-shadow:6px 6px 0 0 var(--blaze)}
+.price-card .pe{font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--blaze);margin-bottom:14px}
+.price-card .pv{font-size:56px;font-weight:700;letter-spacing:-.03em;line-height:1}
+.price-card .pv small{font-size:18px;color:#9a9a9a;font-weight:500}
+.price-card .pnote{font-size:14px;color:#9a9a9a;margin-top:8px}
+.feature-list{margin-top:26px;display:grid;gap:12px}
+.feature-list .fi{display:flex;gap:10px;font-size:15px;align-items:flex-start}
+.feature-list .ck{color:var(--blaze);font-weight:700;flex-shrink:0}
+/* form */
+.pform .field{margin-bottom:16px}
+.pform label{display:block;font-size:14px;font-weight:600;margin-bottom:6px}
+.pform input,.pform select{width:100%;padding:12px 14px;border:1px solid var(--border-strong);border-radius:8px;font-family:inherit;font-size:15px;background:#fff}
+.pform input:focus,.pform select:focus{outline:0;border-color:var(--blaze);box-shadow:0 0 0 3px rgba(251,86,7,.15)}
+
+/* ===== CTA BAND ===== */
+.cta-band{background:var(--onyx);color:#fff;border-radius:16px;padding:48px;text-align:center}
+.cta-band h2{font-size:36px;font-weight:700;letter-spacing:-.03em;margin-bottom:12px}
+.cta-band h2 .accent{color:var(--blaze)}
+.cta-band p{color:#9a9a9a;max-width:520px;margin:0 auto 26px}
+
+/* ===== AUDIT TAB ===== */
+.score-hero{display:grid;grid-template-columns:auto 1fr;gap:34px;align-items:center}
+.cat-bars{display:grid;gap:14px}
+.cat{display:grid;grid-template-columns:160px 1fr 48px;align-items:center;gap:14px}
+.cat .cn{font-size:14px;font-weight:600}
+.cat .cv{font-size:14px;font-weight:700;text-align:right}
+.chart-box{position:relative;height:260px}
+.chart-box canvas{position:absolute!important;top:0;left:0;width:100%!important;height:100%!important;display:block}
+.checklist .ci{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--border)}
+.checklist .ci:last-child{border-bottom:0}
+.checklist .ci .ct{font-weight:600;font-size:15px}
+.checklist .ci .cd{font-size:13px;color:var(--slate)}
+.checklist .ci .st{margin-left:auto}
+
+/* ===== FOOTER ===== */
+footer{border-top:1px solid var(--border);padding:40px 0 70px;margin-top:20px}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
+.footer-meta{font-size:13px;color:var(--slate-light)}
+
+/* ===== CLIENT LOGO ===== */
+.client-logo{height:34px;width:auto;display:block}
+.nav-right{display:flex;align-items:center;gap:16px}
+.nav-client{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--slate-light);font-weight:500}
+.cl-ph{height:30px;padding:0 14px;border:1px dashed var(--border-strong);border-radius:6px;display:grid;place-items:center;font-size:11px;color:var(--slate-light);white-space:nowrap;background:#fff}
+.hero-logo{display:flex;align-items:center;margin-bottom:22px}
+.hero-logo img{height:66px;width:auto}
+.hero-logo .cl-ph{height:62px;min-width:140px;padding:0 22px;border-radius:10px;font-size:13px}
+.client-lockup{display:inline-flex;align-items:center;gap:9px}
+.cl-name{font-weight:700;color:var(--onyx);letter-spacing:-.01em;font-size:15px;white-space:nowrap}
+.hero-logo{gap:13px}
+.hero-logo .cl-name{font-size:22px;letter-spacing:-.02em}
+
+/* ===== GOOGLE LOGO ===== */
+.g-logo{width:18px;height:18px;display:inline-block;vertical-align:middle}
+.rev-banner .g-logo{width:22px;height:22px;margin-right:6px}
+.gwrap{margin-left:auto;display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--slate);font-weight:500}
+
+/* ===== CAROUSEL ===== */
+.carousel-track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:4px 2px 16px;scrollbar-width:none}
+.carousel-track::-webkit-scrollbar{display:none}
+.carousel-track .shot{flex:0 0 360px;scroll-snap-align:start}
+.rev-slide{flex:0 0 340px;scroll-snap-align:start;display:flex;flex-direction:column}
+.rev-slide p{flex:1;margin:14px 0 18px}
+.rev-slide .rh{margin-top:auto;margin-bottom:0}
+.carousel-nav{display:flex;gap:10px;justify-content:flex-end}
+.cbtn{width:46px;height:46px;border-radius:50%;border:1px solid var(--onyx);background:#fff;box-shadow:3px 3px 0 0 var(--onyx);cursor:pointer;font-size:18px;display:grid;place-items:center;transition:transform .1s,box-shadow .1s}
+.cbtn:hover{transform:translate(1px,1px);box-shadow:2px 2px 0 0 var(--onyx)}
+
+/* ===== ISSUE / PROBLEM TABLE ===== */
+.pos-cell{font-weight:700}
+.tag{display:inline-flex;align-items:center;gap:7px;padding:5px 11px;border-radius:5px;font-size:13px;font-weight:600}
+.tag .bd{width:6px;height:6px;border-radius:50%}
+
+/* ===== COMPETITOR METRIC CHARTS ===== */
+.cmp-charts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+.cmp-chart h4{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--slate);margin-bottom:12px}
+
+/* ===== AUDIT COMPARE / HEAT TABLES ===== */
+.cmp-you{background:var(--info-bg);font-weight:700}
+.heat{display:inline-block;min-width:34px;text-align:center;padding:4px 8px;border-radius:5px;font-weight:700;font-size:13px;color:#fff}
+td.num{font-variant-numeric:tabular-nums}
+.tbl-scroll{overflow-x:auto}
+/* comparison grid + winner color-coding */
+.cmp-grid th,.cmp-grid td{border-right:1px solid var(--border-strong)}
+.cmp-grid th{border-right-color:rgba(255,255,255,.18)}
+.cmp-grid th:last-child,.cmp-grid td:last-child{border-right:0}
+.cmp-grid td{text-align:center}
+.cmp-grid td:first-child,.cmp-grid th:first-child{text-align:left}
+td.win{background:var(--success-bg);color:var(--success);font-weight:700}
+td.lose{background:var(--danger-bg);color:var(--danger);font-weight:700}
+
+/* ===== PRICING (two prices + scroll feature box) ===== */
+.price-card{display:flex;flex-direction:column}
+.price-split{display:flex;gap:12px;margin:4px 0 18px}
+.price-block{flex:1;background:rgba(255,255,255,.05);border:1px solid #2a2a2a;border-radius:10px;padding:16px}
+.price-block .pl{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blaze);margin-bottom:7px}
+.price-block .pn{font-size:30px;font-weight:700;letter-spacing:-.02em;color:#fff;line-height:1}
+.price-block .pn small{font-size:13px;color:#9a9a9a;font-weight:500}
+.feat-scroll{flex:1;max-height:360px;overflow-y:auto;padding-right:12px;border-top:1px solid #2a2a2a;padding-top:18px;scrollbar-width:thin;scrollbar-color:var(--blaze) rgba(251,86,7,.18)}
+.feat-scroll::-webkit-scrollbar{width:9px}
+.feat-scroll::-webkit-scrollbar-track{background:rgba(251,86,7,.18);border-radius:5px}
+.feat-scroll::-webkit-scrollbar-thumb{background:var(--blaze);border-radius:5px}
+.feat-cat{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blaze);margin:18px 0 10px}
+.feat-cat:first-child{margin-top:0}
+.feat-scroll .fi{font-size:14px;color:#e5e5e5;margin-bottom:9px}
+.feat-scroll .ck{color:var(--blaze)}
+
+/* ===== EXECUTIVE SUMMARY ===== */
+.exec{display:grid;grid-template-columns:.95fr 1.05fr 1.05fr;gap:18px;align-items:stretch}
+.exec-col{background:#fff;border:1px solid var(--onyx);border-radius:12px;box-shadow:4px 4px 0 0 var(--onyx);padding:26px}
+.exec-col h3{font-size:17px;font-weight:700;margin-bottom:18px;letter-spacing:-.01em}
+.snap-logo{height:44px;margin-bottom:16px}
+.snap-intro{font-size:13px;color:var(--slate);margin-bottom:16px;line-height:1.5}
+.snap-row{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid var(--border);font-size:14px}
+.snap-row:last-of-type{border-bottom:0}
+.snap-row .k{color:var(--slate)} .snap-row .v{font-weight:600;text-align:right}
+.snap-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.snap-tags .t{font-size:12px;font-weight:600;color:var(--scorch);background:var(--info-bg);padding:4px 9px;border-radius:5px}
+.chal,.strat{display:flex;gap:11px;margin-bottom:15px;font-size:14px;line-height:1.45;color:var(--slate)}
+.chal:last-child,.strat:last-child{margin-bottom:0}
+.chal .cdot{width:7px;height:7px;border-radius:50%;background:var(--danger);margin-top:7px;flex-shrink:0}
+.strat .n{width:24px;height:24px;border-radius:6px;background:var(--blaze);color:#fff;font-weight:700;font-size:13px;display:grid;place-items:center;flex-shrink:0}
+.chal b,.strat b{color:var(--onyx)}
+
+/* ===== PRICING TIERS ===== */
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
+.tier{background:#fff;border:1px solid var(--onyx);border-radius:14px;box-shadow:4px 4px 0 0 var(--onyx);padding:28px 24px;display:flex;flex-direction:column}
+.tier.popular{background:var(--onyx);color:#fff;box-shadow:5px 5px 0 0 var(--blaze)}
+.tier .badge-pop{display:inline-block;background:var(--blaze);color:#fff;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:5px;margin-bottom:12px;width:fit-content}
+.tier .tn{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blaze);margin-bottom:10px}
+.tier .tp{font-size:40px;font-weight:700;letter-spacing:-.03em;line-height:1}
+.tier .tp small{font-size:15px;color:var(--slate-light);font-weight:500}
+.tier.popular .tp small{color:#9a9a9a}
+.tier .tsum{font-size:14px;color:var(--slate);margin:10px 0 18px;min-height:40px}
+.tier.popular .tsum{color:#c9c9c9}
+.tier .tlist{display:grid;gap:10px;font-size:14px;flex:1;border-top:1px solid var(--border);padding-top:16px}
+.tier.popular .tlist{border-top-color:#2a2a2a}
+.tier .tlist .ti{display:flex;gap:9px}
+.tier .tlist .ck{color:var(--blaze);font-weight:700;flex-shrink:0}
+
+/* ===== ANALYSIS: SCORECARDS ===== */
+.scorecards{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.scard{background:#fff;border:1px solid var(--onyx);border-radius:10px;padding:18px;box-shadow:3px 3px 0 0 var(--onyx)}
+.scard.hl{box-shadow:3px 3px 0 0 var(--blaze)}
+.scard .sl{font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--slate);margin-bottom:10px}
+.scard .sv{font-size:30px;font-weight:700;letter-spacing:-.03em;line-height:1}
+.scard .sd{font-size:13px;font-weight:600;margin-top:7px}
+.scard .sd .agone{color:var(--slate-light);font-weight:400}
+.callout-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+.callout{display:flex;justify-content:space-between;align-items:center;gap:14px;background:var(--danger-bg);border:1px solid var(--danger);border-radius:10px;padding:16px 20px}
+.callout .cl-t{font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--danger)}
+.callout .cl-s{font-size:13px;color:var(--slate);margin-top:2px}
+.callout .cl-v{font-size:30px;font-weight:700;color:var(--danger);letter-spacing:-.02em}
+
+/* ===== ANALYSIS: FUNNEL ===== */
+.funnel{display:grid;gap:12px}
+.frow{display:grid;grid-template-columns:190px 1fr 96px;align-items:center;gap:14px}
+.frow .fl{font-size:14px;font-weight:600}
+.frow .fl small{display:block;font-weight:400;color:var(--slate-light);font-size:12px}
+.frow .fbar{height:32px;border-radius:6px;background:var(--border);overflow:hidden}
+.frow .fbar i{display:block;height:100%;background:var(--blaze)}
+.frow .fv{text-align:right;font-weight:700}
+.frow .fv small{display:block;font-weight:400;color:var(--slate-light);font-size:12px}
+
+/* ===== ANALYSIS: ROADMAP PHASES ===== */
+.phases{display:grid;gap:14px}
+.phase{display:grid;grid-template-columns:140px 1fr;gap:20px;background:#fff;border:1px solid var(--onyx);border-radius:12px;box-shadow:4px 4px 0 0 var(--onyx);padding:22px 24px}
+.phase .ph-when{font-size:13px;font-weight:700;color:var(--blaze);letter-spacing:.04em}
+.phase .ph-when .ph-sub{display:block;color:var(--slate-light);font-weight:400;margin-top:4px;font-size:12px}
+.phase ul{margin:0;padding-left:18px}
+.phase li{font-size:14px;color:var(--slate);margin-bottom:6px}
+.phase li:last-child{margin-bottom:0}
+
+/* ===== WINNING FORMULA DROPDOWNS ===== */
+.how-btn{margin-top:auto;width:100%;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 14px;border:1px solid var(--onyx);background:var(--onyx);color:#fff;border-radius:7px;font-family:inherit;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;box-shadow:2px 2px 0 0 var(--blaze);transition:transform .1s,box-shadow .1s}
+.term .how-btn{margin-top:16px}
+.how-btn:hover{transform:translate(1px,1px);box-shadow:1px 1px 0 0 var(--blaze)}
+.how-btn .car{transition:transform .2s;font-size:11px}
+.term.active{box-shadow:4px 4px 0 0 var(--blaze)}
+.term.active .how-btn{background:var(--blaze)}
+.term.active .how-btn .car{transform:rotate(180deg)}
+.lever-details{margin-top:18px}
+.lever-panel{display:none;background:#fff;border:1px solid var(--onyx);border-radius:14px;box-shadow:4px 4px 0 0 var(--onyx);padding:30px 32px}
+.lever-panel.active{display:block;animation:lpfade .25s ease}
+@keyframes lpfade{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.lp-head{display:flex;align-items:center;gap:12px;margin-bottom:6px;flex-wrap:wrap}
+.lp-num{width:30px;height:30px;border-radius:7px;background:var(--blaze);color:#fff;font-weight:700;font-size:14px;display:grid;place-items:center;flex-shrink:0}
+.lp-ic{font-size:22px}
+.lp-title{font-size:19px;font-weight:700;letter-spacing:-.01em}
+.lp-tag{margin-left:auto;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--scorch);background:var(--info-bg);padding:5px 11px;border-radius:5px}
+.lp-sub{font-size:14px;color:var(--slate);font-style:italic;margin-bottom:20px}
+.lp-list{display:grid;gap:13px}
+.lp-list .li{display:flex;gap:11px;font-size:15px;color:var(--slate);line-height:1.5}
+.lp-list .dot{width:7px;height:7px;border-radius:50%;background:var(--blaze);margin-top:8px;flex-shrink:0}
+.lp-list b{color:var(--onyx)}
+.lp-why{display:flex;align-items:center;gap:20px;background:var(--info-bg);border-left:3px solid var(--blaze);border-radius:8px;padding:18px 22px;margin:22px 0}
+.lp-why .big{font-size:36px;font-weight:700;color:var(--blaze);letter-spacing:-.03em;line-height:1;flex-shrink:0}
+.lp-why .wt{font-size:14px;color:var(--slate)} .lp-why .wt b{color:var(--onyx)}
+.lp-cta{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;background:var(--blaze);color:#fff;border-radius:6px;font-size:14px;font-weight:600;text-decoration:none;box-shadow:3px 3px 0 0 var(--onyx)}
+.lp-example{margin:22px 0 0}
+.lp-img{border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.lp-img img{width:100%;display:block}
+.lp-img .ph{aspect-ratio:2/1;display:grid;place-items:center;text-align:center;color:var(--slate-light);font-size:14px;background:repeating-linear-gradient(45deg,#fafafa,#fafafa 12px,#f2f0ec 12px,#f2f0ec 24px);padding:24px}
+.lp-example figcaption{font-size:13px;color:var(--slate);margin-top:10px;font-style:italic}
+/* automation flow diagram */
+.flow{display:flex;align-items:flex-start;justify-content:center;gap:4px;padding:26px 20px;background:#fff;flex-wrap:wrap}
+.fnode{display:flex;flex-direction:column;align-items:center;gap:7px;text-align:center;width:104px}
+.fnode .fic{width:46px;height:46px;border-radius:11px;background:var(--info-bg);border:1px solid var(--border);display:grid;place-items:center;font-size:22px}
+.fnode .flab{font-size:12px;font-weight:600;color:var(--onyx);line-height:1.3}
+.farrow{color:var(--blaze);font-size:20px;font-weight:700;margin-top:13px}
+.fbranch{display:flex;flex-direction:column;gap:14px}
+.fbranch .fnode .fic{background:var(--success-bg);border-color:#bfe3cd}
+
+/* term cards as a logical equation */
+.term{text-align:left}
+.term-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.term-num{display:grid;place-items:center;min-width:30px;height:26px;padding:0 9px;border:1px solid var(--border-strong);border-radius:6px;font-size:12px;font-weight:700;color:var(--blaze);background:var(--bone)}
+.term-top .ic{font-size:28px;width:auto;height:auto;background:none;margin:0;border-radius:0}
+
+/* architecture diagram */
+.arch-tier-lab{text-align:center;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blaze);margin:24px 0 16px}
+.arch-row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.node{position:relative;background:#fff;border:1px solid var(--onyx);border-radius:9px;padding:11px 16px;font-size:14px;font-weight:600;cursor:pointer;box-shadow:2px 2px 0 0 var(--onyx);transition:transform .1s,box-shadow .1s,border-color .1s;display:inline-flex;align-items:center;gap:8px;font-family:inherit;color:var(--onyx)}
+.node:hover{transform:translate(1px,1px);box-shadow:1px 1px 0 0 var(--blaze);border-color:var(--blaze)}
+.node .dotp{width:6px;height:6px;border-radius:50%;background:var(--blaze)}
+.node.home{background:var(--onyx);color:#fff}
+.node .more{background:var(--blaze);color:#fff;font-size:11px;font-weight:700;padding:2px 7px;border-radius:20px}
+.node-hint{text-align:center;font-size:12px;color:var(--slate-light);margin-top:16px}
+.arch-stats{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:24px;border-top:1px solid var(--border);padding-top:22px}
+.arch-stat{text-align:center}
+.arch-stat .n{font-size:30px;font-weight:700;letter-spacing:-.03em;line-height:1}
+.arch-stat .l{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--slate);margin-top:6px}
+
+/* page-guide modal */
+.modal-back{display:none;position:fixed;inset:0;background:rgba(10,10,10,.6);z-index:100;padding:24px;overflow-y:auto}
+.modal-back.open{display:block}
+.modal{position:relative;background:#fff;border:1px solid var(--onyx);border-radius:16px;box-shadow:6px 6px 0 0 var(--blaze);max-width:680px;width:100%;margin:6vh auto;padding:34px}
+.modal-head{display:flex;align-items:center;gap:12px;margin-bottom:6px;padding-right:30px}
+.modal-head .mt{font-size:23px;font-weight:700;letter-spacing:-.02em}
+.modal-tag{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--scorch);background:var(--info-bg);padding:5px 11px;border-radius:5px;margin-left:auto;white-space:nowrap}
+.modal-sub{font-size:14px;color:var(--slate);margin-bottom:24px}
+.modal-cols{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.mcol h4{font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin-bottom:13px}
+.mcol.do h4{color:var(--success)} .mcol.dont h4{color:var(--danger)}
+.mcol .mi{display:flex;gap:9px;font-size:14px;color:var(--slate);line-height:1.45;margin-bottom:11px}
+.mcol.do .mk{color:var(--success);font-weight:700;flex-shrink:0} .mcol.dont .mk{color:var(--danger);font-weight:700;flex-shrink:0}
+.modal-x{position:absolute;top:16px;right:20px;font-size:26px;color:var(--slate);cursor:pointer;background:none;border:0;line-height:1}
+.modal-x:hover{color:var(--onyx)}
+
+/* ===== GAME PLAN (pitch) ===== */
+.plan-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-items:stretch}
+.plan-card{background:#fff;border:1px solid var(--onyx);border-radius:14px;box-shadow:4px 4px 0 0 var(--onyx);overflow:hidden;display:flex;flex-direction:column}
+.plan-head{background:var(--onyx);color:#fff;padding:18px 20px}
+.plan-head .pn{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blaze)}
+.plan-head .pw{font-size:19px;font-weight:700;margin-top:5px;letter-spacing:-.01em}
+.plan-head .pt{font-size:12px;color:#9a9a9a;margin-top:3px}
+.plan-body{padding:18px 20px 20px;flex:1}
+.plan-body ul{margin:0;padding-left:16px}
+.plan-body li{font-size:13px;color:var(--slate);margin-bottom:9px;line-height:1.45}
+.plan-body li:last-child{margin-bottom:0}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:880px){
+  .container{padding:0 22px}
+  .hero h1{font-size:40px}
+  .grid-4,.grid-3,.gallery,.timeline,.roadmap{grid-template-columns:1fr 1fr}
+  .roadmap{gap:24px} .rstep::before{display:none}
+  .loom-band,.rev-grid,.lf-wrap,.roi,.price-wrap,.score-hero{grid-template-columns:1fr}
+  .cmp-charts{grid-template-columns:1fr}
+  .exec,.tiers{grid-template-columns:1fr}
+  .scorecards,.plan-grid{grid-template-columns:1fr 1fr}
+  .callout-row{grid-template-columns:1fr}
+  .frow{grid-template-columns:1fr;gap:6px} .frow .fbar{height:20px}
+  .phase{grid-template-columns:1fr;gap:10px}
+  .carousel-track .shot{flex-basis:80%}
+  .hero-headrow{flex-direction:column;align-items:flex-start;gap:24px}
+  .lp-why{flex-direction:column;align-items:flex-start;gap:10px}
+  .arch-stats{grid-template-columns:repeat(3,1fr);gap:18px 12px}
+  .modal-cols{grid-template-columns:1fr;gap:18px}
+  .heatmap{grid-template-columns:repeat(7,1fr)}
+  .section-head .desc{text-align:left;margin-left:0}
+  .tabs{order:3;width:100%;justify-content:center}
+  .topnav-inner{flex-wrap:wrap}
+}
+@media(max-width:540px){ .grid-4,.grid-3,.gallery,.timeline,.roadmap,.plan-grid,.scorecards,.grid-2{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+
+<!-- ===================== NAV ===================== -->
+<nav class="topnav">
+  <div class="container topnav-inner">
+    <div class="wordmark"><span class="wordmark-dot"></span>22 Local Marketing <small>· Proposal</small></div>
+    <div class="tabs" role="tablist">
+      <button class="tab-btn active" data-panel="pitch"><span class="dot"></span>Proposal</button>
+      <button class="tab-btn" data-panel="audit"><span class="dot"></span>Analysis</button>
+    </div>
+    <div class="nav-right">
+      <span class="nav-client">for
+        <!-- <img class="client-logo" src="Vivid Tree Service" alt="Vivid Tree Service"> -->
+        <span class="client-lockup"><img class="client-logo" src="logo.webp" alt="Vivid Tree Service"><span class="cl-name">Vivid Tree Service</span></span>
+      </span>
+      <a href="#pricing" class="nav-cta">Get started →</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== PITCH PANEL ===================== -->
+<div class="panel active" id="pitch">
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container">
+      <div class="prepared">
+        <span>PREPARED FOR <b>Vivid Tree Service</b></span><span>·</span>
+        <span><b>Logansport, Indiana</b></span><span>·</span>
+        <span>June 2026</span>
+      </div>
+      <div class="eyebrow"><span class="eb-dash"></span>Local growth proposal</div>
+      <div class="hero-headrow">
+        <div class="hero-frame">
+          <h1>You own the Logansport map. Online, you're <span class="accent">invisible.</span></h1>
+        </div>
+        <div class="hero-logo">
+          <!-- <img src="Vivid Tree Service" alt="Vivid Tree Service"> -->
+          <img src="logo.webp" alt="Vivid Tree Service"><span class="cl-name">Vivid Tree Service</span>
+        </div>
+      </div>
+      <p class="lead">You rank #1 across all of Logansport, that's rare. But your website has almost no presence beyond the map pack, plus a link problem dragging it down, and that's exactly what we'd fix.</p>
+      <div class="hero-actions">
+        <a href="#pricing" class="btn btn-primary">See the plan →</a>
+        <a href="#audit-jump" class="btn btn-secondary" data-jump="audit">See the full analysis</a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- EXECUTIVE SUMMARY -->
+  <section id="summary">
+    <div class="container">
+      <div class="eyebrow"><span class="eb-dash"></span>Executive summary</div>
+      <div class="section-head">
+        <h2>The short version.</h2>
+        <span class="desc">Where you stand, what's holding you back, and what we'd do about it.</span>
+      </div>
+      <div class="exec">
+        <div class="exec-col">
+          <h3>Snapshot</h3>
+          <div class="snap-intro">Tree removal, trimming, pruning, stump grinding, land clearing, and timber milling across Northern Indiana.</div>
+          <div class="snap-row"><span class="k">Markets</span><span class="v">Logansport + N. Indiana</span></div>
+          <div class="snap-row"><span class="k">Avg map rank</span><span class="v">1.0 · #1 of 49</span></div>
+          <div class="snap-row"><span class="k">Domain authority</span><span class="v">0.1 / 100</span></div>
+          <div class="snap-row"><span class="k">Organic traffic</span><span class="v">~0 / mo</span></div>
+          <div class="snap-row"><span class="k">Google reviews</span><span class="v">55 · 5.0★</span></div>
+          <div class="snap-tags">
+            <span class="t">Tree Removal</span><span class="t">Trimming</span><span class="t">Pruning</span><span class="t">Stump Grinding</span><span class="t">Land Clearing</span><span class="t">Timber Milling</span>
+          </div>
+        </div>
+        <div class="exec-col">
+          <h3>Where you stand today</h3>
+          <div class="chal"><span class="cdot" style="background:var(--success)"></span><span><b>#1 across all of Logansport</b> with a 5.0 from 55 reviews. Few crews own their map like you do.</span></div>
+          <div class="chal"><span class="cdot"></span><span>Your website is invisible: <b>domain authority 0.1</b>, ~0 organic traffic, just 2 ranking keywords.</span></div>
+          <div class="chal"><span class="cdot"></span><span>A <b>5-page site</b> with no service or location pages, nothing for Google or AI to rank.</span></div>
+          <div class="chal"><span class="cdot"></span><span>A <b>toxic-link spike</b> (34 → 176 referring domains while authority fell) that risks a penalty.</span></div>
+          <div class="chal"><span class="cdot"></span><span>Bigger markets are open: <b>Kokomo, Peru, Rochester</b>, where Heartland (233 reviews) already leads.</span></div>
+        </div>
+        <div class="exec-col">
+          <h3>What we'd do</h3>
+          <div class="strat"><span class="n">1</span><span><b>Clean up the link profile</b>, disavow the toxic spike before it costs you rankings.</span></div>
+          <div class="strat"><span class="n">2</span><span><b>Build a real website</b>, a page for every service and every nearby city.</span></div>
+          <div class="strat"><span class="n">3</span><span><b>Rank organically and in AI</b>, capture the searches your map pin can't reach.</span></div>
+          <div class="strat"><span class="n">4</span><span><b>Expand the map</b> into Kokomo, Peru, and Rochester, one proven city at a time.</span></div>
+          <div class="strat"><span class="n">5</span><span><b>Keep your edge</b>, protect the 5.0 reviews and map dominance that already win.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCAL FALCON -->
+  <section id="map">
+    <div class="container">
+      <div class="eyebrow"><span class="eb-dash"></span>Geo-grid rank scan</div>
+      <div class="section-head">
+        <h2>You own your map.</h2>
+        <span class="desc">We scanned a grid across Logansport for "tree service logansport." Every point is green, you're #1 everywhere. That's the part that's working.</span>
+      </div>
+      <div class="lf-wrap">
+        <div class="lf-shot"><img src="geogrid.png" alt="Geo-grid scan, ranked #1 at every point"></div>
+        <div class="lf-side">
+          <div class="lf-kw">Keyword: <b>tree service logansport</b> · scanned June 2026</div>
+          <div class="lf-metrics">
+            <div class="lf-metric"><span class="m-lab">Average map rank</span><span class="m-val">1.0</span></div>
+            <div class="lf-metric"><span class="m-lab">Share of local voice</span><span class="m-val">100%</span></div>
+            <div class="lf-metric"><span class="m-lab">Top-3 visibility</span><span class="m-val">100%</span></div>
+          </div>
+          <p style="font-size:14px;color:var(--slate);margin-top:18px">This is rare, and it's your foundation. The catch: it stops at the edge of town, and it's all you have. In organic search, in AI answers, and in the next town over, you don't exist yet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RANKINGS + AHREFS -->
+  <section id="rankings">
+    <div class="container">
+      <div class="eyebrow"><span class="eb-dash"></span>Visibility gaps</div>
+      <div class="section-head">
+        <h2>Where your website goes missing.</h2>
+        <span class="desc">The searches that book jobs, whether your website ranks, and why a map pin alone can't catch them.</span>
+      </div>
+      <div class="tbl-wrap issues" style="margin-bottom:18px">
+        <table>
+          <thead><tr><th>Keyword</th><th>Searches / mo</th><th>Your rank</th><th>The problem</th></tr></thead>
+          <tbody>
+            <tr><td>tree service logansport</td><td class="num">10</td><td class="pos-cell" style="color:var(--warning)">Map pin</td><td><span class="tag b-warn"><span class="bd"></span>Your GBP ranks; your website doesn't</span></td></tr>
+            <tr><td>emergency tree service logansport</td><td class="num">~10</td><td class="pos-cell" style="color:var(--danger)">—</td><td><span class="tag b-danger"><span class="bd"></span>An AI Overview answers it, you're not cited</span></td></tr>
+            <tr><td>stump grinding logansport</td><td class="num">low</td><td class="pos-cell" style="color:var(--danger)">—</td><td><span class="tag b-danger"><span class="bd"></span>No page on your site targets this service</span></td></tr>
+            <tr><td>tree removal cost</td><td class="num">12,100</td><td class="pos-cell" style="color:var(--danger)">—</td><td><span class="tag b-danger"><span class="bd"></span>Big research demand, no content to capture it</span></td></tr>
+            <tr><td>tree removal near me</td><td class="num">60,500</td><td class="pos-cell" style="color:var(--danger)">—</td><td><span class="tag b-danger"><span class="bd"></span>Where the volume is, a map pin can't reach it</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="grid-3">
+        <div class="card" style="text-align:center">
+          <div class="gauge" style="--val:1;--gc:var(--danger);margin:0 auto 14px"><div class="inner"><div><div class="g-val">0.1</div><div class="g-lab">Domain authority</div></div></div></div>
+          <div style="font-size:13px;color:var(--slate)">Out of 100. Effectively zero.</div>
+        </div>
+        <div class="card" style="text-align:center">
+          <div class="gauge" style="--val:70;--gc:var(--danger);margin:0 auto 14px"><div class="inner"><div><div class="g-val">176</div><div class="g-lab">Linking sites</div></div></div></div>
+          <div style="font-size:13px;color:var(--slate)">Mostly low-quality. A cleanup target.</div>
+        </div>
+        <div class="card">
+          <div style="font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--slate);margin-bottom:14px">Organic traffic · last 12 months</div>
+          <div class="chart-box" style="height:150px"><canvas id="trafficChart"></canvas></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPETITORS -->
+  <section id="competitors">
+    <div class="container">
+      <div class="eyebrow"><span class="eb-dash"></span>Competitor gap</div>
+      <div class="section-head">
+        <h2>Who you're up against as you grow.</h2>
+        <span class="desc">The local independents you'll face the moment you expand beyond Logansport.</span>
+      </div>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>Company</th><th>Domain authority</th><th>Reviews</th><th>Rating</th><th>Keywords ranked</th></tr></thead>
+          <tbody>
+            <tr><td class="you">Vivid Tree Service (you)</td><td class="you num">0.1</td><td class="you num">55</td><td class="you num">5.0</td><td class="you num">2</td></tr>
+            <tr><td>Heartland Tree Service</td><td class="num">1.6</td><td class="num">233</td><td class="num">5.0</td><td class="num">8</td></tr>
+            <tr><td>Straight Cut Tree Service</td><td class="num">0.0</td><td class="num">120</td><td class="num">5.0</td><td class="num">4</td></tr>
+            <tr><td>Beachy Tree Service</td><td class="num">0.0</td><td class="num">73</td><td class="num">5.0</td><td class="num">7</td></tr>
+            <tr><td>HillTop Tree Service</td><td class="num">0.7</td><td class="num">41</td><td class="num">4.7</td><td class="num">0</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="cmp-charts">
+        <div class="card cmp-chart"><h4>Google reviews</h4><div class="chart-box" style="height:200px"><canvas id="compReviews"></canvas></div></div>
+        <div class="card cmp-chart"><h4>Domain authority</h4><div class="chart-box" style="height:200px"><canvas id="compDR"></canvas></div></div>
+        <div class="card cmp-chart"><h4>Keywords ranked</h4><div class="chart-box" style="height:200px"><canvas id="compKw"></canvas></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WINNING FORMULA -->
+  <section id="formula">
+    <div class="container">
+      <div class="eyebrow"><span class="eb-dash"></span>The winning formula</div>
+      <div class="section-head">
+        <h2>So what can be done about it?</h2>
+        <span class="desc">It comes down to three levers. Every dollar we spend moves one of them. Nothing else.</span>
+      </div>
+      <div class="equation">
+        <div class="term" id="term-1"><div class="term-top"><span class="term-num">01</span><span class="ic">📈</span></div><h3>Traffic</h3><p>Get found first on Google and AI.</p><button class="how-btn" data-lever="1">How? <span class="car">▾</span></button></div>
+        <div class="op">+</div>
+        <div class="term" id="term-2"><div class="term-top"><span class="term-num">02</span><span class="ic">🤝</span></div><h3>Trust</h3><p>Win them in the first five seconds.</p><button class="how-btn" data-lever="2">How? <span class="car">▾</span></button></div>
+        <div class="op">+</div>
+        <div class="term" id="term-3"><div class="term-top"><span class="term-num">03</span><span class="ic">📅</span></div><h3>Conversion</h3><p>Turn visits into booked jobs.</p><button class="how-btn" data-lever="3">How? <span class="car">▾</span></button></div>
+        <div class="op eq">=</div>
+        <div class="result"><div class="ic">💰</div><div class="rg">Success</div><small>More jobs, lower cost per lead</small></div>
+      </div>
+      <div class="lever-details">
+        <div class="lever-panel" data-panel="1">
+          <div class="lp-head"><span class="lp-num">01</span><span class="lp-ic">🌐</span><span class="lp-title">Get found, on Google and in AI answers</span><span class="lp-tag">Traffic</span></div>
+          <div class="lp-sub">It starts with architecture: a hub-and-spoke system where every page owns one job and one query, so your own pages never compete with each other (the number-one reason local SEO stalls).</div>
+          <div class="lp-list">
+            <div class="li"><span class="dot"></span><span><b>A core service hub for every service</b>, targeting pure service intent and serving as the topical authority for that service across your whole area.</span></div>
+            <div class="li"><span class="dot"></span><span><b>An area hub for every city you serve</b>, the page that wins "[service] [city]", not your overworked homepage.</span></div>
+            <div class="li"><span class="dot"></span><span><b>City-service spokes for the long tail</b>, "[service] in [city]" pages, built only where you have real local proof, never templated.</span></div>
+            <div class="li"><span class="dot"></span><span><b>A separate commercial silo</b> for B2B, plus schema and internal links that follow a strict matrix so authority flows the right way.</span></div>
+          </div>
+          <div class="lp-why"><div class="big">46%</div><div class="wt"><b>Why this works:</b> Nearly half of Google searches are local, and AI Overviews now sit on top of them. A complete, non-cannibalizing structure is what gets you into both.</div></div>
+          <div class="arch">
+            <div class="arch-tier-lab">Homepage · brand + region</div>
+            <div class="arch-row"><button class="node home" data-pop="home">Home</button></div>
+            <div class="arch-tier-lab">Utility pages</div>
+            <div class="arch-row">
+              <button class="node" data-pop="about"><span class="dotp"></span>About</button>
+              <button class="node" data-pop="contact"><span class="dotp"></span>Contact</button>
+              <button class="node" data-pop="careers"><span class="dotp"></span>Careers</button>
+              <button class="node" data-pop="blog"><span class="dotp"></span>Blog</button>
+            </div>
+            <div class="arch-tier-lab">Core service hubs · /service/</div>
+            <div class="arch-row">
+              <button class="node" data-pop="service"><span class="dotp"></span>Tree Removal</button>
+              <button class="node" data-pop="service"><span class="dotp"></span>Tree Trimming</button>
+              <button class="node" data-pop="service"><span class="dotp"></span>Tree Pruning</button>
+              <button class="node" data-pop="service"><span class="dotp"></span>Stump Grinding</button>
+              <button class="node" data-pop="service"><span class="dotp"></span>Emergency Tree Service</button>
+              <button class="node" data-pop="service"><span class="dotp"></span>Land Clearing</button>
+            </div>
+            <div class="arch-tier-lab">Service areas · /areas/</div>
+            <div class="arch-row">
+              <button class="node" data-pop="areas">Areas Index</button>
+              <button class="node" data-pop="areahub"><span class="dotp"></span>Logansport <span class="more">primary</span></button>
+              <button class="node" data-pop="areahub"><span class="dotp"></span>Peru</button>
+              <button class="node" data-pop="areahub"><span class="dotp"></span>Kokomo</button>
+              <button class="node" data-pop="areahub"><span class="dotp"></span>Rochester</button>
+              <button class="node" data-pop="areahub"><span class="dotp"></span>Wabash</button>
+              <button class="node" data-pop="areahub"><span class="dotp"></span>Royal Center</button>
+            </div>
+            <div class="arch-tier-lab">Commercial · B2B silo · /commercial/</div>
+            <div class="arch-row">
+              <button class="node" data-pop="commercial"><span class="dotp"></span>Property Management</button>
+              <button class="node" data-pop="commercial"><span class="dotp"></span>HOA</button>
+              <button class="node" data-pop="commercial"><span class="dotp"></span>Commercial &amp; Retail</button>
+              <button class="node" data-pop="commercial"><span class="dotp"></span>Municipal</button>
+              <button class="node" data-pop="commercial"><span class="dotp"></span>New Construction</button>
+            </div>
+            <div class="soft" style="margin-top:18px">
+              <div style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--slate);margin-bottom:6px">City-service spokes from <span style="color:var(--blaze)">Logansport</span> · /areas/logansport/&hellip;</div>
+              <div style="font-size:12px;color:var(--slate-light);margin-bottom:14px">Built one at a time, only when 3 of 5 local-proof items exist.</div>
+              <div class="arch-row" style="justify-content:flex-start">
+                <button class="node" data-pop="spoke"><span class="dotp"></span>Tree Removal in Logansport</button>
+                <button class="node" data-pop="spoke"><span class="dotp"></span>Stump Grinding in Logansport</button>
+                <button class="node" data-pop="spoke"><span class="dotp"></span>Tree Trimming in Logansport</button>
+                <button class="node" data-pop="spoke">+ more</button>
+              </div>
+            </div>
+            <div class="node-hint">Click any page to see how the top 1% build it, and the mistakes that sink the rest.</div>
+            <div class="arch-stats">
+              <div class="arch-stat"><div class="n">5+</div><div class="l">Service hubs</div></div>
+              <div class="arch-stat"><div class="n">5+</div><div class="l">Area hubs</div></div>
+              <div class="arch-stat"><div class="n">15+</div><div class="l">City spokes</div></div>
+              <div class="arch-stat"><div class="n">5+</div><div class="l">Commercial</div></div>
+              <div class="arch-stat"><div class="n">35+</div><div class="l">Total pages</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="lever-panel" data-panel="2">
+          <div class="lp-head"><span class="lp-num">02</span><span class="lp-ic">⭐</span><span class="lp-title">Build trust before they ever call</span><span class="lp-tag">Trust</span></div>
+          <div class="lp-sub">A stranger decides in about five seconds. The top 1% put the trust signals right where they land:</div>
+          <div class="lp-list">
+            <div class="li"><span class="dot"></span><span><b>The owner's face, front and center</b>, a real photo of the owner with a name and signature, so visitors see a person, not a faceless company.</span></div>
+            <div class="li"><span class="dot"></span><span><b>Phone number and quote form above the fold</b>, both visible the instant the page loads, no scrolling to take action.</span></div>
+            <div class="li"><span class="dot"></span><span><b>A rating callout up top</b>, "rated best in the area" or the star rating, stated plainly next to the headline.</span></div>
+            <div class="li"><span class="dot"></span><span><b>Real personality and local voice</b>, copy that sounds like the business and names the actual town, not a swapped-out template.</span></div>
+            <div class="li"><span class="dot"></span><span><b>Trust badges in view</b>, the credentials your trade is judged on (licensed where it applies, insured, bonded), plus 24/7 or free-estimate callouts, as a strip near the top.</span></div>
+            <div class="li"><span class="dot"></span><span><b>Real photos of real work</b>, the actual crew and completed jobs throughout. Never stock.</span></div>
+          </div>
+          <div class="lp-why"><div class="big">★ 4.9</div><div class="wt"><b>Why this works:</b> Reviews are the number-one driver of map-pack rank. More of them, more recent, beats a competitor on ad spend alone.</div></div>
+          <figure class="lp-example">
+            <div class="lp-img"><img src="example-build-trust.png" alt="TN Tree Preservation homepage above the fold"></div>
+            <figcaption>A real example: owner's photo and signature, phone and free-estimate form above the fold, a "rated best in greater Nashville" callout, and trust badges across the bottom.</figcaption>
+          </figure>
+        </div>
+        <div class="lever-panel" data-panel="3">
+          <div class="lp-head"><span class="lp-num">03</span><span class="lp-ic">📞</span><span class="lp-title">Turn the click into a booked job</span><span class="lp-tag">Conversion</span></div>
+          <div class="lp-sub">A great-looking site that doesn't convert is wasted. The new edge is AI doing the answering and follow-up around the clock:</div>
+          <div class="lp-list">
+            <div class="li"><span class="dot"></span><span><b>An AI chatbot that answers instantly</b>, it handles the common questions day or night, so a visitor never leaves unanswered.</span></div>
+            <div class="li"><span class="dot"></span><span><b>Automated email and text follow-up</b>, every lead gets an instant reply and gentle reminders, so nothing slips through the cracks.</span></div>
+            <div class="li"><span class="dot"></span><span><b>Speed to lead, on autopilot</b>, the moment a form hits, you're alerted and the customer is acknowledged. The first to respond wins.</span></div>
+            <div class="li"><span class="dot"></span><span><b>Frictionless forms</b>, only the fields that matter, enough to qualify the job without scaring the buyer off.</span></div>
+            <div class="li"><span class="dot"></span><span><b>Phone numbers everywhere</b>, tap-to-call in the header, the hero, and a sticky mobile bar. Never more than a thumb away.</span></div>
+            <div class="li"><span class="dot"></span><span><b>Trust signals at the decision points</b>, reviews and badges placed right next to the buttons that book the job.</span></div>
+          </div>
+          <div class="lp-why"><div class="big">78%</div><div class="wt"><b>Why this works:</b> Most jobs go to the first contractor to call back. A fast site plus fast follow-up is the difference.</div></div>
+          <figure class="lp-example">
+            <div class="lp-img"><img src="conversion-automation.png" alt="Automated lead-handling workflow"></div>
+            <figcaption>A real automation running behind the scenes: every form submission is screened by AI, then you're alerted and the customer gets an instant reply. No lead slips through.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS + GOOGLE REVIEWS (one section) -->
+  <section id="reviews">
+    <div class="container">
+      <div class="eyebrow"><span class="eb-dash"></span>Don't take our word for it</div>
+      <div class="section-head">
+        <h2>But does this actually work?</h2>
+        <span class="desc">A client telling it in their own words, plus what people say about working with us.</span>
+      </div>
+      <div class="grid-2" style="align-items:center;gap:34px;margin-bottom:40px">
+        <div class="video-card" data-video="9IfMlUOqJ-I" style="background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.6)),#000 url('https://img.youtube.com/vi/9IfMlUOqJ-I/maxresdefault.jpg') center/cover">
+          <div class="play"></div>
+          <div class="video-meta"><div class="vt">Mitch Crowell</div><div class="vd">Owner, TN Tree Preservation · ▶ watch</div></div>
+        </div>
+        <div>
+          <div class="stars">★★★★★</div>
+          <p style="font-size:27px;font-weight:600;letter-spacing:-.015em;margin:14px 0;line-height:1.35">"Singlehandedly, Connor saved my business."</p>
+          <div style="font-weight:600">Mitch Crowell</div>
+          <div style="font-size:14px;color:var(--slate)">Owner, TN Tree Preservation</div>
+        </div>
+      </div>
+      <div class="rev-banner">
+        <div class="big">5.0</div>
+        <div>
+          <div class="stars">★★★★★</div>
+          <div style="font-size:14px;color:var(--slate)">Our Google rating, from real clients</div>
+        </div>
+        <span class="gwrap"><svg class="g-logo" viewBox="0 0 48 48" aria-label="Google"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34A21.99 21.99 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg> Google verified</span>
+      </div>
+      <!-- Real reviews from the 22LM Google Business Profile. Reusable across prospects. Never include any review mentioning DWS or Dann Web Solutions. -->
+      <div class="carousel">
+        <div class="carousel-nav" style="margin-bottom:14px">
+          <button class="cbtn" data-track="revTrack" data-dir="-1" aria-label="Previous">←</button>
+          <button class="cbtn" data-track="revTrack" data-dir="1" aria-label="Next">→</button>
+        </div>
+        <div class="carousel-track" id="revTrack">
+          <div class="review rev-slide"><div class="stars">★★★★★</div><p>"Super service, very easy to work with. Connor is very knowledgeable, patient, and best of all isn't trying to push services you don't need. Here's to the beginning of a long business relationship."</p><div class="rh"><div class="avatar">RR</div><div><div class="nm">Robert Rangel</div><div class="src">Google review</div></div><span><svg class="g-logo" viewBox="0 0 48 48" aria-label="Google"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34A21.99 21.99 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg></span></div></div>
+          <div class="review rev-slide"><div class="stars">★★★★★</div><p>"Connor has done a great job for us, servicing our website and Google account. Always on time, efficient, and full of great recommendations. We're very happy with the service, and you will be too!"</p><div class="rh"><div class="avatar">DP</div><div><div class="nm">Dixie Paint Inc.</div><div class="src">Google review</div></div><span><svg class="g-logo" viewBox="0 0 48 48" aria-label="Google"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34A21.99 21.99 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg></span></div></div>
+          <div class="review rev-slide"><div class="stars">★★★★★</div><p>"Connor's attention to detail and constant communication have made him a joy to work with. I'm extremely happy with the work he has done and hope to have a long, lasting relationship with this company!"</p><div class="rh"><div class="avatar">DS</div><div><div class="nm">Dawn Renee Sulflow</div><div class="src">Google review</div></div><span><svg class="g-logo" viewBox="0 0 48 48" aria-label="Google"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34A21.99 21.99 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg></span></div></div>
+          <div class="review rev-slide"><div class="stars">★★★★★</div><p>"Connor is awesome to work with. His communications are clear and concise, and he's a great collaborator for your website."</p><div class="rh"><div class="avatar">WS</div><div><div class="nm">Will Seeley</div><div class="src">Local Guide · Google</div></div><span><svg class="g-logo" viewBox="0 0 48 48" aria-label="Google"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34A21.99 21.99 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg></span></div></div>
+          <div class="review rev-slide"><div class="stars">★★★★★</div><p>"This guy is the man! He definitely knows his stuff and is very responsive. I wish I could leave more than 5 stars!"</p><div class="rh"><div class="avatar">BF</div><div><div class="nm">Brice Fonville</div><div class="src">Google review</div></div><span><svg class="g-logo" viewBox="0 0 48 48" aria-label="Google"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34A21.99 21.99 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg></span></div></div>
+          <div class="review rev-slide"><div class="stars">★★★★★</div><p>"Connor is so great to work with! The knowledge he brings is unmatched to any other company I had a consultation with."</p><div class="rh"><div class="avatar">MV</div><div><div class="nm">Maximilian Van Dessel</div><div class="src">Google review</div></div><span><svg class="g-logo" viewBox="0 0 48 48" aria-label="Google"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34A21.99 21.99 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg></span></div></div>
+          <div class="review rev-slide"><div class="stars">★★★★★</div><p>"Connor was an absolute pleasure to work with. Unbelievable service!"</p><div class="rh"><div class="avatar">RK</div><div><div class="nm">Rouben Keshguerian</div><div class="src">Google review</div></div><span><svg class="g-logo" viewBox="0 0 48 48" aria-label="Google"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34A21.99 21.99 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg></span></div></div>
+          <div class="review rev-slide"><div class="stars">★★★★★</div><p>"Highly recommend Connor! Professional, extremely talented, and detail oriented. He focuses on your needs and creates a custom design. All around great web designer!"</p><div class="rh"><div class="avatar">MY</div><div><div class="nm">Matt Yoder</div><div class="src">Google review</div></div><span><svg class="g-logo" viewBox="0 0 48 48" aria-label="Google"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34A21.99 21.99 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg></span></div></div>
+          <div class="review rev-slide"><div class="stars">★★★★★</div><p>"Dedicated, professional and exceptional attention to detail!"</p><div class="rh"><div class="avatar">K</div><div><div class="nm">Kristen</div><div class="src">Google review</div></div><span><svg class="g-logo" viewBox="0 0 48 48" aria-label="Google"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34A21.99 21.99 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg></span></div></div>
+          <div class="review rev-slide"><div class="stars">★★★★★</div><p>"Such a pleasure to work with. 10/10."</p><div class="rh"><div class="avatar">C</div><div><div class="nm">Chase</div><div class="src">Google review</div></div><span><svg class="g-logo" viewBox="0 0 48 48" aria-label="Google"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34A21.99 21.99 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg></span></div></div>
+          <div class="review rev-slide"><div class="stars">★★★★★</div><p>"They do an awesome job. Highly recommended. You won't be disappointed."</p><div class="rh"><div class="avatar">MP</div><div><div class="nm">Michelle Phillips</div><div class="src">Google review</div></div><span><svg class="g-logo" viewBox="0 0 48 48" aria-label="Google"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34A21.99 21.99 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg></span></div></div>
+          <div class="review rev-slide"><div class="stars">★★★★★</div><p>"Top marketing company for the tree service industry, 100%! Trust him to build your website and do your SEO if you are a tree company."</p><div class="rh"><div class="avatar">BK</div><div><div class="nm">Ben Kleman</div><div class="src">Google review</div></div><span><svg class="g-logo" viewBox="0 0 48 48" aria-label="Google"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34A21.99 21.99 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg></span></div></div>
+          <div class="review rev-slide"><div class="stars">★★★★★</div><p>"Very knowledgeable, beautiful web design, comprehensive programs."</p><div class="rh"><div class="avatar">RP</div><div><div class="nm">Robert Phillips</div><div class="src">Google review</div></div><span><svg class="g-logo" viewBox="0 0 48 48" aria-label="Google"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34A21.99 21.99 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg></span></div></div>
+          <div class="review rev-slide"><div class="stars">★★★★★</div><p>"Connor and his team did an AMAZING job with our website."</p><div class="rh"><div class="avatar">MF</div><div><div class="nm">Melanie Fyda</div><div class="src">Google review</div></div><span><svg class="g-logo" viewBox="0 0 48 48" aria-label="Google"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34A21.99 21.99 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg></span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESIGN EXAMPLES -->
+  <section id="work">
+    <div class="container">
+      <div class="eyebrow"><span class="eb-dash"></span>Recent work</div>
+      <div class="section-head">
+        <h2>Sites we've built.</h2>
+        <span class="desc">Real photos, fast load, built to convert. Yours comes after you're on board.</span>
+      </div>
+      <div class="carousel">
+        <div class="carousel-nav" style="margin-bottom:14px">
+          <button class="cbtn" data-track="workTrack" data-dir="-1" aria-label="Previous">←</button>
+          <button class="cbtn" data-track="workTrack" data-dir="1" aria-label="Next">→</button>
+        </div>
+        <div class="carousel-track" id="workTrack">
+          <div class="shot"><div class="img"><img src="work-ranger.png" alt="Ranger Tree Care website"></div><div class="cap">Ranger Tree Care <span class="badge b-brand"><span class="bd"></span>Live</span></div></div>
+          <div class="shot"><div class="img"><img src="work-fonville.png" alt="Fonville Tree Service website"></div><div class="cap">Fonville Tree Service <span class="badge b-brand"><span class="bd"></span>Live</span></div></div>
+          <div class="shot"><div class="img"><img src="work-mcquillin.png" alt="McQuillin Tree Care website"></div><div class="cap">McQuillin Tree Care <span class="badge b-brand"><span class="bd"></span>Live</span></div></div>
+          <div class="shot"><div class="img"><img src="work-greenbear.png" alt="Green Bear Tree Service website"></div><div class="cap">Green Bear Tree Service <span class="badge b-brand"><span class="bd"></span>Live</span></div></div>
+          <div class="shot"><div class="img"><img src="work-tntp.png" alt="TN Tree Preservation website"></div><div class="cap">TN Tree Preservation <span class="badge b-brand"><span class="bd"></span>Live</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROI CALCULATOR -->
+  <section id="roi">
+    <div class="container">
+      <div class="eyebrow"><span class="eb-dash"></span>Run the numbers</div>
+      <div class="section-head">
+        <h2>What this is worth to you.</h2>
+        <span class="desc">Move the sliders. These are your numbers, not ours.</span>
+      </div>
+      <div class="roi">
+        <div class="roi-inputs">
+          <div class="field"><label>New leads / month from the site <span id="o-leads">40</span></label><input type="range" id="r-leads" min="5" max="150" value="40"></div>
+          <div class="field"><label>Booking rate <span id="o-book">40%</span></label><input type="range" id="r-book" min="10" max="90" value="40"></div>
+          <div class="field"><label>Close rate <span id="o-close">30%</span></label><input type="range" id="r-close" min="10" max="90" value="30"></div>
+          <div class="field"><label>Avg job value <span id="o-job">$1,800</span></label><input type="range" id="r-job" min="300" max="8000" step="100" value="1800"></div>
+        </div>
+        <div class="roi-out">
+          <div class="ro"><div class="ro-lab">Added revenue / month</div><div class="ro-val" id="o-mo">$8,640</div></div>
+          <div class="ro"><div class="ro-lab">Added revenue / year</div><div class="ro-val" id="o-yr">$103,680</div></div>
+          <div class="ro"><div class="ro-lab">Return on retainer</div><div class="ro-val" id="o-roi">29×</div></div>
+          <div class="roi-note">Projections based on your inputs. Not a guarantee of results.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GAME PLAN -->
+  <section id="timeline">
+    <div class="container">
+      <div class="eyebrow"><span class="eb-dash"></span>Your game plan</div>
+      <div class="section-head">
+        <h2>The first six months.</h2>
+        <span class="desc">Highest-leverage work first. You're live and generating leads in week one.</span>
+      </div>
+      <div class="plan-grid">
+        <div class="plan-card"><div class="plan-head"><div class="pn">Phase 1</div><div class="pw">Foundation</div><div class="pt">Weeks 1–4</div></div><div class="plan-body"><ul><li>Disavow the toxic backlink spike before it costs rankings</li><li>Call tracking and analytics live</li><li>Lock in the Google Business Profile that's already winning</li></ul></div></div>
+        <div class="plan-card"><div class="plan-head"><div class="pn">Phase 2</div><div class="pw">Content</div><div class="pt">Months 2–3</div></div><div class="plan-body"><ul><li>A real page for every service and location</li><li>Rewrite thin pages to depth that competes</li><li>Launch the review-generation engine</li></ul></div></div>
+        <div class="plan-card"><div class="plan-head"><div class="pn">Phase 3</div><div class="pw">Authority</div><div class="pt">Months 3–6</div></div><div class="plan-body"><ul><li>Link building and citations to move domain authority</li><li>Weekly geo-tagged posts</li><li>AI and map-pack visibility optimization</li></ul></div></div>
+        <div class="plan-card"><div class="plan-head"><div class="pn">Phase 4</div><div class="pw">Scale</div><div class="pt">Months 6–12</div></div><div class="plan-body"><ul><li>Expand into adjacent markets and services</li><li>Compound rankings, reviews, and links</li><li>Scale ads against proven winners</li></ul></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING (FULL TIER ONLY) -->
+  <section id="pricing" data-tier="full">
+    <div class="container">
+      <div class="eyebrow"><span class="eb-dash"></span>Investment</div>
+      <div class="section-head">
+        <h2>One plan. Everything included.</h2>
+        <span class="desc">Your website is a one-time build. Everything that grows it runs monthly. No itemized add-ons.</span>
+      </div>
+      <div class="price-wrap">
+        <div class="price-card">
+          <div class="pe">The 22LM growth engine</div>
+          <div class="price-split">
+            <div class="price-block"><div class="pl">Website build</div><div class="pn">$5,000<small> one-time</small></div></div>
+          </div>
+          <div class="feat-scroll">
+            <div class="feat-cat">Website</div>
+            <div class="fi"><span class="ck">✓</span> Custom, conversion-built design, no templates</div>
+            <div class="fi"><span class="ck">✓</span> Your real photos, professionally arranged</div>
+            <div class="fi"><span class="ck">✓</span> Mobile-first, sub-2-second load</div>
+            <div class="fi"><span class="ck">✓</span> A page for every service and location</div>
+            <div class="fi"><span class="ck">✓</span> Click-to-call, sticky forms, lead capture</div>
+            <div class="fi"><span class="ck">✓</span> Hosting, SSL, and ongoing maintenance</div>
+            <div class="feat-cat">Local SEO</div>
+            <div class="fi"><span class="ck">✓</span> Map pack optimization across your service area</div>
+            <div class="fi"><span class="ck">✓</span> Keyword strategy and new content every month</div>
+            <div class="fi"><span class="ck">✓</span> Local and service schema markup</div>
+            <div class="fi"><span class="ck">✓</span> Technical SEO and site-health monitoring</div>
+            <div class="fi"><span class="ck">✓</span> Citation building and cleanup</div>
+            <div class="feat-cat">Google Business Profile</div>
+            <div class="fi"><span class="ck">✓</span> Full profile optimization</div>
+            <div class="fi"><span class="ck">✓</span> Weekly geo-tagged posts</div>
+            <div class="fi"><span class="ck">✓</span> Review generation engine</div>
+            <div class="fi"><span class="ck">✓</span> Q&amp;A and category management</div>
+            <div class="feat-cat">Paid ads</div>
+            <div class="fi"><span class="ck">✓</span> Google Ads build and management</div>
+            <div class="fi"><span class="ck">✓</span> Landing pages tuned for conversion</div>
+            <div class="fi"><span class="ck">✓</span> Budget and negative-keyword optimization</div>
+            <div class="feat-cat">Tracking + reporting</div>
+            <div class="fi"><span class="ck">✓</span> Call tracking on every lead</div>
+            <div class="fi"><span class="ck">✓</span> Monthly performance report</div>
+            <div class="fi"><span class="ck">✓</span> Live results dashboard</div>
+            <div class="fi"><span class="ck">✓</span> Dedicated team, no outsourcing</div>
+          </div>
+        </div>
+        <div class="card pform">
+          <h3 style="font-size:20px;font-weight:700;margin-bottom:6px">Get started</h3>
+          <p style="font-size:14px;color:var(--slate);margin-bottom:20px">We'll send your invoice and kick off onboarding. No charge until you review it.</p>
+          <div class="field"><label>Legal business name</label><input type="text" placeholder="Vivid Tree Service LLC"></div>
+          <div class="field"><label>Your name</label><input type="text" placeholder="Full name"></div>
+          <div class="field"><label>Email</label><input type="email" placeholder="you@business.com"></div>
+          <div class="field"><label>Billing address</label><input type="text" placeholder="Street, City, State, ZIP"></div>
+          <div class="field"><label>What you're starting with</label><select>
+            <option>Website build + monthly services</option>
+            <option>Monthly services only</option>
+            <option>Website build only</option>
+          </select></div>
+          <button class="btn btn-primary" style="width:100%;justify-content:center" id="invoiceBtn">Send my invoice →</button>
+          <p style="font-size:12px;color:var(--slate-light);margin-top:12px;text-align:center">Generates a Stripe invoice. Does not charge you now.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING TIERS (FULL TIER ONLY) -->
+  <section data-tier="full" style="padding-top:0;border-top:0">
+    <div class="container">
+      <div class="section-head" style="margin-bottom:26px">
+        <h2 style="font-size:26px">Monthly service tiers.</h2>
+        <span class="desc">Pick the level of pressure. Every tier includes the website build and call tracking.</span>
+      </div>
+      <div class="tbl-wrap">
+        <table class="tier-table">
+          <thead>
+            <tr><th>Plan</th><th>Foundation</th><th class="hot">Growth <span class="tier-pop">Popular</span></th><th>Dominate</th></tr>
+          </thead>
+          <tbody>
+            <tr class="prow"><td>Monthly price</td><td>$1,000<small style="font-size:13px;color:var(--slate-light);font-weight:500">/mo</small></td><td class="hot">$1,500<small style="font-size:13px;color:var(--slate-light);font-weight:500">/mo</small></td><td>$2,000<small style="font-size:13px;color:var(--slate-light);font-weight:500">/mo</small></td></tr>
+            <tr><td>New content pages / month</td><td>2</td><td class="hot">4</td><td>8</td></tr>
+            <tr><td>Google Business Profile management</td><td class="yes">✓</td><td class="hot yes">✓</td><td class="yes">✓</td></tr>
+            <tr><td>Review generation engine</td><td class="yes">✓</td><td class="hot yes">✓</td><td class="yes">✓</td></tr>
+            <tr><td>Call tracking + monthly report</td><td class="yes">✓</td><td class="hot yes">✓</td><td class="yes">✓</td></tr>
+            <tr><td>Weekly GBP posts</td><td class="no">—</td><td class="hot yes">✓</td><td class="yes">✓</td></tr>
+            <tr><td>Google Ads build + management</td><td class="no">—</td><td class="hot yes">✓</td><td class="yes">✓</td></tr>
+            <tr><td>Live results dashboard</td><td class="no">—</td><td class="hot yes">✓</td><td class="yes">✓</td></tr>
+            <tr><td>Aggressive link building</td><td class="no">—</td><td class="hot no">—</td><td class="yes">✓</td></tr>
+            <tr><td>Multi-market expansion</td><td class="no">—</td><td class="hot no">—</td><td class="yes">✓</td></tr>
+            <tr><td>Priority support + biweekly calls</td><td class="no">—</td><td class="hot no">—</td><td class="yes">✓</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section>
+    <div class="container">
+      <div class="cta-band">
+        <h2>Ready to grow beyond <span class="accent">Logansport?</span></h2>
+        <p>You already own your town. Let's turn that into a website and a market that grow with you.</p>
+        <a href="#pricing" class="btn btn-primary btn-lg">Get started →</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===================== AUDIT PANEL ===================== -->
+<div class="panel" id="audit">
+  <span id="audit-jump"></span>
+
+  <!-- ORGANIC PERFORMANCE -->
+  <section style="border-top:0">
+    <div class="container">
+      <div class="eyebrow"><span class="eb-dash"></span>Performance</div>
+      <div class="section-head">
+        <h2>Current organic performance.</h2>
+        <span class="desc">Your search footprint and how it's moved over the last 24 months.</span>
+      </div>
+      <div class="scorecards">
+        <div class="scard"><div class="sl">Domain authority</div><div class="sv">0.1</div><div class="sd down">▼ 1.6 <span class="agone">vs 6 mo ago</span></div></div>
+        <div class="scard"><div class="sl">Organic keywords</div><div class="sv">2</div><div class="sd down">▼ 1 <span class="agone">vs 6 mo ago</span></div></div>
+        <div class="scard"><div class="sl">Organic traffic</div><div class="sv">~0</div><div class="sd neutral">— none in 24 mo</div></div>
+        <div class="scard hl"><div class="sl">Traffic value</div><div class="sv">$0</div><div class="sd neutral"><span class="agone">/mo est.</span></div></div>
+        <div class="scard"><div class="sl">Referring domains</div><div class="sv">176</div><div class="sd down">▲ 119 <span class="agone">likely spam</span></div></div>
+      </div>
+      <div class="card" style="margin-top:18px">
+        <div style="font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--slate);margin-bottom:6px">24-month organic trend</div>
+        <div style="font-size:13px;color:var(--slate-light);margin-bottom:14px">Traffic (left) · estimated traffic value (right)</div>
+        <div class="chart-box" style="height:280px"><canvas id="organicTrend"></canvas></div>
+      </div>
+      <div class="callout-row">
+        <div class="callout"><div><div class="cl-t">Organic traffic, 24 months</div><div class="cl-s">Effectively zero the entire time</div></div><div class="cl-v">~0</div></div>
+        <div class="callout"><div><div class="cl-t">Ranking keywords</div><div class="cl-s">Both zero-volume; your GBP does the work</div></div><div class="cl-v">2</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT'S DRIVING IT -->
+  <section>
+    <div class="container">
+      <div class="eyebrow"><span class="eb-dash"></span>Performance</div>
+      <div class="section-head"><h2>So why is your website invisible?</h2><span class="desc">Two reasons: there's almost nothing on the site to rank, and the links you do have are hurting you.</span></div>
+      <div class="grid-2" style="align-items:stretch">
+        <div class="card">
+          <div style="font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--slate);margin-bottom:14px">Why there's nothing to rank</div>
+          <div class="checklist">
+            <div class="ci"><div><div class="ct">5 pages total</div><div class="cd">home, services, about, contact, estimate</div></div><span class="st badge b-danger"><span class="bd"></span>Thin</span></div>
+            <div class="ci"><div><div class="ct">No service pages</div><div class="cd">8 services live on one shared page</div></div><span class="st badge b-danger"><span class="bd"></span>Missing</span></div>
+            <div class="ci"><div><div class="ct">No location pages</div><div class="cd">nothing for nearby towns</div></div><span class="st badge b-danger"><span class="bd"></span>Missing</span></div>
+            <div class="ci"><div><div class="ct">No blog or content</div><div class="cd">no topical authority being built</div></div><span class="st badge b-warn"><span class="bd"></span>Gap</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <div style="font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--slate);margin-bottom:14px">A toxic backlink spike</div>
+          <div class="gauge" style="--val:80;--gc:var(--danger);margin:6px auto 16px"><div class="inner"><div><div class="g-val">176</div><div class="g-lab">ref domains</div></div></div></div>
+          <p style="font-size:13px;color:var(--slate)">Your referring domains jumped from 34 to 176 in two months while your authority fell. That's the signature of a spam/PBN link blast, and it risks a Google penalty. Cleanup is step one.</p>
+        </div>
+      </div>
+      <div style="margin-top:26px">
+        <div style="font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--onyx);margin-bottom:4px">AI Overviews answering for you</div>
+        <div style="font-size:14px;color:var(--slate);margin-bottom:14px">Google now shows an AI answer on these searches. You're not cited in any of them, your competitors are.</div>
+        <div class="tbl-wrap">
+          <table>
+            <thead><tr><th>Search</th><th>AI Overview</th><th>You cited?</th><th>Who shows instead</th></tr></thead>
+            <tbody>
+              <tr><td>emergency tree service logansport</td><td><span class="tag b-danger"><span class="bd"></span>Yes</span></td><td><span class="tag b-danger"><span class="bd"></span>No</span></td><td>Heartland, Straight Cut</td></tr>
+              <tr><td>tree removal cost</td><td><span class="tag b-danger"><span class="bd"></span>Yes</span></td><td><span class="tag b-danger"><span class="bd"></span>No</span></td><td>National sites</td></tr>
+              <tr><td>tree removal near me</td><td><span class="tag b-warn"><span class="bd"></span>Map pack</span></td><td><span class="tag b-warn"><span class="bd"></span>Pin only</span></td><td>You, plus local rivals</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEYWORD FUNNEL -->
+  <section>
+    <div class="container">
+      <div class="eyebrow"><span class="eb-dash"></span>Keywords</div>
+      <div class="section-head"><h2>Where your keywords sit.</h2><span class="desc">You rank for almost nothing. Two keywords total, both zero-volume. There's no funnel yet, we build it.</span></div>
+      <div class="funnel">
+        <div class="frow"><div class="fl">Awareness <small>"how to save a tree"</small></div><div class="fbar"><i style="width:3%"></i></div><div class="fv">0 kw<small>info intent</small></div></div>
+        <div class="frow"><div class="fl">Consideration <small>"tree removal cost"</small></div><div class="fbar"><i style="width:3%"></i></div><div class="fv">0 kw<small>research</small></div></div>
+        <div class="frow"><div class="fl">Decision <small>"tree service logansport"</small></div><div class="fbar"><i style="width:14%"></i></div><div class="fv">2 kw<small>both zero-volume</small></div></div>
+      </div>
+      <p style="font-size:13px;color:var(--slate);margin-top:14px">You rank for just <strong>2 keywords</strong> total, both zero-volume local terms your GBP already covers. There's no organic funnel yet. That's what we build.</p>
+    </div>
+  </section>
+
+  <!-- KEYWORD DETAIL -->
+  <section>
+    <div class="container">
+      <div class="eyebrow"><span class="eb-dash"></span>Keywords</div>
+      <div class="section-head"><h2>The keywords that pay.</h2><span class="desc">Volume, difficulty, whether your website ranks, and what's on the results page.</span></div>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>Keyword</th><th>Volume</th><th>Difficulty</th><th>Your pos.</th><th>SERP features</th></tr></thead>
+          <tbody>
+            <tr><td>tree service logansport</td><td>10</td><td>n/a</td><td>Map pin</td><td>Map pack</td></tr>
+            <tr><td>emergency tree service logansport</td><td>~10</td><td>n/a</td><td>—</td><td>AI Overview, Map pack</td></tr>
+            <tr><td>stump grinding logansport</td><td>low</td><td>n/a</td><td>—</td><td>Map pack, PAA</td></tr>
+            <tr><td>tree removal cost</td><td>12,100</td><td>10</td><td>—</td><td>AI Overview, PAA</td></tr>
+            <tr><td>tree removal near me</td><td>60,500</td><td>30</td><td>—</td><td>Map pack</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- GENERATIVE / AI PRESENCE -->
+  <section>
+    <div class="container">
+      <div class="eyebrow"><span class="eb-dash"></span>AI search</div>
+      <div class="section-head"><h2>Do AI tools recommend you?</h2><span class="desc">Ask an AI assistant for a tree service near Logansport and you don't come up. The local leaders do.</span></div>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>AI surface</th><th>Query</th><th>You cited?</th><th>Who they name</th></tr></thead>
+          <tbody>
+            <tr><td>Google AI Overview</td><td>"emergency tree service logansport"</td><td><span class="tag b-danger"><span class="bd"></span>No</span></td><td>Heartland, Straight Cut</td></tr>
+            <tr><td>ChatGPT</td><td>"best tree service near logansport"</td><td><span class="tag b-danger"><span class="bd"></span>No</span></td><td>Heartland, Beachy</td></tr>
+            <tr><td>Perplexity</td><td>"tree removal logansport in"</td><td><span class="tag b-danger"><span class="bd"></span>No</span></td><td>Straight Cut, Heartland</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOP PAGES -->
+  <section>
+    <div class="container">
+      <div class="eyebrow"><span class="eb-dash"></span>Content</div>
+      <div class="section-head"><h2>What's actually pulling traffic.</h2><span class="desc">Your whole site is 5 pages, and none of them pull measurable organic traffic.</span></div>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>Page</th><th>Est. traffic / mo</th><th>Top keyword</th><th>Intent</th></tr></thead>
+          <tbody>
+            <tr><td>/ (home)</td><td class="num">~0</td><td>tree trimming logansport</td><td><span class="tag b-success"><span class="bd"></span>Branded</span></td></tr>
+            <tr><td>/services</td><td class="num">0</td><td>—</td><td><span class="tag b-warn"><span class="bd"></span>One shared page</span></td></tr>
+            <tr><td>/about</td><td class="num">0</td><td>—</td><td><span class="tag b-success"><span class="bd"></span>Branded</span></td></tr>
+            <tr><td>/contact</td><td class="num">0</td><td>—</td><td><span class="tag b-success"><span class="bd"></span>Utility</span></td></tr>
+            <tr><td>/free-estimate</td><td class="num">0</td><td>—</td><td><span class="tag b-success"><span class="bd"></span>Conversion</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:13px;color:var(--slate);margin-top:12px"><strong>No page pulls measurable organic traffic.</strong> No blog, no service pages, the homepage is carrying everything, which is almost nothing.</p>
+    </div>
+  </section>
+
+  <!-- TOPICAL AUTHORITY -->
+  <section>
+    <div class="container">
+      <div class="eyebrow"><span class="eb-dash"></span>Content</div>
+      <div class="section-head"><h2>Nobody here has built real content.</h2><span class="desc">The whole market is thin. Ranking keywords per site, you're last, but a real content build leapfrogs everyone.</span></div>
+      <div class="tbl-wrap tbl-scroll cmp-grid">
+        <table>
+          <thead><tr><th>Content signal</th><th>You</th><th>Heartland</th><th>Straight Cut</th><th>Beachy</th><th>HillTop</th></tr></thead>
+          <tbody>
+            <tr><td>Keywords ranked</td><td class="lose">2</td><td class="win">8</td><td class="lose">4</td><td class="lose">7</td><td class="lose">0</td></tr>
+            <tr><td>Domain authority</td><td class="lose">0.1</td><td class="win">1.6</td><td class="lose">0.0</td><td class="lose">0.0</td><td class="lose">0.7</td></tr>
+            <tr><td>Dedicated service pages</td><td class="lose">0</td><td class="win">3</td><td class="lose">1</td><td class="lose">2</td><td class="lose">0</td></tr>
+            <tr><td><strong>Location pages</strong></td><td class="lose">0</td><td class="win">2</td><td class="lose">1</td><td class="lose">1</td><td class="lose">0</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:13px;color:var(--slate);margin-top:12px">Even the leader, Heartland, ranks for only 8 keywords. No one here has built real service or location content. The first to do it wins the region.</p>
+    </div>
+  </section>
+
+  <!-- THIN CONTENT AUDIT -->
+  <section>
+    <div class="container">
+      <div class="eyebrow"><span class="eb-dash"></span>Content</div>
+      <div class="section-head"><h2>Page-by-page depth.</h2><span class="desc">Your full page inventory, and the pages that don't exist yet but need to.</span></div>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>Page</th><th>Status</th><th>What it needs</th></tr></thead>
+          <tbody>
+            <tr><td>/ (home)</td><td><span class="tag b-warn"><span class="bd"></span>Live</span></td><td>Rework into a brand + region hub</td></tr>
+            <tr><td>/services (one page)</td><td><span class="tag b-warn"><span class="bd"></span>Live</span></td><td>Split into a page per service</td></tr>
+            <tr><td>/about</td><td><span class="tag b-success"><span class="bd"></span>Live</span></td><td>Add owner + crew for E-E-A-T</td></tr>
+            <tr><td>/contact &amp; /free-estimate</td><td><span class="tag b-success"><span class="bd"></span>Live</span></td><td>Fine as-is</td></tr>
+            <tr><td>Per-service pages (removal, stump, etc.)</td><td><span class="tag b-danger"><span class="bd"></span>Missing</span></td><td>Build one for each of your 8 services</td></tr>
+            <tr><td>Location pages (Peru, Kokomo, &hellip;)</td><td><span class="tag b-danger"><span class="bd"></span>Missing</span></td><td>Build per nearby city</td></tr>
+            <tr><td>Blog / topical content</td><td><span class="tag b-danger"><span class="bd"></span>Missing</span></td><td>Start a hub-supporting blog</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT GAP -->
+  <section>
+    <div class="container">
+      <div class="eyebrow"><span class="eb-dash"></span>Content</div>
+      <div class="section-head"><h2>What they rank for that you don't.</h2><span class="desc">Topics your competitors have pages for and you have none. Each one is demand you're handing over.</span></div>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>Topic / keyword</th><th>Competitors covering</th><th>Your pages</th><th>Searches / mo</th><th>Opportunity</th></tr></thead>
+          <tbody>
+            <tr><td>tree removal near me</td><td class="num">most</td><td class="num">0</td><td class="num">60,500</td><td><span class="tag b-danger"><span class="bd"></span>High</span></td></tr>
+            <tr><td>tree removal cost</td><td class="num">national</td><td class="num">0</td><td class="num">12,100</td><td><span class="tag b-danger"><span class="bd"></span>High</span></td></tr>
+            <tr><td>emergency tree service logansport</td><td class="num">leaders</td><td class="num">0</td><td class="num">local</td><td><span class="tag b-danger"><span class="bd"></span>High</span></td></tr>
+            <tr><td>tree service [nearby town]</td><td class="num">leaders</td><td class="num">0</td><td class="num">expansion</td><td><span class="tag b-danger"><span class="bd"></span>High</span></td></tr>
+            <tr><td>timber milling / lumber</td><td class="num">0 of 4</td><td class="num">0</td><td class="num">niche</td><td><span class="tag b-warn"><span class="bd"></span>Your edge</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECHNICAL / HEALTH SCORE -->
+  <section>
+    <div class="container">
+      <div class="eyebrow"><span class="eb-dash"></span>Technical</div>
+      <div class="section-head">
+        <h2>The foundation's fine. The site is empty.</h2>
+        <span class="desc">The technical basics check out. What's missing is content, structure, and clean links.</span>
+      </div>
+      <div class="score-hero">
+        <div class="card" style="text-align:center">
+          <div class="gauge" style="--val:42;--gc:var(--warning);margin:0 auto 14px;width:180px;height:180px"><div class="inner" style="width:138px;height:138px"><div><div class="g-val" style="font-size:46px">42</div><div class="g-lab">Site health</div></div></div></div>
+          <div class="badge b-warn"><span class="bd"></span>Needs work</div>
+        </div>
+        <div class="cat-bars">
+          <div class="cat"><span class="cn">Foundation (HTTPS, mobile)</span><div class="mini-bar"><i style="width:88%"></i></div><span class="cv">88</span></div>
+          <div class="cat"><span class="cn">On-page basics</span><div class="mini-bar"><i style="width:70%"></i></div><span class="cv">70</span></div>
+          <div class="cat"><span class="cn">Schema</span><div class="mini-bar"><i style="width:65%"></i></div><span class="cv">65</span></div>
+          <div class="cat"><span class="cn">Content depth</span><div class="mini-bar"><i style="width:12%"></i></div><span class="cv">12</span></div>
+          <div class="cat"><span class="cn">Site structure (pages)</span><div class="mini-bar"><i style="width:10%"></i></div><span class="cv">10</span></div>
+          <div class="cat"><span class="cn">Authority / backlinks</span><div class="mini-bar"><i style="width:8%"></i></div><span class="cv">8</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CRAWL SUMMARY -->
+  <section>
+    <div class="container">
+      <div class="eyebrow"><span class="eb-dash"></span>Technical</div>
+      <div class="section-head"><h2>What the crawl found.</h2><span class="desc">Full site is 5 pages, June 2026.</span></div>
+      <div class="grid-4" style="margin-bottom:24px">
+        <div class="stat"><div class="lab">Total pages</div><div class="val">5</div></div>
+        <div class="stat"><div class="lab">Service pages</div><div class="val down">0</div><div class="sub down">8 services, 1 page</div></div>
+        <div class="stat"><div class="lab">Location pages</div><div class="val down">0</div></div>
+        <div class="stat"><div class="lab">Blog posts</div><div class="val down">0</div></div>
+      </div>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>Finding</th><th>Detail</th><th>Severity</th></tr></thead>
+          <tbody>
+            <tr><td>No per-service pages</td><td>8 services share one page</td><td><span class="badge b-danger"><span class="bd"></span>High</span></td></tr>
+            <tr><td>No location pages</td><td>0 of your towns covered</td><td><span class="badge b-danger"><span class="bd"></span>High</span></td></tr>
+            <tr><td>Toxic referring domains</td><td>spike to 176, DR fell</td><td><span class="badge b-danger"><span class="bd"></span>High</span></td></tr>
+            <tr><td>No blog / topical content</td><td>0 posts</td><td><span class="badge b-warn"><span class="bd"></span>Medium</span></td></tr>
+            <tr><td>Foundation (HTTPS, mobile, schema)</td><td>present and OK</td><td><span class="badge b-success"><span class="bd"></span>Pass</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- TECHNICAL CHECKLIST + SERP -->
+  <section>
+    <div class="container">
+      <div class="eyebrow"><span class="eb-dash"></span>Technical</div>
+      <div class="section-head"><h2>The fundamentals.</h2><span class="desc">Pass, warn, or fail on the things that gate rankings.</span></div>
+      <div class="grid-2" style="align-items:stretch">
+        <div class="card checklist">
+          <div class="ci"><div><div class="ct">HTTPS / SSL</div><div class="cd">Secure across the site</div></div><span class="st badge b-success"><span class="bd"></span>Pass</span></div>
+          <div class="ci"><div><div class="ct">Mobile-friendly</div><div class="cd">Responsive viewport set</div></div><span class="st badge b-success"><span class="bd"></span>Pass</span></div>
+          <div class="ci"><div><div class="ct">XML sitemap</div><div class="cd">Present</div></div><span class="st badge b-success"><span class="bd"></span>Pass</span></div>
+          <div class="ci"><div><div class="ct">Local schema</div><div class="cd">JSON-LD present on homepage</div></div><span class="st badge b-success"><span class="bd"></span>Pass</span></div>
+          <div class="ci"><div><div class="ct">Service &amp; location pages</div><div class="cd">None exist yet</div></div><span class="st badge b-danger"><span class="bd"></span>Fail</span></div>
+          <div class="ci"><div><div class="ct">Content depth</div><div class="cd">5-page site, no blog</div></div><span class="st badge b-danger"><span class="bd"></span>Fail</span></div>
+        </div>
+        <div class="card">
+          <div style="font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--slate);margin-bottom:14px">Referring domains · last 12 months</div>
+          <div class="chart-box" style="height:220px"><canvas id="backlinkChart"></canvas></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GBP COMPETITOR AUDIT -->
+  <section>
+    <div class="container">
+      <div class="eyebrow"><span class="eb-dash"></span>Local presence</div>
+      <div class="section-head"><h2>Google Business Profile audit.</h2><span class="desc">The profile signals that decide the map pack, you against the local field.</span></div>
+      <div class="tbl-wrap tbl-scroll cmp-grid">
+        <table>
+          <thead><tr><th>Business</th><th>Reviews</th><th>Rating</th><th>Market</th></tr></thead>
+          <tbody>
+            <tr><td class="cmp-you">Vivid Tree Service (you)</td><td class="lose">55</td><td class="win">5.0</td><td>Logansport</td></tr>
+            <tr><td>Heartland Tree Service</td><td class="win">233</td><td class="win">5.0</td><td>Kokomo</td></tr>
+            <tr><td>Straight Cut Tree Service</td><td class="lose">120</td><td class="win">5.0</td><td>Royal Center</td></tr>
+            <tr><td>Beachy Tree Service</td><td class="lose">73</td><td class="win">5.0</td><td>Peru</td></tr>
+            <tr><td>HillTop Tree Service</td><td class="lose">41</td><td class="lose">4.7</td><td>Akron</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:13px;color:var(--slate);margin-top:12px">You're tied for the best rating in the market and mid-pack on volume, a real strength. Heartland's review lead is what we close as you push into their backyard.</p>
+    </div>
+  </section>
+
+  <!-- BACKLINK COMPARISON -->
+  <section>
+    <div class="container">
+      <div class="eyebrow"><span class="eb-dash"></span>Authority</div>
+      <div class="section-head"><h2>Backlink profile.</h2><span class="desc">Authority comes from other sites linking to you. You're starting from behind.</span></div>
+      <div class="tbl-wrap cmp-grid">
+        <table>
+          <thead><tr><th>Site</th><th>Referring domains</th><th>Domain authority</th><th>Spam links (est.)</th></tr></thead>
+          <tbody>
+            <tr><td class="cmp-you">Vivid Tree Service (you)</td><td class="lose">176</td><td class="lose">0.1</td><td class="lose">45%</td></tr>
+            <tr><td>Heartland Tree Service</td><td class="win">183</td><td class="win">1.6</td><td class="win">25%</td></tr>
+            <tr><td>Straight Cut Tree Service</td><td class="lose">167</td><td class="lose">0.0</td><td class="lose">35%</td></tr>
+            <tr><td>Beachy Tree Service</td><td class="lose">178</td><td class="lose">0.0</td><td class="lose">30%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:13px;color:var(--slate);margin-top:12px">The whole local market runs low-quality link profiles. Yours spiked worst (34 → 176 domains while authority fell), so cleanup is first, then we rebuild with links that actually count. Spam share is estimated from referring-domain quality.</p>
+    </div>
+  </section>
+
+  <!-- PROJECTION -->
+  <section>
+    <div class="container">
+      <div class="eyebrow"><span class="eb-dash"></span>Outlook</div>
+      <div class="section-head"><h2>So where does this go?</h2><span class="desc">Conservative modeling: your current trajectory versus working with us.</span></div>
+      <div class="card">
+        <div class="chart-box" style="height:280px"><canvas id="projectionChart"></canvas></div>
+      </div>
+      <div class="callout-row">
+        <div class="callout" style="background:var(--success-bg);border-color:var(--success)"><div><div class="cl-t" style="color:var(--success)">Projected organic traffic · month 12</div><div class="cl-s">From ~0 today</div></div><div class="cl-v" style="color:var(--success)">~400</div></div>
+        <div class="callout" style="background:var(--success-bg);border-color:var(--success)"><div><div class="cl-t" style="color:var(--success)">Ranking keywords · month 12</div><div class="cl-s">From 2 today</div></div><div class="cl-v" style="color:var(--success)">30+</div></div>
+      </div>
+      <p style="font-size:12px;color:var(--slate-light);margin-top:12px">Projection is a model based on comparable campaigns, not a guarantee of results.</p>
+    </div>
+  </section>
+</div>
+
+<!-- ===================== PAGE-GUIDE MODAL ===================== -->
+<div class="modal-back" id="pageModal">
+  <div class="modal">
+    <button class="modal-x" id="modalX" aria-label="Close">&times;</button>
+    <div class="modal-head"><span class="mt" id="mTitle"></span><span class="modal-tag" id="mTag"></span></div>
+    <div class="modal-sub" id="mSub"></div>
+    <div class="modal-cols">
+      <div class="mcol do"><h4>✓ Do this</h4><div id="mDo"></div></div>
+      <div class="mcol dont"><h4>✕ Avoid this</h4><div id="mDont"></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="container footer-inner">
+    <div class="wordmark"><span class="wordmark-dot"></span>22 Local Marketing</div>
+    <span class="footer-meta">Proposal prepared for Vivid Tree Service · June 2026 · Confidential</span>
+  </div>
+</footer>
+
+<script>
+/* ---- TAB SWITCHING ---- */
+const tabBtns=document.querySelectorAll('.tab-btn');
+const panels=document.querySelectorAll('.panel');
+function showPanel(name){
+  tabBtns.forEach(b=>b.classList.toggle('active',b.dataset.panel===name));
+  panels.forEach(p=>p.classList.toggle('active',p.id===name));
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+tabBtns.forEach(b=>b.addEventListener('click',()=>showPanel(b.dataset.panel)));
+document.querySelectorAll('[data-jump]').forEach(el=>el.addEventListener('click',e=>{e.preventDefault();showPanel(el.dataset.jump)}));
+
+/* ---- LOOM PERSONAL VIDEO ---- */
+document.querySelectorAll('[data-loom]').forEach(v=>v.addEventListener('click',()=>{
+  const id=v.dataset.loom;
+  if(!id||id.startsWith('{{')){alert('Loom slot — paste your reusable Loom share ID in data-loom. Same video for every prospect.');return;}
+  v.innerHTML='<iframe width="100%" height="100%" style="border:0" src="https://www.loom.com/embed/'+id+'?autoplay=1" allowfullscreen></iframe>';
+}));
+
+/* ---- ROI CALCULATOR ---- */
+const f=n=>'$'+n.toLocaleString('en-US');
+const RETAINER=1500; // sample monthly retainer for ROI multiple
+function roi(){
+  const leads=+r_leads.value, book=+r_book.value/100, close=+r_close.value/100, job=+r_job.value;
+  o_leads.textContent=leads; o_book.textContent=Math.round(book*100)+'%';
+  o_close.textContent=Math.round(close*100)+'%'; o_job.textContent=f(job);
+  const mo=Math.round(leads*book*close*job);
+  o_mo.textContent=f(mo); o_yr.textContent=f(mo*12);
+  o_roi.textContent=(mo/RETAINER).toFixed(0)+'×';
+}
+['r_leads','r_book','r_close','r_job'].forEach(id=>window[id]&&window[id].addEventListener('input',roi));
+['r-leads','r-book','r-close','r-job'].forEach(id=>document.getElementById(id).addEventListener('input',roi));
+// map hyphen ids to vars
+const r_leads=document.getElementById('r-leads'),r_book=document.getElementById('r-book'),r_close=document.getElementById('r-close'),r_job=document.getElementById('r-job');
+const o_leads=document.getElementById('o-leads'),o_book=document.getElementById('o-book'),o_close=document.getElementById('o-close'),o_job=document.getElementById('o-job'),o_mo=document.getElementById('o-mo'),o_yr=document.getElementById('o-yr'),o_roi=document.getElementById('o-roi');
+[r_leads,r_book,r_close,r_job].forEach(el=>el.addEventListener('input',roi)); roi();
+
+/* ---- CHARTS ---- */
+const ORANGE='#FB5607', INK='#0A0A0A', GRID='#E5E2DC', SLATE='#8A8A8A';
+Chart.defaults.font.family='Sora'; Chart.defaults.color=SLATE;
+const noLegend={plugins:{legend:{display:false}}};
+
+new Chart(document.getElementById('trafficChart'),{type:'line',
+ data:{labels:['J','F','M','A','M','J','J','A','S','O','N','D'],
+ datasets:[{data:[0,0,0,1,0,0,1,0,0,0,0,0],borderColor:ORANGE,backgroundColor:'rgba(251,86,7,.10)',fill:true,tension:.4,pointRadius:0,borderWidth:3}]},
+ options:{...noLegend,maintainAspectRatio:false,scales:{x:{grid:{display:false}},y:{grid:{color:GRID},ticks:{maxTicksLimit:4}}}}});
+
+const CMP_LABELS=['You','Heartland','Straight Cut','Beachy','HillTop'];
+const cmpBars=(id,data)=>new Chart(document.getElementById(id),{type:'bar',
+ data:{labels:CMP_LABELS,datasets:[{data,backgroundColor:[ORANGE,INK,INK,INK,INK],borderRadius:6}]},
+ options:{...noLegend,maintainAspectRatio:false,scales:{x:{grid:{display:false},ticks:{font:{size:10}}},y:{grid:{color:GRID},ticks:{maxTicksLimit:4}}}}});
+cmpBars('compReviews',[55,233,120,73,41]);
+cmpBars('compDR',[0.1,1.6,0,0,0.7]);
+cmpBars('compKw',[2,8,4,7,0]);
+
+/* ---- CAROUSEL ---- */
+document.querySelectorAll('.cbtn').forEach(b=>b.addEventListener('click',()=>{
+  const t=document.getElementById(b.dataset.track);
+  t.scrollBy({left:(+b.dataset.dir)*378,behavior:'smooth'});
+}));
+
+/* ---- WINNING FORMULA DROPDOWNS ---- */
+function setLever(n){
+  document.querySelectorAll('.term').forEach(t=>t.classList.toggle('active',t.id==='term-'+n));
+  document.querySelectorAll('.lever-panel').forEach(p=>p.classList.toggle('active',p.dataset.panel===n));
+}
+document.querySelectorAll('.how-btn').forEach(b=>b.addEventListener('click',()=>setLever(b.dataset.lever)));
+setLever('1');
+
+/* ---- ARCHITECTURE PAGE-GUIDE MODAL ---- */
+const PAGE_GUIDE={
+  home:{t:'Homepage',tag:'Brand + region',sub:"The brand entry point. It does NOT target “[service] in [city]”, that's the primary area hub's job.",
+    do:['H1 is brand + broad region (5-8 words), e.g. “Trusted Tree Service in the Greater Logansport area”.','Owner photo + quote, click-to-call, and a reviews badge in the hero.','Link to every core service hub and the /areas/ index; full NAP + LocalBusiness schema.'],
+    dont:["Don't target “[primary service] in [primary city]” in the H1 (that's the area hub).","Don't list every city as individual links, use the /areas/ index.","Don't use stock photography or generic filler imagery."]},
+  about:{t:'About page',tag:'Utility',sub:'Where E-E-A-T and credibility get established.',
+    do:['Name the team with real bios, photos, and years of experience.','Show insurance + bonding clearly.','Link to all core services and contact.'],
+    dont:["Don't use stock photos or faceless filler.","Don't make claims you can't back up.","Don't link to city-service spokes from the body."]},
+  contact:{t:'Contact page',tag:'Utility',sub:'A full page that captures intent, not just a popup.',
+    do:['Phone, form, address, map, and hours all on one page.','Offer more than one way to reach you and promise a fast response.','Link to all core services.'],
+    dont:["Don't make it form-only or phone-only.","Don't hide the phone number.","Don't omit your real NAP and service area."]},
+  careers:{t:'Careers page',tag:'Utility',sub:"Recruiting, and a quiet signal that you're an established, growing crew.",
+    do:["List real roles and what it's like to work there.",'Give a simple way to apply.','Link back to home and contact.'],
+    dont:["Don't post fake or evergreen openings.","Don't link to spokes from the body.","Don't let it dead-end."]},
+  blog:{t:'Blog',tag:'Utility',sub:'A topical-authority engine, not a news feed. Every post supports a parent hub.',
+    do:['Every post supports a core service or commercial hub, linked with descriptive anchor text.','Hyperlocal angle in the first 100 words; named author with a real bio (E-E-A-T).','2-4 quality posts a month; Article schema with author + dates.'],
+    dont:["Don't write posts that compete with a service page for the same keyword.","Don't publish under an “Admin” byline or with no author.","No stock photos, no link dumps, no AI-only drafts."]},
+  service:{t:'Core Service Page',tag:'Service hub',sub:'The topical-authority hub for ONE service. Targets pure service intent, no city. The workhorse of the site.',
+    do:['H1 is the service only, never service + city (area scope goes in the subhead).','Go deep: 1,200+ words with process, pricing factors, a long-tail variant section, and 5+ FAQs.','Link to 2-4 related services, the area hub, and every spoke for this service; Service + BreadcrumbList schema.'],
+    dont:["Don't lock the H1 to one city (that's the spoke's job).","Don't publish under 1,200 words or reskin another service page (40-60% unique minimum).","Don't mix in commercial / B2B messaging (separate silo)."]},
+  areas:{t:'Areas Index',tag:'/areas/',sub:'A simple hub listing every city you serve. It gives the area hubs a parent.',
+    do:['List every area hub with a one-line blurb.','Show a service-area map; keep it concise (400+ words) and functional.','Cross-link to the core service hubs.'],
+    dont:["Don't link to city-service spokes here (those live on their area hub).","Don't list cities you don't actually serve.","Don't exceed ~15 area hubs (template-farm signal)."]},
+  areahub:{t:'Area Hub',tag:'One city',sub:'The topical-authority page for ONE city across all services. This replaces the homepage for primary-city queries.',
+    do:['H1 includes the city; target the broad “[service] [city]” multi-service query.','40-60% unique content: 2+ city reviews, 3+ city photos, 3+ named neighborhoods, 2+ landmarks.',"Link to all core service hubs and down to this city's spokes; LocalBusiness + BreadcrumbList schema."],
+    dont:["Don't template it with only the city name swapped.","Don't target “[specific service] in [city]”, that's the spoke's lane.","Don't reference spokes that aren't built, or extend beyond a 60-90 min drive."]},
+  spoke:{t:'City-Service Spoke',tag:'City + service',sub:'The long-tail conversion engine. One per city + service, built only with real local proof.',
+    do:['Build only when 3 of 5 proof items exist (a photo, a review, a neighborhood, a landmark, 3+ jobs in that city).','H1 is service + city; lead with conversion (hero CTA + phone + reviews in the first scroll).','800-1,200+ words, hyperlocal in the first 50 words; up-link to BOTH the parent service hub and area hub.'],
+    dont:["Don't publish under 800 words (doorway risk) or reuse the hub's content with the city swapped.","Don't use the same H1 structure as the service hub.","No diagonal links (a different service in a different city)."]},
+  commercial:{t:'Commercial Vertical',tag:'B2B silo',sub:'B2B intent in a separate silo, property managers, HOAs, municipalities, builders, and commercial property owners.',
+    do:['B2B framing: capabilities (crew, equipment, response window), insurance + bonding dollar figures, 2-3 case studies.','Link to sibling verticals and 1-2 relevant core service hubs.','Build only when the client actively pursues it and has a real completed job to reference.'],
+    dont:["Don't mix in residential “same-day / call now” language.","Don't cross-link to residential city-service spokes.","Don't build a vertical speculatively, an empty one signals capability you can't deliver."]}
+};
+const pm=document.getElementById('pageModal');
+const mTitle=document.getElementById('mTitle'),mTag=document.getElementById('mTag'),mSub=document.getElementById('mSub'),mDo=document.getElementById('mDo'),mDont=document.getElementById('mDont');
+function openGuide(k){
+  const g=PAGE_GUIDE[k]; if(!g) return;
+  mTitle.textContent=g.t; mTag.textContent=g.tag; mSub.textContent=g.sub||'';
+  mDo.innerHTML=g.do.map(x=>'<div class="mi"><span class="mk">✓</span><span>'+x+'</span></div>').join('');
+  mDont.innerHTML=g.dont.map(x=>'<div class="mi"><span class="mk">✕</span><span>'+x+'</span></div>').join('');
+  pm.classList.add('open'); document.body.style.overflow='hidden';
+}
+function closeGuide(){pm.classList.remove('open'); document.body.style.overflow='';}
+document.querySelectorAll('.node[data-pop]').forEach(n=>n.addEventListener('click',()=>openGuide(n.dataset.pop)));
+document.getElementById('modalX').addEventListener('click',closeGuide);
+pm.addEventListener('click',e=>{if(e.target===pm)closeGuide();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeGuide();});
+
+new Chart(document.getElementById('backlinkChart'),{type:'bar',
+ data:{labels:['J','F','M','A','M','J','J','A','S','O','N','D'],
+ datasets:[{data:[42,44,45,47,47,57,49,40,18,34,172,176],backgroundColor:ORANGE,borderRadius:4}]},
+ options:{...noLegend,maintainAspectRatio:false,scales:{x:{grid:{display:false}},y:{grid:{color:GRID},ticks:{maxTicksLimit:4}}}}});
+
+/* ---- 24-MONTH ORGANIC TREND (dual axis) ---- */
+const MONTHS24=['May','Jul','Sep','Nov','Jan','Mar','May','Jul','Sep','Nov','Jan','Mar'];
+new Chart(document.getElementById('organicTrend'),{
+ type:'line',
+ data:{labels:MONTHS24,datasets:[
+   {type:'line',label:'Traffic',data:[0,0,0,0,1,0,0,1,0,0,0,0],borderColor:ORANGE,backgroundColor:'rgba(251,86,7,.10)',fill:true,tension:.4,pointRadius:0,borderWidth:3,yAxisID:'y'},
+   {type:'line',label:'Traffic value',data:[0,0,0,0,0,0,0,0,0,0,0,0],borderColor:INK,borderDash:[5,4],tension:.4,pointRadius:0,borderWidth:2,yAxisID:'y1'}
+ ]},
+ options:{maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
+   plugins:{legend:{display:true,labels:{boxWidth:12,font:{size:11}}}},
+   scales:{x:{grid:{display:false},ticks:{font:{size:10}}},
+     y:{position:'left',grid:{color:GRID},title:{display:true,text:'Traffic',font:{size:10}}},
+     y1:{position:'right',grid:{display:false},title:{display:true,text:'Value $',font:{size:10}}}}}});
+
+/* ---- 12-MONTH PROJECTION ---- */
+new Chart(document.getElementById('projectionChart'),{
+ type:'line',
+ data:{labels:['Now','M2','M4','M6','M8','M10','M12'],datasets:[
+   {type:'line',label:'Do nothing',data:[0,0,0,0,0,0,0],borderColor:'#C42017',borderDash:[5,4],tension:.4,pointRadius:0,borderWidth:2},
+   {type:'line',label:'With 22 Local Marketing',data:[0,40,110,200,300,380,450],borderColor:'#1F7A4D',backgroundColor:'rgba(31,122,77,.10)',fill:true,tension:.4,pointRadius:0,borderWidth:3}
+ ]},
+ options:{maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
+   plugins:{legend:{display:true,labels:{boxWidth:12,font:{size:11}}}},
+   scales:{x:{grid:{display:false}},y:{grid:{color:GRID},title:{display:true,text:'Organic traffic / mo',font:{size:10}}}}}});
+
+/* ---- VIDEO PLACEHOLDER ---- */
+document.querySelectorAll('[data-video]').forEach(v=>v.addEventListener('click',()=>{
+  const id=v.dataset.video;
+  if(!id||id.startsWith('{{')){alert('Video embed slot — wire a YouTube ID in the data contract.');return;}
+  v.innerHTML='<iframe width="100%" height="100%" style="border:0" src="https://www.youtube.com/embed/'+id+'?autoplay=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
+}));
+</script>
+</body>
+</html>

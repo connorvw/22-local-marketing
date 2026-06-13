@@ -6,6 +6,12 @@
       "runtimeExecutable": "python",
       "runtimeArgs": ["-m", "http.server", "50502", "--directory", "C:/22 Local Marketing/dist"],
       "port": 50502
+    },
+    {
+      "name": "22lm-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--", "--port", "4321"],
+      "port": 4321
     }
   ]
 }

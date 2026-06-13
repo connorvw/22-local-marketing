@@ -1,0 +1,51 @@
+{
+  "_status": "audit collected 2026-06-04; DataForSEO PENDING funding; narrative = GBP-strong / web-weak (adapt, do NOT use 'invisible on map' framing)",
+  "slug": "vivid-tree-service-9k4m",
+  "client": {
+    "name": "Vivid Tree Service",
+    "city": "Logansport",
+    "state": "Indiana",
+    "url": "vividtreeservice.com",
+    "phone": "(574) 242-0438",
+    "owner": "Adam",
+    "credentials": "licensed, bonded, insured",
+    "emergency": "24/7",
+    "services": ["Tree Removal","Tree Trimming","Tree Pruning","Stump Grinding","Land Clearing","Tree Health Inspections & Treatment","Tree Planting & Transplanting","Timber Milling","Firewood Sales"],
+    "service_area": "Northern Indiana",
+    "expansion_cities": ["Peru","Kokomo","Rochester","Wabash","Royal Center"],
+    "site_pages": ["home","services","about","contact","free-estimate"],
+    "site_page_note": "only 5 pages, no per-service or per-city pages"
+  },
+  "localfalcon": {
+    "keyword": "tree service logansport",
+    "arp": 1.0, "solv": 100, "atrp": 100,
+    "grid_all_rank_1": true,
+    "heatmap_file": "geogrid.png",
+    "rating": 5.0, "reviews": 55,
+    "reviews_note": "CONFIRMED by Connor 2026-06-04: 55 reviews / 5.0 (the ranking listing). Vivid is mid-pack on reviews (Heartland 233 > Straight Cut 120 > Beachy 73 > Vivid 55 > HillTop 41).",
+    "report_key": "3065f7d9a90e8e0"
+  },
+  "ahrefs": {
+    "dr_now": 0.1, "dr_6mo": 1.7,
+    "refdomains_now": 176, "refdomains_6mo": 57,
+    "refdomains_series_12mo": [42,44,45,47,47,57,49,40,18,34,172,176],
+    "toxic_link_flag": "refdomains spiked 34->176 in 2 months while DR FELL 1.7->0.1 = spam/PBN fingerprint; lead with cleanup/disavow",
+    "keywords_now": 2, "keywords_6mo": 3,
+    "traffic_now": 0, "traffic_6mo": 0, "traffic_value_now": 0,
+    "top_keywords": [{"keyword":"tree trimming logansport","volume":0,"position":2},{"keyword":"tree services logansport","volume":0,"position":3}],
+    "organic_competitors_note": "only directories (FB/Yelp/BBB/Angi) overlap = no real organic footprint"
+  },
+  "competitors": [
+    {"name":"Heartland Tree Service","city":"Kokomo","reviews":233,"rating":5.0,"domain":"heartlandtreeservices.com","dr":1.6,"refdomains":183,"keywords":8,"is_leader":true},
+    {"name":"Straight Cut Tree Service","city":"Royal Center","reviews":120,"rating":5.0,"domain":"straightcuttreeservicellc.net","dr":0.0,"refdomains":167,"keywords":4,"is_leader":false},
+    {"name":"Beachy Tree Service","city":"Peru","reviews":73,"rating":5.0,"domain":"treeremovalperu.com","dr":0.0,"refdomains":178,"keywords":7,"is_leader":false},
+    {"name":"HillTop Tree Service","city":"Akron","reviews":41,"rating":4.7,"domain":"hilltoptreeakronin.com","dr":0.7,"refdomains":183,"keywords":0,"is_leader":false}
+  ],
+  "vivid_competitor_row": {"reviews":55,"rating":5.0,"dr":0.1,"refdomains":176,"keywords":2},
+  "dataforseo": {"status":"PENDING - account unfunded (40200 Payment Required); pull keyword volume/difficulty/SERP after Connor funds"},
+  "narrative": {
+    "angle": "You own the Logansport map pack (#1 at all 49 grid points, 5.0). But your website is invisible: DR 0.1, ~0 organic traffic, 2 keywords, no service/location pages. Plus a toxic-link spike to clean up. Bigger markets (Kokomo via Heartland) are open. Build the web engine to grow beyond your backyard.",
+    "hero": "Strong local + weak web; NOT 'invisible on the map'",
+    "geogrid_framing": "show the all-green grid as a STRENGTH, then pivot to the web/organic gap"
+  }
+}
