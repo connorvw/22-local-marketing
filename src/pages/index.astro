@@ -53,23 +53,20 @@ const tradesRow3 = [...trades.slice(8), ...trades.slice(0, 8)];
   <div class="container">
     <div class="stats-row">
       <div class="stats-tag">Our clients average:</div>
-      <div class="stats">
+      <div class="stats stats-2x2">
         <div class="stat"><div class="stat-label">Phone calls</div><div class="stat-value">60+</div><div class="stat-desc">Per client each month, across Google, ads, and search</div></div>
         <div class="stat"><div class="stat-label">Form leads</div><div class="stat-value">40+</div><div class="stat-desc">Web form submissions per client, every month</div></div>
         <div class="stat"><div class="stat-label">Cost per lead</div><div class="stat-value">&lt;$50</div><div class="stat-desc">From all sources combined, paid and organic</div></div>
         <div class="stat"><div class="stat-label">Google reviews</div><div class="stat-value">5.0★</div><div class="stat-desc">Average rating across our clients' profiles</div></div>
       </div>
-      <!-- Overview walkthrough video hidden for now
-      <div class="video-placeholder">
-        <div class="video-thumb">
-          <div class="video-play">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"/></svg>
-          </div>
-          <div class="video-hint">Overview walkthrough goes here</div>
-          <div class="video-meta">Video slot 02 · placeholder</div>
-        </div>
+      <div class="video-placeholder hero-video">
+        <iframe
+          src="https://www.tella.tv/video/vid_cmqcvpjf8002q04l8eqb80rgc/embed?b=0&amp;title=0&amp;a=1&amp;loop=1&amp;t=0&amp;muted=1&amp;wt=0"
+          title="Marketing Systems That Build Trust"
+          allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
       </div>
-      -->
     </div>
   </div>
 </section>
@@ -363,7 +360,7 @@ const tradesRow3 = [...trades.slice(8), ...trades.slice(0, 8)];
 .dark .section-head h2 { color: var(--white); }
 
 /* ===== STATS ===== */
-.stats-row { display: grid; grid-template-columns: 1fr; gap: 24px; align-items: stretch; position: relative; }
+.stats-row { display: grid; grid-template-columns: 1.2fr 1fr; gap: 24px; align-items: stretch; position: relative; }
 .stats-tag { position: absolute; top: -14px; left: 28px; z-index: 2; background: var(--blaze); color: var(--white); font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 6px 12px; border-radius: 4px; border: 1px solid var(--onyx); }
 .stats { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--onyx); background: var(--white); border-radius: 10px; box-shadow: 6px 6px 0 0 var(--onyx); overflow: hidden; transition: transform 0.15s, box-shadow 0.15s; }
 .stats:hover { transform: translate(-2px, -2px); box-shadow: 9px 9px 0 0 var(--onyx); }
@@ -372,6 +369,8 @@ const tradesRow3 = [...trades.slice(8), ...trades.slice(0, 8)];
 .stats-2x2 .stat:nth-child(1), .stats-2x2 .stat:nth-child(2) { border-bottom: 1px solid var(--border); }
 .stats-row .video-placeholder { box-shadow: 6px 6px 0 0 var(--onyx); height: 100%; }
 .stats-row .video-thumb { aspect-ratio: auto; height: 100%; min-height: 100%; }
+.stats-row .hero-video { height: 100%; background: #000; }
+.stats-row .hero-video iframe { width: 100%; height: 100%; min-height: 100%; border: 0; display: block; }
 .stat { padding: 28px 24px; border-right: 1px solid var(--border); position: relative; }
 .stat:last-child { border-right: 0; }
 .stats-2x2 .stat:last-child { border-right: 0; }
@@ -579,6 +578,7 @@ button.video-thumb-yt .video-play { position: relative; z-index: 2; }
   .hero-grid, .results-grid, .about-grid, .cta-block, .stats-row { grid-template-columns: 1fr; gap: 32px; }
   .stats, .svc-grid, .review-grid { grid-template-columns: repeat(2, 1fr); }
   .stats-row .video-thumb { aspect-ratio: 16 / 9; min-height: 0; }
+  .stats-row .hero-video { aspect-ratio: 16 / 9; height: auto; }
   .stat:nth-child(2) { border-right: 0; }
   .stat:nth-child(1), .stat:nth-child(2) { border-bottom: 1px solid var(--border); }
   .process { grid-template-columns: repeat(2, 1fr); }
