@@ -3,6 +3,16 @@
 
 export const posts = [
   {
+    title: "How to Get More Google Reviews Without Begging, Buying, or Breaking the Rules",
+    slug: "how-to-get-more-google-reviews",
+    excerpt: "The highest-converting review tactic we've seen in the trades costs about two dollars. Here's the full system: how to get reviews every week, where they should live, and what to do when they come in.",
+    date: "July 9, 2026",
+    dateISO: "2026-07-09",
+    readTime: "7 min read",
+    category: "Google Business Profile",
+    featured: false,
+  },
+  {
     title: "Google's New AI Agents Are Reshaping Local Search",
     slug: "google-ai-agents-local-search",
     excerpt: "Google rolled out the biggest shift to Search in over two decades at I/O 2026. AI agents now find pricing, check availability, and in some cases call local businesses directly on behalf of homeowners. Here's what home service owners need to know.",
