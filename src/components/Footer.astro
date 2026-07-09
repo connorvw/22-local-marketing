@@ -38,7 +38,7 @@ const year = new Date().getFullYear();
       </div>
     </div>
     <div class="footer-bottom">
-      <div>© {year} 22 Local Marketing LLC. All rights reserved.</div>
+      <div>© {year} 22 Local Marketing LLC. All rights reserved. <a href="/privacy/" class="footer-legal">Privacy Policy</a></div>
       <div>Built in-house. No templates were harmed.</div>
     </div>
   </div>
@@ -77,6 +77,10 @@ footer {
   font-size: 13px; color: var(--slate); text-decoration: none;
 }
 .footer-col a:hover { color: var(--blaze); }
+.footer-legal {
+  color: var(--slate); text-decoration: underline; margin-left: 8px;
+}
+.footer-legal:hover { color: var(--blaze); }
 .footer-bottom {
   border-top: 1px solid var(--border); padding-top: 24px;
   display: flex; align-items: center; justify-content: space-between;
