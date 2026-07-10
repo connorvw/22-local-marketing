@@ -17,12 +17,28 @@ const links = [
 
 <nav class="topnav">
   <div class="container topnav-inner">
-    <a href="/" class="wordmark"><span class="wordmark-dot"></span>22 Local Marketing</a>
+    <a href="/" class="wordmark" aria-label="22 Local Marketing home">
+      <span class="wordmark-dot"></span>
+      <span class="wordmark-text">22 Local Marketing</span>
+      <img src="/logo-condensed.png" class="wordmark-img" alt="22 Local Marketing" width="2027" height="501" />
+    </a>
     <div class="topnav-links">
       {links.map(l => (
         <a href={l.href} class={isActive(l.href) ? 'active' : ''}>{l.label}</a>
       ))}
       <a href="/#contact" class="topnav-cta" data-quote>Free strategy call</a>
+      <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="container mobile-menu-inner">
+      {links.map(l => (
+        <a href={l.href} class={isActive(l.href) ? 'active' : ''}>{l.label}</a>
+      ))}
     </div>
   </div>
 </nav>
@@ -36,7 +52,7 @@ const links = [
 }
 .topnav-inner {
   display: flex; align-items: center; justify-content: space-between;
-  padding: 18px 0;
+  padding-block: 18px;
 }
 .wordmark {
   display: flex; align-items: center; gap: 8px;
@@ -46,6 +62,7 @@ const links = [
 .wordmark-dot {
   width: 10px; height: 10px; background: var(--blaze); border-radius: 2px;
 }
+.wordmark-img { display: none; height: 30px; width: auto; }
 .topnav-links { display: flex; gap: 28px; align-items: center; }
 .topnav-links a {
   color: var(--slate); text-decoration: none; font-size: 14px; font-weight: 500;
@@ -59,8 +76,64 @@ const links = [
   text-decoration: none;
 }
 .topnav-cta:hover { background: var(--blaze); }
+
+/* Hamburger toggle (mobile / tablet only) */
+.nav-toggle {
+  display: none;
+  flex-direction: column; justify-content: center; gap: 4px;
+  width: 38px; height: 36px; padding: 0 8px;
+  background: transparent; border: 1px solid var(--border-strong);
+  border-radius: 6px; cursor: pointer;
+}
+.nav-toggle-bar {
+  display: block; width: 100%; height: 2px;
+  background: var(--onyx); border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.topnav.menu-open .nav-toggle-bar:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.topnav.menu-open .nav-toggle-bar:nth-child(2) { opacity: 0; }
+.topnav.menu-open .nav-toggle-bar:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+/* Dropdown panel */
+.mobile-menu { display: none; background: var(--bone); border-bottom: 1px solid var(--border); }
+.topnav.menu-open .mobile-menu { display: block; }
+.mobile-menu-inner { display: flex; flex-direction: column; padding-bottom: 12px; }
+.mobile-menu-inner a {
+  padding: 14px 0; color: var(--onyx); text-decoration: none;
+  font-size: 15px; font-weight: 500; border-top: 1px solid var(--border);
+}
+.mobile-menu-inner a:first-child { border-top: 0; }
+.mobile-menu-inner a.active { color: var(--blaze); font-weight: 600; }
+
 @media (max-width: 1000px) {
   .topnav-links a:not(.topnav-cta) { display: none; }
   .topnav-links a.topnav-cta { display: inline-block; }
+  .topnav-links { gap: 10px; }
+  .nav-toggle { display: flex; }
+}
+@media (max-width: 600px) {
+  .topnav-inner { padding-block: 14px; gap: 12px; }
+  .wordmark-text, .wordmark-dot { display: none; }
+  .wordmark-img { display: block; height: 28px; }
+  .topnav-cta { padding: 8px 12px; font-size: 12px; white-space: nowrap; }
 }
 </style>
+
+<script is:inline>
+(function () {
+  const nav = document.querySelector('.topnav');
+  const btn = nav && nav.querySelector('.nav-toggle');
+  if (!nav || !btn) return;
+  function close() {
+    nav.classList.remove('menu-open');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.setAttribute('aria-label', 'Open menu');
+  }
+  btn.addEventListener('click', () => {
+    const open = nav.classList.toggle('menu-open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  });
+  nav.querySelectorAll('.mobile-menu a').forEach((a) => a.addEventListener('click', close));
+})();
+</script>

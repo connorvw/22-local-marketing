@@ -36,6 +36,7 @@ const {
     <div class="qf-field"><label class="qf-label">Message</label><input class="qf-input" type="text" name="message" placeholder="What can we help with?"></div>
   </div>
   <button type="submit" class="qf-submit"><span class="qf-submit-label">{submitLabel}</span> <span class="qf-arrow">→</span></button>
+  <p class="qf-consent">By submitting, you agree that 22 Local Marketing may contact you by phone, email, or text message about your inquiry. Message and data rates may apply. Message frequency varies. Reply STOP to opt out or HELP for help. See our <a href="/privacy/">Privacy Policy</a>.</p>
   <div class="qf-status" hidden></div>
 </form>
 
@@ -109,6 +110,12 @@ const {
 .qf-arrow { display: inline-block; transition: transform 0.25s; }
 .qf-submit:hover .qf-arrow { transform: translateX(3px); }
 
+.qf-consent {
+  margin-top: 10px;
+  font-size: 10.5px; line-height: 1.5; color: var(--slate);
+}
+.qf-consent a { color: var(--slate); text-decoration: underline; }
+.quote-form.is-sent .qf-consent { display: none; }
 .qf-status {
   margin-top: 12px;
   padding: 12px 14px;
@@ -135,6 +142,9 @@ const {
 }
 .quote-form.is-sent .qf-status {
   margin-top: 0;
+}
+@media (max-width: 600px) {
+  .qf-row { grid-template-columns: 1fr; }
 }
 </style>
 

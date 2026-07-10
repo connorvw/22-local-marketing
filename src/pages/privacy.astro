@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Privacy Policy | 22 Local Marketing" description="How 22 Local Marketing collects, uses, and protects your information, including SMS communications.">
+  <main class="legal-page">
+    <div class="legal-container">
+      <h1>Privacy Policy</h1>
+      <p class="legal-updated">Last updated: July 8, 2026</p>
+
+      <p>22 Local Marketing ("we", "us", "our") provides digital marketing services for home service companies. This policy explains what information we collect, how we use it, and the choices you have. We keep it in plain English on purpose.</p>
+
+      <h2>Information We Collect</h2>
+      <p>We collect information you give us directly: your name, email address, phone number, business name, and details you share through our contact forms, onboarding forms, phone calls, or text messages. We also collect standard website analytics such as pages visited and general location, which help us understand how people use our site.</p>
+
+      <h2>How We Use Your Information</h2>
+      <p>We use your information to respond to inquiries, deliver our services, send invoices and service updates, and communicate with you about your marketing campaigns. We do not sell your personal information to anyone.</p>
+
+      <h2>SMS and Text Messaging</h2>
+      <p>If you opt in to text messages from 22 Local Marketing, we will send you occasional updates related to your inquiry or your marketing services. Message and data rates may apply. Message frequency varies. You can text HELP for help or STOP at any time to opt out, and we will stop sending you messages.</p>
+      <p>SMS opt-in consent and phone numbers collected for SMS purposes will not be shared with or sold to any third party for their own marketing purposes. SMS data will not be shared with anyone except our texting service provider, and only so they can deliver our messages to you.</p>
+
+      <h2>Sharing With Service Providers</h2>
+      <p>We use a small number of trusted service providers to run our business, such as website hosting, email delivery, phone and texting services, and analytics. They only receive the information needed to perform their function and are not permitted to use it for anything else.</p>
+
+      <h2>Data Retention and Security</h2>
+      <p>We keep your information only as long as needed to serve you and meet legal requirements. We use reasonable technical and organizational safeguards to protect it.</p>
+
+      <h2>Your Choices</h2>
+      <p>You can ask us to update or delete your personal information at any time. You can opt out of texts by replying STOP and unsubscribe from emails using the link in any message. To make any other request, contact us and we will take care of it.</p>
+
+      <h2>Contact Us</h2>
+      <p>Questions about this policy or your data can be sent to <a href="mailto:connor@22localmarketing.com">connor@22localmarketing.com</a>.</p>
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  .legal-page {
+    padding: 140px 24px 96px;
+    background: #fff;
+  }
+  .legal-container {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .legal-page h1 {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .legal-updated {
+    color: #777;
+    font-size: 0.9rem;
+    margin-bottom: 40px;
+  }
+  .legal-page h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 36px 0 12px;
+  }
+  .legal-page p {
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+  .legal-page a {
+    color: #FB5607;
+  }
+  @media (max-width: 640px) {
+    .legal-page {
+      padding: 110px 20px 64px;
+    }
+  }
+</style>

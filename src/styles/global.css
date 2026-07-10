@@ -26,6 +26,7 @@ body {
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
   font-feature-settings: "ss01", "ss02";
+  overflow-x: clip;
 }
 .container { max-width: 1440px; margin: 0 auto; padding: 0 40px; }
 
@@ -132,4 +133,12 @@ section.flush { border-top: 0; }
 @media (max-width: 600px) {
   .container { padding: 0 18px; }
   section { padding: 64px 0; }
+  /* Keep decorative corner brackets inside the viewport */
+  .hero-frame::before, .hero-frame::after { width: 16px; height: 16px; }
+  .hero-frame::before { left: -10px; }
+  .hero-frame::after { right: -10px; }
+  .section-head h2::before { left: -12px; }
+  .section-head h2::after { right: -12px; }
+  /* Full-width buttons on mobile */
+  .btn { width: 100%; justify-content: center; }
 }
