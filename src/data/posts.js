@@ -3,6 +3,16 @@
 
 export const posts = [
   {
+    title: "Your Tree Service Website Looks Great and Still Loses Leads to the Competitor Down the Road",
+    slug: "your-tree-service-website-looks-great-and",
+    excerpt: "Most tree service redesigns chase a polished look while ignoring the boring mechanics that turn visitors into calls. This plan audits the five conversion basics that beat any logo or homepage animation, especially when storm season floods your market with searchers comparing options fast.",
+    date: "July 26, 2026",
+    dateISO: "2026-07-26",
+    readTime: "10 min read",
+    category: "Business Growth",
+    featured: false,
+  },
+  {
     title: "Tree Service Grows 5% a Year. Most Owners Market Wrong.",
     slug: "the-tree-service-industry-grows-about-5",
     excerpt: "Tree care is a durable, hyper-local trade built on storms, referrals, and demand that climbs at low single digits a year. The numbers are less dramatic than the pitch decks and more useful. Here is what they say about where your money should go.",
