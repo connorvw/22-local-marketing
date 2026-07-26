@@ -2,6 +2,16 @@
 // Body content lives alongside the slug at src/content/blog/[slug].astro.
 
 export const posts = [
+  {
+    title: "Tree Service Websites Lose Storm-Season Calls To Rivals",
+    slug: "tree-service-websites-lose-stormseason-calls-to",
+    excerpt: "Most tree service websites are built to look polished, not to convert, and that tradeoff costs real storm-season calls. This plan audits the unglamorous parts (speed, pricing clarity, service area, proof, and click-to-call) that actually drive leads before you spend a dollar on a redesign.",
+    date: "July 26, 2026",
+    dateISO: "2026-07-26",
+    readTime: "9 min read",
+    category: "Business Growth",
+    featured: false,
+  },
   
   
   {
