@@ -3,6 +3,16 @@
 
 export const posts = [
   {
+    title: "The Tree Service Industry Grows About 5% a Year, and Most Owners Market Like It's Either a Gold Rush or Nothing",
+    slug: "the-tree-service-industry-grows-about-5",
+    excerpt: "Tree care is a durable, hyper-local trade built on storms, referrals, and demand that climbs at low single digits a year. The numbers are less dramatic than the pitch decks and more useful. Here is what they say about where your money should go.",
+    date: "July 26, 2026",
+    dateISO: "2026-07-26",
+    readTime: "11 min read",
+    category: "Business Growth",
+    featured: false,
+  },
+  {
     title: "What Google Ads Actually Costs Home Service Businesses Once You Count the Booked Jobs",
     slug: "what-google-ads-actually-costs-home-service",
     excerpt: "The people writing the pricing guides sell the ads, so their numbers lean sunny. This is what contractors pay per lead, per customer, and per job, with honest caveats about where the data thins out. It also explains why a $3,000 budget with no structure mostly funds branded searches and tire-kickers.",
