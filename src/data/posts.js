@@ -3,6 +3,16 @@
 
 export const posts = [
   {
+    title: "What Google Ads Actually Costs Home Service Businesses Once You Count the Booked Jobs",
+    slug: "what-google-ads-actually-costs-home-service",
+    excerpt: "The people writing the pricing guides sell the ads, so their numbers lean sunny. This is what contractors pay per lead, per customer, and per job, with honest caveats about where the data thins out. It also explains why a $3,000 budget with no structure mostly funds branded searches and tire-kickers.",
+    date: "July 26, 2026",
+    dateISO: "2026-07-26",
+    readTime: "10 min read",
+    category: "Marketing",
+    featured: false,
+  },
+  {
     title: "How to Get More Google Reviews Without Begging, Buying, or Breaking the Rules",
     slug: "how-to-get-more-google-reviews",
     excerpt: "The highest-converting review tactic we've seen in the trades costs about two dollars. Here's the full system: how to get reviews every week, where they should live, and what to do when they come in.",
