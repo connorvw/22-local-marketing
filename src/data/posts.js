@@ -3,6 +3,16 @@
 
 export const posts = [
   {
+    title: "Tree Service Websites Lose Storm-Season Calls To Rivals",
+    slug: "tree-service-websites-lose-stormseason-calls-to",
+    excerpt: "Most tree service websites are built to look polished, not to convert, and that tradeoff costs real storm-season calls. This plan audits the unglamorous parts (speed, pricing clarity, service area, proof, and click-to-call) that actually drive leads before you spend a dollar on a redesign.",
+    date: "July 26, 2026",
+    dateISO: "2026-07-26",
+    readTime: "9 min read",
+    category: "Business Growth",
+    featured: false,
+  },
+  {
     title: "Your Tree Service Website Looks Great and Still Loses Leads to the Competitor Down the Road",
     slug: "your-tree-service-website-looks-great-and",
     excerpt: "Most tree service redesigns chase a polished look while ignoring the boring mechanics that turn visitors into calls. This plan audits the five conversion basics that beat any logo or homepage animation, especially when storm season floods your market with searchers comparing options fast.",
