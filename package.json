@@ -10,6 +10,7 @@
     "deploy": "astro build && wrangler pages deploy dist --project-name=22-local-marketing --branch=main"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.7.3",
     "astro": "^6.3.8"
   }
 }
