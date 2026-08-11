@@ -35,6 +35,10 @@ const {
     <div class="qf-field"><label class="qf-label">Website</label><input class="qf-input" type="text" name="websiteUrl" placeholder="yourtreeservice.com"></div>
     <div class="qf-field"><label class="qf-label">Message</label><input class="qf-input" type="text" name="message" placeholder="What can we help with?"></div>
   </div>
+  <label class="qf-checkbox">
+    <input type="checkbox" name="smsConsent" value="yes">
+    <span>I consent to receive text messages from 22 Local Marketing about my inquiry at the phone number provided. Message frequency may vary. Message and data rates may apply. Reply HELP for help or STOP to opt out.</span>
+  </label>
   <button type="submit" class="qf-submit"><span class="qf-submit-label">{submitLabel}</span> <span class="qf-arrow">→</span></button>
   <p class="qf-consent">By submitting, you agree that 22 Local Marketing may contact you by phone, email, or text message about your inquiry. Consent is not a condition of purchase. Message and data rates may apply. Message frequency varies. Reply STOP to opt out or HELP for help. See our <a href="/privacy/">Privacy Policy</a>.</p>
   <div class="qf-status" hidden></div>
@@ -110,6 +114,17 @@ const {
 .qf-arrow { display: inline-block; transition: transform 0.25s; }
 .qf-submit:hover .qf-arrow { transform: translateX(3px); }
 
+.qf-checkbox {
+  display: flex; gap: 8px; align-items: flex-start;
+  margin-top: 10px;
+  font-size: 10.5px; line-height: 1.5; color: var(--slate);
+  cursor: pointer;
+}
+.qf-checkbox input {
+  margin-top: 2px; width: 13px; height: 13px;
+  accent-color: var(--blaze); flex-shrink: 0; cursor: pointer;
+}
+.quote-form.is-sent .qf-checkbox { display: none; }
 .qf-consent {
   margin-top: 10px;
   font-size: 10.5px; line-height: 1.5; color: var(--slate);
@@ -165,6 +180,7 @@ const {
       const originalLabel = label ? label.textContent : '';
       const fd = new FormData(form);
       const payload = Object.fromEntries(fd.entries());
+      payload.smsConsent = fd.get('smsConsent') ? 'yes' : 'no';
       payload.pageUrl = window.location.href;
       payload.submittedAt = new Date().toISOString();
       payload.referrer = document.referrer || '';
