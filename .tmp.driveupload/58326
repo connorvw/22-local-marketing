@@ -1,0 +1,130 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Why Your Phone Won&#39;t Stop Ringing With Scam Calls (And What to Do About It) | 22 Local Marketing</title><meta name="description" content="If you own a local home services business, you already know. Your phone rings, and an automated voice tells you something is wrong with your Google Business listing. It's a scam. Every single time. Here's how it works and what you can do about it."><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"><script async src="https://aromatic-caribou-889.convex.site/api/a/am_z8jL6jvgnKBNlcJA"></script><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-50NCREP6P6"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-50NCREP6P6');
+</script><link rel="stylesheet" href="/_astro/QuoteForm.BzQ9FMhG.css">
+<link rel="stylesheet" href="/_astro/BlogPostLayout.DwQT_6CC.css">
+<link rel="stylesheet" href="/_astro/BaseLayout.DvBFZpWW.css"></head> <body class> <nav class="topnav" data-astro-cid-3ef6ksr2> <div class="container topnav-inner" data-astro-cid-3ef6ksr2> <a href="/" class="wordmark" aria-label="22 Local Marketing home" data-astro-cid-3ef6ksr2> <span class="wordmark-dot" data-astro-cid-3ef6ksr2></span> <span class="wordmark-text" data-astro-cid-3ef6ksr2>22 Local Marketing</span> <img src="/logo-condensed.png" class="wordmark-img" alt="22 Local Marketing" width="2027" height="501" data-astro-cid-3ef6ksr2> </a> <div class="topnav-links" data-astro-cid-3ef6ksr2> <a href="/#services" class data-astro-cid-3ef6ksr2>What We Do</a><a href="/blog/" class="active" data-astro-cid-3ef6ksr2>Blog</a><a href="/#results" class data-astro-cid-3ef6ksr2>Results</a><a href="/pricing/" class data-astro-cid-3ef6ksr2>Pricing</a><a href="/#reviews" class data-astro-cid-3ef6ksr2>Reviews</a> <a href="/#contact" class="topnav-cta" data-quote data-astro-cid-3ef6ksr2>Free strategy call</a> <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" data-astro-cid-3ef6ksr2> <span class="nav-toggle-bar" data-astro-cid-3ef6ksr2></span> <span class="nav-toggle-bar" data-astro-cid-3ef6ksr2></span> <span class="nav-toggle-bar" data-astro-cid-3ef6ksr2></span> </button> </div> </div> <div class="mobile-menu" id="mobile-menu" data-astro-cid-3ef6ksr2> <div class="container mobile-menu-inner" data-astro-cid-3ef6ksr2> <a href="/#services" class data-astro-cid-3ef6ksr2>What We Do</a><a href="/blog/" class="active" data-astro-cid-3ef6ksr2>Blog</a><a href="/#results" class data-astro-cid-3ef6ksr2>Results</a><a href="/pricing/" class data-astro-cid-3ef6ksr2>Pricing</a><a href="/#reviews" class data-astro-cid-3ef6ksr2>Reviews</a> </div> </div> </nav>  <script>
+(function () {
+  const nav = document.querySelector('.topnav');
+  const btn = nav && nav.querySelector('.nav-toggle');
+  if (!nav || !btn) return;
+  function close() {
+    nav.classList.remove('menu-open');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.setAttribute('aria-label', 'Open menu');
+  }
+  btn.addEventListener('click', () => {
+    const open = nav.classList.toggle('menu-open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  });
+  nav.querySelectorAll('.mobile-menu a').forEach((a) => a.addEventListener('click', close));
+})();
+</script>  <article class="post"> <!-- ============ POST HERO ============ --> <header class="post-hero"> <div class="container post-hero-inner"> <nav class="post-breadcrumb" aria-label="Breadcrumb"> <a href="/">Home</a> <span class="post-bc-sep">/</span> <a href="/blog/">Blog</a> <span class="post-bc-sep">/</span> <span>Article</span> </nav> <div class="eyebrow-rugged"> <span class="eb-dash"></span> <span>Google Business Profile</span> <span class="eb-sep">·</span> <time datetime="2026-01-15">January 15, 2026</time> <span class="eb-sep">·</span> <span>8 min read</span> </div> <h1 class="post-title">Why Your Phone Won&#39;t Stop Ringing With Scam Calls (And What to Do About It)</h1> <p class="post-excerpt">If you own a local home services business, you already know. Your phone rings, and an automated voice tells you something is wrong with your Google Business listing. It&#39;s a scam. Every single time. Here&#39;s how it works and what you can do about it.</p> <div class="post-byline"> <div class="post-byline-avatar" aria-hidden="true">CD</div> <div class="post-byline-meta"> <span class="post-byline-name">By Connor Dann</span> <span class="post-byline-role">Founder, 22 Local Marketing</span> </div> </div> </div> </header> <!-- ============ POST BODY ============ --> <section class="post-body-section flush"> <div class="container post-body-grid"> <div class="post-body">  <p>If you own a home services business, you already know. Your phone rings, and an automated voice tells you something is wrong with your Google Business listing. Maybe they say your profile needs to be "verified" or "renewed." Maybe they threaten to suspend your listing unless you pay a fee or hand over your account details.</p> <p>It's a scam. Every single time.</p> <p>And it's getting worse. As of early 2026, industry data shows that roughly 40% of the calls coming through Google Business Profiles for home services businesses are spam. Not tire-kickers or wrong numbers. Straight-up scam calls.</p> <h2>How the Scam Works</h2> <p>Scammers use robocallers to blast thousands of businesses per hour with the same script. The calls sound official. Some now use AI-generated voices that are hard to distinguish from a real person. They spoof local area codes so the call looks like it's coming from down the street.</p> <p>The pitch usually goes one of two ways:</p> <p><strong>The fear play.</strong> "Your Google listing has been flagged. Press 2 immediately to speak with a representative or your listing may be suspended." Google does not do this. Google will never cold-call you about your Business Profile. If you didn't open a support ticket with Google first, the call is fake.</p> <p><strong>The sales play.</strong> "We work with Google to manage your listing. For a monthly fee, we can keep your profile active and ranking." Google Business Profiles are free. Google does not charge to add, update, or maintain a listing. Anyone telling you otherwise is lying.</p> <p>In both cases, the goal is the same: get you to hand over money, account access, or personal information.</p> <h2>Why Home Services Businesses Get Hit Harder Than Most</h2> <p>home services businesses answer their phones. That's the job. When a homeowner has a tree on their roof at 11 PM, they need someone who picks up. Scammers know this. Emergency-service businesses are the most profitable targets because the answer rate is high and the owners are used to taking calls from numbers they don't recognize.</p> <p>There's another factor. Your phone number is public. It's on your Google Business Profile, your website, your trucks, your yard signs, your Yelp page, and every directory listing your marketing company has ever submitted it to. Scammers scrape these numbers in bulk. Industry reports have found that "US home services owner" contact lists get sold for pennies per record and resold repeatedly through lead brokers.</p> <p>Here's the part that stings: the better your online presence, the more visible your phone number becomes. A strong Google Business Profile that ranks well in the map pack gets scraped more often than one buried on page three. The same SEO work that's sending you real customers is also putting your number in front of more bots.</p> <p>That doesn't mean the SEO is the problem. It means the scammers are following the signal.</p> <h2>What Google Actually Does (and Doesn't Do)</h2> <p>Google will never:</p> <ul> <li>Cold-call you about your Business Profile</li> <li>Threaten to remove your listing over the phone</li> <li>Ask for payment to keep your listing active</li> <li>Request your password or account login by phone</li> </ul> <p>Google may contact you if you've already initiated a support request, or to verify basic business details through an automated system you opted into. That's it. Every other "Google" call is someone pretending.</p> <h2>How to Shut It Down</h2> <p>There's no magic fix that stops every scam call overnight, but these steps cut the volume significantly.</p> <p><strong>1. Add a phone tree (IVR) to your business line.</strong> This is the single most effective move. A simple "Press 1 to continue" prompt before the call connects stops robocallers cold. They can't press buttons. One agency owner reported this blocking 99% of spam calls for their clients. Your real customers will press the button without thinking twice.</p> <p><strong>2. Register with the National Do Not Call Registry.</strong> It won't stop every call, but it gives you legal standing and gets your number into carrier-level filtering systems. Register at donotcall.gov.</p> <p><strong>3. Enable carrier-level spam filtering.</strong> AT&T ActiveArmor, Verizon Call Filter, and T-Mobile Scam Shield all offer free tools that flag and block known spam numbers. Contact your carrier or download their app.</p> <p><strong>4. Register your number with the Free Caller Registry.</strong> This tells major carriers your number belongs to a real business, reducing the chance your outbound calls get flagged as spam in return.</p> <p><strong>5. Never press any button or engage with a robocall.</strong> Pressing a number confirms your line is active and staffed. That makes your number more valuable to scammers and guarantees more calls, not fewer.</p> <p><strong>6. Report the calls.</strong> File complaints with the FTC at reportfraud.ftc.gov and the FCC. It takes two minutes and contributes to enforcement actions against robocall operations.</p> <h2>What to Tell Your Team</h2> <p>If you have office staff or dispatchers answering phones, make sure they know:</p> <ul> <li>Google does not call businesses about their listings</li> <li>Never give account information, passwords, or payment details to an inbound caller claiming to be from Google</li> <li>If a caller says "your listing will be removed," hang up. It's a scare tactic with no teeth.</li> <li>Log the phone number and report it</li> </ul> <p>The scam only works if someone believes it. A 30-second conversation with your team eliminates the risk.</p> <h2>The Bigger Picture</h2> <p>This problem isn't going away. AI is making these operations cheaper to run and harder to detect. The FTC has taken action against specific robocall schemes, but new ones spin up constantly.</p> <p>For home services owners investing in their online presence, scam calls are an annoying side effect of being visible. The answer isn't to shrink your digital footprint. It's to put simple filters in place, educate your team, and keep building the online presence that's actually generating revenue.</p> <p>Your Google Business Profile is still one of the most valuable lead sources your business has. Don't let a scammer convince you otherwise.</p>  <div class="post-end-rule"></div> <div class="post-cta-card"> <div class="post-cta-eyebrow">→ Free strategy call</div> <h3>Want this kind of work for your business?</h3> <p>22 Local Marketing builds the marketing engine for serious home service companies. Websites, SEO, Google Ads, and reporting tied to revenue. If anything you just read sounded like a problem you have, let's talk.</p> <a href="/#contact" class="btn btn-primary btn-lg" data-quote>Book a 30-minute call <span class="btn-arrow">→</span></a> </div> </div> <aside class="post-aside"> <div class="post-aside-sticky"> <div class="aside-card aside-toc"> <div class="aside-eyebrow">→ Article</div> <h4>What's in here</h4> <ul class="aside-meta-list"> <li><span>Category</span><strong>Google Business Profile</strong></li> <li><span>Published</span><strong>January 15, 2026</strong></li> <li><span>Read time</span><strong>8 min read</strong></li> </ul> </div> <div class="aside-card aside-recent"> <div class="aside-eyebrow">→ Keep reading</div> <h4>Recent posts</h4> <ul class="aside-recent-list"> <li> <a href="/blog/facebook-ads-for-contractors/"> <span class="aside-recent-cat">Marketing</span> <span class="aside-recent-title">Why Contractors Should Run Facebook Ads Alongside Google Ads</span> <span class="aside-recent-date">August 12, 2026</span> </a> </li><li> <a href="/blog/tree-service-websites-lose-stormseason-calls-to/"> <span class="aside-recent-cat">Business Growth</span> <span class="aside-recent-title">Tree Service Websites Lose Storm-Season Calls To Rivals</span> <span class="aside-recent-date">July 26, 2026</span> </a> </li><li> <a href="/blog/the-tree-service-industry-grows-about-5/"> <span class="aside-recent-cat">Business Growth</span> <span class="aside-recent-title">Tree Service Grows 5% a Year. Most Owners Market Wrong.</span> <span class="aside-recent-date">July 26, 2026</span> </a> </li> </ul> </div> <div class="aside-card aside-cta"> <div class="aside-eyebrow">→ Talk to us</div> <h4>Get a free audit</h4> <p>One call. One page of action items. Yours whether you hire us or not.</p> <a href="/#contact" class="btn btn-secondary" data-quote>Start the conversation <span class="btn-arrow">→</span></a> </div> </div> </aside> </div> </section> </article>  <footer data-astro-cid-sz7xmlte> <div class="container" data-astro-cid-sz7xmlte> <div class="footer-grid" data-astro-cid-sz7xmlte> <div class="footer-brand" data-astro-cid-sz7xmlte> <a href="/" class="wordmark" data-astro-cid-sz7xmlte><span class="wordmark-dot" data-astro-cid-sz7xmlte></span>22 Local Marketing</a> <p data-astro-cid-sz7xmlte>The marketing engine for serious tree and land companies. Built by operators, run for results.</p> </div> <div class="footer-col" data-astro-cid-sz7xmlte> <h4 data-astro-cid-sz7xmlte>What We Do</h4> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte><a href="/#services" data-astro-cid-sz7xmlte>Local SEO</a></li> <li data-astro-cid-sz7xmlte><a href="/#services" data-astro-cid-sz7xmlte>Google Ads</a></li> <li data-astro-cid-sz7xmlte><a href="/#services" data-astro-cid-sz7xmlte>Websites</a></li> <li data-astro-cid-sz7xmlte><a href="/#services" data-astro-cid-sz7xmlte>GBP management</a></li> <li data-astro-cid-sz7xmlte><a href="/#services" data-astro-cid-sz7xmlte>Reporting</a></li> </ul> </div> <div class="footer-col" data-astro-cid-sz7xmlte> <h4 data-astro-cid-sz7xmlte>Company</h4> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte><a href="/blog/" data-astro-cid-sz7xmlte>Blog</a></li> <li data-astro-cid-sz7xmlte><a href="/#results" data-astro-cid-sz7xmlte>Results</a></li> <li data-astro-cid-sz7xmlte><a href="/pricing/" data-astro-cid-sz7xmlte>Pricing</a></li> <li data-astro-cid-sz7xmlte><a href="/#reviews" data-astro-cid-sz7xmlte>Reviews</a></li> <li data-astro-cid-sz7xmlte><a href="/#about" data-astro-cid-sz7xmlte>About</a></li> </ul> </div> <div class="footer-col" data-astro-cid-sz7xmlte> <h4 data-astro-cid-sz7xmlte>Contact</h4> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte><a href="mailto:connor@22localmarketing.com" data-astro-cid-sz7xmlte>connor@22localmarketing.com</a></li> <li data-astro-cid-sz7xmlte>Based in North Carolina</li> <li data-astro-cid-sz7xmlte><a href="/#contact" data-astro-cid-sz7xmlte>Book a call</a></li> </ul> </div> </div> <div class="footer-bottom" data-astro-cid-sz7xmlte> <div data-astro-cid-sz7xmlte>© 2026 22 Local Marketing, a registered trade name of Connor Dann. All rights reserved. <a href="/privacy/" class="footer-legal" data-astro-cid-sz7xmlte>Privacy Policy</a> <a href="/terms/" class="footer-legal" data-astro-cid-sz7xmlte>Terms</a></div> <div data-astro-cid-sz7xmlte>Built in-house. No templates were harmed.</div> </div> </div> </footer> <div class="quote-modal" id="quote-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="quote-modal-title" data-astro-cid-ympurtut> <div class="quote-modal-overlay" data-quote-close data-astro-cid-ympurtut></div> <div class="quote-modal-panel" data-astro-cid-ympurtut> <button class="quote-modal-close" data-quote-close aria-label="Close form" data-astro-cid-ympurtut> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" data-astro-cid-ympurtut> <line x1="6" y1="6" x2="18" y2="18" data-astro-cid-ympurtut></line> <line x1="18" y1="6" x2="6" y2="18" data-astro-cid-ympurtut></line> </svg> </button> <div id="quote-modal-title" class="visually-hidden" data-astro-cid-ympurtut>Get a free site & competitor audit</div> <form class="quote-form quote-form-card" data-quote-form data-astro-cid-dmdhz2qs> <div class="qf-eyebrow" data-astro-cid-dmdhz2qs>→ Start here</div> <h3 class="qf-title" data-astro-cid-dmdhz2qs>Get a free site &amp; competitor audit</h3> <p class="qf-desc" data-astro-cid-dmdhz2qs>We review your site, GBP, and ads. You get a 1-page action list within 48 hours.</p> <div class="qf-row" data-astro-cid-dmdhz2qs> <div class="qf-field" data-astro-cid-dmdhz2qs><label class="qf-label" data-astro-cid-dmdhz2qs>First name</label><input class="qf-input" type="text" name="firstName" placeholder="John" required data-astro-cid-dmdhz2qs></div> <div class="qf-field" data-astro-cid-dmdhz2qs><label class="qf-label" data-astro-cid-dmdhz2qs>Last name</label><input class="qf-input" type="text" name="lastName" placeholder="Doe" required data-astro-cid-dmdhz2qs></div> </div> <div class="qf-row" data-astro-cid-dmdhz2qs> <div class="qf-field" data-astro-cid-dmdhz2qs><label class="qf-label" data-astro-cid-dmdhz2qs>Email</label><input class="qf-input" type="email" name="email" placeholder="you@company.com" required data-astro-cid-dmdhz2qs></div> <div class="qf-field" data-astro-cid-dmdhz2qs><label class="qf-label" data-astro-cid-dmdhz2qs>Phone</label><input class="qf-input" type="tel" name="phone" placeholder="(555) 555-5555" required data-astro-cid-dmdhz2qs></div> </div> <div class="qf-row" data-astro-cid-dmdhz2qs> <div class="qf-field" data-astro-cid-dmdhz2qs><label class="qf-label" data-astro-cid-dmdhz2qs>Business name</label><input class="qf-input" type="text" name="businessName" placeholder="Your Tree Service" required data-astro-cid-dmdhz2qs></div> <div class="qf-field" data-astro-cid-dmdhz2qs><label class="qf-label" data-astro-cid-dmdhz2qs>City</label><input class="qf-input" type="text" name="city" placeholder="Raleigh, NC" required data-astro-cid-dmdhz2qs></div> </div> <div class="qf-row" data-astro-cid-dmdhz2qs> <div class="qf-field" data-astro-cid-dmdhz2qs><label class="qf-label" data-astro-cid-dmdhz2qs>Website</label><input class="qf-input" type="text" name="websiteUrl" placeholder="yourtreeservice.com" data-astro-cid-dmdhz2qs></div> <div class="qf-field" data-astro-cid-dmdhz2qs><label class="qf-label" data-astro-cid-dmdhz2qs>Message</label><input class="qf-input" type="text" name="message" placeholder="What can we help with?" data-astro-cid-dmdhz2qs></div> </div> <label class="qf-checkbox" data-astro-cid-dmdhz2qs> <input type="checkbox" name="smsConsent" value="yes" data-astro-cid-dmdhz2qs> <span data-astro-cid-dmdhz2qs>I consent to receive text messages from 22 Local Marketing about my inquiry at the phone number provided. Message frequency may vary. Message and data rates may apply. Reply HELP for help or STOP to opt out.</span> </label> <button type="submit" class="qf-submit" data-astro-cid-dmdhz2qs><span class="qf-submit-label" data-astro-cid-dmdhz2qs>Request my audit</span> <span class="qf-arrow" data-astro-cid-dmdhz2qs>→</span></button> <p class="qf-consent" data-astro-cid-dmdhz2qs>By submitting, you agree that 22 Local Marketing may contact you by phone, email, or text message about your inquiry. Consent is not a condition of purchase. Message and data rates may apply. Message frequency varies. Reply STOP to opt out or HELP for help. See our <a href="/privacy/" data-astro-cid-dmdhz2qs>Privacy Policy</a> and <a href="/terms/" data-astro-cid-dmdhz2qs>Terms</a>.</p> <div class="qf-status" hidden data-astro-cid-dmdhz2qs></div> </form>  <script>
+(function(){
+  if (window.__qf_init) return;
+  window.__qf_init = true;
+  const WEBHOOK = 'https://connorvw.app.n8n.cloud/webhook/22lm-contact-form';
+
+  function bind(form) {
+    if (form.dataset.qfBound) return;
+    form.dataset.qfBound = '1';
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('.qf-submit');
+      const label = form.querySelector('.qf-submit-label');
+      const status = form.querySelector('.qf-status');
+      const originalLabel = label ? label.textContent : '';
+      const fd = new FormData(form);
+      const payload = Object.fromEntries(fd.entries());
+      payload.smsConsent = fd.get('smsConsent') ? 'yes' : 'no';
+      payload.pageUrl = window.location.href;
+      payload.submittedAt = new Date().toISOString();
+      payload.referrer = document.referrer || '';
+
+      if (btn) btn.disabled = true;
+      if (label) label.textContent = 'Sending...';
+      if (status) { status.hidden = true; status.className = 'qf-status'; status.textContent = ''; }
+
+      try {
+        const res = await fetch(WEBHOOK, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        form.classList.add('is-sent');
+        if (status) {
+          status.hidden = false;
+          status.className = 'qf-status is-success';
+          status.innerHTML = "<strong>Got it.</strong> We'll be in touch within one business day. Look for an email confirmation in your inbox.";
+        }
+      } catch (err) {
+        if (status) {
+          status.hidden = false;
+          status.className = 'qf-status is-error';
+          status.innerHTML = "Something went wrong on our end. Email <a href='mailto:connor@22localmarketing.com' style='color:inherit;text-decoration:underline;'>connor@22localmarketing.com</a> and we'll pick it up directly.";
+        }
+        if (btn) btn.disabled = false;
+        if (label) label.textContent = originalLabel;
+      }
+    });
+  }
+
+  function bindAll() {
+    document.querySelectorAll('form.quote-form[data-quote-form]').forEach(bind);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bindAll);
+  } else {
+    bindAll();
+  }
+  // Re-bind any forms added later (e.g. modal contents are present from page load
+  // but if anything ever swaps them, this catches it).
+  new MutationObserver(bindAll).observe(document.body, { childList: true, subtree: true });
+})();
+</script> </div> </div>  <script>
+(function(){
+  const modal = document.getElementById('quote-modal');
+  if (!modal) return;
+
+  function open() {
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('quote-open');
+    // Focus the first input in the modal on next frame
+    requestAnimationFrame(() => {
+      const first = modal.querySelector('input, select, button.qf-submit');
+      if (first) first.focus({ preventScroll: true });
+    });
+  }
+  function close() {
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('quote-open');
+  }
+
+  document.addEventListener('click', e => {
+    const opener = e.target.closest('[data-quote]');
+    if (opener) {
+      e.preventDefault();
+      open();
+      return;
+    }
+    const closer = e.target.closest('[data-quote-close]');
+    if (closer && modal.contains(closer)) {
+      e.preventDefault();
+      close();
+    }
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+      close();
+    }
+  });
+})();
+</script> </body></html>

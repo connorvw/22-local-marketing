@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paid Ads vs SEO &middot; 22 Local Marketing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blaze: #FB5607;
+      --scorch: #C13D0E;
+      --bone: #F8F6F2;
+      --white: #FFFFFF;
+      --slate: #525252;
+      --slate-light: #8A8A8A;
+      --onyx: #0A0A0A;
+      --border: #E5E2DC;
+      --border-strong: #D4D0C8;
+      --info-bg: #FFE8D9;
+      --warn: #8A5A00;
+      --warn-bg: #FFF4D9;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; overflow: hidden; }
+    body {
+      background: var(--bone);
+      color: var(--onyx);
+      font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      font-feature-settings: "ss01", "ss02";
+    }
+    .deck { width: 100vw; height: 100vh; position: relative; overflow: hidden; }
+    .slides { display: flex; height: 100vh; transition: transform 0.65s cubic-bezier(0.65, 0, 0.35, 1); }
+    .slide {
+      min-width: 100vw; width: 100vw; height: 100vh;
+      flex-shrink: 0;
+      display: flex; flex-direction: column;
+      justify-content: center;
+      padding: 12vh 9vw 16vh;
+      position: relative;
+    }
+    .slide-title { align-items: center; text-align: center; justify-content: center; }
+
+    .eyebrow {
+      font-family: 'Sora', sans-serif; font-weight: 500;
+      font-size: 14px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--blaze);
+      margin-bottom: 2.5rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .eyebrow::before {
+      content: ''; display: inline-block;
+      width: 28px; height: 2px; background: var(--blaze);
+    }
+
+    .slide-title h1 {
+      font-size: clamp(2.75rem, 7vw, 6rem);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      line-height: 0.98;
+      max-width: 95%;
+      position: relative;
+      display: inline-block;
+      padding: 14px 0 10px;
+    }
+    .slide-title h1::before, .slide-title h1::after {
+      content: ''; position: absolute;
+      width: 22px; height: 22px;
+      border: 2px solid var(--blaze);
+    }
+    .slide-title h1::before { top: 0; left: -22px; border-right: 0; border-bottom: 0; }
+    .slide-title h1::after { bottom: 0; right: -22px; border-left: 0; border-top: 0; }
+    .slide-title h1 .accent { color: var(--blaze); }
+    .slide-title .sub {
+      margin-top: 2.25rem;
+      font-size: clamp(1.125rem, 1.55vw, 1.5rem);
+      color: var(--slate);
+      max-width: 800px;
+      line-height: 1.5;
+    }
+
+    .slide h2 {
+      font-size: clamp(2.25rem, 5vw, 4.5rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+      margin-bottom: 1.5rem;
+      max-width: 1200px;
+      color: var(--onyx);
+    }
+    .slide h2 .accent { color: var(--blaze); }
+    .slide .body {
+      font-size: clamp(1.125rem, 1.65vw, 1.5rem);
+      color: var(--slate);
+      max-width: 920px;
+      line-height: 1.55;
+    }
+
+    .slide-section-label {
+      font-family: 'Sora', sans-serif; font-weight: 500;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--blaze);
+      margin-bottom: 1.5rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .slide-section-label::before {
+      content: ''; width: 28px; height: 2px;
+      background: var(--blaze); display: inline-block;
+    }
+
+    /* ===== Channel panel ===== */
+    .channel-panel {
+      max-width: 1100px;
+      margin-top: 1.5rem;
+      padding: 2.125rem 2.375rem 2.375rem;
+      background: var(--white);
+      border: 1px solid var(--onyx);
+      border-radius: 12px;
+      box-shadow: 5px 5px 0 0 var(--onyx);
+    }
+    .channel-panel .tag {
+      display: inline-block;
+      font-family: 'Sora', sans-serif; font-weight: 500;
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--scorch);
+      margin-bottom: 1rem;
+      padding: 5px 11px;
+      background: var(--info-bg);
+      border-radius: 4px;
+    }
+    .channel-panel.warn .tag {
+      color: var(--warn);
+      background: var(--warn-bg);
+    }
+    .channel-panel .name {
+      font-size: clamp(2.25rem, 4vw, 3.25rem);
+      font-weight: 700;
+      letter-spacing: -0.035em;
+      line-height: 1;
+      margin-bottom: 0.875rem;
+      color: var(--onyx);
+    }
+    .channel-panel .summary {
+      font-size: clamp(1.1875rem, 1.55vw, 1.3125rem);
+      color: var(--slate);
+      margin-bottom: 1.75rem;
+      max-width: 760px;
+      line-height: 1.5;
+    }
+    .pro-con {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    .pro-con .col h3 {
+      font-family: 'Sora', sans-serif; font-weight: 500;
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--slate);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .pro-con .col.pro h3 { color: var(--scorch); border-color: var(--blaze); }
+    .pro-con .col.con h3 { color: var(--warn); border-color: rgba(138, 90, 0, 0.4); }
+    .pro-con ul { list-style: none; }
+    .pro-con li {
+      font-size: clamp(1.0625rem, 1.3vw, 1.1875rem);
+      font-weight: 500;
+      line-height: 1.45;
+      padding: 0.5rem 0;
+      color: var(--onyx);
+      display: flex;
+      gap: 0.625rem;
+    }
+    .pro-con li::before {
+      content: '\2022';
+      color: var(--slate-light);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .pro-con .col.pro li::before { content: '+'; color: var(--blaze); }
+    .pro-con .col.con li::before { content: '\2013'; color: var(--warn); }
+
+    /* ===== Timeline ===== */
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      margin-top: 1.5rem;
+      max-width: 1200px;
+      border: 1px solid var(--onyx);
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--white);
+      box-shadow: 5px 5px 0 0 var(--onyx);
+    }
+    .timeline .step {
+      padding: 1.875rem 1.625rem 2rem;
+      border-right: 1px solid var(--border);
+      position: relative;
+    }
+    .timeline .step:last-child { border-right: none; }
+    .timeline .when {
+      font-family: 'Sora', sans-serif; font-weight: 500;
+      color: var(--blaze);
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+    .timeline .title {
+      font-size: clamp(1.25rem, 1.7vw, 1.5625rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 0.625rem;
+      color: var(--onyx);
+    }
+    .timeline .what {
+      font-size: clamp(1rem, 1.2vw, 1.125rem);
+      color: var(--slate);
+      line-height: 1.5;
+    }
+
+    /* ===== Image split ===== */
+    .slide-image-split {
+      display: grid;
+      grid-template-columns: 1fr 1.05fr;
+      gap: 5vw;
+      align-items: center;
+      padding: 11vh 7vw 14vh;
+    }
+    .image-split-text { display: flex; flex-direction: column; justify-content: center; }
+    .image-split-text h2 { font-size: clamp(2.125rem, 4.25vw, 3.5rem); margin-bottom: 1.25rem; }
+    .image-split-text .body { font-size: clamp(1.0625rem, 1.5vw, 1.3125rem); margin-bottom: 0.5rem; }
+    .image-split-img {
+      display: flex; align-items: center; justify-content: center;
+      height: 100%;
+      max-height: 75vh;
+    }
+    .image-split-img img {
+      max-height: 75vh; max-width: 100%;
+      width: auto; height: auto; object-fit: contain;
+      border-radius: 10px;
+      background: var(--white);
+      border: 1px solid var(--onyx);
+      box-shadow: 6px 6px 0 0 var(--onyx);
+    }
+
+    /* ===== Fixed UI ===== */
+    .home {
+      position: fixed;
+      top: 3vh; left: 3vw;
+      text-decoration: none;
+      color: var(--onyx);
+      font-family: 'Sora', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 10px 16px;
+      border: 1px solid var(--onyx);
+      background: var(--white);
+      border-radius: 6px;
+      box-shadow: 3px 3px 0 0 var(--onyx);
+      transition: transform 0.1s ease, box-shadow 0.1s ease, color 0.15s ease, border-color 0.15s ease;
+      z-index: 20;
+    }
+    .home:hover {
+      transform: translate(1px, 1px);
+      box-shadow: 2px 2px 0 0 var(--blaze);
+      border-color: var(--blaze);
+      color: var(--blaze);
+    }
+    .topic-label {
+      position: fixed;
+      top: 3vh; right: 3vw;
+      color: var(--slate);
+      font-family: 'Sora', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      z-index: 20;
+      padding: 10px 0;
+    }
+
+    .nav {
+      position: fixed;
+      bottom: 3.5vh;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+      background: var(--white);
+      border: 1px solid var(--onyx);
+      padding: 8px 11px;
+      border-radius: 100px;
+      z-index: 20;
+      box-shadow: 3px 3px 0 0 var(--onyx);
+    }
+    .nav button {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      border: 1px solid var(--border-strong);
+      background: var(--white);
+      color: var(--onyx);
+      cursor: pointer;
+      font-size: 16px; font-weight: 600;
+      display: inline-flex; align-items: center; justify-content: center;
+      transition: all 0.15s ease;
+      font-family: inherit;
+    }
+    .nav button:hover:not(:disabled) {
+      background: var(--blaze); color: var(--white); border-color: var(--blaze);
+    }
+    .nav button:disabled { opacity: 0.3; cursor: not-allowed; }
+    .dots { display: flex; gap: 0.45rem; padding: 0 0.5rem; }
+    .dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--border-strong);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: none; padding: 0;
+    }
+    .dot.active { background: var(--blaze); width: 24px; border-radius: 4px; }
+
+    .progress {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--border);
+      z-index: 20;
+    }
+    .progress-fill {
+      height: 100%;
+      background: var(--blaze);
+      width: 0;
+      transition: width 0.65s cubic-bezier(0.65, 0, 0.35, 1);
+    }
+    @media (max-width: 1000px) {
+      .pro-con { grid-template-columns: 1fr; gap: 1.25rem; }
+      .timeline { grid-template-columns: 1fr 1fr; }
+      .timeline .step { border-right: none; border-bottom: 1px solid var(--border); }
+    }
+    @media (max-width: 1100px) {
+      .slide-image-split { grid-template-columns: 1fr; gap: 2vh; padding: 9vh 6vw 14vh; }
+      .image-split-img { max-height: 42vh; order: -1; }
+      .image-split-img img { max-height: 42vh; }
+    }
+  </style>
+</head>
+<body>
+  <div class="deck">
+    <div class="progress"><div class="progress-fill" id="progress"></div></div>
+    <a class="home" href="/knowledge-base/">&larr; Knowledge Base</a>
+    <div class="topic-label">Paid Ads vs SEO</div>
+
+    <div class="slides" id="slides">
+      <section class="slide slide-title">
+        <div class="eyebrow">Marketing Strategy</div>
+        <h1>Paid ads or <span class="accent">SEO?</span></h1>
+        <p class="sub">The most common question home service owners ask. Here&rsquo;s the honest answer.</p>
+      </section>
+
+      <section class="slide">
+        <div class="slide-section-label">The long game</div>
+        <div class="channel-panel">
+          <span class="tag">Long game</span>
+          <div class="name">SEO</div>
+          <p class="summary">Building search visibility you don&rsquo;t pay for per click. Compounding equity in your website.</p>
+          <div class="pro-con">
+            <div class="col pro">
+              <h3>What you get</h3>
+              <ul>
+                <li>Free traffic forever once you rank</li>
+                <li>Compounds month over month</li>
+                <li>Hard for competitors to undercut</li>
+                <li>Trust signal that paid ads can&rsquo;t replicate</li>
+              </ul>
+            </div>
+            <div class="col con">
+              <h3>The cost</h3>
+              <ul>
+                <li>6 to 12 months before real results</li>
+                <li>Requires sustained content investment</li>
+                <li>Technical foundation has to be right</li>
+                <li>Quiet at the start</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide">
+        <div class="slide-section-label">The short game</div>
+        <div class="channel-panel warn">
+          <span class="tag">Short game</span>
+          <div class="name">PPC</div>
+          <p class="summary">Paying Google for clicks. Leads land in your inbox the day the campaign turns on.</p>
+          <div class="pro-con">
+            <div class="col pro">
+              <h3>What you get</h3>
+              <ul>
+                <li>Leads on day one</li>
+                <li>Predictable, scalable volume</li>
+                <li>Test offers, services, and markets fast</li>
+                <li>Full control over what you spend</li>
+              </ul>
+            </div>
+            <div class="col con">
+              <h3>The cost</h3>
+              <ul>
+                <li>Stops the day you stop paying</li>
+                <li>Costs rise as competitors enter</li>
+                <li>No long-term equity built</li>
+                <li>Bad campaigns burn cash fast</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide slide-image-split">
+        <div class="image-split-text">
+          <div class="slide-section-label">The honest answer</div>
+          <h2>Run <span class="accent">both</span>. In the right order.</h2>
+          <p class="body">PPC owns the top of the page from day one. SEO earns the map pack and organic over months. Home service companies that win cover the whole SERP. By month 12, SEO carries the load and PPC plays defense.</p>
+        </div>
+        <div class="image-split-img">
+          <img src="../assets/serp-mockup.png" alt="Google search results page showing PPC placements at the top and the map pack plus organic results below." />
+        </div>
+      </section>
+
+      <section class="slide">
+        <div class="slide-section-label">The recommended stack</div>
+        <h2>What the first year actually looks like.</h2>
+        <div class="timeline">
+          <div class="step">
+            <div class="when">Day 1</div>
+            <div class="title">GBP + Site Launch</div>
+            <div class="what">Google Business Profile fully built. New site live and indexed. Tracking installed.</div>
+          </div>
+          <div class="step">
+            <div class="when">Week 2</div>
+            <div class="title">PPC On</div>
+            <div class="what">Ads running on core services. Lead flow starts immediately while SEO works in the background.</div>
+          </div>
+          <div class="step">
+            <div class="when">Month 3</div>
+            <div class="title">SEO Contributing</div>
+            <div class="what">Service and location pages start ranking. Organic traffic builds. PPC efficiency improves.</div>
+          </div>
+          <div class="step">
+            <div class="when">Month 12+</div>
+            <div class="title">SEO Carries It</div>
+            <div class="what">Organic dominates lead volume. PPC plays defense on competitor terms. Cost per lead drops.</div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <nav class="nav">
+      <button id="prev" aria-label="Previous slide">&larr;</button>
+      <div class="dots" id="dots"></div>
+      <button id="next" aria-label="Next slide">&rarr;</button>
+    </nav>
+  </div>
+
+  <script>
+    const slidesEl = document.getElementById('slides');
+    const slides = slidesEl.querySelectorAll('.slide');
+    const total = slides.length;
+    const prevBtn = document.getElementById('prev');
+    const nextBtn = document.getElementById('next');
+    const dotsEl = document.getElementById('dots');
+    const progress = document.getElementById('progress');
+    let i = 0;
+    for (let n = 0; n < total; n++) {
+      const d = document.createElement('button');
+      d.className = 'dot' + (n === 0 ? ' active' : '');
+      d.setAttribute('aria-label', 'Slide ' + (n + 1));
+      d.addEventListener('click', () => go(n));
+      dotsEl.appendChild(d);
+    }
+    const dots = dotsEl.querySelectorAll('.dot');
+    function go(n) {
+      i = Math.max(0, Math.min(total - 1, n));
+      slidesEl.style.transform = 'translateX(-' + (i * 100) + 'vw)';
+      dots.forEach((d, idx) => d.classList.toggle('active', idx === i));
+      prevBtn.disabled = i === 0;
+      nextBtn.disabled = i === total - 1;
+      progress.style.width = (((i + 1) / total) * 100) + '%';
+    }
+    prevBtn.addEventListener('click', () => go(i - 1));
+    nextBtn.addEventListener('click', () => go(i + 1));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); go(i + 1); }
+      else if (e.key === 'ArrowLeft') { e.preventDefault(); go(i - 1); }
+      else if (e.key === 'Home') go(0);
+      else if (e.key === 'End') go(total - 1);
+    });
+    go(0);
+  </script>
+</body>
+</html>
