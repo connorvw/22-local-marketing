@@ -1,0 +1,278 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>22 Local Marketing | Tree service and land management marketing</title><meta name="description" content="22 Local Marketing builds the marketing engine for tree service and land management companies. SEO, Google Ads, websites, and reporting that ties every dollar to revenue."><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"><script async src="https://aromatic-caribou-889.convex.site/api/a/am_z8jL6jvgnKBNlcJA"></script><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-50NCREP6P6"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-50NCREP6P6');
+</script><link rel="stylesheet" href="/_astro/QuoteForm.BzQ9FMhG.css">
+<link rel="stylesheet" href="/_astro/index.C6_V5_AM.css">
+<link rel="stylesheet" href="/_astro/BaseLayout.DvBFZpWW.css"></head> <body class> <nav class="topnav" data-astro-cid-3ef6ksr2> <div class="container topnav-inner" data-astro-cid-3ef6ksr2> <a href="/" class="wordmark" aria-label="22 Local Marketing home" data-astro-cid-3ef6ksr2> <span class="wordmark-dot" data-astro-cid-3ef6ksr2></span> <span class="wordmark-text" data-astro-cid-3ef6ksr2>22 Local Marketing</span> <img src="/logo-condensed.png" class="wordmark-img" alt="22 Local Marketing" width="2027" height="501" data-astro-cid-3ef6ksr2> </a> <div class="topnav-links" data-astro-cid-3ef6ksr2> <a href="/#services" class data-astro-cid-3ef6ksr2>What We Do</a><a href="/blog/" class data-astro-cid-3ef6ksr2>Blog</a><a href="/#results" class data-astro-cid-3ef6ksr2>Results</a><a href="/pricing/" class data-astro-cid-3ef6ksr2>Pricing</a><a href="/#reviews" class data-astro-cid-3ef6ksr2>Reviews</a> <a href="/#contact" class="topnav-cta" data-quote data-astro-cid-3ef6ksr2>Free strategy call</a> <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" data-astro-cid-3ef6ksr2> <span class="nav-toggle-bar" data-astro-cid-3ef6ksr2></span> <span class="nav-toggle-bar" data-astro-cid-3ef6ksr2></span> <span class="nav-toggle-bar" data-astro-cid-3ef6ksr2></span> </button> </div> </div> <div class="mobile-menu" id="mobile-menu" data-astro-cid-3ef6ksr2> <div class="container mobile-menu-inner" data-astro-cid-3ef6ksr2> <a href="/#services" class data-astro-cid-3ef6ksr2>What We Do</a><a href="/blog/" class data-astro-cid-3ef6ksr2>Blog</a><a href="/#results" class data-astro-cid-3ef6ksr2>Results</a><a href="/pricing/" class data-astro-cid-3ef6ksr2>Pricing</a><a href="/#reviews" class data-astro-cid-3ef6ksr2>Reviews</a> </div> </div> </nav>  <script>
+(function () {
+  const nav = document.querySelector('.topnav');
+  const btn = nav && nav.querySelector('.nav-toggle');
+  if (!nav || !btn) return;
+  function close() {
+    nav.classList.remove('menu-open');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.setAttribute('aria-label', 'Open menu');
+  }
+  btn.addEventListener('click', () => {
+    const open = nav.classList.toggle('menu-open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  });
+  nav.querySelectorAll('.mobile-menu a').forEach((a) => a.addEventListener('click', close));
+})();
+</script>   <header class="hero"> <div class="container hero-grid"> <div> <div class="eyebrow-rugged"> <span class="eb-dash"></span> <span>TREE &amp; LAND MARKETING</span> <span class="eb-sep">·</span> <span>EST. 2026</span> </div> <div class="hero-frame"> <h1>The marketing engine for serious <span class="accent">tree and land</span> companies.</h1> </div> <p class="hero-sub">We build the websites, SEO, and paid campaigns that move tree services and land management companies from booked-out-by-luck to booked-out-by-system. Every dollar tied back to revenue.</p> <div class="hero-actions"> <a href="#contact" class="btn btn-primary btn-lg" data-quote>Get a free audit <span class="btn-arrow">→</span></a> <a href="#services" class="btn btn-secondary btn-lg">See what we do</a> </div> </div> <form class="quote-form quote-form-card" data-quote-form data-astro-cid-dmdhz2qs> <div class="qf-eyebrow" data-astro-cid-dmdhz2qs>→ Start here</div> <h3 class="qf-title" data-astro-cid-dmdhz2qs>Get a free site &amp; competitor audit</h3> <p class="qf-desc" data-astro-cid-dmdhz2qs>We review your site, GBP, and ads. You get a 1-page action list within 48 hours.</p> <div class="qf-row" data-astro-cid-dmdhz2qs> <div class="qf-field" data-astro-cid-dmdhz2qs><label class="qf-label" data-astro-cid-dmdhz2qs>First name</label><input class="qf-input" type="text" name="firstName" placeholder="John" required data-astro-cid-dmdhz2qs></div> <div class="qf-field" data-astro-cid-dmdhz2qs><label class="qf-label" data-astro-cid-dmdhz2qs>Last name</label><input class="qf-input" type="text" name="lastName" placeholder="Doe" required data-astro-cid-dmdhz2qs></div> </div> <div class="qf-row" data-astro-cid-dmdhz2qs> <div class="qf-field" data-astro-cid-dmdhz2qs><label class="qf-label" data-astro-cid-dmdhz2qs>Email</label><input class="qf-input" type="email" name="email" placeholder="you@company.com" required data-astro-cid-dmdhz2qs></div> <div class="qf-field" data-astro-cid-dmdhz2qs><label class="qf-label" data-astro-cid-dmdhz2qs>Phone</label><input class="qf-input" type="tel" name="phone" placeholder="(555) 555-5555" required data-astro-cid-dmdhz2qs></div> </div> <div class="qf-row" data-astro-cid-dmdhz2qs> <div class="qf-field" data-astro-cid-dmdhz2qs><label class="qf-label" data-astro-cid-dmdhz2qs>Business name</label><input class="qf-input" type="text" name="businessName" placeholder="Your Tree Service" required data-astro-cid-dmdhz2qs></div> <div class="qf-field" data-astro-cid-dmdhz2qs><label class="qf-label" data-astro-cid-dmdhz2qs>City</label><input class="qf-input" type="text" name="city" placeholder="Raleigh, NC" required data-astro-cid-dmdhz2qs></div> </div> <div class="qf-row" data-astro-cid-dmdhz2qs> <div class="qf-field" data-astro-cid-dmdhz2qs><label class="qf-label" data-astro-cid-dmdhz2qs>Website</label><input class="qf-input" type="text" name="websiteUrl" placeholder="yourtreeservice.com" data-astro-cid-dmdhz2qs></div> <div class="qf-field" data-astro-cid-dmdhz2qs><label class="qf-label" data-astro-cid-dmdhz2qs>Message</label><input class="qf-input" type="text" name="message" placeholder="What can we help with?" data-astro-cid-dmdhz2qs></div> </div> <label class="qf-checkbox" data-astro-cid-dmdhz2qs> <input type="checkbox" name="smsConsent" value="yes" data-astro-cid-dmdhz2qs> <span data-astro-cid-dmdhz2qs>I consent to receive text messages from 22 Local Marketing about my inquiry at the phone number provided. Message frequency may vary. Message and data rates may apply. Reply HELP for help or STOP to opt out.</span> </label> <button type="submit" class="qf-submit" data-astro-cid-dmdhz2qs><span class="qf-submit-label" data-astro-cid-dmdhz2qs>Request my audit</span> <span class="qf-arrow" data-astro-cid-dmdhz2qs>→</span></button> <p class="qf-consent" data-astro-cid-dmdhz2qs>By submitting, you agree that 22 Local Marketing may contact you by phone, email, or text message about your inquiry. Consent is not a condition of purchase. Message and data rates may apply. Message frequency varies. Reply STOP to opt out or HELP for help. See our <a href="/privacy/" data-astro-cid-dmdhz2qs>Privacy Policy</a> and <a href="/terms/" data-astro-cid-dmdhz2qs>Terms</a>.</p> <div class="qf-status" hidden data-astro-cid-dmdhz2qs></div> </form>  <script>
+(function(){
+  if (window.__qf_init) return;
+  window.__qf_init = true;
+  const WEBHOOK = 'https://connorvw.app.n8n.cloud/webhook/22lm-contact-form';
+
+  function bind(form) {
+    if (form.dataset.qfBound) return;
+    form.dataset.qfBound = '1';
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('.qf-submit');
+      const label = form.querySelector('.qf-submit-label');
+      const status = form.querySelector('.qf-status');
+      const originalLabel = label ? label.textContent : '';
+      const fd = new FormData(form);
+      const payload = Object.fromEntries(fd.entries());
+      payload.smsConsent = fd.get('smsConsent') ? 'yes' : 'no';
+      payload.pageUrl = window.location.href;
+      payload.submittedAt = new Date().toISOString();
+      payload.referrer = document.referrer || '';
+
+      if (btn) btn.disabled = true;
+      if (label) label.textContent = 'Sending...';
+      if (status) { status.hidden = true; status.className = 'qf-status'; status.textContent = ''; }
+
+      try {
+        const res = await fetch(WEBHOOK, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        form.classList.add('is-sent');
+        if (status) {
+          status.hidden = false;
+          status.className = 'qf-status is-success';
+          status.innerHTML = "<strong>Got it.</strong> We'll be in touch within one business day. Look for an email confirmation in your inbox.";
+        }
+      } catch (err) {
+        if (status) {
+          status.hidden = false;
+          status.className = 'qf-status is-error';
+          status.innerHTML = "Something went wrong on our end. Email <a href='mailto:connor@22localmarketing.com' style='color:inherit;text-decoration:underline;'>connor@22localmarketing.com</a> and we'll pick it up directly.";
+        }
+        if (btn) btn.disabled = false;
+        if (label) label.textContent = originalLabel;
+      }
+    });
+  }
+
+  function bindAll() {
+    document.querySelectorAll('form.quote-form[data-quote-form]').forEach(bind);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bindAll);
+  } else {
+    bindAll();
+  }
+  // Re-bind any forms added later (e.g. modal contents are present from page load
+  // but if anything ever swaps them, this catches it).
+  new MutationObserver(bindAll).observe(document.body, { childList: true, subtree: true });
+})();
+</script> </div> </header>  <section class="flush" style="padding-top: 0; border-top: 0;"> <div class="container"> <div class="stats-row"> <div class="stats-tag">Our clients average:</div> <div class="stats stats-2x2"> <div class="stat"><div class="stat-label">Phone calls</div><div class="stat-value">60+</div><div class="stat-desc">Per client each month, across Google, ads, and search</div></div> <div class="stat"><div class="stat-label">Form leads</div><div class="stat-value">40+</div><div class="stat-desc">Web form submissions per client, every month</div></div> <div class="stat"><div class="stat-label">Cost per lead</div><div class="stat-value">&lt;$50</div><div class="stat-desc">From all sources combined, paid and organic</div></div> <div class="stat"><div class="stat-label">Google reviews</div><div class="stat-value">5.0★</div><div class="stat-desc">Average rating across our clients' profiles</div></div> </div> <div class="video-placeholder hero-video"> <iframe src="https://www.tella.tv/video/vid_cmqe4jmxp045k04l94o4adtlj/embed?b=0&title=0&a=1&loop=1&t=0&muted=1&wt=0" title="Systems that build trusted brands" allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe> </div> </div> </div> </section>  <section id="services"> <div class="container"> <div class="section-head"> <h2>One team. The whole marketing stack.</h2> <span class="desc">We run SEO, paid, web, and reporting under one roof so nothing falls between the cracks.</span> </div> <div class="svc-grid"> <div class="svc-card"> <div class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg></div> <div class="svc-title">Local SEO</div> <div class="svc-body">Map pack rankings, GBP optimization, and content engineered to win every relevant search in your service area.</div> <ul class="svc-features"><li>Google Business Profile build-out</li><li>Service + location page architecture</li><li>Review velocity and reputation</li><li>Citations, schema, and technical SEO</li></ul> </div> <div class="svc-card"> <div class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 3v18h18"></path><path d="M7 14l4-4 4 3 5-7"></path></svg></div> <div class="svc-title">Paid Advertising</div> <div class="svc-body">Google Ads, LSA, and Meta Ads measured against revenue, not clicks. Built to fill calendar gaps fast.</div> <ul class="svc-features"><li>Google Search, Performance Max, and Meta Ads</li><li>Local Services Ads management</li><li>Call tracking and attribution</li><li>Weekly budget pacing reports</li></ul> </div> <div class="svc-card"> <div class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="4" width="18" height="14" rx="2"></rect><path d="M3 9h18"></path><path d="M8 14h3"></path></svg></div> <div class="svc-title">Website builds</div> <div class="svc-body">Fast, conversion-focused sites that look like the top 1% of your industry. Real photos, real content, no templates that scream template.</div> <ul class="svc-features"><li>Full custom design and copy</li><li>Service and city page coverage</li><li>Forms wired to your CRM</li><li>Fast hosting on a global edge network</li></ul> </div> <div class="svc-card"> <div class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2a10 10 0 1 0 10 10"></path><path d="M12 2v10l7 4"></path></svg></div> <div class="svc-title">Google Business Profile</div> <div class="svc-body">Geotagged posts, photos, and Q&A maintenance that keep your profile active and visible in the map pack week after week.</div> <ul class="svc-features"><li>Weekly posts with real job photos</li><li>Category and service optimization</li><li>Review responses and reporting</li><li>Spam review removal workflow</li></ul> </div> <div class="svc-card"> <div class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg></div> <div class="svc-title">AI SEO</div> <div class="svc-body">Content, schema, and entity signals tuned for ChatGPT, Gemini, and Google's AI Overviews. Built so AI tools surface your business when homeowners ask for service in your area.</div> <ul class="svc-features"><li>AI-tuned service and location page rewrites</li><li>Schema markup and entity-linked structured data</li><li>Brand mentions and citation building</li><li>Visibility tracking across ChatGPT, Gemini, and AI Overviews</li></ul> </div> <div class="svc-card"> <div class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 3h7v7H3z"></path><path d="M14 3h7v7h-7z"></path><path d="M14 14h7v7h-7z"></path><path d="M3 14h7v7H3z"></path></svg></div> <div class="svc-title">Reporting & strategy</div> <div class="svc-body">Monthly PDF reports tied to leads and revenue. Real strategy calls, not screenshot tours of vanity metrics.</div> <ul class="svc-features"><li>Branded monthly performance PDFs</li><li>Reporting tied to calls and booked jobs</li><li>Scheduled strategy session every 90 days</li><li>Phone or video calls whenever you need more</li></ul> </div> </div> </div> </section>  <section id="process"> <div class="container"> <div class="section-head"> <h2>How a campaign comes together.</h2> <span class="desc">A clear path from first call to first lead, then onward.</span> </div> <div class="process"> <div class="step"><div class="step-num">01</div><div class="step-title">Audit</div><div class="step-body">We dig into your site, GBP, ads, and reviews. One-page action list within 48 hours.</div></div> <div class="step"><div class="step-num">02</div><div class="step-title">Strategy</div><div class="step-body">We pick the channels and pages that move the needle in your market. Nothing busywork.</div></div> <div class="step"><div class="step-num">03</div><div class="step-title">Build</div><div class="step-body">Website, GBP, and ad accounts get built or rebuilt to the standard your competitors aren't holding. This is where the Compound Presence Method channels get stood up.</div></div> <div class="step"><div class="step-num">04</div><div class="step-title">Launch</div><div class="step-body">Everything goes live on the same day. Tracking, forms, and call attribution wired before traffic hits. Channels launch together, not one at a time.</div></div> <div class="step"><div class="step-num">05</div><div class="step-title">Optimize</div><div class="step-body">Weekly tweaks, monthly reports, strategy session every 90 days. We move budget toward the channels earning it and keep the overlap intact.</div></div> </div> </div> </section>  <section id="compound-presence" class="cpm-section"> <div class="container"> <div class="cpm-grid"> <div class="cpm-copy"> <div class="cpm-eyebrow">Inside build, launch, and optimize</div> <h2>The Compound Presence Method.</h2> <p class="cpm-lead">Show up everywhere your buyer looks, so the choice is made before they call.</p> <p>One channel produces leads. Several overlapping channels produce something different: a market that keeps seeing you. You win the searches you can rank for, you pay for the ones you can't, and you stay visible in the gaps between.</p> <p>This isn't a second process. It's the channel strategy that runs inside steps three, four, and five above. The five steps are how the work gets done. This is what gets deployed.</p> </div> <div class="cpm-channels"> <div class="cpm-channel">Google Ads</div> <div class="cpm-channel">Local Services Ads</div> <div class="cpm-channel">Meta Ads</div> <div class="cpm-channel">Website and SEO</div> <div class="cpm-channel">Google Business Profile</div> <div class="cpm-channel">Social media</div> <div class="cpm-channel">Citations and directories</div> <div class="cpm-channel">Review generation</div> <div class="cpm-channel">AI search visibility</div> </div> </div> </div> </section>  <section id="results" class="dark"> <div class="container"> <div class="section-head"> <h2 style="color: var(--white)">Numbers we work for.</h2> <span class="desc">Pulled from active client campaigns over the last 12 months.</span> </div> <div class="results-grid"> <div class="results-metrics"> <div class="metric-card"><div class="metric-label">Google impressions</div><div class="metric-value">17,000+</div><div class="metric-desc">For a single client in a 90-day window (Mar to May 2026).</div></div> <div class="metric-card"><div class="metric-label">Queries ranking</div><div class="metric-value">1,000+</div><div class="metric-desc">Search terms the same client now appears for on Google.</div></div> <div class="metric-card"><div class="metric-label">Top-3 rankings</div><div class="metric-value">160+</div><div class="metric-desc">Keywords this client holds in Google's top three.</div></div> </div> <div class="case-card"> <div class="case-eyebrow">[ Case study · 6 months ]</div> <div class="case-title">Land management company</div> <div class="case-meta">Northwest Ohio · Land clearing, forestry mulching, and grading</div> <div class="case-body">A newer land management company came to us with almost no search presence. We built the site, built out the Google Business Profile, and turned Google search into a real lead channel. Inside six months they rank for over 1,000 queries, pull more than 17,000 Google impressions a quarter, and hold 160-plus keywords in Google's top three.</div> <div class="case-stats"> <div class="case-stat"><div class="case-stat-value">17K</div><div class="case-stat-label">Impressions / 90 days</div></div> <div class="case-stat"><div class="case-stat-value">1,000+</div><div class="case-stat-label">Keywords ranking</div></div> <div class="case-stat"><div class="case-stat-value">160+</div><div class="case-stat-label">Top-3 rankings</div></div> </div> </div> </div> </div> </section>  <section id="reviews"> <div class="container"> <div class="section-head"> <h2>What clients actually say.</h2> <span class="desc">Real reviews from real owners we work with every week.</span> </div> <div class="review-grid"> <div class="review"><div class="review-stars">★★★★★</div><div class="review-quote">"Top marketing company for the tree service industry. Trust him to build your website and do your SEO if you are a tree company."</div><div class="review-author"><div class="review-avatar">BK</div><div class="review-meta"><div class="review-name">Ben Kleman</div><div class="review-company">Verified Google review</div></div></div></div> <div class="review"><div class="review-stars">★★★★★</div><div class="review-quote">"Connor is the man. Very responsive and he knows his stuff. He has helped my business grow more than I ever imagined. 10/10 would recommend."</div><div class="review-author"><div class="review-avatar">BF</div><div class="review-meta"><div class="review-name">Brice Fonville</div><div class="review-company">Verified Google review</div></div></div></div> <div class="review"><div class="review-stars">★★★★★</div><div class="review-quote">"Super service, very easy to work with. Connor is very knowledgeable, patient and best of all isn't trying to push services you don't need. Here's to the beginning of a long business relationship."</div><div class="review-author"><div class="review-avatar">RR</div><div class="review-meta"><div class="review-name">Robert Rangel</div><div class="review-company">Verified Google review</div></div></div></div> <div class="review"><div class="review-stars">★★★★★</div><div class="review-quote">"The knowledge he brings is unmatched to any other company I had a consultation with. For our project he was very open and explained the process simply so it was easy to follow."</div><div class="review-author"><div class="review-avatar">MV</div><div class="review-meta"><div class="review-name">Maximilian Van Dessel</div><div class="review-company">Verified Google review</div></div></div></div> <div class="review"><div class="review-stars">★★★★★</div><div class="review-quote">"Highly recommend Connor. Professional, extremely talented, and detail oriented. He focuses on your needs and creates a custom design."</div><div class="review-author"><div class="review-avatar">MY</div><div class="review-meta"><div class="review-name">Matt Yoder</div><div class="review-company">Verified Google review</div></div></div></div> <div class="review"><div class="review-stars">★★★★★</div><div class="review-quote">"Connor's attention to detail and constant communication have made him a joy to work with. I am extremely happy for the work he has done for me and hope to have a long, lasting relationship."</div><div class="review-author"><div class="review-avatar">DS</div><div class="review-meta"><div class="review-name">Dawn Sulflow</div><div class="review-company">Verified Google review</div></div></div></div> </div> <div class="review-summary"> <div class="review-sum-left"> <div class="review-sum-score">5.0</div> <div><div class="review-sum-stars">★★★★★</div><div class="review-sum-text">Across 36 verified 5-star Google reviews</div></div> </div> <a href="https://g.page/r/CQmMJquJoYTrEAE/review" class="btn btn-secondary" target="_blank" rel="noopener">See more reviews →</a> </div> </div> </section>  <section id="client-video"> <div class="container"> <div class="section-head"> <h2>Hear it from a client.</h2> <span class="desc">An unscripted look at what it's like to work with us, straight from an owner we serve.</span> </div> <div class="video-placeholder"> <button type="button" class="video-thumb video-thumb-yt" data-video-id="r8N1O7WwK6c" data-start="0" aria-label="Play client testimonial video"> <img class="yt-poster" src="https://i.ytimg.com/vi/r8N1O7WwK6c/maxresdefault.jpg" alt="" loading="lazy"> <span class="video-play"><svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></span> </button> </div> </div> </section>  <section id="about" style="background: var(--white)"> <div class="container"> <div class="about-grid"> <div class="about-copy"> <div class="section-head" style="margin-bottom: 20px"> <h2>Why owners hire us.</h2> </div> <h3>Marketing built around the work, not the retainer.</h3> <p>22 Local Marketing was built because the agency industry kept selling the same recycled retainer to tree and land owners who deserved better. Generic templates, vanity dashboards, monthly invoices, no accountability for revenue.</p> <p>Three things tend to matter most to the owners who stay. You get a fast answer, and it comes from Connor, not a ticket queue. We treat your numbers as our problem rather than handing over a list of completed tasks. And there is a method behind the work, one that produces results when it gets followed. That last part is a real condition, not a figure of speech. When a client skips the photos, sits on review requests, or holds back ad budget, the method slows down, and we will say so rather than quietly absorb it.</p> <p>One team runs SEO, paid, web, and reporting in house, so nothing gets handed off and lost. Reporting is tied to calls and booked jobs, not impressions.</p> <div class="about-bullets"> <div class="about-bullet"><div class="about-bullet-tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"></polyline></svg></div><div>Connor answers personally. Not a ticket queue.</div></div> <div class="about-bullet"><div class="about-bullet-tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"></polyline></svg></div><div>One team, in house. SEO, paid, web, and reporting.</div></div> <div class="about-bullet"><div class="about-bullet-tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"></polyline></svg></div><div>Reported against calls and booked jobs, not impressions.</div></div> <div class="about-bullet"><div class="about-bullet-tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"></polyline></svg></div><div>No long contracts. Month to month, always.</div></div> <div class="about-bullet"><div class="about-bullet-tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"></polyline></svg></div><div>You own everything we build. Site, GBP, accounts.</div></div> <div class="about-bullet"><div class="about-bullet-tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"></polyline></svg></div><div>Real photos, real copy, no templates.</div></div> </div> <a href="#contact" class="btn btn-primary btn-lg" data-quote>Book a strategy call <span class="btn-arrow">→</span></a> </div> <div class="about-card"> <div class="about-card-eyebrow">→ Founder</div> <div class="about-photo"><img src="/founder.png" alt="Connor Dann, founder of 22 Local Marketing" loading="lazy"></div> <div class="about-name">Connor Dann</div> <div class="about-role">Founder · 22 Local Marketing</div> <div class="about-quote">"Most agencies sell hours. We sell outcomes. The difference shows up in the work, and you'll feel it in the first 30 days."</div> </div> </div> </div> </section>  <section id="faq"> <div class="container"> <div class="section-head"> <h2>Questions worth answering up front.</h2> </div> <div class="faq-list"> <div class="faq-item open"><button class="faq-q">I've tried a marketing agency before and it didn't work. Why would this be different?</button><div class="faq-a">That's the objection we hear most, and it's usually earned. Here's what we can point at instead of arguing. Our clients average 60-plus phone calls and 40-plus form leads a month at under $50 per lead. One land management client in Northwest Ohio went from no search presence at all to ranking for over 1,000 queries, with 160-plus of them in Google's top three, inside six months. Our own profile sits at 5.0 stars across 36 verified Google reviews.<br><br>Now the honest part. Expect 3 to 5 leads in the first couple of months, then building from there. Not fifty. If someone promises you fifty in month one, that's the version of this that didn't work last time. You're month to month the whole way, so if we're not earning it you leave.</div></div> <div class="faq-item"><button class="faq-q">How long until I see results?</button><div class="faq-a">Expect 3 to 5 leads in the first couple of months, and growth from there. Paid usually moves first because you're buying placement. Map pack movement tends to show up inside 30 to 60 days. Organic ranking shifts take 3 to 6 months depending on where you're starting. We'll give you our read on your specific market on the first call rather than a generic number.</div></div> <div class="faq-item"><button class="faq-q">Do I have to sign a long contract?</button><div class="faq-a">No. Every engagement is month-to-month. If you want to stop, you stop. We earn the renewal by performing, not by trapping you.</div></div> <div class="faq-item"><button class="faq-q">Do I own the website and accounts you build?</button><div class="faq-a">Yes. You own the website, the domain, the GBP, the ad accounts, the call tracking, and everything in between. If we ever part ways, you walk with everything.</div></div> <div class="faq-item"><button class="faq-q">What does it actually cost?</button><div class="faq-a">Engagements are scoped to the work and your market. Most full-service clients land in the range you'd expect for an in-house marketing hire, but with a whole team behind it. We give you a flat number on the second call once we understand the scope.</div></div> <div class="faq-item"><button class="faq-q">Will you work with my existing website?</button><div class="faq-a">Sometimes yes. If the bones are good, we tune it. If it's holding you back, we rebuild it. The audit tells us which one. Most clients end up with a rebuild because the gap to top-of-industry is bigger than it looks from the inside.</div></div> <div class="faq-item"><button class="faq-q">Do you only work with tree and land companies?</button><div class="faq-a">That's where we focus, and it's where most of our clients are. The playbook came out of tree care and land management, so we know the search terms, the seasonality, and the way these jobs get bought.<br><br>We do take on other home service contractors when the fit is right. Electrical, plumbing, HVAC, roofing, landscaping, grading, and similar trades all run on the same method, since the lead is a phone call and the job happens at a property. Ask on the first call and we'll tell you whether we're the right fit.</div></div> </div> </div> </section>  <section id="contact"> <div class="container"> <div class="cta-block"> <div> <div class="cta-eyebrow">→ Free 30-minute call</div> <h2>Let's see if the numbers work.</h2> <p>One call, no pitch deck. We look at your business, your market, and tell you straight whether we can move the needle. If not, we point you at someone who can.</p> <div class="cta-points"> <div class="cta-point"><div class="cta-point-num">→</div><div><div class="cta-point-title">No pitch deck</div><div class="cta-point-desc">We come ready to talk about your business, not ours.</div></div></div> <div class="cta-point"><div class="cta-point-num">→</div><div><div class="cta-point-title">Honest answer</div><div class="cta-point-desc">If we can't help, we say so on the call.</div></div></div> <div class="cta-point"><div class="cta-point-num">→</div><div><div class="cta-point-title">Audit included</div><div class="cta-point-desc">You leave with a 1-page action list whether you hire us or not.</div></div></div> </div> </div> <form class="quote-form quote-form-card" data-quote-form data-astro-cid-dmdhz2qs> <div class="qf-eyebrow" data-astro-cid-dmdhz2qs>→ Start here</div> <h3 class="qf-title" data-astro-cid-dmdhz2qs>Get a free site &amp; competitor audit</h3> <p class="qf-desc" data-astro-cid-dmdhz2qs>We review your site, GBP, and ads. You get a 1-page action list within 48 hours.</p> <div class="qf-row" data-astro-cid-dmdhz2qs> <div class="qf-field" data-astro-cid-dmdhz2qs><label class="qf-label" data-astro-cid-dmdhz2qs>First name</label><input class="qf-input" type="text" name="firstName" placeholder="John" required data-astro-cid-dmdhz2qs></div> <div class="qf-field" data-astro-cid-dmdhz2qs><label class="qf-label" data-astro-cid-dmdhz2qs>Last name</label><input class="qf-input" type="text" name="lastName" placeholder="Doe" required data-astro-cid-dmdhz2qs></div> </div> <div class="qf-row" data-astro-cid-dmdhz2qs> <div class="qf-field" data-astro-cid-dmdhz2qs><label class="qf-label" data-astro-cid-dmdhz2qs>Email</label><input class="qf-input" type="email" name="email" placeholder="you@company.com" required data-astro-cid-dmdhz2qs></div> <div class="qf-field" data-astro-cid-dmdhz2qs><label class="qf-label" data-astro-cid-dmdhz2qs>Phone</label><input class="qf-input" type="tel" name="phone" placeholder="(555) 555-5555" required data-astro-cid-dmdhz2qs></div> </div> <div class="qf-row" data-astro-cid-dmdhz2qs> <div class="qf-field" data-astro-cid-dmdhz2qs><label class="qf-label" data-astro-cid-dmdhz2qs>Business name</label><input class="qf-input" type="text" name="businessName" placeholder="Your Tree Service" required data-astro-cid-dmdhz2qs></div> <div class="qf-field" data-astro-cid-dmdhz2qs><label class="qf-label" data-astro-cid-dmdhz2qs>City</label><input class="qf-input" type="text" name="city" placeholder="Raleigh, NC" required data-astro-cid-dmdhz2qs></div> </div> <div class="qf-row" data-astro-cid-dmdhz2qs> <div class="qf-field" data-astro-cid-dmdhz2qs><label class="qf-label" data-astro-cid-dmdhz2qs>Website</label><input class="qf-input" type="text" name="websiteUrl" placeholder="yourtreeservice.com" data-astro-cid-dmdhz2qs></div> <div class="qf-field" data-astro-cid-dmdhz2qs><label class="qf-label" data-astro-cid-dmdhz2qs>Message</label><input class="qf-input" type="text" name="message" placeholder="What can we help with?" data-astro-cid-dmdhz2qs></div> </div> <label class="qf-checkbox" data-astro-cid-dmdhz2qs> <input type="checkbox" name="smsConsent" value="yes" data-astro-cid-dmdhz2qs> <span data-astro-cid-dmdhz2qs>I consent to receive text messages from 22 Local Marketing about my inquiry at the phone number provided. Message frequency may vary. Message and data rates may apply. Reply HELP for help or STOP to opt out.</span> </label> <button type="submit" class="qf-submit" data-astro-cid-dmdhz2qs><span class="qf-submit-label" data-astro-cid-dmdhz2qs>Request my audit</span> <span class="qf-arrow" data-astro-cid-dmdhz2qs>→</span></button> <p class="qf-consent" data-astro-cid-dmdhz2qs>By submitting, you agree that 22 Local Marketing may contact you by phone, email, or text message about your inquiry. Consent is not a condition of purchase. Message and data rates may apply. Message frequency varies. Reply STOP to opt out or HELP for help. See our <a href="/privacy/" data-astro-cid-dmdhz2qs>Privacy Policy</a> and <a href="/terms/" data-astro-cid-dmdhz2qs>Terms</a>.</p> <div class="qf-status" hidden data-astro-cid-dmdhz2qs></div> </form>  <script>
+(function(){
+  if (window.__qf_init) return;
+  window.__qf_init = true;
+  const WEBHOOK = 'https://connorvw.app.n8n.cloud/webhook/22lm-contact-form';
+
+  function bind(form) {
+    if (form.dataset.qfBound) return;
+    form.dataset.qfBound = '1';
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('.qf-submit');
+      const label = form.querySelector('.qf-submit-label');
+      const status = form.querySelector('.qf-status');
+      const originalLabel = label ? label.textContent : '';
+      const fd = new FormData(form);
+      const payload = Object.fromEntries(fd.entries());
+      payload.smsConsent = fd.get('smsConsent') ? 'yes' : 'no';
+      payload.pageUrl = window.location.href;
+      payload.submittedAt = new Date().toISOString();
+      payload.referrer = document.referrer || '';
+
+      if (btn) btn.disabled = true;
+      if (label) label.textContent = 'Sending...';
+      if (status) { status.hidden = true; status.className = 'qf-status'; status.textContent = ''; }
+
+      try {
+        const res = await fetch(WEBHOOK, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        form.classList.add('is-sent');
+        if (status) {
+          status.hidden = false;
+          status.className = 'qf-status is-success';
+          status.innerHTML = "<strong>Got it.</strong> We'll be in touch within one business day. Look for an email confirmation in your inbox.";
+        }
+      } catch (err) {
+        if (status) {
+          status.hidden = false;
+          status.className = 'qf-status is-error';
+          status.innerHTML = "Something went wrong on our end. Email <a href='mailto:connor@22localmarketing.com' style='color:inherit;text-decoration:underline;'>connor@22localmarketing.com</a> and we'll pick it up directly.";
+        }
+        if (btn) btn.disabled = false;
+        if (label) label.textContent = originalLabel;
+      }
+    });
+  }
+
+  function bindAll() {
+    document.querySelectorAll('form.quote-form[data-quote-form]').forEach(bind);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bindAll);
+  } else {
+    bindAll();
+  }
+  // Re-bind any forms added later (e.g. modal contents are present from page load
+  // but if anything ever swaps them, this catches it).
+  new MutationObserver(bindAll).observe(document.body, { childList: true, subtree: true });
+})();
+</script> </div> </div> </section>  <script>
+// FAQ toggles
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => btn.parentElement.classList.toggle('open'));
+});
+
+// YouTube facade
+document.querySelectorAll('.video-thumb-yt').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const id = btn.dataset.videoId;
+    const start = btn.dataset.start || '0';
+    const iframe = document.createElement('iframe');
+    iframe.className = 'yt-iframe';
+    iframe.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&start=' + start + '&rel=0';
+    iframe.title = 'Client testimonial video';
+    iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+    iframe.setAttribute('allowfullscreen', '');
+    btn.parentNode.replaceChild(iframe, btn);
+  }, { once: true });
+});
+</script>  <footer data-astro-cid-sz7xmlte> <div class="container" data-astro-cid-sz7xmlte> <div class="footer-grid" data-astro-cid-sz7xmlte> <div class="footer-brand" data-astro-cid-sz7xmlte> <a href="/" class="wordmark" data-astro-cid-sz7xmlte><span class="wordmark-dot" data-astro-cid-sz7xmlte></span>22 Local Marketing</a> <p data-astro-cid-sz7xmlte>The marketing engine for serious tree and land companies. Built by operators, run for results.</p> </div> <div class="footer-col" data-astro-cid-sz7xmlte> <h4 data-astro-cid-sz7xmlte>What We Do</h4> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte><a href="/#services" data-astro-cid-sz7xmlte>Local SEO</a></li> <li data-astro-cid-sz7xmlte><a href="/#services" data-astro-cid-sz7xmlte>Google Ads</a></li> <li data-astro-cid-sz7xmlte><a href="/#services" data-astro-cid-sz7xmlte>Websites</a></li> <li data-astro-cid-sz7xmlte><a href="/#services" data-astro-cid-sz7xmlte>GBP management</a></li> <li data-astro-cid-sz7xmlte><a href="/#services" data-astro-cid-sz7xmlte>Reporting</a></li> </ul> </div> <div class="footer-col" data-astro-cid-sz7xmlte> <h4 data-astro-cid-sz7xmlte>Company</h4> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte><a href="/blog/" data-astro-cid-sz7xmlte>Blog</a></li> <li data-astro-cid-sz7xmlte><a href="/#results" data-astro-cid-sz7xmlte>Results</a></li> <li data-astro-cid-sz7xmlte><a href="/pricing/" data-astro-cid-sz7xmlte>Pricing</a></li> <li data-astro-cid-sz7xmlte><a href="/#reviews" data-astro-cid-sz7xmlte>Reviews</a></li> <li data-astro-cid-sz7xmlte><a href="/#about" data-astro-cid-sz7xmlte>About</a></li> </ul> </div> <div class="footer-col" data-astro-cid-sz7xmlte> <h4 data-astro-cid-sz7xmlte>Contact</h4> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte><a href="mailto:connor@22localmarketing.com" data-astro-cid-sz7xmlte>connor@22localmarketing.com</a></li> <li data-astro-cid-sz7xmlte>Based in North Carolina</li> <li data-astro-cid-sz7xmlte><a href="/#contact" data-astro-cid-sz7xmlte>Book a call</a></li> </ul> </div> </div> <div class="footer-bottom" data-astro-cid-sz7xmlte> <div data-astro-cid-sz7xmlte>© 2026 22 Local Marketing, a registered trade name of Connor Dann. All rights reserved. <a href="/privacy/" class="footer-legal" data-astro-cid-sz7xmlte>Privacy Policy</a> <a href="/terms/" class="footer-legal" data-astro-cid-sz7xmlte>Terms</a></div> <div data-astro-cid-sz7xmlte>Built in-house. No templates were harmed.</div> </div> </div> </footer> <div class="quote-modal" id="quote-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="quote-modal-title" data-astro-cid-ympurtut> <div class="quote-modal-overlay" data-quote-close data-astro-cid-ympurtut></div> <div class="quote-modal-panel" data-astro-cid-ympurtut> <button class="quote-modal-close" data-quote-close aria-label="Close form" data-astro-cid-ympurtut> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" data-astro-cid-ympurtut> <line x1="6" y1="6" x2="18" y2="18" data-astro-cid-ympurtut></line> <line x1="18" y1="6" x2="6" y2="18" data-astro-cid-ympurtut></line> </svg> </button> <div id="quote-modal-title" class="visually-hidden" data-astro-cid-ympurtut>Get a free site & competitor audit</div> <form class="quote-form quote-form-card" data-quote-form data-astro-cid-dmdhz2qs> <div class="qf-eyebrow" data-astro-cid-dmdhz2qs>→ Start here</div> <h3 class="qf-title" data-astro-cid-dmdhz2qs>Get a free site &amp; competitor audit</h3> <p class="qf-desc" data-astro-cid-dmdhz2qs>We review your site, GBP, and ads. You get a 1-page action list within 48 hours.</p> <div class="qf-row" data-astro-cid-dmdhz2qs> <div class="qf-field" data-astro-cid-dmdhz2qs><label class="qf-label" data-astro-cid-dmdhz2qs>First name</label><input class="qf-input" type="text" name="firstName" placeholder="John" required data-astro-cid-dmdhz2qs></div> <div class="qf-field" data-astro-cid-dmdhz2qs><label class="qf-label" data-astro-cid-dmdhz2qs>Last name</label><input class="qf-input" type="text" name="lastName" placeholder="Doe" required data-astro-cid-dmdhz2qs></div> </div> <div class="qf-row" data-astro-cid-dmdhz2qs> <div class="qf-field" data-astro-cid-dmdhz2qs><label class="qf-label" data-astro-cid-dmdhz2qs>Email</label><input class="qf-input" type="email" name="email" placeholder="you@company.com" required data-astro-cid-dmdhz2qs></div> <div class="qf-field" data-astro-cid-dmdhz2qs><label class="qf-label" data-astro-cid-dmdhz2qs>Phone</label><input class="qf-input" type="tel" name="phone" placeholder="(555) 555-5555" required data-astro-cid-dmdhz2qs></div> </div> <div class="qf-row" data-astro-cid-dmdhz2qs> <div class="qf-field" data-astro-cid-dmdhz2qs><label class="qf-label" data-astro-cid-dmdhz2qs>Business name</label><input class="qf-input" type="text" name="businessName" placeholder="Your Tree Service" required data-astro-cid-dmdhz2qs></div> <div class="qf-field" data-astro-cid-dmdhz2qs><label class="qf-label" data-astro-cid-dmdhz2qs>City</label><input class="qf-input" type="text" name="city" placeholder="Raleigh, NC" required data-astro-cid-dmdhz2qs></div> </div> <div class="qf-row" data-astro-cid-dmdhz2qs> <div class="qf-field" data-astro-cid-dmdhz2qs><label class="qf-label" data-astro-cid-dmdhz2qs>Website</label><input class="qf-input" type="text" name="websiteUrl" placeholder="yourtreeservice.com" data-astro-cid-dmdhz2qs></div> <div class="qf-field" data-astro-cid-dmdhz2qs><label class="qf-label" data-astro-cid-dmdhz2qs>Message</label><input class="qf-input" type="text" name="message" placeholder="What can we help with?" data-astro-cid-dmdhz2qs></div> </div> <label class="qf-checkbox" data-astro-cid-dmdhz2qs> <input type="checkbox" name="smsConsent" value="yes" data-astro-cid-dmdhz2qs> <span data-astro-cid-dmdhz2qs>I consent to receive text messages from 22 Local Marketing about my inquiry at the phone number provided. Message frequency may vary. Message and data rates may apply. Reply HELP for help or STOP to opt out.</span> </label> <button type="submit" class="qf-submit" data-astro-cid-dmdhz2qs><span class="qf-submit-label" data-astro-cid-dmdhz2qs>Request my audit</span> <span class="qf-arrow" data-astro-cid-dmdhz2qs>→</span></button> <p class="qf-consent" data-astro-cid-dmdhz2qs>By submitting, you agree that 22 Local Marketing may contact you by phone, email, or text message about your inquiry. Consent is not a condition of purchase. Message and data rates may apply. Message frequency varies. Reply STOP to opt out or HELP for help. See our <a href="/privacy/" data-astro-cid-dmdhz2qs>Privacy Policy</a> and <a href="/terms/" data-astro-cid-dmdhz2qs>Terms</a>.</p> <div class="qf-status" hidden data-astro-cid-dmdhz2qs></div> </form>  <script>
+(function(){
+  if (window.__qf_init) return;
+  window.__qf_init = true;
+  const WEBHOOK = 'https://connorvw.app.n8n.cloud/webhook/22lm-contact-form';
+
+  function bind(form) {
+    if (form.dataset.qfBound) return;
+    form.dataset.qfBound = '1';
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('.qf-submit');
+      const label = form.querySelector('.qf-submit-label');
+      const status = form.querySelector('.qf-status');
+      const originalLabel = label ? label.textContent : '';
+      const fd = new FormData(form);
+      const payload = Object.fromEntries(fd.entries());
+      payload.smsConsent = fd.get('smsConsent') ? 'yes' : 'no';
+      payload.pageUrl = window.location.href;
+      payload.submittedAt = new Date().toISOString();
+      payload.referrer = document.referrer || '';
+
+      if (btn) btn.disabled = true;
+      if (label) label.textContent = 'Sending...';
+      if (status) { status.hidden = true; status.className = 'qf-status'; status.textContent = ''; }
+
+      try {
+        const res = await fetch(WEBHOOK, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        form.classList.add('is-sent');
+        if (status) {
+          status.hidden = false;
+          status.className = 'qf-status is-success';
+          status.innerHTML = "<strong>Got it.</strong> We'll be in touch within one business day. Look for an email confirmation in your inbox.";
+        }
+      } catch (err) {
+        if (status) {
+          status.hidden = false;
+          status.className = 'qf-status is-error';
+          status.innerHTML = "Something went wrong on our end. Email <a href='mailto:connor@22localmarketing.com' style='color:inherit;text-decoration:underline;'>connor@22localmarketing.com</a> and we'll pick it up directly.";
+        }
+        if (btn) btn.disabled = false;
+        if (label) label.textContent = originalLabel;
+      }
+    });
+  }
+
+  function bindAll() {
+    document.querySelectorAll('form.quote-form[data-quote-form]').forEach(bind);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bindAll);
+  } else {
+    bindAll();
+  }
+  // Re-bind any forms added later (e.g. modal contents are present from page load
+  // but if anything ever swaps them, this catches it).
+  new MutationObserver(bindAll).observe(document.body, { childList: true, subtree: true });
+})();
+</script> </div> </div>  <script>
+(function(){
+  const modal = document.getElementById('quote-modal');
+  if (!modal) return;
+
+  function open() {
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('quote-open');
+    // Focus the first input in the modal on next frame
+    requestAnimationFrame(() => {
+      const first = modal.querySelector('input, select, button.qf-submit');
+      if (first) first.focus({ preventScroll: true });
+    });
+  }
+  function close() {
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('quote-open');
+  }
+
+  document.addEventListener('click', e => {
+    const opener = e.target.closest('[data-quote]');
+    if (opener) {
+      e.preventDefault();
+      open();
+      return;
+    }
+    const closer = e.target.closest('[data-quote-close]');
+    if (closer && modal.contains(closer)) {
+      e.preventDefault();
+      close();
+    }
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+      close();
+    }
+  });
+})();
+</script> </body></html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>How to Get More Google Reviews Without Begging, Buying, or Breaking the Rules | 22 Local Marketing</title><meta name="description" content="The highest-converting review tactic we've seen in the trades costs about two dollars. Here's the full system: how to get reviews every week, where they should live, and what to do when they come in."><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"><script async src="https://aromatic-caribou-889.convex.site/api/a/am_z8jL6jvgnKBNlcJA"></script><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-50NCREP6P6"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-50NCREP6P6');
+</script><link rel="stylesheet" href="/_astro/QuoteForm.BzQ9FMhG.css">
+<link rel="stylesheet" href="/_astro/BlogPostLayout.DwQT_6CC.css">
+<link rel="stylesheet" href="/_astro/BaseLayout.DvBFZpWW.css"></head> <body class> <nav class="topnav" data-astro-cid-3ef6ksr2> <div class="container topnav-inner" data-astro-cid-3ef6ksr2> <a href="/" class="wordmark" aria-label="22 Local Marketing home" data-astro-cid-3ef6ksr2> <span class="wordmark-dot" data-astro-cid-3ef6ksr2></span> <span class="wordmark-text" data-astro-cid-3ef6ksr2>22 Local Marketing</span> <img src="/logo-condensed.png" class="wordmark-img" alt="22 Local Marketing" width="2027" height="501" data-astro-cid-3ef6ksr2> </a> <div class="topnav-links" data-astro-cid-3ef6ksr2> <a href="/#services" class data-astro-cid-3ef6ksr2>What We Do</a><a href="/blog/" class="active" data-astro-cid-3ef6ksr2>Blog</a><a href="/#results" class data-astro-cid-3ef6ksr2>Results</a><a href="/pricing/" class data-astro-cid-3ef6ksr2>Pricing</a><a href="/#reviews" class data-astro-cid-3ef6ksr2>Reviews</a> <a href="/#contact" class="topnav-cta" data-quote data-astro-cid-3ef6ksr2>Free strategy call</a> <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" data-astro-cid-3ef6ksr2> <span class="nav-toggle-bar" data-astro-cid-3ef6ksr2></span> <span class="nav-toggle-bar" data-astro-cid-3ef6ksr2></span> <span class="nav-toggle-bar" data-astro-cid-3ef6ksr2></span> </button> </div> </div> <div class="mobile-menu" id="mobile-menu" data-astro-cid-3ef6ksr2> <div class="container mobile-menu-inner" data-astro-cid-3ef6ksr2> <a href="/#services" class data-astro-cid-3ef6ksr2>What We Do</a><a href="/blog/" class="active" data-astro-cid-3ef6ksr2>Blog</a><a href="/#results" class data-astro-cid-3ef6ksr2>Results</a><a href="/pricing/" class data-astro-cid-3ef6ksr2>Pricing</a><a href="/#reviews" class data-astro-cid-3ef6ksr2>Reviews</a> </div> </div> </nav>  <script>
+(function () {
+  const nav = document.querySelector('.topnav');
+  const btn = nav && nav.querySelector('.nav-toggle');
+  if (!nav || !btn) return;
+  function close() {
+    nav.classList.remove('menu-open');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.setAttribute('aria-label', 'Open menu');
+  }
+  btn.addEventListener('click', () => {
+    const open = nav.classList.toggle('menu-open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  });
+  nav.querySelectorAll('.mobile-menu a').forEach((a) => a.addEventListener('click', close));
+})();
+</script>  <article class="post"> <!-- ============ POST HERO ============ --> <header class="post-hero"> <div class="container post-hero-inner"> <nav class="post-breadcrumb" aria-label="Breadcrumb"> <a href="/">Home</a> <span class="post-bc-sep">/</span> <a href="/blog/">Blog</a> <span class="post-bc-sep">/</span> <span>Article</span> </nav> <div class="eyebrow-rugged"> <span class="eb-dash"></span> <span>Google Business Profile</span> <span class="eb-sep">·</span> <time datetime="2026-07-09">July 9, 2026</time> <span class="eb-sep">·</span> <span>7 min read</span> </div> <h1 class="post-title">How to Get More Google Reviews Without Begging, Buying, or Breaking the Rules</h1> <p class="post-excerpt">The highest-converting review tactic we&#39;ve seen in the trades costs about two dollars. Here&#39;s the full system: how to get reviews every week, where they should live, and what to do when they come in.</p> <div class="post-byline"> <div class="post-byline-avatar" aria-hidden="true">CD</div> <div class="post-byline-meta"> <span class="post-byline-name">By Connor Dann</span> <span class="post-byline-role">Founder, 22 Local Marketing</span> </div> </div> </div> </header> <!-- ============ POST BODY ============ --> <section class="post-body-section flush"> <div class="container post-body-grid"> <div class="post-body">  <p>Reviews decide who gets the call before your phone ever rings. A homeowner with three quotes in hand is going to look at your Google profile, look at the other two, and make half the decision right there.</p> <p>Most home service businesses know this. Very few have a system for it. They ask when they remember, go quiet for months, and wonder why the competitor with a worse crew keeps showing up above them on the map.</p> <p>This is the system we run for our clients. It covers three things: how to get more reviews without begging or buying them, where those reviews should live, and what to do when they come in, good or bad. Everything here is safe under Google's review policies.</p> <h2>Frequency Beats Volume</h2> <p>Before the tactics, one principle worth remembering: a business earning one review a week, every week, will usually outrank a business sitting on a bigger pile of old reviews.</p> <p>Steady reviews tell Google you are active right now. A profile with 200 reviews that went quiet a year ago reads as a business that peaked. A profile adding one a week reads as a business people are hiring today.</p> <p>That also means you never have "enough." The goal is a rhythm, not a number.</p> <h2>The Laminated QR Sheet</h2> <p>The single highest-converting review tactic we have seen in the trades costs about two dollars.</p> <p>Here's the problem it solves: most customers say yes to a review and then forget the moment you leave the driveway. The QR sheet closes that gap by making the review happen while you are standing there.</p> <ol> <li><strong>Get your direct review link.</strong> In your Google Business Profile dashboard, hit "Ask for reviews" and copy the short link. That link opens the leave-a-review box directly. No searching, no taps in between.</li> <li><strong>Turn it into a QR code.</strong> Any free QR generator works. Download the code at high resolution.</li> <li><strong>Print and laminate it.</strong> One sheet per crew: your logo at the top, the QR code big in the middle, and one line under it: "Scan to leave us a Google review." Laminate it so it survives the truck.</li> <li><strong>Make it part of the final walkthrough.</strong> Every job ends with a walkthrough anyway. Show the finished work, then hand over the sheet while you are still standing together. The customer scans, taps stars, and is done in under a minute.</li> </ol> <p>The ask itself should be low key. Something like:</p> <blockquote>"Before we head out, if you're happy with how everything turned out, would you mind scanning this and leaving us a quick review? It takes about thirty seconds and it genuinely helps a small crew like ours. And if you add a photo of the finished work, even better."</blockquote> <p>Ask once, politely, and let it go. The link works just as well from their couch that evening. You are making it easy, never making it awkward.</p> <p>The photo ask matters more than people realize. Reviews that mention the service you did and the town it happened in, plus a photo, are worth far more for rankings than a bare five stars. You never script the customer's words. But "mention what we did and where, if you can" is a fair and honest ask.</p> <h2>The Same-Day Text Backup</h2> <p>Some customers wave you off at the walkthrough and still mean well. Text them the same link before you leave the job site. Not that evening, not tomorrow. Response rates fall off a cliff within hours of job completion.</p> <blockquote>"Hi [name], thank you for choosing [business name]! It was a pleasure working on your property today. If you have a minute, a quick review at the link below would mean a lot to our crew. [review link]"</blockquote> <h2>The Rules That Keep You Safe</h2> <p>Google has been aggressive about review enforcement lately, and a flagged profile is far more expensive than a slow one. Four rules:</p> <ul> <li><strong>Never pay, discount, or gift for reviews.</strong> Incentivized reviews violate Google policy and can get the whole profile penalized.</li> <li><strong>Never filter who you ask.</strong> Asking only happy customers, known as review gating, also violates policy. Ask everyone, the same way, every job.</li> <li><strong>Real customers only.</strong> No friends, no family, no bought reviews. One flagged batch can wipe out years of real ones.</li> <li><strong>Never stop.</strong> A review rhythm that runs for two months and dies looks worse than a slow steady trickle that never quits.</li> </ul> <p>We covered <a href="/blog/google-review-policy-change-2026/">Google's 2026 review policy update</a> in detail if you want the full picture of what gets flagged now.</p> <h2>Where Your Reviews Should Live</h2> <p>Google carries the most weight, but a review profile that exists only on Google looks thin to both customers and AI search tools, which read all of these platforms when deciding who to recommend.</p> <ul> <li><strong>Google, roughly 70% of your asks.</strong> Drives map rankings, AI recommendations, and most customer decisions. The QR sheet and text ask point here by default.</li> <li><strong>Facebook, secondary.</strong> Point every fifth ask or so here, especially customers who found you on Facebook. Recommendations there feed local word of mouth and show up in AI answers.</li> <li><strong>Yelp, passive only.</strong> Claim and complete your profile, but do not actively ask for Yelp reviews. Yelp penalizes solicited reviews and hides them. Let these come naturally.</li> <li><strong>BBB, Nextdoor, Angi, occasional.</strong> Claim the profiles so the information is right. A handful of reviews across these rounds out the footprint AI tools see.</li> </ul> <p>The simple rotation: default everyone to Google. Once you pass a healthy Google baseline (100 or more is the benchmark we work toward), start steering roughly one in five asks to Facebook. Never route anyone to Yelp directly.</p> <h2>Respond to Every Positive Review</h2> <p>Within 48 hours. A fast owner response signals an active business to both Google and the next customer reading it.</p> <p>Keep it to two or three sentences, in your own voice. Thank them by name, mention the work naturally ("glad the drainage issue is finally handled"), and welcome them back. Working the service and town in naturally helps the review rank. Stuffing keywords into every reply looks fake and reads worse.</p> <p>And vary the wording. Ten identical "Thanks for the 5 stars!" replies look automated. Write like a person.</p> <h2>Negative Reviews: Do Not Fight in Public</h2> <p>This is our rule, and we hold every client to it: never argue with a bad review publicly. An angry public reply lives forever, reads worse than the review itself, and tells every future customer how you handle conflict.</p> <p>Instead:</p> <ol> <li><strong>Document it.</strong> Screenshot the review and pull the job records while details are fresh.</li> <li><strong>Check if it's reportable.</strong> Reviews from people who were never customers, competitor sabotage, profanity, or spam all violate Google's policies and can be reported for removal. A surprising share of bad reviews qualify.</li> <li><strong>Take it offline.</strong> If it's a real customer with a real complaint, call them. A resolved problem often turns into an edited or deleted review, and even when it doesn't, you handled it like a professional.</li> <li><strong>Bury it with volume.</strong> The permanent fix for one bad review is fifty new good ones. The weekly rhythm above is the real defense.</li> </ol> <h2>What This Looks Like in Practice</h2> <p>One review a week from the QR sheet. A same-day text to everyone who waved it off. Every positive review answered within two days. Bad ones handled quietly and reported when they break the rules.</p> <p>None of it is complicated, and none of it requires software. It requires doing the same small things every job, forever. Six months of that beats any shortcut on the market.</p> <p>If you would rather have someone run this for you, review management is part of what we do for every client. <a href="/#contact" data-quote>Book a call</a> and we'll walk you through it.</p>  <div class="post-end-rule"></div> <div class="post-cta-card"> <div class="post-cta-eyebrow">→ Free strategy call</div> <h3>Want this kind of work for your business?</h3> <p>22 Local Marketing builds the marketing engine for serious home service companies. Websites, SEO, Google Ads, and reporting tied to revenue. If anything you just read sounded like a problem you have, let's talk.</p> <a href="/#contact" class="btn btn-primary btn-lg" data-quote>Book a 30-minute call <span class="btn-arrow">→</span></a> </div> </div> <aside class="post-aside"> <div class="post-aside-sticky"> <div class="aside-card aside-toc"> <div class="aside-eyebrow">→ Article</div> <h4>What's in here</h4> <ul class="aside-meta-list"> <li><span>Category</span><strong>Google Business Profile</strong></li> <li><span>Published</span><strong>July 9, 2026</strong></li> <li><span>Read time</span><strong>7 min read</strong></li> </ul> </div> <div class="aside-card aside-recent"> <div class="aside-eyebrow">→ Keep reading</div> <h4>Recent posts</h4> <ul class="aside-recent-list"> <li> <a href="/blog/facebook-ads-for-contractors/"> <span class="aside-recent-cat">Marketing</span> <span class="aside-recent-title">Why Contractors Should Run Facebook Ads Alongside Google Ads</span> <span class="aside-recent-date">August 12, 2026</span> </a> </li><li> <a href="/blog/tree-service-websites-lose-stormseason-calls-to/"> <span class="aside-recent-cat">Business Growth</span> <span class="aside-recent-title">Tree Service Websites Lose Storm-Season Calls To Rivals</span> <span class="aside-recent-date">July 26, 2026</span> </a> </li><li> <a href="/blog/the-tree-service-industry-grows-about-5/"> <span class="aside-recent-cat">Business Growth</span> <span class="aside-recent-title">Tree Service Grows 5% a Year. Most Owners Market Wrong.</span> <span class="aside-recent-date">July 26, 2026</span> </a> </li> </ul> </div> <div class="aside-card aside-cta"> <div class="aside-eyebrow">→ Talk to us</div> <h4>Get a free audit</h4> <p>One call. One page of action items. Yours whether you hire us or not.</p> <a href="/#contact" class="btn btn-secondary" data-quote>Start the conversation <span class="btn-arrow">→</span></a> </div> </div> </aside> </div> </section> </article>  <footer data-astro-cid-sz7xmlte> <div class="container" data-astro-cid-sz7xmlte> <div class="footer-grid" data-astro-cid-sz7xmlte> <div class="footer-brand" data-astro-cid-sz7xmlte> <a href="/" class="wordmark" data-astro-cid-sz7xmlte><span class="wordmark-dot" data-astro-cid-sz7xmlte></span>22 Local Marketing</a> <p data-astro-cid-sz7xmlte>The marketing engine for serious tree and land companies. Built by operators, run for results.</p> </div> <div class="footer-col" data-astro-cid-sz7xmlte> <h4 data-astro-cid-sz7xmlte>What We Do</h4> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte><a href="/#services" data-astro-cid-sz7xmlte>Local SEO</a></li> <li data-astro-cid-sz7xmlte><a href="/#services" data-astro-cid-sz7xmlte>Google Ads</a></li> <li data-astro-cid-sz7xmlte><a href="/#services" data-astro-cid-sz7xmlte>Websites</a></li> <li data-astro-cid-sz7xmlte><a href="/#services" data-astro-cid-sz7xmlte>GBP management</a></li> <li data-astro-cid-sz7xmlte><a href="/#services" data-astro-cid-sz7xmlte>Reporting</a></li> </ul> </div> <div class="footer-col" data-astro-cid-sz7xmlte> <h4 data-astro-cid-sz7xmlte>Company</h4> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte><a href="/blog/" data-astro-cid-sz7xmlte>Blog</a></li> <li data-astro-cid-sz7xmlte><a href="/#results" data-astro-cid-sz7xmlte>Results</a></li> <li data-astro-cid-sz7xmlte><a href="/pricing/" data-astro-cid-sz7xmlte>Pricing</a></li> <li data-astro-cid-sz7xmlte><a href="/#reviews" data-astro-cid-sz7xmlte>Reviews</a></li> <li data-astro-cid-sz7xmlte><a href="/#about" data-astro-cid-sz7xmlte>About</a></li> </ul> </div> <div class="footer-col" data-astro-cid-sz7xmlte> <h4 data-astro-cid-sz7xmlte>Contact</h4> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte><a href="mailto:connor@22localmarketing.com" data-astro-cid-sz7xmlte>connor@22localmarketing.com</a></li> <li data-astro-cid-sz7xmlte>Based in North Carolina</li> <li data-astro-cid-sz7xmlte><a href="/#contact" data-astro-cid-sz7xmlte>Book a call</a></li> </ul> </div> </div> <div class="footer-bottom" data-astro-cid-sz7xmlte> <div data-astro-cid-sz7xmlte>© 2026 22 Local Marketing, a registered trade name of Connor Dann. All rights reserved. <a href="/privacy/" class="footer-legal" data-astro-cid-sz7xmlte>Privacy Policy</a> <a href="/terms/" class="footer-legal" data-astro-cid-sz7xmlte>Terms</a></div> <div data-astro-cid-sz7xmlte>Built in-house. No templates were harmed.</div> </div> </div> </footer> <div class="quote-modal" id="quote-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="quote-modal-title" data-astro-cid-ympurtut> <div class="quote-modal-overlay" data-quote-close data-astro-cid-ympurtut></div> <div class="quote-modal-panel" data-astro-cid-ympurtut> <button class="quote-modal-close" data-quote-close aria-label="Close form" data-astro-cid-ympurtut> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" data-astro-cid-ympurtut> <line x1="6" y1="6" x2="18" y2="18" data-astro-cid-ympurtut></line> <line x1="18" y1="6" x2="6" y2="18" data-astro-cid-ympurtut></line> </svg> </button> <div id="quote-modal-title" class="visually-hidden" data-astro-cid-ympurtut>Get a free site & competitor audit</div> <form class="quote-form quote-form-card" data-quote-form data-astro-cid-dmdhz2qs> <div class="qf-eyebrow" data-astro-cid-dmdhz2qs>→ Start here</div> <h3 class="qf-title" data-astro-cid-dmdhz2qs>Get a free site &amp; competitor audit</h3> <p class="qf-desc" data-astro-cid-dmdhz2qs>We review your site, GBP, and ads. You get a 1-page action list within 48 hours.</p> <div class="qf-row" data-astro-cid-dmdhz2qs> <div class="qf-field" data-astro-cid-dmdhz2qs><label class="qf-label" data-astro-cid-dmdhz2qs>First name</label><input class="qf-input" type="text" name="firstName" placeholder="John" required data-astro-cid-dmdhz2qs></div> <div class="qf-field" data-astro-cid-dmdhz2qs><label class="qf-label" data-astro-cid-dmdhz2qs>Last name</label><input class="qf-input" type="text" name="lastName" placeholder="Doe" required data-astro-cid-dmdhz2qs></div> </div> <div class="qf-row" data-astro-cid-dmdhz2qs> <div class="qf-field" data-astro-cid-dmdhz2qs><label class="qf-label" data-astro-cid-dmdhz2qs>Email</label><input class="qf-input" type="email" name="email" placeholder="you@company.com" required data-astro-cid-dmdhz2qs></div> <div class="qf-field" data-astro-cid-dmdhz2qs><label class="qf-label" data-astro-cid-dmdhz2qs>Phone</label><input class="qf-input" type="tel" name="phone" placeholder="(555) 555-5555" required data-astro-cid-dmdhz2qs></div> </div> <div class="qf-row" data-astro-cid-dmdhz2qs> <div class="qf-field" data-astro-cid-dmdhz2qs><label class="qf-label" data-astro-cid-dmdhz2qs>Business name</label><input class="qf-input" type="text" name="businessName" placeholder="Your Tree Service" required data-astro-cid-dmdhz2qs></div> <div class="qf-field" data-astro-cid-dmdhz2qs><label class="qf-label" data-astro-cid-dmdhz2qs>City</label><input class="qf-input" type="text" name="city" placeholder="Raleigh, NC" required data-astro-cid-dmdhz2qs></div> </div> <div class="qf-row" data-astro-cid-dmdhz2qs> <div class="qf-field" data-astro-cid-dmdhz2qs><label class="qf-label" data-astro-cid-dmdhz2qs>Website</label><input class="qf-input" type="text" name="websiteUrl" placeholder="yourtreeservice.com" data-astro-cid-dmdhz2qs></div> <div class="qf-field" data-astro-cid-dmdhz2qs><label class="qf-label" data-astro-cid-dmdhz2qs>Message</label><input class="qf-input" type="text" name="message" placeholder="What can we help with?" data-astro-cid-dmdhz2qs></div> </div> <label class="qf-checkbox" data-astro-cid-dmdhz2qs> <input type="checkbox" name="smsConsent" value="yes" data-astro-cid-dmdhz2qs> <span data-astro-cid-dmdhz2qs>I consent to receive text messages from 22 Local Marketing about my inquiry at the phone number provided. Message frequency may vary. Message and data rates may apply. Reply HELP for help or STOP to opt out.</span> </label> <button type="submit" class="qf-submit" data-astro-cid-dmdhz2qs><span class="qf-submit-label" data-astro-cid-dmdhz2qs>Request my audit</span> <span class="qf-arrow" data-astro-cid-dmdhz2qs>→</span></button> <p class="qf-consent" data-astro-cid-dmdhz2qs>By submitting, you agree that 22 Local Marketing may contact you by phone, email, or text message about your inquiry. Consent is not a condition of purchase. Message and data rates may apply. Message frequency varies. Reply STOP to opt out or HELP for help. See our <a href="/privacy/" data-astro-cid-dmdhz2qs>Privacy Policy</a> and <a href="/terms/" data-astro-cid-dmdhz2qs>Terms</a>.</p> <div class="qf-status" hidden data-astro-cid-dmdhz2qs></div> </form>  <script>
+(function(){
+  if (window.__qf_init) return;
+  window.__qf_init = true;
+  const WEBHOOK = 'https://connorvw.app.n8n.cloud/webhook/22lm-contact-form';
+
+  function bind(form) {
+    if (form.dataset.qfBound) return;
+    form.dataset.qfBound = '1';
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('.qf-submit');
+      const label = form.querySelector('.qf-submit-label');
+      const status = form.querySelector('.qf-status');
+      const originalLabel = label ? label.textContent : '';
+      const fd = new FormData(form);
+      const payload = Object.fromEntries(fd.entries());
+      payload.smsConsent = fd.get('smsConsent') ? 'yes' : 'no';
+      payload.pageUrl = window.location.href;
+      payload.submittedAt = new Date().toISOString();
+      payload.referrer = document.referrer || '';
+
+      if (btn) btn.disabled = true;
+      if (label) label.textContent = 'Sending...';
+      if (status) { status.hidden = true; status.className = 'qf-status'; status.textContent = ''; }
+
+      try {
+        const res = await fetch(WEBHOOK, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        form.classList.add('is-sent');
+        if (status) {
+          status.hidden = false;
+          status.className = 'qf-status is-success';
+          status.innerHTML = "<strong>Got it.</strong> We'll be in touch within one business day. Look for an email confirmation in your inbox.";
+        }
+      } catch (err) {
+        if (status) {
+          status.hidden = false;
+          status.className = 'qf-status is-error';
+          status.innerHTML = "Something went wrong on our end. Email <a href='mailto:connor@22localmarketing.com' style='color:inherit;text-decoration:underline;'>connor@22localmarketing.com</a> and we'll pick it up directly.";
+        }
+        if (btn) btn.disabled = false;
+        if (label) label.textContent = originalLabel;
+      }
+    });
+  }
+
+  function bindAll() {
+    document.querySelectorAll('form.quote-form[data-quote-form]').forEach(bind);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bindAll);
+  } else {
+    bindAll();
+  }
+  // Re-bind any forms added later (e.g. modal contents are present from page load
+  // but if anything ever swaps them, this catches it).
+  new MutationObserver(bindAll).observe(document.body, { childList: true, subtree: true });
+})();
+</script> </div> </div>  <script>
+(function(){
+  const modal = document.getElementById('quote-modal');
+  if (!modal) return;
+
+  function open() {
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('quote-open');
+    // Focus the first input in the modal on next frame
+    requestAnimationFrame(() => {
+      const first = modal.querySelector('input, select, button.qf-submit');
+      if (first) first.focus({ preventScroll: true });
+    });
+  }
+  function close() {
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('quote-open');
+  }
+
+  document.addEventListener('click', e => {
+    const opener = e.target.closest('[data-quote]');
+    if (opener) {
+      e.preventDefault();
+      open();
+      return;
+    }
+    const closer = e.target.closest('[data-quote-close]');
+    if (closer && modal.contains(closer)) {
+      e.preventDefault();
+      close();
+    }
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+      close();
+    }
+  });
+})();
+</script> </body></html>
