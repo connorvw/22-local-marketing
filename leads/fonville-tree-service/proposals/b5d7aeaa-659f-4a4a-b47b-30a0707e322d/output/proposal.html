@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Fonville Tree Service — SEO & GEO Proposal</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+<style>
+:root {
+  --brand-primary: #FB5607;
+  --brand-primary-dark: #dc4b06;
+  --brand-secondary: #1a1a1f;
+  --brand-primary-light: #FB5607;
+}
+</style>
+<style>
+/**
+ * Agency OS Proposal CSS
+ * Font: Sora (replacing Space Grotesk + Inter per improvement plan)
+ * Slide dimensions: 1280x720
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap');
+
+/* Reset & Base */
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#1a1a1f;font-family:'Sora',sans-serif;padding:24px 0;}
+
+/* Slide Structure */
+.slide-wrap{width:100%;display:flex;justify-content:center;margin-bottom:16px;}
+.slide{width:1280px;height:720px;background:#f8f7f4;background-image:linear-gradient(rgba(158,124,46,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(158,124,46,.03) 1px,transparent 1px);background-size:64px 64px;position:relative;overflow:hidden;flex-shrink:0;transform-origin:top center;border-radius:6px;box-shadow:0 8px 40px rgba(0,0,0,.35);}
+
+/* Accent Bar (top) */
+.ab{position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--brand-primary, #9e7c2e),var(--brand-primary-light, #c8a44e));z-index:20;}
+
+/* Footer */
+.ft{position:absolute;bottom:0;left:0;right:0;height:38px;background:rgba(248,247,244,.92);border-top:1px solid rgba(0,0,0,.06);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:space-between;padding:0 44px;z-index:20;}
+.ft-logo{font-family:'Sora',sans-serif;font-size:15px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#1a1a1f;}
+.ft-logo span{color:var(--brand-primary, #9e7c2e);}
+.ft-c{font-size:14px;color:#8a8892;letter-spacing:.04em;position:absolute;left:50%;transform:translateX(-50%);}
+.ft-r{font-size:14px;color:#8a8892;}
+
+/* Slide Inner */
+.si{padding:28px 44px 52px;height:100%;display:flex;flex-direction:column;}
+
+/* Typography */
+.sg{font-family:'Sora',sans-serif;font-weight:700;}
+.ey{font-size:14px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--brand-primary, #9e7c2e);margin-bottom:5px;}
+.slide-title{font-family:'Sora',sans-serif;font-size:30px;font-weight:700;color:#1a1a1f;line-height:1.1;margin-bottom:3px;}
+.slide-src{font-size:16px;color:#8a8892;letter-spacing:.01em;margin-bottom:14px;}
+
+/* Cards */
+.card{background:#ffffff;border:1px solid rgba(0,0,0,.08);border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.04);}
+.card-h{font-size:14px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:#8a8892;margin-bottom:8px;flex-shrink:0;}
+
+/* KPI Row */
+.kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px;flex-shrink:0;}
+.kpi{border-radius:12px;padding:14px 18px;position:relative;}
+.kpi-l{font-size:13px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:#8a8892;margin-bottom:5px;}
+.kpi-v{font-family:'Sora',sans-serif;font-size:44px;font-weight:800;color:#1a1a1f;line-height:1;}
+.kpi-m{font-size:15px;color:#8a8892;margin-top:4px;}
+
+/* KPI Colors */
+.kpi-gold{background:linear-gradient(135deg,rgba(158,124,46,.1),rgba(158,124,46,.04));border:1px solid rgba(158,124,46,.2);}
+.kpi-blue{background:linear-gradient(135deg,rgba(59,130,246,.09),rgba(59,130,246,.03));border:1px solid rgba(59,130,246,.18);}
+.kpi-green{background:linear-gradient(135deg,rgba(22,163,74,.09),rgba(22,163,74,.03));border:1px solid rgba(22,163,74,.18);}
+.kpi-purple{background:linear-gradient(135deg,rgba(139,92,246,.09),rgba(139,92,246,.03));border:1px solid rgba(139,92,246,.18);}
+.kpi-red{background:linear-gradient(135deg,rgba(239,68,68,.09),rgba(239,68,68,.03));border:1px solid rgba(239,68,68,.18);}
+
+/* Status Colors */
+.dn{color:#ef4444;font-weight:600;}
+.up{color:#16a34a;font-weight:600;}
+
+/* Comparison Table */
+.comp-t{width:100%;border-collapse:collapse;}
+.comp-t th{padding:9px 14px;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#8a8892;text-align:left;border-bottom:1px solid rgba(0,0,0,.08);background:rgba(0,0,0,.02);white-space:nowrap;}
+.comp-t th.you{background:rgba(158,124,46,.07);color:var(--brand-primary, #9e7c2e);border-bottom:1px solid rgba(158,124,46,.2);}
+.comp-t td{padding:8px 14px;font-size:16px;color:#5a5862;border-bottom:1px solid rgba(0,0,0,.04);vertical-align:middle;}
+.comp-t td.you{background:rgba(158,124,46,.04);color:#1a1a1f;}
+.comp-t tbody tr:last-child td{border-bottom:none;}
+.win{color:#16a34a;font-weight:700;}
+.gap-n{font-size:12px;color:#8a8892;display:block;margin-top:1px;font-weight:400;}
+
+/* Chips */
+.chip{display:inline-flex;align-items:center;justify-content:center;padding:3px 9px;border-radius:20px;font-size:14px;font-weight:700;}
+.ch-z{background:rgba(0,0,0,.06);color:#8a8892;}
+.ch-s{background:rgba(158,124,46,.12);color:var(--brand-primary, #9e7c2e);}
+.ch-g{background:rgba(22,163,74,.12);color:#16a34a;}
+.ch-r{background:rgba(239,68,68,.12);color:#ef4444;}
+
+/* Metric Stats */
+.ms-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px;flex-shrink:0;}
+.ms{background:linear-gradient(135deg,rgba(22,163,74,.08),rgba(22,163,74,.03));border:1px solid rgba(22,163,74,.2);border-radius:10px;padding:10px 14px;}
+.ms-l{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#8a8892;margin-bottom:4px;}
+.ms-v{font-family:'Sora',sans-serif;font-size:22px;font-weight:800;color:#16a34a;}
+.ms-s{font-size:13px;color:#8a8892;margin-top:2px;}
+.ms-red{background:linear-gradient(135deg,rgba(239,68,68,.08),rgba(239,68,68,.03));border:1px solid rgba(239,68,68,.2);}
+.ms-red .ms-v{color:#ef4444;}
+.ms-amber{background:linear-gradient(135deg,rgba(217,119,6,.08),rgba(217,119,6,.03));border:1px solid rgba(217,119,6,.2);}
+.ms-amber .ms-v{color:#d97706;}
+
+/* GEO Layout */
+.geo-layout{display:grid;grid-template-columns:56% 44%;gap:12px;flex:1;min-height:0;}
+.mx-card{background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.04);padding:14px 16px;display:flex;flex-direction:column;}
+.mx-t{width:100%;border-collapse:collapse;}
+.mx-t th{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#8a8892;padding:7px 10px;text-align:center;border-bottom:1px solid rgba(0,0,0,.08);white-space:nowrap;}
+.mx-t th:first-child{text-align:left;}
+.mx-t th.myou{color:var(--brand-primary, #9e7c2e);background:rgba(158,124,46,.07);border-bottom:1px solid rgba(158,124,46,.2);}
+.mx-t td{padding:8px 10px;text-align:center;font-size:15px;border-bottom:1px solid rgba(0,0,0,.04);}
+.mx-t td:first-child{text-align:left;font-size:14px;color:#1a1a1f;font-weight:600;}
+.mx-t td.myou{background:rgba(158,124,46,.03);}
+.mx-t tr:last-child td{border-bottom:none;}
+
+/* GEO Values */
+.mz{color:#ef4444;font-family:'Sora',sans-serif;font-weight:700;font-size:17px;}
+.mg{color:#16a34a;font-family:'Sora',sans-serif;font-weight:700;}
+.mb{color:#7c3aed;font-family:'Sora',sans-serif;font-weight:700;font-size:20px;}
+.mm{color:var(--brand-primary, #9e7c2e);font-family:'Sora',sans-serif;font-weight:700;}
+.mp{color:#8a8892;font-family:'Sora',sans-serif;font-weight:600;font-size:15px;font-style:italic;}
+
+/* GEO Right Panel */
+.geo-right{display:flex;flex-direction:column;gap:10px;}
+.geo-hero{background:linear-gradient(135deg,rgba(239,68,68,.08),rgba(239,68,68,.03));border:1px solid rgba(239,68,68,.2);border-radius:12px;padding:16px 18px;display:flex;align-items:center;gap:16px;flex-shrink:0;}
+.gh-num{font-family:'Sora',sans-serif;font-size:80px;font-weight:800;color:#ef4444;line-height:1;flex-shrink:0;}
+.gh-title{font-family:'Sora',sans-serif;font-size:17px;font-weight:700;color:#1a1a1f;margin-bottom:5px;}
+.gh-sub{font-size:14px;color:#5a5862;line-height:1.6;}
+.geo-opp{background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.04);padding:14px 16px;flex:1;}
+.go-title{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--brand-primary, #9e7c2e);margin-bottom:10px;}
+.go-row{display:flex;align-items:flex-start;gap:9px;margin-bottom:8px;font-size:14px;color:#5a5862;line-height:1.5;}
+.go-row:last-child{margin-bottom:0;}
+.go-dot{width:18px;height:18px;border-radius:50%;background:rgba(158,124,46,.1);border:1px solid rgba(158,124,46,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+.go-dot span{font-size:11px;font-weight:700;color:var(--brand-primary, #9e7c2e);}
+.go-kw{font-weight:600;color:#1a1a1f;display:block;margin-bottom:1px;}
+.geo-note{font-size:12px;color:rgba(109,40,217,.55);font-style:italic;margin-top:8px;padding-top:8px;border-top:1px dashed rgba(139,92,246,.2);}
+
+/* Local Grid */
+.lv-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:3px;}
+.lv-cell{border-radius:4px;display:flex;align-items:center;justify-content:center;font-family:'Sora',sans-serif;font-weight:700;font-size:14px;height:32px;}
+.lv-1{background:#16a34a;color:#fff;}
+.lv-2{background:#22c55e;color:#fff;}
+.lv-310{background:#d97706;color:#fff;}
+.lv-1120{background:#ef4444;color:#fff;}
+.lv-none{background:rgba(0,0,0,.06);color:#c0bdb8;}
+
+/* Observation Cards */
+.obs-card{background:#ffffff;border:1px solid rgba(0,0,0,.08);border-left:4px solid var(--brand-primary, #9e7c2e);border-radius:0 10px 10px 0;padding:10px 13px;box-shadow:0 2px 6px rgba(0,0,0,.04);display:flex;gap:9px;align-items:flex-start;}
+.obs-card.obs-purple{border-left-color:#8b5cf6;}
+.obs-card.obs-red{border-left-color:#ef4444;}
+.obs-num{width:22px;height:22px;border-radius:50%;background:var(--brand-primary, #9e7c2e);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.obs-num.obs-purple{background:#8b5cf6;}
+.obs-num.obs-red{background:#ef4444;}
+.obs-num span{font-size:13px;font-weight:800;color:#fff;}
+.obs-title{font-size:15px;font-weight:700;color:#1a1a1f;font-family:'Sora',sans-serif;margin-bottom:3px;}
+.obs-body{font-size:13px;color:#5a5862;line-height:1.45;}
+
+/* Executive Summary - Challenges text (increased font per plan) */
+.challenges-text{font-size:21px;line-height:1.6;color:#5a5862;}
+
+/* Strategic Reads - Market slide (increased font per plan) */
+.strategic-reads{font-size:21px;line-height:1.6;color:#5a5862;}
+
+/* Takeaways text (increased font per plan) */
+.kt-txt{font-size:18px;line-height:1.55;color:#5a5862;}
+
+/* Marketing Funnel Layout */
+.funnel-layout{display:grid;grid-template-columns:45% 55%;gap:16px;flex:1;min-height:0;}
+.funnel-svg{display:flex;align-items:center;justify-content:center;}
+.funnel-boxes{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:10px;}
+.funnel-box{background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;}
+.funnel-box-h{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#8a8892;margin-bottom:6px;}
+.funnel-box-pct{font-family:'Sora',sans-serif;font-size:36px;font-weight:800;margin-bottom:4px;}
+.funnel-box-kws{font-size:13px;color:#5a5862;line-height:1.4;}
+
+/* Team Grid */
+.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:16px;}
+.team-card{background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:12px;padding:20px;text-align:center;box-shadow:0 2px 6px rgba(0,0,0,.04);}
+.team-avatar{width:80px;height:80px;border-radius:50%;margin:0 auto 12px;object-fit:cover;border:3px solid rgba(158,124,46,.2);}
+.team-avatar-placeholder{width:80px;height:80px;border-radius:50%;margin:0 auto 12px;background:linear-gradient(135deg,rgba(158,124,46,.15),rgba(158,124,46,.05));border:3px solid rgba(158,124,46,.2);display:flex;align-items:center;justify-content:center;font-family:'Sora',sans-serif;font-size:28px;font-weight:700;color:var(--brand-primary, #9e7c2e);}
+.team-name{font-family:'Sora',sans-serif;font-size:18px;font-weight:700;color:#1a1a1f;margin-bottom:4px;}
+.team-role{font-size:14px;color:var(--brand-primary, #9e7c2e);font-weight:600;margin-bottom:8px;}
+.team-bio{font-size:13px;color:#5a5862;line-height:1.5;}
+
+/* Investment Table */
+.invest-table{width:100%;border-collapse:collapse;margin-top:12px;}
+.invest-table th{padding:10px 14px;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#8a8892;text-align:center;border-bottom:2px solid rgba(0,0,0,.08);background:rgba(0,0,0,.02);}
+.invest-table th:first-child{text-align:left;}
+.invest-table td{padding:10px 14px;font-size:14px;color:#5a5862;text-align:center;border-bottom:1px solid rgba(0,0,0,.04);}
+.invest-table td:first-child{text-align:left;font-weight:600;color:#1a1a1f;}
+.invest-table .month-total{font-family:'Sora',sans-serif;font-size:16px;font-weight:700;color:var(--brand-primary, #9e7c2e);}
+.invest-tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px;}
+.invest-tile{background:linear-gradient(135deg,rgba(158,124,46,.08),rgba(158,124,46,.03));border:1px solid rgba(158,124,46,.2);border-radius:10px;padding:14px 18px;text-align:center;}
+.invest-tile-icon{font-size:24px;margin-bottom:6px;}
+.invest-tile-txt{font-size:14px;font-weight:600;color:#1a1a1f;}
+
+/* Traffic Chart */
+.traffic-chart-wrap{flex:1;min-height:0;display:flex;flex-direction:column;}
+.traffic-chart-wrap canvas{flex:1;}
+
+/* Backlink Comparison Table */
+.backlink-comp{width:100%;border-collapse:collapse;}
+.backlink-comp th{padding:10px 14px;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#8a8892;text-align:center;border-bottom:1px solid rgba(0,0,0,.08);background:rgba(0,0,0,.02);}
+.backlink-comp th:first-child{text-align:left;}
+.backlink-comp th.you{background:rgba(158,124,46,.07);color:var(--brand-primary, #9e7c2e);}
+.backlink-comp td{padding:10px 14px;font-size:16px;color:#5a5862;text-align:center;border-bottom:1px solid rgba(0,0,0,.04);}
+.backlink-comp td:first-child{text-align:left;font-weight:600;color:#1a1a1f;}
+.backlink-comp td.you{background:rgba(158,124,46,.04);}
+
+/* Technical Audit Table */
+.audit-table{width:100%;border-collapse:collapse;}
+.audit-table th{padding:10px 14px;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#8a8892;text-align:left;border-bottom:1px solid rgba(0,0,0,.08);background:rgba(0,0,0,.02);}
+.audit-table td{padding:10px 14px;font-size:14px;color:#5a5862;border-bottom:1px solid rgba(0,0,0,.04);}
+.audit-table .status-pass{color:#16a34a;font-weight:600;}
+.audit-table .status-warn{color:#d97706;font-weight:600;}
+.audit-table .status-fail{color:#ef4444;font-weight:600;}
+
+/* Action Plan Timeline */
+.action-timeline{display:flex;gap:12px;margin-top:16px;flex:1;}
+.action-phase{flex:1;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:12px;padding:16px;display:flex;flex-direction:column;}
+.action-phase-h{font-family:'Sora',sans-serif;font-size:14px;font-weight:700;color:#fff;padding:8px 12px;border-radius:8px;margin-bottom:12px;text-align:center;}
+.action-phase-period{font-size:12px;color:#8a8892;text-align:center;margin-bottom:12px;}
+.action-phase-items{list-style:none;padding:0;margin:0;}
+.action-phase-items li{font-size:13px;color:#5a5862;padding:6px 0;border-bottom:1px dashed rgba(0,0,0,.06);display:flex;align-items:flex-start;gap:8px;}
+.action-phase-items li:last-child{border-bottom:none;}
+.action-phase-items li::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;flex-shrink:0;margin-top:6px;}
+
+/* Traffic Projection */
+.proj-layout{display:grid;grid-template-columns:60% 40%;gap:16px;flex:1;min-height:0;}
+.proj-chart{background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:12px;padding:16px;display:flex;flex-direction:column;}
+.proj-metrics{display:flex;flex-direction:column;gap:12px;}
+.proj-metric{background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:12px;padding:16px;text-align:center;}
+.proj-metric-l{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#8a8892;margin-bottom:6px;}
+.proj-metric-v{font-family:'Sora',sans-serif;font-size:32px;font-weight:800;color:#1a1a1f;}
+.proj-metric-v.up{color:#16a34a;}
+
+/* Print Styles */
+@media print{
+  body{background:#fff;padding:0;}
+  @page{size:1280px 720px;margin:0;}
+  *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;}
+  .slide-wrap{display:block!important;page-break-after:always!important;width:1280px!important;height:720px!important;margin:0!important;}
+  .slide{width:1280px!important;height:720px!important;transform:none!important;border-radius:0!important;box-shadow:none!important;}
+}
+
+</style>
+</head>
+<body class="">
+
+<div class="slide-wrap"><div class="slide">
+  <div class="ab"></div>
+  <div class="si">
+    <div style="position:absolute;right:-80px;top:-80px;width:480px;height:480px;background:radial-gradient(circle,rgba(158,124,46,.07) 0%,transparent 65%);pointer-events:none;z-index:1;"></div>
+<div style="position:absolute;left:-100px;bottom:-100px;width:360px;height:360px;background:radial-gradient(circle,rgba(158,124,46,.04) 0%,transparent 65%);pointer-events:none;z-index:1;"></div>
+<div style="position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;text-align:center;padding:60px 80px;">
+  <div style="font-family:'Sora',sans-serif;font-size:17px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:#1a1a1f;margin-bottom:44px;">22 Local Marketing</div>
+  <div style="width:72px;height:3px;background:linear-gradient(90deg,var(--brand-primary, #9e7c2e),var(--brand-primary-light, #c8a44e));border-radius:2px;margin-bottom:44px;"></div>
+  <div style="font-family:'Sora',sans-serif;font-size:52px;font-weight:700;color:#1a1a1f;line-height:1.05;margin-bottom:10px;">SEO & GEO Proposal</div>
+  <div style="font-size:26px;font-weight:600;color:var(--brand-primary, #9e7c2e);letter-spacing:.04em;margin-bottom:50px;">Fonville Tree Service</div>
+  <div style="font-size:15px;color:#8a8892;">June 18, 2026</div>
+</div>
+
+  </div>
+  <div class="ft">
+    <div class="ft-logo">
+      2L
+    </div>
+    <div class="ft-c">Fonville Tree Service</div>
+    <div class="ft-r">0 / 13</div>
+  </div>
+</div></div>
+<div class="slide-wrap"><div class="slide">
+  <div class="ab"></div>
+  <div class="si">
+    <div class="ey">Overview</div>
+<div class="slide-title">Executive Summary</div>
+<div class="slide-src">Fonville Tree Service — Current State & Opportunities</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;flex:1;min-height:0;">
+  <div class="card" style="padding:20px;display:flex;flex-direction:column;">
+    <div class="card-h">Current State</div>
+    <div class="kpi-row" style="grid-template-columns:1fr 1fr;margin-bottom:16px;">
+      <div class="kpi kpi-gold">
+        <div class="kpi-l">Monthly Traffic</div>
+        <div class="kpi-v" style="font-size:32px;"></div>
+        
+      </div>
+      <div class="kpi kpi-blue">
+        <div class="kpi-l">Domain Rating</div>
+        <div class="kpi-v" style="font-size:32px;"></div>
+      </div>
+    </div>
+    <div class="card-h">Challenges & Opportunities</div>
+    <div class="challenges-text" style="flex:1;">
+      <p style="margin-bottom:10px;">• Organic traffic peaked in January 2026 and has fallen sharply since, with a near-zero month in March worth investigating</p>
+      <p style="margin-bottom:10px;">• A high-value page is a 404: /services/free-wood-chips still draws 330 impressions a month with nothing to land on</p>
+      <p style="margin-bottom:10px;">• Local visibility is modest at about 14% Share of Local Voice, and the profile drops out of the top 20 entirely in the western part of Wake Forest</p>
+      <p style="margin-bottom:10px;">• Most service and service-area pages sit on page 2, and the /services money page is thin</p>
+    </div>
+  </div>
+
+  <div class="card" style="padding:20px;display:flex;flex-direction:column;">
+    <div class="card-h">Key Metrics</div>
+    <div class="kpi-row" style="grid-template-columns:1fr 1fr;margin-bottom:16px;">
+      <div class="kpi kpi-purple">
+        <div class="kpi-l">Ranking Keywords</div>
+        <div class="kpi-v" style="font-size:32px;"></div>
+      </div>
+      <div class="kpi kpi-green">
+        <div class="kpi-l">Top 10 Keywords</div>
+        <div class="kpi-v" style="font-size:32px;"></div>
+      </div>
+    </div>
+    <div class="card-h">Opportunities</div>
+    <div class="challenges-text" style="flex:1;">
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="ft">
+    <div class="ft-logo">
+      2L
+    </div>
+    <div class="ft-c">Fonville Tree Service</div>
+    <div class="ft-r">1 / 13</div>
+  </div>
+</div></div>
+<div class="slide-wrap"><div class="slide">
+  <div class="ab"></div>
+  <div class="si">
+    <div class="ey">Performance</div>
+<div class="slide-title">Organic Performance</div>
+<div class="slide-src">fonvilletreeservice.com — Data as of Jun 18, 2026</div>
+
+<div class="kpi-row">
+  <div class="kpi kpi-gold">
+    <div class="kpi-l">Monthly Traffic</div>
+    <div class="kpi-v"></div>
+    
+  </div>
+  <div class="kpi kpi-blue">
+    <div class="kpi-l">Traffic Value</div>
+    <div class="kpi-v">$0</div>
+    <div class="kpi-m">/month</div>
+  </div>
+  <div class="kpi kpi-purple">
+    <div class="kpi-l">Ranking Keywords</div>
+    <div class="kpi-v"></div>
+    
+  </div>
+  <div class="kpi kpi-green">
+    <div class="kpi-l">Domain Rating</div>
+    <div class="kpi-v"></div>
+  </div>
+</div>
+
+<div class="card" style="flex:1;min-height:0;padding:14px 18px 12px;">
+  <div class="card-h">Organic Traffic Trend — Fonville Tree Service — 5 Year History</div>
+  <div class="traffic-chart-wrap">
+    <canvas id="traffic-chart"></canvas>
+  </div>
+</div>
+
+  </div>
+  <div class="ft">
+    <div class="ft-logo">
+      2L
+    </div>
+    <div class="ft-c">Fonville Tree Service</div>
+    <div class="ft-r">2 / 13</div>
+  </div>
+</div></div>
+<div class="slide-wrap"><div class="slide">
+  <div class="ab"></div>
+  <div class="si">
+    <div class="ey">Analysis</div>
+<div class="slide-title">Why Has Traffic Fallen?</div>
+<div class="slide-src">fonvilletreeservice.com — Root Cause Analysis</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;flex:1;min-height:0;">
+  <div style="display:flex;flex-direction:column;gap:12px;">
+  </div>
+
+  <div class="card" style="padding:20px;display:flex;flex-direction:column;">
+    <div class="card-h">Impact Summary</div>
+    <div class="kpi-row" style="grid-template-columns:1fr 1fr;margin-bottom:16px;">
+      <div class="kpi kpi-red">
+        <div class="kpi-l">Traffic Lost</div>
+        <div class="kpi-v" style="font-size:28px;color:#ef4444;"></div>
+        <div class="kpi-m"> decline</div>
+      </div>
+      <div class="kpi kpi-red">
+        <div class="kpi-l">Value Lost</div>
+        <div class="kpi-v" style="font-size:28px;color:#ef4444;">$</div>
+        <div class="kpi-m">/month</div>
+      </div>
+    </div>
+    <div class="card-h">Recovery Potential</div>
+    <div style="flex:1;">
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="ft">
+    <div class="ft-logo">
+      2L
+    </div>
+    <div class="ft-c">Fonville Tree Service</div>
+    <div class="ft-r">3 / 13</div>
+  </div>
+</div></div>
+<div class="slide-wrap"><div class="slide">
+  <div class="ab"></div>
+  <div class="si">
+    <div class="ey">Strategy</div>
+<div class="slide-title">Marketing Funnel</div>
+<div class="slide-src">fonvilletreeservice.com — Keyword Distribution by Intent</div>
+
+<div class="funnel-layout">
+  <div class="funnel-svg">
+    <svg width="380" height="520" viewBox="0 0 380 520">
+      <path d="M10,10 L370,10 L340,130 L40,130 Z" fill="rgba(99,102,241,0.15)" stroke="rgba(99,102,241,0.4)" stroke-width="2"/>
+      <text x="190" y="55" text-anchor="middle" font-family="Sora" font-size="14" font-weight="600" fill="#6366f1">AWARENESS</text>
+      <text x="190" y="80" text-anchor="middle" font-family="Sora" font-size="24" font-weight="800" fill="#6366f1">%</text>
+      <text x="190" y="105" text-anchor="middle" font-family="Sora" font-size="12" fill="#8a8892"> keywords</text>
+
+      <path d="M40,140 L340,140 L310,260 L70,260 Z" fill="rgba(59,130,246,0.15)" stroke="rgba(59,130,246,0.4)" stroke-width="2"/>
+      <text x="190" y="185" text-anchor="middle" font-family="Sora" font-size="14" font-weight="600" fill="#3b82f6">CONSIDERATION</text>
+      <text x="190" y="210" text-anchor="middle" font-family="Sora" font-size="24" font-weight="800" fill="#3b82f6">%</text>
+      <text x="190" y="235" text-anchor="middle" font-family="Sora" font-size="12" fill="#8a8892"> keywords</text>
+
+      <path d="M70,270 L310,270 L270,390 L110,390 Z" fill="rgba(34,197,94,0.15)" stroke="rgba(34,197,94,0.4)" stroke-width="2"/>
+      <text x="190" y="315" text-anchor="middle" font-family="Sora" font-size="14" font-weight="600" fill="#22c55e">DECISION</text>
+      <text x="190" y="340" text-anchor="middle" font-family="Sora" font-size="24" font-weight="800" fill="#22c55e">%</text>
+      <text x="190" y="365" text-anchor="middle" font-family="Sora" font-size="12" fill="#8a8892"> keywords</text>
+
+      <path d="M110,400 L270,400 L220,500 L160,500 Z" fill="rgba(139,92,246,0.15)" stroke="rgba(139,92,246,0.4)" stroke-width="2"/>
+      <text x="190" y="440" text-anchor="middle" font-family="Sora" font-size="14" font-weight="600" fill="#8b5cf6">BRANDED</text>
+      <text x="190" y="465" text-anchor="middle" font-family="Sora" font-size="18" font-weight="800" fill="#8b5cf6">%</text>
+    </svg>
+  </div>
+
+  <div class="funnel-boxes">
+    <div class="funnel-box">
+      <div class="funnel-box-h" style="color:#6366f1;">Awareness (TOFU)</div>
+      <div class="funnel-box-pct" style="color:#6366f1;">%</div>
+      <div class="funnel-box-kws">
+        
+      </div>
+    </div>
+    <div class="funnel-box">
+      <div class="funnel-box-h" style="color:#3b82f6;">Consideration (MOFU)</div>
+      <div class="funnel-box-pct" style="color:#3b82f6;">%</div>
+      <div class="funnel-box-kws">
+        
+      </div>
+    </div>
+    <div class="funnel-box">
+      <div class="funnel-box-h" style="color:#22c55e;">Decision (BOFU)</div>
+      <div class="funnel-box-pct" style="color:#22c55e;">%</div>
+      <div class="funnel-box-kws">
+        
+      </div>
+    </div>
+    <div class="funnel-box">
+      <div class="funnel-box-h" style="color:#8b5cf6;">Branded</div>
+      <div class="funnel-box-pct" style="color:#8b5cf6;">%</div>
+      <div class="funnel-box-kws">
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="ft">
+    <div class="ft-logo">
+      2L
+    </div>
+    <div class="ft-c">Fonville Tree Service</div>
+    <div class="ft-r">4 / 13</div>
+  </div>
+</div></div>
+<div class="slide-wrap"><div class="slide">
+  <div class="ab"></div>
+  <div class="si">
+    <div class="ey">Content</div>
+<div class="slide-title">Top Performing Pages</div>
+<div class="slide-src">fonvilletreeservice.com — Pages Driving Organic Traffic</div>
+
+<div class="card" style="flex:1;padding:16px;overflow:hidden;">
+  <table class="comp-t" style="width:100%;">
+    <thead>
+      <tr>
+        <th style="width:45%;">Page</th>
+        <th style="width:15%;">Traffic</th>
+        <th style="width:15%;">Value</th>
+        <th style="width:12%;">Keywords</th>
+        <th style="width:13%;">Top Keyword</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="font-size:14px;">
+          <div style="font-weight:600;color:#1a1a1f;margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:400px;"></div>
+          <div style="font-size:12px;color:#8a8892;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:400px;">/ (home)</div>
+        </td>
+        <td style="font-family:'Sora',sans-serif;font-weight:700;color:#1a1a1f;">856</td>
+        <td style="color:#16a34a;font-weight:600;">$</td>
+        <td></td>
+        <td style="font-size:13px;">fonville tree service</td>
+      </tr>
+      <tr>
+        <td style="font-size:14px;">
+          <div style="font-weight:600;color:#1a1a1f;margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:400px;"></div>
+          <div style="font-size:12px;color:#8a8892;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:400px;">/services/tree-removal/</div>
+        </td>
+        <td style="font-family:'Sora',sans-serif;font-weight:700;color:#1a1a1f;">555</td>
+        <td style="color:#16a34a;font-weight:600;">$</td>
+        <td></td>
+        <td style="font-size:13px;">tree removal wake forest</td>
+      </tr>
+      <tr>
+        <td style="font-size:14px;">
+          <div style="font-weight:600;color:#1a1a1f;margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:400px;"></div>
+          <div style="font-size:12px;color:#8a8892;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:400px;">/services/firewood/</div>
+        </td>
+        <td style="font-family:'Sora',sans-serif;font-weight:700;color:#1a1a1f;">114</td>
+        <td style="color:#16a34a;font-weight:600;">$</td>
+        <td></td>
+        <td style="font-size:13px;">firewood wake forest</td>
+      </tr>
+      <tr>
+        <td style="font-size:14px;">
+          <div style="font-weight:600;color:#1a1a1f;margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:400px;"></div>
+          <div style="font-size:12px;color:#8a8892;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:400px;">/contact/</div>
+        </td>
+        <td style="font-family:'Sora',sans-serif;font-weight:700;color:#1a1a1f;">98</td>
+        <td style="color:#16a34a;font-weight:600;">$</td>
+        <td></td>
+        <td style="font-size:13px;">fonville contact</td>
+      </tr>
+      <tr>
+        <td style="font-size:14px;">
+          <div style="font-weight:600;color:#1a1a1f;margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:400px;"></div>
+          <div style="font-size:12px;color:#8a8892;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:400px;">/services/tree-trimming-pruning/</div>
+        </td>
+        <td style="font-family:'Sora',sans-serif;font-weight:700;color:#1a1a1f;">68</td>
+        <td style="color:#16a34a;font-weight:600;">$</td>
+        <td></td>
+        <td style="font-size:13px;">tree trimming wake forest</td>
+      </tr>
+      <tr>
+        <td style="font-size:14px;">
+          <div style="font-weight:600;color:#1a1a1f;margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:400px;"></div>
+          <div style="font-size:12px;color:#8a8892;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:400px;">/services/stump-grinding</div>
+        </td>
+        <td style="font-family:'Sora',sans-serif;font-weight:700;color:#1a1a1f;">63</td>
+        <td style="color:#16a34a;font-weight:600;">$</td>
+        <td></td>
+        <td style="font-size:13px;">stump grinding</td>
+      </tr>
+      <tr>
+        <td style="font-size:14px;">
+          <div style="font-weight:600;color:#1a1a1f;margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:400px;"></div>
+          <div style="font-size:12px;color:#8a8892;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:400px;">/service-area/knightdale-nc/</div>
+        </td>
+        <td style="font-family:'Sora',sans-serif;font-weight:700;color:#1a1a1f;">30</td>
+        <td style="color:#16a34a;font-weight:600;">$</td>
+        <td></td>
+        <td style="font-size:13px;">tree service knightdale</td>
+      </tr>
+      <tr>
+        <td style="font-size:14px;">
+          <div style="font-weight:600;color:#1a1a1f;margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:400px;"></div>
+          <div style="font-size:12px;color:#8a8892;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:400px;">/common-trees-wake-forest-nc-care-guide/</div>
+        </td>
+        <td style="font-family:'Sora',sans-serif;font-weight:700;color:#1a1a1f;">25</td>
+        <td style="color:#16a34a;font-weight:600;">$</td>
+        <td></td>
+        <td style="font-size:13px;">tree care guide</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  </div>
+  <div class="ft">
+    <div class="ft-logo">
+      2L
+    </div>
+    <div class="ft-c">Fonville Tree Service</div>
+    <div class="ft-r">5 / 13</div>
+  </div>
+</div></div>
+<div class="slide-wrap"><div class="slide">
+  <div class="ab"></div>
+  <div class="si">
+    <div class="ey">Local SEO</div>
+<div class="slide-title">Local Pack Rankings — </div>
+<div class="slide-src">"tree service" — </div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;flex:1;min-height:0;">
+  <div class="card" style="padding:16px;display:flex;flex-direction:column;">
+    <div class="card-h">Grid Scan Results</div>
+    <div style="flex:1;display:flex;align-items:center;justify-content:center;">
+      <div class="lv-grid" style="width:100%;max-width:280px;">
+        <div class="lv-cell lv-none">
+          —
+        </div>
+        <div class="lv-cell lv-none">
+          —
+        </div>
+        <div class="lv-cell lv-none">
+          —
+        </div>
+        <div class="lv-cell lv-none">
+          —
+        </div>
+        <div class="lv-cell lv-none">
+          —
+        </div>
+        <div class="lv-cell lv-none">
+          —
+        </div>
+        <div class="lv-cell lv-none">
+          —
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:center;gap:16px;margin-top:12px;font-size:12px;color:#8a8892;">
+      <span><span class="lv-cell lv-1" style="display:inline-flex;width:16px;height:16px;font-size:10px;margin-right:4px;">1</span> #1</span>
+      <span><span class="lv-cell lv-2" style="display:inline-flex;width:16px;height:16px;font-size:10px;margin-right:4px;">2</span> #2-3</span>
+      <span><span class="lv-cell lv-310" style="display:inline-flex;width:16px;height:16px;font-size:10px;margin-right:4px;">5</span> #4-10</span>
+      <span><span class="lv-cell lv-1120" style="display:inline-flex;width:16px;height:16px;font-size:10px;margin-right:4px;">15</span> #11-20</span>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:12px;">
+    <div class="kpi-row" style="grid-template-columns:1fr 1fr;">
+      <div class="kpi kpi-gold">
+        <div class="kpi-l">Avg. Rank</div>
+        <div class="kpi-v" style="font-size:36px;"></div>
+      </div>
+      <div class="kpi kpi-green">
+        <div class="kpi-l">Top 3 Coverage</div>
+        <div class="kpi-v" style="font-size:36px;">%</div>
+      </div>
+    </div>
+    <div class="card" style="padding:16px;flex:1;">
+      <div class="card-h">Top Competitors</div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="ft">
+    <div class="ft-logo">
+      2L
+    </div>
+    <div class="ft-c">Fonville Tree Service</div>
+    <div class="ft-r">6 / 13</div>
+  </div>
+</div></div>
+<div class="slide-wrap"><div class="slide">
+  <div class="ab"></div>
+  <div class="si">
+    <div class="ey">Content</div>
+<div class="slide-title">Content Performance</div>
+<div class="slide-src">fonvilletreeservice.com — Traffic by Content Section</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;flex:1;min-height:0;">
+  <div class="card" style="padding:16px;display:flex;flex-direction:column;">
+    <div class="card-h">Traffic by Section — 24 Month Trend</div>
+    <div style="flex:1;min-height:0;">
+      <canvas id="content-perf-chart"></canvas>
+    </div>
+  </div>
+
+  <div class="card" style="padding:16px;display:flex;flex-direction:column;">
+    <div class="card-h">Section Performance</div>
+    <div style="flex:1;overflow:auto;">
+      <div style="padding:10px 0;border-bottom:1px solid rgba(0,0,0,.04);">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;">
+          <div style="font-weight:600;color:#1a1a1f;font-size:15px;">Service Pages</div>
+          <div style="font-size:14px;font-weight:600;color:#ef4444;">
+            %
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;">
+          <div style="flex:1;height:8px;background:rgba(0,0,0,.06);border-radius:4px;overflow:hidden;">
+            <div style="width:%;height:100%;background:linear-gradient(90deg,var(--brand-primary, #9e7c2e),var(--brand-primary-light, #c8a44e));border-radius:4px;"></div>
+          </div>
+          <div style="font-size:13px;color:#8a8892;width:60px;text-align:right;"></div>
+        </div>
+      </div>
+      <div style="padding:10px 0;border-bottom:1px solid rgba(0,0,0,.04);">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;">
+          <div style="font-weight:600;color:#1a1a1f;font-size:15px;">Service-Area Pages</div>
+          <div style="font-size:14px;font-weight:600;color:#ef4444;">
+            %
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;">
+          <div style="flex:1;height:8px;background:rgba(0,0,0,.06);border-radius:4px;overflow:hidden;">
+            <div style="width:%;height:100%;background:linear-gradient(90deg,var(--brand-primary, #9e7c2e),var(--brand-primary-light, #c8a44e));border-radius:4px;"></div>
+          </div>
+          <div style="font-size:13px;color:#8a8892;width:60px;text-align:right;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="ft">
+    <div class="ft-logo">
+      2L
+    </div>
+    <div class="ft-c">Fonville Tree Service</div>
+    <div class="ft-r">7 / 13</div>
+  </div>
+</div></div>
+<div class="slide-wrap"><div class="slide">
+  <div class="ab"></div>
+  <div class="si">
+    <div class="ey">Technical</div>
+<div class="slide-title">Technical SEO Audit</div>
+<div class="slide-src">fonvilletreeservice.com — Site Health Overview</div>
+
+<div class="card" style="flex:1;padding:16px;display:flex;flex-direction:column;">
+  <div class="card-h">Audit Results</div>
+  <table class="audit-table" style="flex:1;">
+    <thead>
+      <tr>
+        <th style="width:20%;">Category</th>
+        <th style="width:12%;">Status</th>
+        <th style="width:40%;">Finding</th>
+        <th style="width:28%;">Key Metrics</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+</div>
+
+<div class="ms-grid" style="margin-top:12px;">
+  <div class="ms ms-red">
+    <div class="ms-l">Health Score</div>
+    <div class="ms-v">%</div>
+  </div>
+  <div class="ms ms-red">
+    <div class="ms-l">Issues Found</div>
+    <div class="ms-v"></div>
+  </div>
+  <div class="ms">
+    <div class="ms-l">Pages Crawled</div>
+    <div class="ms-v"></div>
+  </div>
+  <div class="ms ms-red">
+    <div class="ms-l">Core Web Vitals</div>
+    <div class="ms-v"></div>
+  </div>
+</div>
+
+  </div>
+  <div class="ft">
+    <div class="ft-logo">
+      2L
+    </div>
+    <div class="ft-c">Fonville Tree Service</div>
+    <div class="ft-r">8 / 13</div>
+  </div>
+</div></div>
+<div class="slide-wrap"><div class="slide">
+  <div class="ab"></div>
+  <div class="si">
+    <div class="ey">Summary</div>
+<div class="slide-title">Analysis Recap</div>
+<div class="slide-src">Fonville Tree Service — Key Takeaways</div>
+
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;flex:1;min-height:0;">
+  <div class="card" style="padding:16px;display:flex;flex-direction:column;border-top:4px solid #16a34a;">
+    <div class="card-h" style="color:#16a34a;">Strengths</div>
+    <div class="kt-txt" style="flex:1;">
+    </div>
+  </div>
+
+  <div class="card" style="padding:16px;display:flex;flex-direction:column;border-top:4px solid #ef4444;">
+    <div class="card-h" style="color:#ef4444;">Weaknesses</div>
+    <div class="kt-txt" style="flex:1;">
+    </div>
+  </div>
+
+  <div class="card" style="padding:16px;display:flex;flex-direction:column;border-top:4px solid var(--brand-primary, #9e7c2e);">
+    <div class="card-h" style="color:var(--brand-primary, #9e7c2e);">Opportunities</div>
+    <div class="kt-txt" style="flex:1;">
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="ft">
+    <div class="ft-logo">
+      2L
+    </div>
+    <div class="ft-c">Fonville Tree Service</div>
+    <div class="ft-r">9 / 13</div>
+  </div>
+</div></div>
+<div class="slide-wrap"><div class="slide">
+  <div class="ab"></div>
+  <div class="si">
+    <div class="ey">Forecast</div>
+<div class="slide-title">Traffic Projection</div>
+<div class="slide-src">Fonville Tree Service — 12 Month Growth Forecast</div>
+
+<div class="proj-layout">
+  <div class="proj-chart">
+    <div class="card-h">Projected Traffic Growth</div>
+    <div style="flex:1;min-height:0;">
+      <canvas id="projection-chart"></canvas>
+    </div>
+  </div>
+
+  <div class="proj-metrics">
+    <div class="proj-metric">
+      <div class="proj-metric-l">Current Traffic</div>
+      <div class="proj-metric-v">127</div>
+    </div>
+    <div class="proj-metric">
+      <div class="proj-metric-l">Projected Traffic (12mo)</div>
+      <div class="proj-metric-v up"></div>
+    </div>
+    <div class="proj-metric">
+      <div class="proj-metric-l">Growth</div>
+      <div class="proj-metric-v up">+%</div>
+    </div>
+    <div class="proj-metric">
+      <div class="proj-metric-l">Projected Value</div>
+      <div class="proj-metric-v up">$</div>
+    </div>
+  </div>
+</div>
+
+<div style="margin-top:12px;padding:12px 16px;background:rgba(158,124,46,.06);border:1px solid rgba(158,124,46,.15);border-radius:8px;font-size:13px;color:#5a5862;">
+  <strong style="color:var(--brand-primary, #9e7c2e);">Assumptions:</strong> 
+</div>
+
+  </div>
+  <div class="ft">
+    <div class="ft-logo">
+      2L
+    </div>
+    <div class="ft-c">Fonville Tree Service</div>
+    <div class="ft-r">10 / 13</div>
+  </div>
+</div></div>
+<div class="slide-wrap"><div class="slide">
+  <div class="ab"></div>
+  <div class="si">
+    <div class="ey">Strategy</div>
+<div class="slide-title">Action Plan</div>
+<div class="slide-src">Fonville Tree Service — Implementation Timeline</div>
+
+<div class="action-timeline">
+  <div class="action-phase">
+    <div class="action-phase-h" style="background:;">Diagnose and Stabilize</div>
+    <div class="action-phase-period">Month 1</div>
+    <ul class="action-phase-items" style="color:;">
+    </ul>
+  </div>
+  <div class="action-phase">
+    <div class="action-phase-h" style="background:;">Local and Content</div>
+    <div class="action-phase-period">Months 2 to 3</div>
+    <ul class="action-phase-items" style="color:;">
+    </ul>
+  </div>
+  <div class="action-phase">
+    <div class="action-phase-h" style="background:;">Authority and Growth</div>
+    <div class="action-phase-period">Months 4 to 6</div>
+    <ul class="action-phase-items" style="color:;">
+    </ul>
+  </div>
+</div>
+
+
+  </div>
+  <div class="ft">
+    <div class="ft-logo">
+      2L
+    </div>
+    <div class="ft-c">Fonville Tree Service</div>
+    <div class="ft-r">11 / 13</div>
+  </div>
+</div></div>
+<div class="slide-wrap"><div class="slide">
+  <div class="ab"></div>
+  <div class="si">
+    <div class="ey">About Us</div>
+<div class="slide-title">Meet Your Team</div>
+<div class="slide-src">22 Local Marketing — Your Dedicated Specialists</div>
+
+<div class="team-grid">
+</div>
+
+
+  </div>
+  <div class="ft">
+    <div class="ft-logo">
+      2L
+    </div>
+    <div class="ft-c">Fonville Tree Service</div>
+    <div class="ft-r">12 / 13</div>
+  </div>
+</div></div>
+
+<script>
+// Chart.js defaults
+Chart.defaults.font.family = "'Sora', sans-serif";
+Chart.defaults.color = '#8a8892';
+
+// Helper: Format large numbers
+function fmtNum(n) {
+  if (n >= 1000000) return (n/1000000).toFixed(1) + 'M';
+  if (n >= 1000) return (n/1000).toFixed(1) + 'K';
+  return n.toString();
+}
+
+// Helper: Get color for rank
+function rankColor(rank) {
+  if (rank === 1) return '#16a34a';
+  if (rank <= 3) return '#22c55e';
+  if (rank <= 10) return '#d97706';
+  if (rank <= 20) return '#ef4444';
+  return '#c0bdb8';
+}
+
+// Chart: Traffic History (organic_performance slide)
+function initTrafficChart(canvasId, data) {
+  const ctx = document.getElementById(canvasId);
+  if (!ctx) return;
+
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: data.labels,
+      datasets: [{
+        label: 'Organic Traffic',
+        data: data.traffic,
+        borderColor: '#9e7c2e',
+        backgroundColor: 'rgba(158,124,46,0.1)',
+        fill: true,
+        tension: 0.3,
+        pointRadius: 0,
+        pointHoverRadius: 6,
+        borderWidth: 2
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { intersect: false, mode: 'index' },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: function(ctx) { return fmtNum(ctx.raw) + ' visits'; }
+          }
+        }
+      },
+      scales: {
+        x: { grid: { display: false }, ticks: { maxTicksLimit: 12 } },
+        y: {
+          grid: { color: 'rgba(0,0,0,0.05)' },
+          ticks: { callback: function(v) { return fmtNum(v); } }
+        }
+      }
+    }
+  });
+}
+
+// Chart: Traffic Projection (traffic_projection slide)
+function initProjectionChart(canvasId, data) {
+  const ctx = document.getElementById(canvasId);
+  if (!ctx) return;
+
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: data.labels,
+      datasets: [
+        {
+          label: 'Current Trajectory',
+          data: data.current,
+          borderColor: '#8a8892',
+          borderDash: [5, 5],
+          tension: 0.3,
+          pointRadius: 0,
+          borderWidth: 2
+        },
+        {
+          label: 'Projected Growth',
+          data: data.projected,
+          borderColor: '#16a34a',
+          backgroundColor: 'rgba(22,163,74,0.1)',
+          fill: true,
+          tension: 0.3,
+          pointRadius: 0,
+          borderWidth: 2
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { intersect: false, mode: 'index' },
+      plugins: {
+        legend: { position: 'bottom' }
+      },
+      scales: {
+        x: { grid: { display: false } },
+        y: {
+          grid: { color: 'rgba(0,0,0,0.05)' },
+          ticks: { callback: function(v) { return fmtNum(v); } }
+        }
+      }
+    }
+  });
+}
+
+// Chart: Comparison Bar Chart (backlink_profile slide)
+function initComparisonBarChart(canvasId, data) {
+  const ctx = document.getElementById(canvasId);
+  if (!ctx) return;
+
+  const colors = data.values.map((_, i) =>
+    i === data.highlightIndex ? '#9e7c2e' : 'rgba(138,136,146,0.3)'
+  );
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: data.labels,
+      datasets: [{
+        label: data.label,
+        data: data.values,
+        backgroundColor: colors,
+        borderRadius: 4
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: {
+        x: { grid: { display: false } },
+        y: {
+          grid: { color: 'rgba(0,0,0,0.05)' },
+          ticks: { callback: function(v) { return fmtNum(v); } }
+        }
+      }
+    }
+  });
+}
+
+// Chart: DR Distribution (backlink_profile slide)
+function initDRDistributionChart(canvasId, data) {
+  const ctx = document.getElementById(canvasId);
+  if (!ctx) return;
+
+  new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: data.labels,
+      datasets: [{
+        data: data.values,
+        backgroundColor: ['#16a34a', '#22c55e', '#d97706', '#ef4444', '#8a8892'],
+        borderWidth: 0
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'right', labels: { boxWidth: 12 } }
+      }
+    }
+  });
+}
+
+// Chart: Content Performance (content_performance slide)
+function initContentPerfChart(canvasId, data) {
+  const ctx = document.getElementById(canvasId);
+  if (!ctx) return;
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: data.labels,
+      datasets: data.sections.map((section, i) => ({
+        label: section.name,
+        data: section.data,
+        backgroundColor: ['#6366f1', '#3b82f6', '#22c55e', '#9e7c2e', '#8b5cf6'][i % 5],
+        borderRadius: 2
+      }))
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { position: 'bottom' } },
+      scales: {
+        x: { stacked: true, grid: { display: false } },
+        y: {
+          stacked: true,
+          grid: { color: 'rgba(0,0,0,0.05)' },
+          ticks: { callback: function(v) { return fmtNum(v); } }
+        }
+      }
+    }
+  });
+}
+
+// Initialize charts after DOM load
+document.addEventListener('DOMContentLoaded', function() {
+  
+        initTrafficChart('traffic-chart', {
+          labels: ["May 2025","Jun 2025","Jul 2025","Aug 2025","Sep 2025","Oct 2025","Nov 2025","Dec 2025","Jan 2026","Feb 2026","Mar 2026","Apr 2026","May 2026"],
+          traffic: [176,181,106,190,293,383,358,419,638,296,44,141,127],
+          value: [0,0,0,0,0,0,0,0,0,0,0,0,0]
+        });
+      
+});
+</script>
+</body>
+</html>

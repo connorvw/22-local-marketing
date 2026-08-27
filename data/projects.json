@@ -1,0 +1,26 @@
+[
+  {
+    "client_id": "de83484e-7f2c-4587-af13-4c7e222e32b8",
+    "name": "WQA Implementation — June 2026",
+    "project_type": "seo_sprint",
+    "status": "active",
+    "primary_goal": "Kickoff (WQA + report + plan, M1), technical fixes (M1), analytics setup (M1), content production (M3+), link building (M4+), monthly reporting throughout.",
+    "start_date": "2026-06-22",
+    "target_end_date": "2027-05-31",
+    "id": "3c153c0f-5261-447d-8b70-07cb4e99fd69",
+    "created_at": "2026-06-18T18:29:51.554Z",
+    "updated_at": "2026-06-18T18:29:51.554Z"
+  },
+  {
+    "client_id": "0471a2d9-b8a1-4012-9daf-7920c1022c53",
+    "name": "WQA Implementation — June 2026",
+    "project_type": "seo_sprint",
+    "status": "active",
+    "primary_goal": "Kickoff, technical fixes, analytics setup, content production (M3+), link building (M4+), monthly reporting.",
+    "start_date": "2026-06-22",
+    "target_end_date": "2027-05-31",
+    "id": "c8ac5a2f-32e5-4409-ab51-65528cc072bf",
+    "created_at": "2026-06-18T21:57:12.606Z",
+    "updated_at": "2026-06-18T21:57:12.606Z"
+  }
+]

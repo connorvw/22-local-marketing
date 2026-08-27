@@ -1,0 +1,178 @@
+[
+  {
+    "row": 1,
+    "url": "https://fonvilletreeservice.com/services",
+    "address": "/services",
+    "category": "Content",
+    "action_type": "Rewrite",
+    "original_text": "Thin money page (432w). Expand to 1,000w+ with conversion content, social proof, FAQs."
+  },
+  {
+    "row": 2,
+    "url": "https://fonvilletreeservice.com/services/firewood",
+    "address": "/services/firewood",
+    "category": "Content",
+    "action_type": "Rewrite",
+    "original_text": "Thin money page (479w). Expand to 1,000w+ with conversion content, social proof, FAQs."
+  },
+  {
+    "row": 3,
+    "url": "https://fonvilletreeservice.com/services/free-wood-chips",
+    "address": "/services/free-wood-chips",
+    "category": "Technical",
+    "action_type": "Fix 404",
+    "original_text": "HIGH-SIGNAL 4xx (404) \u2014 330 imp, 0 RDs, 12 sessions/90d. Restore or 301 to closest live equivalent."
+  },
+  {
+    "row": 4,
+    "url": "https://fonvilletreeservice.com",
+    "address": "/",
+    "category": "Content",
+    "action_type": "Rewrite title/meta",
+    "original_text": "High impressions (21,098) but low CTR (1.0%) at pos 13.0. Rewrite title/meta to match intent + add a hook."
+  },
+  {
+    "row": 5,
+    "url": "https://fonvilletreeservice.com",
+    "address": "/",
+    "category": "Content",
+    "action_type": "Update onpage",
+    "original_text": "Striking distance \u2014 pos 13.0 with 21,098 imp. Refresh content + add internal links to push into top 5."
+  },
+  {
+    "row": 6,
+    "url": "https://fonvilletreeservice.com/about-us",
+    "address": "/about-us",
+    "category": "Content",
+    "action_type": "Update onpage",
+    "original_text": "Striking distance \u2014 pos 10.4 with 560 imp. Refresh content + add internal links to push into top 5."
+  },
+  {
+    "row": 7,
+    "url": "https://fonvilletreeservice.com/cdn-cgi/l/email-protection",
+    "address": "/cdn-cgi/l/email-protection",
+    "category": "Content",
+    "action_type": "Rewrite title/meta",
+    "original_text": "Missing page title. Add an SEO-optimized title (50-60 chars) targeting the page's primary keyword."
+  },
+  {
+    "row": 8,
+    "url": "https://fonvilletreeservice.com/contact",
+    "address": "/contact",
+    "category": "Content",
+    "action_type": "Rewrite title/meta",
+    "original_text": "High impressions (1,074) but low CTR (0.2%) at pos 18.2. Rewrite title/meta to match intent + add a hook."
+  },
+  {
+    "row": 9,
+    "url": "https://fonvilletreeservice.com/how-much-is-tree-removal-average-costs-and-price-factors-2026",
+    "address": "/how-much-is-tree-removal-average-costs-and-price-factors-2026",
+    "category": "Content",
+    "action_type": "Rewrite title/meta",
+    "original_text": "High impressions (1,490) but low CTR (0.0%) at pos 22.7. Rewrite title/meta to match intent + add a hook."
+  },
+  {
+    "row": 10,
+    "url": "https://fonvilletreeservice.com/service-area/knightdale-nc",
+    "address": "/service-area/knightdale-nc",
+    "category": "Content",
+    "action_type": "Rewrite title/meta",
+    "original_text": "High impressions (1,782) but low CTR (0.4%) at pos 11.8. Rewrite title/meta to match intent + add a hook."
+  },
+  {
+    "row": 11,
+    "url": "https://fonvilletreeservice.com/service-area/knightdale-nc",
+    "address": "/service-area/knightdale-nc",
+    "category": "Content",
+    "action_type": "Update onpage",
+    "original_text": "Striking distance \u2014 pos 11.8 with 1,782 imp. Refresh content + add internal links to push into top 5."
+  },
+  {
+    "row": 12,
+    "url": "https://fonvilletreeservice.com/service-area/youngsville-nc",
+    "address": "/service-area/youngsville-nc",
+    "category": "Content",
+    "action_type": "Rewrite title/meta",
+    "original_text": "High impressions (2,566) but low CTR (0.0%) at pos 15.4. Rewrite title/meta to match intent + add a hook."
+  },
+  {
+    "row": 13,
+    "url": "https://fonvilletreeservice.com/services",
+    "address": "/services",
+    "category": "Content",
+    "action_type": "Update onpage",
+    "original_text": "Striking distance \u2014 pos 14.9 with 996 imp. Refresh content + add internal links to push into top 5."
+  },
+  {
+    "row": 14,
+    "url": "https://fonvilletreeservice.com/services/firewood",
+    "address": "/services/firewood",
+    "category": "Content",
+    "action_type": "Rewrite title/meta",
+    "original_text": "High impressions (2,650) but low CTR (2.0%) at pos 10.0. Rewrite title/meta to match intent + add a hook."
+  },
+  {
+    "row": 15,
+    "url": "https://fonvilletreeservice.com/services/firewood",
+    "address": "/services/firewood",
+    "category": "Content",
+    "action_type": "Update onpage",
+    "original_text": "Striking distance \u2014 pos 10.0 with 2,650 imp. Refresh content + add internal links to push into top 5."
+  },
+  {
+    "row": 16,
+    "url": "https://fonvilletreeservice.com/about-us",
+    "address": "/about-us",
+    "category": "Content",
+    "action_type": "Expand content",
+    "original_text": "Thin content (372w). Expand to 1,000w+ OR consolidate/noindex if low-value."
+  },
+  {
+    "row": 17,
+    "url": "https://fonvilletreeservice.com/blogs",
+    "address": "/blogs",
+    "category": "Content",
+    "action_type": "Update onpage",
+    "original_text": "Missing H1. Add a clear H1 that matches user search intent and uses the primary keyword."
+  },
+  {
+    "row": 18,
+    "url": "https://fonvilletreeservice.com/common-trees-wake-forest-nc-care-guide",
+    "address": "/common-trees-wake-forest-nc-care-guide",
+    "category": "Content",
+    "action_type": "Refresh content",
+    "original_text": "Substantial blog post (2211w) stuck at pos 13.1 with 357 imp. Likely stale \u2014 refresh with current data, new examples, and updated screenshots."
+  },
+  {
+    "row": 19,
+    "url": "https://fonvilletreeservice.com/contact",
+    "address": "/contact",
+    "category": "Content",
+    "action_type": "Expand content",
+    "original_text": "Thin content (472w). Expand to 1,000w+ OR consolidate/noindex if low-value."
+  },
+  {
+    "row": 20,
+    "url": "https://fonvilletreeservice.com/north-raleigh/debris-removal",
+    "address": "/north-raleigh/debris-removal",
+    "category": "Content",
+    "action_type": "Refresh content",
+    "original_text": "Substantial blog post (1342w) stuck at pos 23.2 with 281 imp. Likely stale \u2014 refresh with current data, new examples, and updated screenshots."
+  },
+  {
+    "row": 21,
+    "url": "https://fonvilletreeservice.com/our-work",
+    "address": "/our-work",
+    "category": "Content",
+    "action_type": "Expand content",
+    "original_text": "Thin content (145w). Expand to 1,000w+ OR consolidate/noindex if low-value."
+  },
+  {
+    "row": 22,
+    "url": "https://fonvilletreeservice.com/service-area",
+    "address": "/service-area",
+    "category": "Content",
+    "action_type": "Expand content",
+    "original_text": "Thin content (109w). Expand to 1,000w+ OR consolidate/noindex if low-value."
+  }
+]

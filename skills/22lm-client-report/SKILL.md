@@ -22,7 +22,7 @@ This skill generates branded PDF reports for all 22 Local Marketing clients usin
 
 One PDF per client containing:
 
-1. **Header** with the 22 Local Marketing logo and a "(Formerly VicTree Websites LLC)" line, client name, month/year
+1. **Header** with the 22 Local Marketing logo, client name, and month/year
 2. **KPI hero band**: Total Leads, Website Forms, Phone Calls, Ad Spend
 3. **Leads by Source**: a stacked bar chart combining form submissions and phone calls per channel (Google Ads, SEO, Google Business, AI / ChatGPT, Facebook), plus a cumulative line chart of form leads over the month
 4. **Google Ads Performance** (spend, clicks, conversions, cost / conversion)
@@ -148,7 +148,7 @@ The report CSS already sets `@page{size:letter;margin:0}` and `print-color-adjus
 
 ## Design Standard
 
-Reports follow `22lm-report-design` brand standards: Sora headings (800, uppercase, never italic), Sora body text, #FB5607 (Blaze orange) primary accents, #0A0A0A (Onyx) headings, #F8F6F2 (Bone) card backgrounds. The header embeds the 22LM logo with a "(Formerly VicTree Websites LLC)" line beneath it. No red anywhere.
+Reports follow `22lm-report-design` brand standards: Sora headings (800, uppercase, never italic), Sora body text, #FB5607 (Blaze orange) primary accents, #0A0A0A (Onyx) headings, #F8F6F2 (Bone) card backgrounds. The header embeds the 22LM logo. No red anywhere.
 
 ## Updating Client Defaults
 

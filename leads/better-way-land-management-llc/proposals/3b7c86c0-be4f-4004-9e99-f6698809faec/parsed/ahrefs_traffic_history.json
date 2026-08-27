@@ -1,0 +1,13 @@
+{
+  "type": "traffic_history",
+  "source": "api",
+  "total_months": 0,
+  "history": [],
+  "summary": {
+    "peak_traffic": 0,
+    "peak_date": "",
+    "latest_traffic": 0,
+    "latest_value": 0,
+    "decline_percent": 0
+  }
+}

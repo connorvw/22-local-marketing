@@ -1,0 +1,21 @@
+{
+  "rating": "5.0",
+  "reviews": 127,
+  "grid_keyword": "tree service",
+  "grid_solv": 14.29,
+  "grid_arp": 8.08,
+  "grid": [[0,0,20,13,18,17,7],[0,0,14,9,5,3,4],[0,0,6,3,3,5,5],[0,0,4,1,1,6,8],[0,17,7,1,2,7,7],[0,14,8,6,5,7,8],[0,16,11,10,9,9,11]],
+  "keywords": [
+    {"keyword": "crane tree removal", "solv": 20.41, "arp": 6.77},
+    {"keyword": "tree service", "solv": 14.29, "arp": 8.08},
+    {"keyword": "tree removal", "solv": 14.29, "arp": 8.38},
+    {"keyword": "tree trimming", "solv": 14.29, "arp": 8.30},
+    {"keyword": "emergency tree removal", "solv": 12.24, "arp": 8.61}
+  ],
+  "competitors": [
+    {"name": "Raleigh Tree Service", "avg_rank": 9.4, "rating": "5.0"},
+    {"name": "Ashland Tree Service", "avg_rank": 9.9, "rating": "4.7"},
+    {"name": "Arborex Tree Services", "avg_rank": 10.3, "rating": "5.0"},
+    {"name": "Longhorn Tree Service", "avg_rank": 11.0, "rating": "5.0"}
+  ]
+}

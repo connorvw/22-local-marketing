@@ -1,0 +1,698 @@
+{
+  "id": "b5d7aeaa-659f-4a4a-b47b-30a0707e322d",
+  "lead_id": "25a0c15a-d3c1-4112-a09e-f3709312a152",
+  "version": 1,
+  "status": "building_slides",
+  "business_type": "local_services",
+  "has_locations": true,
+  "primary_service_keywords": [
+    "tree removal",
+    "tree trimming",
+    "stump grinding",
+    "land clearing",
+    "emergency tree service"
+  ],
+  "funnel_classification": {
+    "decision_patterns": [
+      "/services/",
+      "/quote",
+      "/estimate",
+      "/emergency",
+      "/24-hour",
+      "near-me",
+      "tree removal",
+      "tree trimming",
+      "stump grinding",
+      "land clearing",
+      "emergency tree service"
+    ],
+    "branded_patterns": [
+      "fonville tree service"
+    ],
+    "awareness_patterns": [
+      "/blog/",
+      "/how-to/",
+      "/tips/",
+      "/guide/"
+    ],
+    "consideration_patterns": [
+      "/pricing/",
+      "/compare/",
+      "/vs-"
+    ]
+  },
+  "client_domain": "fonvilletreeservice.com",
+  "client_name": "Fonville Tree Service",
+  "competitor_domains": [],
+  "locations": [
+    {
+      "name": "Wake Forest, NC",
+      "gbp_cid": "ChIJk_gskmpXrIkRfUW4wvdiXng",
+      "address": "9721 1/2 Fonville Rd, Wake Forest, NC 27587"
+    }
+  ],
+  "slides": [
+    {
+      "id": "cover",
+      "name": "Cover",
+      "status": "completed",
+      "data": {
+        "client_name": "Fonville Tree Service",
+        "address": "Wake Forest, NC",
+        "date": "June 18, 2026",
+        "subtitle": "SEO, Local & GEO Analysis",
+        "agency_name": "22 Local Marketing"
+      }
+    },
+    {
+      "id": "executive_summary",
+      "name": "Executive Summary",
+      "status": "completed",
+      "data": {
+        "firm_name": "Fonville Tree Service",
+        "locations": [
+          "Wake Forest, NC"
+        ],
+        "challenges": [
+          "Organic traffic peaked in January 2026 and has fallen sharply since, with a near-zero month in March worth investigating",
+          "A high-value page is a 404: /services/free-wood-chips still draws 330 impressions a month with nothing to land on",
+          "Local visibility is modest at about 14% Share of Local Voice, and the profile drops out of the top 20 entirely in the western part of Wake Forest",
+          "Most service and service-area pages sit on page 2, and the /services money page is thin"
+        ],
+        "strategy": [
+          "Recover organic by fixing the 404 and pushing striking-distance pages into the top 5 (the homepage alone has 21,098 impressions at position 13)",
+          "Grow local presence with GBP work, review velocity, and content aimed at the western grid gaps",
+          "Expand the service and service-area page matrix and deepen the thin pages",
+          "Stand up conversion tracking so recovery is measured against a clean baseline"
+        ]
+      }
+    },
+    {
+      "id": "the_market",
+      "name": "The Market",
+      "status": "skipped"
+    },
+    {
+      "id": "organic_performance",
+      "name": "Organic Performance",
+      "status": "completed",
+      "data": {
+        "dr": 0,
+        "traffic": 127,
+        "traffic_value": 0,
+        "referring_domains": 0,
+        "has_decline": true,
+        "decline_percent": 80,
+        "peak_date": "January 2026",
+        "traffic_history": [
+          {
+            "date": "May 2025",
+            "traffic": 176,
+            "traffic_value": 0
+          },
+          {
+            "date": "Jun 2025",
+            "traffic": 181,
+            "traffic_value": 0
+          },
+          {
+            "date": "Jul 2025",
+            "traffic": 106,
+            "traffic_value": 0
+          },
+          {
+            "date": "Aug 2025",
+            "traffic": 190,
+            "traffic_value": 0
+          },
+          {
+            "date": "Sep 2025",
+            "traffic": 293,
+            "traffic_value": 0
+          },
+          {
+            "date": "Oct 2025",
+            "traffic": 383,
+            "traffic_value": 0
+          },
+          {
+            "date": "Nov 2025",
+            "traffic": 358,
+            "traffic_value": 0
+          },
+          {
+            "date": "Dec 2025",
+            "traffic": 419,
+            "traffic_value": 0
+          },
+          {
+            "date": "Jan 2026",
+            "traffic": 638,
+            "traffic_value": 0
+          },
+          {
+            "date": "Feb 2026",
+            "traffic": 296,
+            "traffic_value": 0
+          },
+          {
+            "date": "Mar 2026",
+            "traffic": 44,
+            "traffic_value": 0
+          },
+          {
+            "date": "Apr 2026",
+            "traffic": 141,
+            "traffic_value": 0
+          },
+          {
+            "date": "May 2026",
+            "traffic": 127,
+            "traffic_value": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "traffic_decline",
+      "name": "Why Has Traffic Fallen?",
+      "status": "completed",
+      "data": {
+        "causes": [
+          {
+            "title": "Sharp drop from the January peak",
+            "description": "Organic sessions fell from 638 in January 2026 to 44 in March, then partly recovered to around 130. A drop that steep usually points to lost rankings, an indexing issue, or a tracking gap.",
+            "evidence": "GA4 organic monthly: Jan 638, Feb 296, Mar 44, Apr 141, May 127."
+          },
+          {
+            "title": "A money page is returning 404",
+            "description": "/services/free-wood-chips still collects 330 impressions a month but has no live page, so that demand is lost.",
+            "evidence": "Search Console shows 330 impressions at position 36 on a 404 URL."
+          },
+          {
+            "title": "Most pages stuck on page 2",
+            "description": "Key pages including the homepage sit around position 11 to 15, so small ranking slips cost real clicks.",
+            "evidence": "Homepage at position 13 on 21,098 impressions."
+          }
+        ],
+        "recovery_actions": [
+          "Audit indexing and rankings to explain the February to March drop",
+          "Restore or redirect the free-wood-chips page",
+          "Push striking-distance pages into the top 5 with depth and links"
+        ]
+      }
+    },
+    {
+      "id": "marketing_funnel",
+      "name": "Marketing Funnel",
+      "status": "completed",
+      "data": {
+        "awareness_traffic": 130,
+        "awareness_value": 0,
+        "awareness_percent": 6,
+        "awareness_bar_width": 14,
+        "consideration_traffic": 250,
+        "consideration_value": 0,
+        "consideration_percent": 11,
+        "consideration_bar_width": 26,
+        "decision_traffic": 1010,
+        "decision_value": 0,
+        "decision_percent": 43,
+        "decision_bar_width": 90,
+        "branded_traffic": 856,
+        "branded_value": 0,
+        "branded_percent": 37,
+        "branded_bar_width": 100,
+        "insights": [
+          "Decision-stage service pages already pull the largest share of traffic, led by tree removal",
+          "Branded homepage traffic is strong, a sign of good local word of mouth",
+          "Awareness content is thin, an opening to capture earlier-stage searches"
+        ]
+      }
+    },
+    {
+      "id": "top_pages",
+      "name": "Top Pages",
+      "status": "completed",
+      "data": {
+        "pages": [
+          {
+            "url": "/ (home)",
+            "traffic": 856,
+            "top_keyword": "fonville tree service",
+            "search_volume": 0,
+            "traffic_change": 0,
+            "funnel_stage": "branded"
+          },
+          {
+            "url": "/services/tree-removal/",
+            "traffic": 555,
+            "top_keyword": "tree removal wake forest",
+            "search_volume": 0,
+            "traffic_change": 0,
+            "funnel_stage": "decision"
+          },
+          {
+            "url": "/services/firewood/",
+            "traffic": 114,
+            "top_keyword": "firewood wake forest",
+            "search_volume": 0,
+            "traffic_change": 0,
+            "funnel_stage": "decision"
+          },
+          {
+            "url": "/contact/",
+            "traffic": 98,
+            "top_keyword": "fonville contact",
+            "search_volume": 0,
+            "traffic_change": 0,
+            "funnel_stage": "decision"
+          },
+          {
+            "url": "/services/tree-trimming-pruning/",
+            "traffic": 68,
+            "top_keyword": "tree trimming wake forest",
+            "search_volume": 0,
+            "traffic_change": 0,
+            "funnel_stage": "decision"
+          },
+          {
+            "url": "/services/stump-grinding",
+            "traffic": 63,
+            "top_keyword": "stump grinding",
+            "search_volume": 0,
+            "traffic_change": 0,
+            "funnel_stage": "decision"
+          },
+          {
+            "url": "/service-area/knightdale-nc/",
+            "traffic": 30,
+            "top_keyword": "tree service knightdale",
+            "search_volume": 0,
+            "traffic_change": 0,
+            "funnel_stage": "decision"
+          },
+          {
+            "url": "/common-trees-wake-forest-nc-care-guide/",
+            "traffic": 25,
+            "top_keyword": "tree care guide",
+            "search_volume": 0,
+            "traffic_change": 0,
+            "funnel_stage": "awareness"
+          }
+        ],
+        "takeaways": [
+          "Tree removal is the top non-brand page at 555 sessions in 90 days",
+          "Firewood is a strong secondary draw and a differentiator",
+          "A high-impression page (free-wood-chips) is a 404, losing easy traffic"
+        ]
+      }
+    },
+    {
+      "id": "geo_ai_visibility",
+      "name": "GEO/AI Visibility",
+      "status": "skipped"
+    },
+    {
+      "id": "chatgpt_results",
+      "name": "ChatGPT Results",
+      "status": "skipped"
+    },
+    {
+      "id": "local_pack_0",
+      "name": "Local Pack (Location 1)",
+      "status": "completed",
+      "data": {
+        "location": "Wake Forest, NC",
+        "keyword": "tree service",
+        "grid": [
+          [
+            0,
+            0,
+            20,
+            13,
+            18,
+            17,
+            7
+          ],
+          [
+            0,
+            0,
+            14,
+            9,
+            5,
+            3,
+            4
+          ],
+          [
+            0,
+            0,
+            6,
+            3,
+            3,
+            5,
+            5
+          ],
+          [
+            0,
+            0,
+            4,
+            1,
+            1,
+            6,
+            8
+          ],
+          [
+            0,
+            17,
+            7,
+            1,
+            2,
+            7,
+            7
+          ],
+          [
+            0,
+            14,
+            8,
+            6,
+            5,
+            7,
+            8
+          ],
+          [
+            0,
+            16,
+            11,
+            10,
+            9,
+            9,
+            11
+          ]
+        ],
+        "solv_percent": 14,
+        "arp": 8.1,
+        "status_badge": "partial",
+        "analysis": "Fonville ranks in the top few near its Wake Forest location, but drops out of the top 20 entirely across the western half of the grid, which holds Share of Local Voice to 14%. Notably its average rank of 8.1 is ahead of the main competitors (9 to 11), so the gap is presence in the outer areas, not head-to-head strength. The 5.0 rating on 127 reviews is a strong base to build on.",
+        "top_competitors": [
+          {
+            "name": "Raleigh Tree Service",
+            "avg_rank": 9.4
+          },
+          {
+            "name": "Ashland Tree Service",
+            "avg_rank": 9.9
+          },
+          {
+            "name": "Arborex Tree Services",
+            "avg_rank": 10.3
+          },
+          {
+            "name": "Longhorn Tree Service",
+            "avg_rank": 11
+          }
+        ]
+      }
+    },
+    {
+      "id": "local_competitors",
+      "name": "Local Competitors",
+      "status": "skipped"
+    },
+    {
+      "id": "location_pages",
+      "name": "Location Pages",
+      "status": "skipped"
+    },
+    {
+      "id": "content_performance",
+      "name": "Content Performance",
+      "status": "completed",
+      "data": {
+        "sections": [
+          {
+            "name": "Service Pages",
+            "total_pages": 14,
+            "pages_with_traffic": 9,
+            "zero_traffic_pages": 5,
+            "total_visits": 880,
+            "top_page": {
+              "url": "/services/tree-removal/",
+              "traffic": 555
+            }
+          },
+          {
+            "name": "Service-Area Pages",
+            "total_pages": 12,
+            "pages_with_traffic": 4,
+            "zero_traffic_pages": 8,
+            "total_visits": 90,
+            "top_page": {
+              "url": "/service-area/knightdale-nc/",
+              "traffic": 30
+            }
+          }
+        ],
+        "observations": [
+          "Tree removal carries the service section; the rest is underdeveloped",
+          "Service-area pages exist for the surrounding towns but most get little traffic yet",
+          "Several pages including the homepage are one or two positions from the top 5"
+        ]
+      }
+    },
+    {
+      "id": "backlink_profile",
+      "name": "Backlink Profile",
+      "status": "skipped"
+    },
+    {
+      "id": "technical_audit",
+      "name": "Technical Audit",
+      "status": "completed",
+      "data": {
+        "items": [
+          {
+            "name": "Indexable URLs crawled",
+            "status": "pass",
+            "count": 397
+          },
+          {
+            "name": "Client errors (4xx)",
+            "status": "fail",
+            "count": 7
+          },
+          {
+            "name": "Redirects (3xx)",
+            "status": "improvement_needed",
+            "count": 4
+          },
+          {
+            "name": "High-signal 404 with impressions",
+            "status": "fail",
+            "count": 1
+          },
+          {
+            "name": "Thin pages",
+            "status": "improvement_needed",
+            "count": 2
+          },
+          {
+            "name": "HTTPS",
+            "status": "pass",
+            "value": "All secure"
+          }
+        ]
+      }
+    },
+    {
+      "id": "analysis_recap",
+      "name": "Analysis Recap",
+      "status": "completed",
+      "data": {
+        "rows": [
+          {
+            "category": "Website Performance",
+            "status": "failing",
+            "summary": "Organic peaked at 638 sessions in January 2026 and fell to around 130, an 80% drop from peak. 292 Search Console clicks and 40,142 impressions in 90 days. Recovery is the priority.",
+            "metrics": [
+              "-80% from Jan peak",
+              "40K impressions",
+              "292 clicks/90d"
+            ]
+          },
+          {
+            "category": "Local Performance",
+            "status": "improvement_needed",
+            "summary": "Average rank 8.1 beats the main competitors, but Share of Local Voice is only 14% because the profile is absent in the western grid. 5.0 rating on 127 reviews.",
+            "metrics": [
+              "14% SoLV",
+              "ARP 8.1",
+              "127 reviews"
+            ]
+          },
+          {
+            "category": "Technical SEO",
+            "status": "improvement_needed",
+            "summary": "Clean HTTPS, but 7 pages return 404 and one of them still pulls 330 impressions a month.",
+            "metrics": [
+              "7 x 404",
+              "1 high-signal",
+              "4 redirects"
+            ]
+          },
+          {
+            "category": "Content Performance",
+            "status": "improvement_needed",
+            "summary": "Tree removal carries the site. Service-area pages and a thin money page need development. Homepage is one slip from the top 5.",
+            "metrics": [
+              "~26 content pages",
+              "pos 11 to 15",
+              "2 thin pages"
+            ]
+          },
+          {
+            "category": "Backlinks & Authority",
+            "status": "improvement_needed",
+            "summary": "Target pages sit at 0 referring domains, so links are a clear lever once content is solid.",
+            "metrics": [
+              "Low RDs",
+              "0 RD targets",
+              "authority to build"
+            ]
+          }
+        ],
+        "bottom_line": "Fonville has a strong brand and a 5.0 reputation, but organic has dropped hard from its January peak and local presence thins out west of Wake Forest. The plan is to diagnose and recover the lost traffic, fix the technical leaks, and expand local coverage."
+      }
+    },
+    {
+      "id": "traffic_projection",
+      "name": "Traffic Projection",
+      "status": "completed",
+      "data": {
+        "current_traffic": 127,
+        "peak_traffic": 638,
+        "peak_date": "January 2026",
+        "current_trajectory": [
+          {
+            "month": 0,
+            "traffic": 127
+          },
+          {
+            "month": 6,
+            "traffic": 150
+          },
+          {
+            "month": 12,
+            "traffic": 180
+          }
+        ],
+        "target_trajectory": [
+          {
+            "month": 0,
+            "traffic": 127
+          },
+          {
+            "month": 6,
+            "traffic": 420
+          },
+          {
+            "month": 12,
+            "traffic": 700
+          }
+        ],
+        "monthly_growth_rate": 0.12,
+        "disclaimer": "Projections are directional estimates based on recovering toward the prior peak with planned work, not a guarantee."
+      }
+    },
+    {
+      "id": "action_plan",
+      "name": "Action Plan",
+      "status": "completed",
+      "data": {
+        "phases": [
+          {
+            "title": "Diagnose and Stabilize",
+            "period": "Month 1",
+            "tasks": [
+              "Investigate the February to March organic drop (indexing, rankings, tracking)",
+              "Restore or redirect the free-wood-chips 404 and clear the other 404s",
+              "Set up conversion tracking and a clean baseline"
+            ]
+          },
+          {
+            "title": "Local and Content",
+            "period": "Months 2 to 3",
+            "tasks": [
+              "GBP optimization and a review velocity plan",
+              "Content for the western service areas where the grid drops off",
+              "Expand the thin /services page and the top service pages",
+              "Rewrite low-CTR titles and metas, push striking-distance pages up"
+            ]
+          },
+          {
+            "title": "Authority and Growth",
+            "period": "Months 4 to 6",
+            "tasks": [
+              "Link building across the service and service-area pages",
+              "Ongoing content and internal linking",
+              "Monthly reporting and client check-ins"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "investment",
+      "name": "Investment",
+      "status": "skipped"
+    },
+    {
+      "id": "the_team",
+      "name": "The Team",
+      "status": "completed",
+      "data": {
+        "differentiators": [
+          {
+            "title": "Contractor specialists",
+            "description": "We work only with contractors and home-service businesses, so the playbook is tuned to how local buyers search and hire."
+          },
+          {
+            "title": "Omnipresence, not just rankings",
+            "description": "Maps, organic, Local Services Ads, and paid working together so you show up wherever the customer looks."
+          },
+          {
+            "title": "Honest, measurable reporting",
+            "description": "Clear monthly reporting tied to calls and leads, not vanity metrics."
+          },
+          {
+            "title": "Real local data",
+            "description": "Grid-based local rank tracking and Search Console data drive every recommendation."
+          }
+        ],
+        "team_members": [
+          {
+            "role": "Founder & Strategy",
+            "initials": "CO",
+            "contribution": "Leads strategy and account direction"
+          },
+          {
+            "role": "Google Ads Specialist",
+            "initials": "AB",
+            "contribution": "Runs paid search and Local Services Ads"
+          },
+          {
+            "role": "Operations",
+            "initials": "RZ",
+            "contribution": "Reporting, delivery, and client operations"
+          }
+        ]
+      }
+    }
+  ],
+  "current_slide_index": 0,
+  "parsed_data": {},
+  "input_files": {},
+  "created_at": "2026-06-18T22:07:20.939Z",
+  "updated_at": "2026-06-18T22:10:04.877Z",
+  "output_html_path": "C:\\22 Local Marketing\\leads\\fonville-tree-service\\proposals\\b5d7aeaa-659f-4a4a-b47b-30a0707e322d\\output\\proposal.html"
+}

@@ -1,5 +1,5 @@
-// One-shot script. Reads each VicTree blog post from the local
-// victree-homepage repo, extracts the article body, applies the
+// One-shot script. Reads each legacy blog post from a caller-provided source,
+// extracts the article body, applies the
 // brand-swap rules, and writes a 22lm-styled Astro file using
 // BlogPostLayout. Run via: node scripts/import-posts.mjs
 
@@ -9,8 +9,12 @@ import { dirname, join } from 'node:path';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
-const VW_SRC = 'C:/VicTree Websites LLC/repos/victree-homepage/src/pages/blog';
+const SOURCE_DIR = process.env.BLOG_IMPORT_SOURCE;
 const OUT_DIR = join(ROOT, 'src', 'pages', 'blog');
+
+if (!SOURCE_DIR) {
+  throw new Error('Set BLOG_IMPORT_SOURCE to the source blog directory before running this import.');
+}
 
 // Source data file mirrors what's in 22lm's src/data/posts.js
 const POSTS = [
@@ -27,12 +31,8 @@ const POSTS = [
   { slug: 'gbp-scam-calls-tree-service', title: "Why Your Phone Won't Stop Ringing With Scam Calls (And What to Do About It)", excerpt: "If you own a local home services business, you already know. Your phone rings, and an automated voice tells you something is wrong with your Google Business listing. It's a scam. Every single time. Here's how it works and what you can do about it.", date: 'January 15, 2026', dateISO: '2026-01-15', readTime: '8 min read', category: 'Google Business Profile' },
 ];
 
-// Order-sensitive: do longer phrases first so they don't get half-swapped.
-// Order matters. Longer compounds first, then bare-form fallbacks.
+// Order-sensitive: replace longer industry phrases first.
 const BRAND_SWAPS = [
-  [/\bVicTree Websites\b/g, '22 Local Marketing'],
-  [/\bVicTree\b/g, '22 Local Marketing'],
-
   // Title case first (so case-insensitive lowercase below doesn't clobber).
   [/\bTree Service Companies\b/g, 'Home Services Businesses'],
   [/\bTree Service Company\b/g, 'Home Services Business'],
@@ -91,10 +91,10 @@ function applyBrandSwap(s) {
   return out;
 }
 
-// Pull the .blog-content inner HTML from a VW post .astro file, stripping
+// Pull the .blog-content inner HTML from a source .astro file, stripping
 // the trailing .blog-cta-box block (we render our own CTA in BlogPostLayout).
 function dedent(block) {
-  // VW posts indent their body 10 spaces; strip the common leading whitespace
+  // Source posts indent their body 10 spaces; strip the common leading whitespace
   // so the output is readable when viewed as Astro source.
   const lines = block.split(/\r?\n/);
   let min = Infinity;
@@ -156,7 +156,7 @@ let written = 0;
 if (!existsSync(OUT_DIR)) mkdirSync(OUT_DIR, { recursive: true });
 
 for (const post of POSTS) {
-  const srcPath = join(VW_SRC, `${post.slug}.astro`);
+  const srcPath = join(SOURCE_DIR, `${post.slug}.astro`);
   if (!existsSync(srcPath)) {
     console.warn(`SKIP (missing source): ${post.slug}`);
     continue;

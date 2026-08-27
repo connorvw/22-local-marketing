@@ -34,8 +34,7 @@ from urllib.parse import quote, urlencode, urlparse, parse_qs
 # CONFIG
 # ---------------------------------------------------------------------------
 
-CREDS_CANDIDATES = [r"C:\22 Local Marketing\agent\.creds", r"C:\VicTree Websites LLC\agent\.creds"]
-CREDS_PATH = next((p for p in CREDS_CANDIDATES if os.path.exists(p)), CREDS_CANDIDATES[-1])
+CREDS_PATH = r"C:\Agency Operations\agent\.creds"
 
 _LOGO_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets", "22lm-primary-tight.png")
 try:
@@ -598,7 +597,7 @@ def build_html_report(client_key, leads, gbp, ads, calls, target_month, target_y
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>%s</style></head><body>
 <div class="report-header">
- <div>%s<div class="formerly">(Formerly VicTree Websites LLC)</div></div>
+ <div>%s</div>
  <div class="meta"><span class="agency">Monthly Performance Report</span><br><b>%s</b><br>%s</div>
 </div>
 <div class="client-name">%s</div>

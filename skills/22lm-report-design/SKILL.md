@@ -62,7 +62,6 @@ All reports, audits, analyses, and structured deliverables produced for 22 Local
 ### Logo & Identity
 
 - Logo: `C:\22 Local Marketing\logo-kit\all-formats-no-margin\png\22lm-primary-tight.png` (PNG for PDF embedding; webp/svg variants in the same kit). Place the primary logo top-left of the report header.
-- Directly under the logo, always include: **(Formerly VicTree Websites LLC)** in small Slate text. This runs on every report during the rebrand transition.
 - Agency name in text: **22 Local Marketing** (shorthand and on formal docs). Domain: `22localmarketing.com`.
 - Voice: Direct, no-nonsense, blue-collar credible. No superlatives. No bravado. Data-first.
 
@@ -90,7 +89,6 @@ Every report must follow this section order. Omit sections that don't apply — 
 ### 1. Header Block (always present)
 ```
 [22 Local Marketing logo]
-(Formerly VicTree Websites LLC)
 [Report Type]
 [Client or Subject Name]
 [Date: Month YYYY] | [Location] | Prepared by 22 Local Marketing
@@ -198,7 +196,7 @@ Top border: 2px solid `#FB5607`. Text color: `#525252`. Centered. Small (10 to 1
 - Blaze accent lines on all H2 headers via `border-bottom: 2px solid #FB5607`
 - Cards use `border-left: 4px solid #FB5607`
 - Section fills: `background: #F8F6F2`
-- Header: embed the 22LM logo (base64 data URI for reliable PDF rendering), with "(Formerly VicTree Websites LLC)" beneath it
+- Header: embed the 22LM logo as a base64 data URI for reliable PDF rendering
 - Max content width: `860px`, centered with `margin: 0 auto`
 - Mobile-responsive: single column on screens under 600px
 
@@ -257,7 +255,7 @@ Any report or deliverable produced from this point forward must use:
 - Blaze orange (`#FB5607`) as the primary brand color
 - Onyx (`#0A0A0A`) for all headings
 - Sora 800 uppercase (never italic) for H1/H2, Sora 700 for H3
-- The 22LM logo in the header with "(Formerly VicTree Websites LLC)" beneath it
+- The 22LM logo in the header
 - No red anywhere, including for negative/fail states
 
 If you encounter an older report styled in red or green, regenerate it under the 22LM standard if it's still in active use.

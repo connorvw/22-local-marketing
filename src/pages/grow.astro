@@ -1,0 +1,857 @@
+---
+import '../styles/global.css';
+import QuoteForm from '../components/QuoteForm.astro';
+
+const systems = [
+  ['01', 'Google Business Profile', 'The profile work, reviews, categories, and local signals that help you show up when nearby homeowners need tree work.'],
+  ['02', 'Website and local SEO', 'A fast site with useful service and location pages, built around real photos and the searches that matter in your market.'],
+  ['03', 'Google Ads and LSA', 'High-intent campaigns that create calls while organic visibility builds, with call tracking and practical budget controls.'],
+  ['04', 'Meta Ads', 'Local creative that keeps your company visible, builds familiarity, and creates another source of estimate requests.'],
+  ['05', 'Lead follow-up', 'Forms, call tracking, and follow-up workflows that help your team respond before a good lead goes cold.'],
+  ['06', 'Reporting tied to leads', 'Clear monthly reporting on calls, forms, cost per lead, and the work completed, without a tour of vanity metrics.'],
+];
+
+const faqs = [
+  ['Do you work with tree service companies?', 'Yes. Tree care and related land services are where our systems and experience are deepest. We will review your market and current setup before recommending a plan.'],
+  ['How quickly can paid ads start producing leads?', 'Paid campaigns can create calls sooner than SEO, but timing depends on your market, budget, offer, and account history. We set expectations after reviewing the local competition and existing data.'],
+  ['Do I pay ad spend separately?', 'Yes. Your ad spend is paid directly to the advertising platforms. Management, creative, tracking, website work, and other services are scoped separately in your plan.'],
+  ['Can you work with our existing website or ad accounts?', 'Usually. We audit what is already working, preserve useful history, and recommend only the changes that have a clear reason behind them.'],
+  ['What happens on the strategy call?', 'We review your market, current lead sources, website, Google presence, and advertising. You leave with a short list of the clearest opportunities, even if we are not the right fit.'],
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marketing for Tree Service Companies | 22 Local Marketing</title>
+    <meta name="description" content="A connected marketing system for tree service companies, including Google Ads, local SEO, websites, Meta Ads, reviews, and lead tracking." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://grow.22localmarketing.com/" />
+    <meta property="og:title" content="Stop Renting Leads | 22 Local Marketing" />
+    <meta property="og:description" content="Build a connected marketing system that creates direct calls and strengthens assets your tree service company owns." />
+    <meta property="og:url" content="https://grow.22localmarketing.com/" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script async src="https://aromatic-caribou-889.convex.site/api/a/am_z8jL6jvgnKBNlcJA"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-50NCREP6P6"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-50NCREP6P6');
+    </script>
+  </head>
+  <body class="grow-page">
+    <nav class="grow-nav">
+      <div class="wrap nav-inner">
+        <a href="/" aria-label="22 Local Marketing home"><img src="/22lm-logo.png" alt="22 Local Marketing" /></a>
+        <a class="button button-small" href="#strategy">Free strategy call <span>→</span></a>
+      </div>
+    </nav>
+
+    <main>
+      <header class="hero">
+        <div class="hero-grid"></div>
+        <div class="wrap hero-inner">
+          <div class="eyebrow">One team for every growth channel</div>
+          <h1>Stop renting leads. Build a marketing system <em>you own.</em></h1>
+          <p class="hero-copy">Get one accountable team for your website, Google Ads, Local Services Ads, SEO, Google Business Profile, Meta Ads, tracking, and follow-up. No more coordinating vendors. No more competing for shared leads.</p>
+
+          <div class="video-shell" id="overview">
+            <div class="video-bar">
+              <span class="live-dot"></span>
+              <span>Watch the short overview</span>
+              <span class="video-time">About 1 minute</span>
+            </div>
+            <iframe
+              src="https://www.tella.tv/video/vid_cmt96ym8x01j804jw0itbcc54/embed?b=0&amp;title=0&amp;a=0&amp;loop=0&amp;t=0&amp;muted=0&amp;wt=0"
+              title="Marketing for tree and land companies"
+              allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+
+          <div class="hero-actions">
+            <a class="button button-hero" href="#strategy">Book a free strategy call <span>→</span></a>
+          </div>
+          <div class="micro-trust hero-trust"><span>One accountable team</span><span>Direct leads to your company</span><span>Assets you keep</span></div>
+
+        </div>
+      </header>
+
+      <section class="proof-strip" aria-label="Selected client results">
+        <div class="wrap proof-grid">
+          <div class="stat"><span class="stat-label">Phone calls</span><strong>60+</strong><span>Per client each month, across Google, ads, and search</span></div>
+          <div class="stat"><span class="stat-label">Form leads</span><strong>40+</strong><span>Web form submissions per client, every month</span></div>
+          <div class="stat"><span class="stat-label">Cost per lead</span><strong>&lt;$50</strong><span>From all sources combined, paid and organic</span></div>
+          <div class="stat"><span class="stat-label">Google reviews</span><strong>5.0★</strong><span>Average rating across our clients' profiles</span></div>
+        </div>
+      </section>
+
+      <section class="problem section-pad">
+        <div class="wrap narrow">
+          <div class="section-label">You did not build a tree company to chase shared leads</div>
+          <h2>The work is hard enough. Getting the next estimate should not feel like a race to the bottom.</h2>
+          <div class="problem-grid">
+            <article><span>01</span><h3>Shared leads reward speed, not trust.</h3><p>The homeowner fills out one form and several companies start calling. You paid for access, but you never owned the relationship.</p></article>
+            <article><span>02</span><h3>The phone is inconsistent.</h3><p>A busy month hides the gaps. Then demand slows and there is no dependable system creating the next estimate.</p></article>
+            <article><span>03</span><h3>Your marketing never compounds.</h3><p>When you stop buying marketplace leads, the leads stop. There is no stronger website, better local presence, or growing audience left behind.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="ownership section-pad">
+        <div class="wrap ownership-grid">
+          <div class="ownership-intro">
+            <div class="section-label light">Renting attention versus building equity</div>
+            <h2>Every marketing dollar should leave you with something stronger.</h2>
+            <p>Paid ads can create demand now. SEO, reviews, a useful website, customer data, and good follow-up make that demand more valuable over time. The point is not to avoid paid traffic. The point is to stop depending on a marketplace that owns the customer and sells the same opportunity again.</p>
+          </div>
+          <div class="choice-grid">
+            <article class="choice-card rent">
+              <span class="choice-label">Rent the lead</span>
+              <h3>Marketplace dependency</h3>
+              <ul><li>The same lead goes to multiple companies</li><li>You compete before trust is established</li><li>The platform owns the audience</li><li>Stop paying and the pipeline disappears</li></ul>
+            </article>
+            <article class="choice-card own">
+              <span class="choice-label">Own the system</span>
+              <h3>Your local demand engine</h3>
+              <ul><li>Homeowners contact your company directly</li><li>Your reviews and reputation do the selling</li><li>You keep your data and campaign history</li><li>Each channel strengthens the others</li></ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-study section-pad">
+        <div class="wrap case-grid">
+          <div class="case-copy">
+            <div class="section-label light">A current campaign example</div>
+            <h2>From limited visibility to a real organic lead channel.</h2>
+            <p>A newer land management company in Northwest Ohio had almost no search presence. We built the site, developed its service coverage, and strengthened its Google presence.</p>
+            <p>Within six months, the business appeared for more than 1,000 search queries and held more than 160 keywords in Google’s top three.</p>
+            <div class="case-note">Results vary by market, competition, budget, and starting position. These figures describe one active client campaign.</div>
+          </div>
+          <div class="case-card" aria-label="Case study metrics">
+            <div class="case-card-top"><span>6-month snapshot</span><span>Northwest Ohio</span></div>
+            <div class="case-metric"><strong>17K+</strong><span>Google impressions<br />in a 90-day window</span></div>
+            <div class="case-pair">
+              <div><strong>1,000+</strong><span>queries ranking</span></div>
+              <div><strong>160+</strong><span>top-three rankings</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews section-pad">
+        <div class="wrap">
+          <div class="approved-head">
+            <h2>What owners actually say.</h2>
+            <p>Real reviews from owners we work with every week.</p>
+          </div>
+          <div class="review-grid">
+            <article class="review-card"><div class="stars">★★★★★</div><p>“Connor is the man. Very responsive and he knows his stuff. He has helped my business grow more than I ever imagined.”</p><div class="review-author"><span>BF</span><div><strong>Brice Fonville</strong><small>Verified Google review</small></div></div></article>
+            <article class="review-card"><div class="stars">★★★★★</div><p>“Super service, very easy to work with. Connor is very knowledgeable, patient and best of all isn't trying to push services you don't need.”</p><div class="review-author"><span>RR</span><div><strong>Robert Rangel</strong><small>Verified Google review</small></div></div></article>
+            <article class="review-card"><div class="stars">★★★★★</div><p>“Connor's attention to detail and constant communication have made him a joy to work with. I am extremely happy with the work he has done.”</p><div class="review-author"><span>DS</span><div><strong>Dawn Sulflow</strong><small>Verified Google review</small></div></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="system section-pad">
+        <div class="wrap">
+          <div class="section-label">Your guide and the plan</div>
+          <div class="section-head">
+            <h2>The Compound Presence Method puts your company everywhere the decision happens.</h2>
+            <p>You already know how to run the crew and serve the customer. Our job is to connect the marketing channels, track what creates calls, and give you a clear plan for improving them.</p>
+          </div>
+          <div class="system-grid">
+            {systems.map(([number, title, copy]) => (
+              <article class="system-card"><span>{number}</span><h3>{title}</h3><p>{copy}</p></article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="plan section-pad">
+        <div class="wrap plan-grid">
+          <div>
+            <div class="section-label light">A practical working relationship</div>
+            <h2>A clear path from scattered marketing to an owned lead system.</h2>
+          </div>
+          <div class="plan-steps">
+            <div><span>01</span><p><strong>See the gaps.</strong> We review the site, GBP, ads, reviews, tracking, and local competition.</p></div>
+            <div><span>02</span><p><strong>Choose the target.</strong> We agree on the calls, leads, acquisition cost, and market visibility that matter.</p></div>
+            <div><span>03</span><p><strong>Build the system.</strong> Website, SEO, GBP, paid media, creative, and follow-up support one another.</p></div>
+            <div><span>04</span><p><strong>Improve what you own.</strong> We track the results, move budget with the data, and keep strengthening the assets.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq section-pad">
+        <div class="wrap faq-wrap">
+          <div class="section-label">Questions tree service owners ask</div>
+          <h2>Clear answers before you make a decision.</h2>
+          <div class="faq-list">
+            {faqs.map(([question, answer], index) => (
+              <details open={index === 0}><summary>{question}<span>+</span></summary><p>{answer}</p></details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="strategy section-pad" id="strategy">
+        <div class="wrap strategy-grid">
+          <div class="strategy-copy">
+            <div class="section-label light">Free strategy call</div>
+            <h2>Find the gaps costing you direct calls.</h2>
+            <p>We will review your current presence, local competition, and lead flow before the call. You will see where leads are leaking, which channels deserve attention first, and what your company should own. If there is not a sensible fit, we will say so.</p>
+            <ul><li>Website and conversion review</li><li>Google and paid-channel review</li><li>Local competitor snapshot</li><li>Prioritized next steps</li></ul>
+          </div>
+          <div class="form-wrap"><QuoteForm eyebrow="No-cost market review" title="Tell us about your market" description="Share the basics. We will review your current setup before the call." submitLabel="Request my strategy call" /></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="grow-footer">
+      <div class="wrap footer-inner"><img src="/22lm-logo.png" alt="22 Local Marketing" /><div><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><span>© 2026 22 Local Marketing</span></div></div>
+    </footer>
+
+    <script is:inline>
+      document.querySelectorAll('.faq details').forEach((item) => {
+        item.addEventListener('toggle', () => {
+          if (!item.open) return;
+          document.querySelectorAll('.faq details').forEach((other) => {
+            if (other !== item) other.removeAttribute('open');
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
+
+<style>
+  :global(body.grow-page) { --orange:#fb5607; --ink:#101010; --cream:#f6f2e9; --paper:#fffdf8; --line:#d8d1c4; margin:0; color:var(--ink); background:var(--paper); font-family:'Bai Jamjuree',sans-serif; }
+  :global(.grow-page *) { box-sizing:border-box; }
+  .wrap { width:min(1180px, calc(100% - 48px)); margin-inline:auto; }
+  .narrow { width:min(1000px, calc(100% - 48px)); }
+  .section-pad { padding:110px 0; }
+  .grow-nav { position:absolute; inset:0 0 auto; z-index:10; border-bottom:1px solid rgba(255,255,255,.16); }
+  .nav-inner { height:82px; display:flex; justify-content:space-between; align-items:center; }
+  .nav-inner img,.grow-footer img { width:205px; height:auto; filter:brightness(0) invert(1); display:block; }
+  .button { min-height:52px; display:inline-flex; align-items:center; justify-content:center; gap:18px; padding:0 24px; background:var(--orange); color:#fff; text-decoration:none; font-weight:700; border:1px solid var(--orange); border-radius:3px; box-shadow:5px 5px 0 rgba(0,0,0,.28); transition:transform .18s,box-shadow .18s; }
+  .button:hover { transform:translate(-2px,-2px); box-shadow:8px 8px 0 rgba(0,0,0,.32); }
+  .button-small { min-height:44px; padding:0 18px; font-size:.94rem; box-shadow:none; }
+  .hero { min-height:860px; position:relative; overflow:hidden; color:#fff; background:radial-gradient(circle at 78% 20%,rgba(251,86,7,.28),transparent 30%),linear-gradient(135deg,#0b0b0b 0%,#181818 62%,#0c0c0c 100%); padding:150px 0 90px; }
+  .hero::after { content:''; position:absolute; width:520px; height:520px; right:-180px; bottom:-260px; border:70px solid rgba(251,86,7,.14); transform:rotate(18deg); }
+  .hero-grid { position:absolute; inset:0; opacity:.055; background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px); background-size:54px 54px; mask-image:linear-gradient(to bottom,#000,transparent 88%); }
+  .hero-inner { position:relative; z-index:1; text-align:center; display:flex; align-items:center; flex-direction:column; }
+  .eyebrow,.section-label { display:flex; align-items:center; gap:12px; color:var(--orange); text-transform:uppercase; letter-spacing:.13em; font-size:.9rem; font-weight:700; }
+  .eyebrow span { width:32px; height:2px; background:var(--orange); }
+  h1,h2,h3 { font-family:'Teko',sans-serif; margin:0; }
+  h1 { max-width:930px; margin:24px auto 14px; font-size:clamp(4rem,8vw,7.3rem); line-height:.83; letter-spacing:-.025em; text-transform:uppercase; font-weight:600; }
+  h1 em,h2 em { color:var(--orange); font-style:normal; }
+  .hero-copy { max-width:720px; font-size:1.2rem; line-height:1.6; color:#d1d1d1; margin:0 auto 34px; }
+  .video-shell { width:min(810px,100%); background:#080808; border:1px solid #3b3b3b; box-shadow:16px 18px 0 rgba(251,86,7,.25); text-align:left; }
+  .video-bar { min-height:42px; display:flex; align-items:center; gap:10px; padding:0 15px; color:#cfcfcf; font-size:.9rem; border-bottom:1px solid #303030; }
+  .live-dot { width:8px; height:8px; border-radius:50%; background:var(--orange); box-shadow:0 0 0 5px rgba(251,86,7,.12); }
+  .video-time { margin-left:auto; color:#8d8d8d; }
+  .video-shell iframe { width:100%; aspect-ratio:16/9; border:0; display:block; background:#000; }
+  .button-hero { margin-top:34px; min-width:310px; }
+  .micro-trust { display:flex; flex-wrap:wrap; justify-content:center; gap:10px 28px; margin-top:20px; color:#aaa; font-size:.9rem; }
+  .micro-trust span::before { content:'✓'; color:var(--orange); margin-right:7px; }
+  .proof-strip { background:var(--orange); color:#fff; }
+  .proof-grid { display:grid; grid-template-columns:repeat(4,1fr); }
+  .proof-grid div { padding:30px 24px; border-right:1px solid rgba(255,255,255,.28); display:flex; flex-direction:column; }
+  .proof-grid div:last-child { border:0; }
+  .proof-grid strong { font-family:'Teko'; font-size:3.2rem; line-height:1; }
+  .proof-grid span { font-size:.9rem; line-height:1.3; }
+  .section-label { margin-bottom:20px; }
+  .section-label.light { color:#ff7a38; }
+  .problem h2,.faq h2 { font-size:clamp(3.2rem,6vw,5.2rem); line-height:.92; max-width:850px; letter-spacing:-.02em; text-transform:uppercase; }
+  .problem-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:54px; }
+  .problem-grid article { border-top:4px solid var(--ink); padding:28px 4px 0; }
+  .problem-grid article>span,.system-card>span { color:var(--orange); font-weight:700; }
+  .problem-grid h3 { font-size:2rem; line-height:1; margin:17px 0 10px; text-transform:uppercase; }
+  .problem-grid p,.system-card p,.section-head p,.faq p { color:#5c5a56; line-height:1.65; margin:0; }
+  .case-study { color:#fff; background:linear-gradient(145deg,#101010,#232323); position:relative; overflow:hidden; }
+  .case-study::after { content:'RESULTS'; position:absolute; right:-20px; bottom:-80px; font:600 14rem/1 'Teko'; color:rgba(255,255,255,.025); }
+  .case-grid { display:grid; grid-template-columns:1.05fr .95fr; gap:80px; align-items:center; position:relative; z-index:1; }
+  .case-copy h2,.plan h2,.strategy h2 { font-size:clamp(3.3rem,6vw,5.6rem); line-height:.9; text-transform:uppercase; }
+  .case-copy>p { font-size:1.06rem; line-height:1.7; color:#c5c5c5; max-width:610px; }
+  .case-note { border-left:3px solid var(--orange); padding-left:15px; margin-top:28px; color:#929292; font-size:.9rem; line-height:1.5; }
+  .case-card { background:var(--paper); color:var(--ink); border-radius:4px; padding:30px; box-shadow:12px 12px 0 var(--orange); transform:rotate(1deg); }
+  .case-card-top { display:flex; justify-content:space-between; padding-bottom:20px; border-bottom:1px solid var(--line); text-transform:uppercase; letter-spacing:.08em; font-size:.85rem; font-weight:700; }
+  .case-metric { padding:34px 0; display:flex; align-items:end; gap:20px; }
+  .case-metric strong { font:600 6.8rem/.75 'Teko'; color:var(--orange); }
+  .case-metric span { font-size:1rem; line-height:1.4; }
+  .case-pair { display:grid; grid-template-columns:1fr 1fr; border-top:1px solid var(--line); }
+  .case-pair>div { padding-top:24px; }
+  .case-pair>div+div { border-left:1px solid var(--line); padding-left:24px; }
+  .case-pair strong { display:block; font:600 3rem/1 'Teko'; }
+  .case-pair span { color:#67635e; }
+  .ownership { background:var(--orange); color:#fff; }
+  .ownership-grid { display:grid; grid-template-columns:.82fr 1.18fr; gap:70px; align-items:center; }
+  .ownership-intro h2 { font-size:clamp(3.4rem,6vw,5.7rem); line-height:.88; text-transform:uppercase; }
+  .ownership-intro p { font-size:1.04rem; line-height:1.7; color:#fff4ed; }
+  .choice-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .choice-card { min-height:430px; padding:30px; border:1px solid rgba(255,255,255,.55); position:relative; overflow:hidden; }
+  .choice-card.rent { background:#2a211d; color:#d8cec8; transform:rotate(-1deg); }
+  .choice-card.own { background:var(--paper); color:var(--ink); box-shadow:9px 9px 0 #111; transform:rotate(1deg); }
+  .choice-label { display:inline-block; padding:6px 9px; border:1px solid currentColor; text-transform:uppercase; letter-spacing:.1em; font-size:.78rem; font-weight:700; }
+  .choice-card h3 { font-size:2.5rem; line-height:.95; text-transform:uppercase; margin:28px 0; }
+  .choice-card ul { list-style:none; padding:0; margin:0; }
+  .choice-card li { padding:15px 0 15px 27px; border-top:1px solid rgba(128,128,128,.35); line-height:1.45; position:relative; }
+  .choice-card li::before { content:'×'; position:absolute; left:2px; color:#ad8170; font-weight:700; font-size:1.2rem; }
+  .choice-card.own li::before { content:'✓'; color:var(--orange); }
+  .system { background:var(--cream); }
+  .section-head { display:grid; grid-template-columns:1.2fr .8fr; gap:70px; align-items:end; margin-bottom:50px; }
+  .section-head h2 { font-size:clamp(3.4rem,6vw,5.5rem); line-height:.9; text-transform:uppercase; }
+  .section-head p { font-size:1.04rem; }
+  .system-grid { display:grid; grid-template-columns:repeat(3,1fr); border:1px solid var(--ink); }
+  .system-card { min-height:260px; padding:30px; border-right:1px solid var(--ink); border-bottom:1px solid var(--ink); background:var(--paper); transition:background .2s,transform .2s; }
+  .system-card:nth-child(3n) { border-right:0; }
+  .system-card:nth-last-child(-n+3) { border-bottom:0; }
+  .system-card:hover { background:#fff; transform:translateY(-5px); }
+  .system-card h3 { font-size:2.2rem; line-height:1; text-transform:uppercase; margin:26px 0 10px; }
+  .plan { background:var(--orange); color:#fff; }
+  .plan-grid { display:grid; grid-template-columns:.9fr 1.1fr; gap:90px; align-items:start; }
+  .plan-steps { border-top:1px solid rgba(255,255,255,.4); }
+  .plan-steps>div { display:grid; grid-template-columns:58px 1fr; padding:24px 0; border-bottom:1px solid rgba(255,255,255,.4); }
+  .plan-steps span { font-weight:700; }
+  .plan-steps p { margin:0; line-height:1.55; }
+  .faq-wrap { max-width:900px; }
+  .faq h2 { margin-bottom:42px; }
+  .faq-list { border-top:2px solid var(--ink); }
+  .faq details { border-bottom:1px solid var(--line); }
+  .faq summary { list-style:none; cursor:pointer; display:flex; justify-content:space-between; gap:20px; padding:24px 0; font-weight:700; font-size:1.08rem; }
+  .faq summary::-webkit-details-marker { display:none; }
+  .faq summary span { color:var(--orange); font-size:1.6rem; line-height:.8; transition:transform .2s; }
+  .faq details[open] summary span { transform:rotate(45deg); }
+  .faq details p { padding:0 50px 24px 0; max-width:760px; }
+  .strategy { background:#111; color:#fff; }
+  .strategy-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; }
+  .strategy-copy>p { color:#c2c2c2; line-height:1.65; font-size:1.05rem; }
+  .strategy-copy ul { list-style:none; padding:0; margin:28px 0 0; display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .strategy-copy li::before { content:'↗'; color:var(--orange); margin-right:9px; }
+  .form-wrap :global(.quote-form-card) { box-shadow:12px 12px 0 var(--orange); border-radius:3px; padding:28px; }
+  .form-wrap :global(.qf-title) { font-family:'Teko'; font-size:2.2rem; text-transform:uppercase; }
+  .form-wrap :global(.qf-input) { min-height:44px; border-radius:2px; }
+  .form-wrap :global(.qf-submit) { min-height:52px; border-radius:2px; background:var(--orange); box-shadow:none; }
+  .grow-footer { background:#090909; color:#8e8e8e; border-top:1px solid #292929; }
+  .footer-inner { min-height:100px; display:flex; justify-content:space-between; align-items:center; }
+  .footer-inner div { display:flex; gap:22px; align-items:center; font-size:.88rem; }
+  .footer-inner a { color:#bbb; text-decoration:none; }
+
+  @media (max-width:900px) {
+    .section-pad { padding:80px 0; }
+    .proof-grid,.problem-grid,.system-grid { grid-template-columns:1fr 1fr; }
+    .proof-grid div:nth-child(2) { border-right:0; }
+    .proof-grid div:nth-child(-n+2) { border-bottom:1px solid rgba(255,255,255,.28); }
+    .case-grid,.ownership-grid,.section-head,.plan-grid,.strategy-grid { grid-template-columns:1fr; gap:44px; }
+    .system-card:nth-child(n) { border-right:1px solid var(--ink); border-bottom:1px solid var(--ink); }
+    .system-card:nth-child(2n) { border-right:0; }
+    .system-card:nth-last-child(-n+2) { border-bottom:0; }
+  }
+  @media (max-width:620px) {
+    .wrap,.narrow { width:min(100% - 32px,1180px); }
+    .nav-inner { height:70px; }
+    .nav-inner img { width:154px; }
+    .button-small { min-height:42px; padding:0 12px; font-size:.82rem; }
+    .hero { padding:124px 0 72px; min-height:auto; }
+    h1 { font-size:3.85rem; }
+    .hero-copy { font-size:1rem; }
+    .video-shell { box-shadow:8px 9px 0 rgba(251,86,7,.28); }
+    .video-bar { font-size:.8rem; }
+    .video-time { display:none; }
+    .button-hero { width:100%; min-width:0; }
+    .proof-grid,.problem-grid,.system-grid { grid-template-columns:1fr; }
+    .proof-grid div:nth-child(n) { border-right:0; border-bottom:1px solid rgba(255,255,255,.28); padding:22px 8px; }
+    .proof-grid div:last-child { border-bottom:0; }
+    .problem-grid article { padding-top:20px; }
+    .case-card { padding:22px; box-shadow:8px 8px 0 var(--orange); }
+    .case-metric { align-items:start; flex-direction:column; }
+    .case-metric strong { font-size:5.6rem; }
+    .system-card:nth-child(n) { border-right:0; border-bottom:1px solid var(--ink); min-height:220px; }
+    .system-card:last-child { border-bottom:0; }
+    .choice-grid { grid-template-columns:1fr; }
+    .choice-card { min-height:auto; }
+    .strategy-copy ul { grid-template-columns:1fr; }
+    .footer-inner { padding:28px 0; flex-direction:column; align-items:flex-start; gap:24px; }
+    .footer-inner div { flex-wrap:wrap; gap:12px 20px; }
+  }
+</style>
+
+<style>
+  /* Landing-page color rhythm. Components remain the approved 22LM patterns. */
+  :global(body.grow-page) {
+    --apricot: #fff0e6;
+    --sage: #edf2e8;
+    --mist: #edf2f4;
+    --sand: #f3ebdd;
+    --forest: #17241d;
+    --deep-slate: #141b20;
+  }
+
+  .hero {
+    background:
+      radial-gradient(circle at 82% 14%, rgba(251,86,7,.16), transparent 31%),
+      radial-gradient(circle at 12% 84%, rgba(193,61,14,.07), transparent 28%),
+      #fbf7f0;
+  }
+  .proof-strip { background: #fbf7f0; }
+  .proof-grid { box-shadow: 0 18px 50px rgba(58,38,27,.07); }
+
+  .problem {
+    background:
+      linear-gradient(135deg, rgba(251,86,7,.045) 25%, transparent 25%) 0 0 / 42px 42px,
+      var(--apricot);
+  }
+  .problem-grid article { background: rgba(255,255,255,.88); }
+
+  .case-study {
+    background:
+      radial-gradient(circle at 12% 16%, rgba(251,86,7,.16), transparent 28%),
+      linear-gradient(145deg, var(--deep-slate), #0b0f12);
+  }
+  .case-card { background: #fffaf4; }
+
+  .ownership {
+    background:
+      radial-gradient(circle at 90% 10%, rgba(83,112,74,.12), transparent 30%),
+      var(--sage);
+  }
+  .choice-card.rent { background: #f7f4ee; }
+  .choice-card.own { background: #fff; border-color: #64745d; box-shadow: 5px 5px 0 #64745d; }
+  .choice-card.own .choice-label { color: #4c6345; }
+  .choice-card.own li::before { color: #4c6345; }
+
+  .reviews {
+    background:
+      linear-gradient(90deg, transparent 49.8%, rgba(10,10,10,.025) 50%, transparent 50.2%) 0 0 / 64px 64px,
+      #fff;
+  }
+  .review-card:nth-child(1) { background: #fff8f2; }
+  .review-card:nth-child(2) { background: #f4f7f1; }
+  .review-card:nth-child(3) { background: #f1f6f8; }
+
+  .system {
+    background:
+      radial-gradient(circle at 8% 82%, rgba(61,103,119,.10), transparent 27%),
+      var(--mist);
+  }
+  .system-grid { background: #fff; box-shadow: 7px 7px 0 #27343a; }
+  .system-card:nth-child(2), .system-card:nth-child(6) { background: #f5f9fa; }
+  .system-card:nth-child(4) { background: #fff7f1; }
+
+  .plan {
+    background:
+      radial-gradient(circle at 88% 18%, rgba(251,86,7,.17), transparent 30%),
+      var(--forest);
+    color: #fff;
+  }
+  .plan h2, .plan-steps strong { color: #fff; }
+  .plan .section-label.light { color: #ff7b3b; }
+  .plan-steps p { color: #c7d0c8; }
+  .plan-steps span { background: #223229; border-color: #d9e1da; box-shadow: 3px 3px 0 var(--orange); }
+  .plan-steps::before { background: #45564a; }
+
+  .faq {
+    background:
+      linear-gradient(135deg, rgba(112,84,44,.035) 25%, transparent 25%) 0 0 / 38px 38px,
+      var(--sand);
+  }
+  .faq details:nth-child(even) { background: #fffcf7; }
+
+  .strategy {
+    background:
+      radial-gradient(circle at 10% 10%, rgba(251,86,7,.18), transparent 28%),
+      #fff5ed;
+  }
+  .strategy-copy li::before { color: #c13d0e; }
+  .form-wrap :global(.quote-form-card) { background: #fff; box-shadow: 6px 6px 0 #c13d0e; }
+</style>
+
+<style>
+  /* Current 22LM brand alignment, based on the live homepage. */
+  :global(body.grow-page) {
+    --orange: #fb5607;
+    --ink: #0a0a0a;
+    --cream: #f8f6f2;
+    --paper: #ffffff;
+    --line: #e5e2dc;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'Sora', sans-serif;
+    font-size: 15px;
+  }
+  .wrap { width: min(1280px, calc(100% - 80px)); }
+  .narrow { width: min(1120px, calc(100% - 80px)); }
+  .section-pad { padding: 88px 0; border-top: 1px solid var(--line); }
+  h1, h2, h3 { font-family: 'Sora', sans-serif; text-transform: none; }
+
+  .grow-nav {
+    position: relative;
+    background: rgba(248,246,242,.92);
+    border-bottom: 1px solid var(--line);
+    backdrop-filter: blur(10px);
+  }
+  .nav-inner { height: 78px; }
+  .nav-inner img, .grow-footer img { filter: none; width: 202px; }
+  .button {
+    min-height: 48px;
+    border-radius: 6px;
+    box-shadow: 3px 3px 0 var(--ink);
+    transition: transform .1s, box-shadow .1s;
+  }
+  .button:hover { transform: translate(1px,1px); box-shadow: 2px 2px 0 var(--ink); }
+  .button-small { min-height: 42px; }
+
+  .hero {
+    min-height: auto;
+    padding: 88px 0 72px;
+    color: var(--ink);
+    background:
+      radial-gradient(circle at 82% 14%, rgba(251,86,7,.10), transparent 28%),
+      var(--cream);
+    border-bottom: 1px solid var(--line);
+  }
+  .hero::after { display: none; }
+  .hero-grid {
+    opacity: .5;
+    background-image: repeating-linear-gradient(45deg, transparent 0 28px, rgba(10,10,10,.025) 28px 29px);
+    background-size: auto;
+    mask-image: linear-gradient(to bottom,#000,transparent 92%);
+  }
+  .hero-inner { align-items: flex-start; text-align: left; }
+  .eyebrow, .section-label {
+    font-family: 'Sora', sans-serif;
+    font-size: 11px;
+    letter-spacing: .1em;
+  }
+  h1 {
+    max-width: 1000px;
+    margin: 18px 0 20px;
+    font-size: clamp(3rem, 6.2vw, 5.8rem);
+    line-height: .98;
+    letter-spacing: -.055em;
+    font-weight: 700;
+    text-transform: none;
+    position: relative;
+    padding: 14px 0 8px;
+  }
+  h1::before, h1::after {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border: 2px solid var(--orange);
+  }
+  h1::before { top: 0; left: -20px; border-right: 0; border-bottom: 0; }
+  h1::after { bottom: 0; right: -20px; border-left: 0; border-top: 0; }
+  .hero-copy { max-width: 760px; color: #525252; margin: 0 0 34px; font-size: 1.08rem; }
+  .video-shell {
+    width: min(900px, 100%);
+    margin: 4px auto 0;
+    align-self: center;
+    border: 1px solid var(--ink);
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--ink);
+    box-shadow: 7px 7px 0 var(--ink);
+  }
+  .video-bar { background: var(--ink); }
+  .button-hero { margin: 34px auto 0; align-self: center; }
+  .micro-trust { align-self: center; color: #525252; }
+
+  .proof-strip { background: var(--paper); color: var(--ink); border-bottom: 1px solid var(--line); }
+  .proof-grid div { border-right: 1px solid var(--line); padding: 28px 24px; }
+  .proof-grid strong { font-family: 'Sora', sans-serif; font-size: 2.2rem; letter-spacing: -.04em; }
+  .proof-grid span { color: #525252; }
+
+  .problem h2, .faq h2, .case-copy h2, .plan h2, .strategy h2,
+  .ownership-intro h2, .section-head h2 {
+    font-size: clamp(2.4rem, 4.5vw, 4.25rem);
+    line-height: 1.02;
+    letter-spacing: -.045em;
+    text-transform: none;
+  }
+  .problem-grid article { background: var(--paper); border: 1px solid var(--ink); border-radius: 10px; padding: 26px; box-shadow: 5px 5px 0 var(--ink); }
+  .problem-grid h3, .system-card h3, .choice-card h3 { text-transform: none; font-size: 1.35rem; line-height: 1.15; letter-spacing: -.025em; }
+
+  .case-study { background: var(--ink); }
+  .case-study::after { font-family: 'Sora'; font-size: 8rem; letter-spacing: -.08em; }
+  .case-card { border-radius: 10px; box-shadow: 7px 7px 0 var(--orange); transform: none; }
+  .case-metric strong, .case-pair strong { font-family: 'Sora'; letter-spacing: -.06em; }
+  .case-metric strong { font-size: 5rem; }
+  .case-pair strong { font-size: 2.25rem; }
+
+  .ownership { background: var(--cream); color: var(--ink); }
+  .ownership-intro p { color: #525252; }
+  .choice-card { border-radius: 10px; min-height: 390px; transform: none !important; }
+  .choice-card.rent { background: var(--paper); color: var(--ink); border-color: var(--line); }
+  .choice-card.own { box-shadow: 6px 6px 0 var(--ink); }
+  .choice-label { border-radius: 4px; }
+
+  .system { background: var(--paper); }
+  .section-head { align-items: end; }
+  .system-grid { gap: 14px; border: 0; }
+  .system-card:nth-child(n) {
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    min-height: 240px;
+    box-shadow: none;
+  }
+  .system-card:hover { border-color: var(--ink); transform: translateY(-2px); }
+  .plan { background: var(--ink); }
+  .plan-steps { border-top-color: #333; }
+  .plan-steps > div { border-bottom-color: #333; }
+  .faq details { background: var(--paper); border: 1px solid var(--ink); border-radius: 8px; box-shadow: 3px 3px 0 var(--ink); padding: 0 20px; margin-bottom: 12px; }
+  .faq-list { border-top: 0; }
+  .strategy { background: var(--cream); color: var(--ink); }
+  .strategy-copy > p { color: #525252; }
+  .form-wrap :global(.quote-form-card) { box-shadow: 6px 6px 0 var(--ink); border-radius: 10px; }
+  .form-wrap :global(.qf-title) { font-family: 'Sora'; font-size: 1.35rem; text-transform: none; }
+  .form-wrap :global(.qf-input), .form-wrap :global(.qf-submit) { border-radius: 6px; }
+  .grow-footer { background: var(--ink); }
+  .grow-footer img { filter: brightness(0) invert(1); }
+
+  @media (max-width: 900px) {
+    .wrap, .narrow { width: min(100% - 48px, 1280px); }
+  }
+  @media (max-width: 620px) {
+    .wrap, .narrow { width: min(100% - 36px, 1280px); }
+    .section-pad { padding: 64px 0; }
+    .hero { padding: 64px 0 56px; }
+    h1 { font-size: 3rem; }
+    h1::before { left: -10px; }
+    h1::after { right: -10px; }
+    .proof-grid div:nth-child(n) { border-color: var(--line); }
+    .video-shell { box-shadow: 5px 5px 0 var(--ink); }
+  }
+</style>
+
+<style>
+  /* Reuse the approved homepage section language and proportions. */
+  .hero-inner { align-items: center; text-align: center; }
+  .eyebrow { justify-content: center; }
+  h1 { margin-inline: auto; }
+  .hero-copy { margin-inline: auto; }
+  .video-shell { margin-top: 4px; }
+
+  .proof-strip { padding: 0; }
+  .proof-grid {
+    width: min(1200px, calc(100% - 80px));
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 1px solid var(--line);
+    border-top: 0;
+    background: var(--paper);
+  }
+  .proof-grid .stat { padding: 30px 24px; border-right: 1px solid var(--line); display: block; }
+  .proof-grid .stat:last-child { border-right: 0; }
+  .proof-grid .stat-label { display: block; font-size: 11px; color: var(--orange); letter-spacing: .1em; text-transform: uppercase; font-weight: 700; margin-bottom: 10px; }
+  .proof-grid strong { display: block; font-size: 34px; line-height: 1; margin-bottom: 8px; }
+  .proof-grid .stat > span:last-child { display: block; font-size: 13px; line-height: 1.45; color: #525252; }
+
+  .problem { background: var(--cream); }
+  .problem > .narrow { width: min(1200px, calc(100% - 80px)); }
+  .problem h2 { max-width: 760px; font-size: 38px; line-height: 1.05; }
+  .problem-grid { gap: 16px; margin-top: 48px; }
+  .problem-grid article { box-shadow: none; border-color: var(--line); padding: 26px; transition: transform .15s, border-color .15s; }
+  .problem-grid article:hover { transform: translateY(-2px); border-color: var(--ink); }
+
+  .case-grid { gap: 56px; }
+  .case-copy h2 { font-size: 42px; }
+  .case-card { box-shadow: 6px 6px 0 var(--orange); }
+
+  .ownership { background: var(--cream); }
+  .ownership-grid { grid-template-columns: 1fr 1fr; gap: 56px; }
+  .ownership-intro h2 { font-size: 38px; line-height: 1.05; }
+  .choice-card { min-height: 360px; padding: 26px; }
+  .choice-card.rent { border-color: var(--ink); }
+  .choice-card.own { box-shadow: 5px 5px 0 var(--ink); }
+
+  .approved-head, .section-head {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+  }
+  .approved-head h2, .section-head h2 {
+    font-size: 38px;
+    font-weight: 700;
+    letter-spacing: -.03em;
+    line-height: 1.05;
+    max-width: 680px;
+    position: relative;
+  }
+  .approved-head h2::before, .approved-head h2::after,
+  .section-head h2::before, .section-head h2::after {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border: 2px solid var(--orange);
+  }
+  .approved-head h2::before, .section-head h2::before { top: 0; left: -22px; border-right: 0; border-bottom: 0; }
+  .approved-head h2::after, .section-head h2::after { bottom: 0; right: -22px; border-left: 0; border-top: 0; }
+  .approved-head > p, .section-head > p { margin-left: auto; max-width: 340px; text-align: right; color: #525252; font-size: 14px; }
+
+  .reviews { background: var(--paper); }
+  .review-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .review-card { background: var(--paper); border: 1px solid var(--line); border-radius: 10px; padding: 24px; display: flex; flex-direction: column; min-height: 280px; transition: transform .15s, border-color .15s; }
+  .review-card:hover { transform: translateY(-2px); border-color: var(--ink); }
+  .stars { color: var(--orange); letter-spacing: 1px; margin-bottom: 14px; }
+  .review-card > p { line-height: 1.65; flex: 1; }
+  .review-author { display: flex; align-items: center; gap: 12px; border-top: 1px solid var(--line); padding-top: 16px; margin-top: 18px; }
+  .review-author > span { width: 40px; height: 40px; border-radius: 50%; background: var(--orange); color: #fff; display: grid; place-items: center; font-size: 13px; font-weight: 700; }
+  .review-author strong, .review-author small { display: block; }
+  .review-author small { color: #777; margin-top: 2px; }
+
+  .system { background: var(--cream); }
+  .system-grid { grid-template-columns: repeat(3, 1fr); gap: 0; border: 1px solid var(--ink); border-radius: 10px; overflow: hidden; }
+  .system-card:nth-child(n) { border: 0; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); border-radius: 0; min-height: 250px; }
+  .system-card:nth-child(3n) { border-right: 0; }
+  .system-card:nth-last-child(-n+3) { border-bottom: 0; }
+
+  .plan { background: var(--paper); color: var(--ink); }
+  .plan-grid { grid-template-columns: 1fr; gap: 40px; }
+  .plan h2 { font-size: 38px; max-width: 760px; }
+  .plan .section-label.light { color: var(--orange); }
+  .plan-steps { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 0; position: relative; }
+  .plan-steps::before { content: ''; position: absolute; top: 24px; left: 10%; right: 10%; height: 1px; background: var(--line); }
+  .plan-steps > div { display: block; padding: 0 24px 0 0; border: 0; position: relative; }
+  .plan-steps span { width: 48px; height: 48px; display: grid; place-items: center; border: 1px solid var(--ink); background: var(--paper); border-radius: 8px; color: var(--orange); margin-bottom: 18px; position: relative; z-index: 1; box-shadow: 3px 3px 0 var(--ink); }
+  .plan-steps p { font-size: 14px; color: #525252; }
+  .plan-steps strong { display: block; color: var(--ink); margin-bottom: 5px; }
+
+  .faq { background: var(--cream); }
+  .faq-wrap { max-width: 880px; }
+  .faq h2 { font-size: 38px; margin-bottom: 42px; }
+  .strategy { background: var(--paper); }
+  .strategy h2 { font-size: 42px; }
+
+  @media (max-width: 900px) {
+    .proof-grid { width: min(100% - 48px, 1200px); grid-template-columns: repeat(2, 1fr); }
+    .proof-grid .stat:nth-child(2) { border-right: 0; }
+    .proof-grid .stat:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+    .ownership-grid { grid-template-columns: 1fr; }
+    .review-grid { grid-template-columns: 1fr; }
+    .system-grid { grid-template-columns: repeat(2, 1fr); }
+    .system-card:nth-child(n) { border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .system-card:nth-child(2n) { border-right: 0; }
+    .system-card:nth-last-child(-n+2) { border-bottom: 0; }
+    .plan-steps { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+    .plan-steps::before { display: none; }
+    .approved-head > p, .section-head > p { margin-left: 0; text-align: left; }
+  }
+  @media (max-width: 620px) {
+    .proof-grid { width: min(100% - 36px, 1200px); }
+    .proof-grid .stat:nth-child(n) { padding: 22px 18px; border-right: 0; border-bottom: 1px solid var(--line); }
+    .proof-grid .stat:last-child { border-bottom: 0; }
+    .proof-grid { grid-template-columns: 1fr; }
+    .system-grid, .plan-steps { grid-template-columns: 1fr; }
+    .system-card:nth-child(n) { border-right: 0; border-bottom: 1px solid var(--line); }
+    .system-card:last-child { border-bottom: 0; }
+    .problem > .narrow { width: min(100% - 36px, 1200px); }
+    .approved-head h2, .section-head h2, .problem h2, .plan h2, .faq h2, .strategy h2 { font-size: 28px; }
+  }
+</style>
+
+<style>
+  :global(body.grow-page) { --apricot:#fff0e6; --sage:#edf2e8; --mist:#edf2f4; --sand:#f3ebdd; --forest:#17241d; --deep-slate:#141b20; }
+  .hero { background:radial-gradient(circle at 82% 14%,rgba(251,86,7,.16),transparent 31%),radial-gradient(circle at 12% 84%,rgba(193,61,14,.07),transparent 28%),#fbf7f0; }
+  .proof-strip { background:#fbf7f0; }
+  .proof-grid { box-shadow:0 18px 50px rgba(58,38,27,.07); }
+  .problem { background:linear-gradient(135deg,rgba(251,86,7,.045) 25%,transparent 25%) 0 0/42px 42px,var(--apricot); }
+  .problem-grid article { background:rgba(255,255,255,.88); }
+  .case-study { background:radial-gradient(circle at 12% 16%,rgba(251,86,7,.16),transparent 28%),linear-gradient(145deg,var(--deep-slate),#0b0f12); }
+  .case-card { background:#fffaf4; }
+  .ownership { background:radial-gradient(circle at 90% 10%,rgba(83,112,74,.12),transparent 30%),var(--sage); }
+  .choice-card.rent { background:#f7f4ee; }
+  .choice-card.own { background:#fff; border-color:#64745d; box-shadow:5px 5px 0 #64745d; }
+  .choice-card.own .choice-label,.choice-card.own li::before { color:#4c6345; }
+  .reviews { background:linear-gradient(90deg,transparent 49.8%,rgba(10,10,10,.025) 50%,transparent 50.2%) 0 0/64px 64px,#fff; }
+  .review-card:nth-child(1) { background:#fff8f2; }
+  .review-card:nth-child(2) { background:#f4f7f1; }
+  .review-card:nth-child(3) { background:#f1f6f8; }
+  .system { background:radial-gradient(circle at 8% 82%,rgba(61,103,119,.10),transparent 27%),var(--mist); }
+  .system-grid { background:#fff; box-shadow:7px 7px 0 #27343a; }
+  .system-card:nth-child(2),.system-card:nth-child(6) { background:#f5f9fa; }
+  .system-card:nth-child(4) { background:#fff7f1; }
+  .plan { background:radial-gradient(circle at 88% 18%,rgba(251,86,7,.17),transparent 30%),var(--forest); color:#fff; }
+  .plan h2,.plan-steps strong { color:#fff; }
+  .plan .section-label.light { color:#ff7b3b; }
+  .plan-steps p { color:#c7d0c8; }
+  .plan-steps span { background:#223229; border-color:#d9e1da; box-shadow:3px 3px 0 var(--orange); }
+  .plan-steps::before { background:#45564a; }
+  .faq { background:linear-gradient(135deg,rgba(112,84,44,.035) 25%,transparent 25%) 0 0/38px 38px,var(--sand); }
+  .faq details:nth-child(even) { background:#fffcf7; }
+  .strategy { background:radial-gradient(circle at 10% 10%,rgba(251,86,7,.18),transparent 28%),#fff5ed; }
+  .strategy-copy li::before { color:#c13d0e; }
+  .form-wrap :global(.quote-form-card) { background:#fff; box-shadow:6px 6px 0 #c13d0e; }
+
+  /* Conversion-focused hero refinements. */
+  .nav-inner img { width: 238px; filter: none; }
+  .grow-footer img { width: 238px; }
+  .eyebrow {
+    display: inline-flex;
+    justify-content: center;
+    padding: 8px 12px;
+    color: #9f3209;
+    background: #fff0e6;
+    border: 1px solid rgba(159,50,9,.22);
+    border-radius: 999px;
+    font-size: 11px;
+    letter-spacing: .09em;
+  }
+  h1 {
+    max-width: 900px;
+    margin: 20px auto 18px;
+    padding: 6px 0;
+    font-size: clamp(2.75rem, 5vw, 4.85rem);
+    line-height: 1.02;
+    letter-spacing: -.05em;
+  }
+  h1::before, h1::after { display: none; }
+  .hero-copy {
+    max-width: 850px;
+    margin: 0 auto;
+    color: #111;
+    font-size: 1.08rem;
+    line-height: 1.65;
+    font-weight: 500;
+  }
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin-top: 28px;
+  }
+  .button-hero { margin: 0; }
+  .text-link { color: #111; font-weight: 700; text-underline-offset: 4px; }
+  .hero-trust { margin-top: 18px; color: #3e3e3e; }
+  .hero-trust span { display: inline-flex; align-items: center; gap: 7px; }
+  .hero-trust span::before { content: '✓'; color: #9f3209; font-weight: 800; }
+  .video-shell { margin-top: 34px; scroll-margin-top: 24px; }
+
+  @media (max-width: 620px) {
+    .nav-inner { gap: 14px; }
+    .nav-inner img { width: 154px; }
+    .button-small { min-height: 40px; padding: 0 12px; gap: 8px; font-size: 0; white-space: nowrap; }
+    .button-small::before { content: 'Book call'; font-size: 13px; }
+    .button-small span { font-size: 13px; }
+    .grow-footer img { width: 190px; }
+    h1 { font-size: clamp(2.15rem, 10vw, 2.65rem); line-height: 1.06; }
+    .hero-copy { font-size: 1rem; line-height: 1.55; }
+    .hero-actions { width: 100%; gap: 16px; }
+    .hero-actions .button { width: 100%; }
+    .hero-trust { gap: 8px 16px; }
+  }
+</style>

@@ -1,0 +1,219 @@
+{
+ "health_score": 93,
+ "errors": 29,
+ "warnings": 56,
+ "notices": 78,
+ "crawled": 415,
+ "issues": [
+  {
+   "name": "Image file size too large",
+   "importance": "Error",
+   "category": "Images",
+   "crawled": 24
+  },
+  {
+   "name": "404 page",
+   "importance": "Error",
+   "category": "Internal pages",
+   "crawled": 4
+  },
+  {
+   "name": "4XX page",
+   "importance": "Error",
+   "category": "Internal pages",
+   "crawled": 4
+  },
+  {
+   "name": "Page has links to broken page",
+   "importance": "Error",
+   "category": "Links",
+   "crawled": 1
+  },
+  {
+   "name": "Noindex page",
+   "importance": "Warning",
+   "category": "Indexability",
+   "crawled": 13
+  },
+  {
+   "name": "Meta description too long",
+   "importance": "Warning",
+   "category": "Content",
+   "crawled": 10
+  },
+  {
+   "name": "Open Graph tags incomplete",
+   "importance": "Warning",
+   "category": "Social tags",
+   "crawled": 9
+  },
+  {
+   "name": "Meta description tag missing or empty",
+   "importance": "Warning",
+   "category": "Content",
+   "crawled": 7
+  },
+  {
+   "name": "Meta description too short",
+   "importance": "Warning",
+   "category": "Content",
+   "crawled": 5
+  },
+  {
+   "name": "HTTPS page links to HTTP image",
+   "importance": "Warning",
+   "category": "Images",
+   "crawled": 5
+  },
+  {
+   "name": "HTTPS/HTTP mixed content",
+   "importance": "Warning",
+   "category": "Internal pages",
+   "crawled": 5
+  },
+  {
+   "name": "3XX redirect",
+   "importance": "Warning",
+   "category": "Redirects",
+   "crawled": 4
+  },
+  {
+   "name": "Title too long",
+   "importance": "Warning",
+   "category": "Content",
+   "crawled": 3
+  },
+  {
+   "name": "Image redirects",
+   "importance": "Warning",
+   "category": "Images",
+   "crawled": 3
+  },
+  {
+   "name": "Page has links to redirect",
+   "importance": "Warning",
+   "category": "Links",
+   "crawled": 3
+  },
+  {
+   "name": "CSS broken",
+   "importance": "Warning",
+   "category": "CSS",
+   "crawled": 2
+  },
+  {
+   "name": "Page has broken CSS",
+   "importance": "Warning",
+   "category": "CSS",
+   "crawled": 2
+  },
+  {
+   "name": "Page has redirected image",
+   "importance": "Warning",
+   "category": "Images",
+   "crawled": 2
+  },
+  {
+   "name": "Slow page",
+   "importance": "Warning",
+   "category": "Usability and performance",
+   "crawled": 2
+  },
+  {
+   "name": "H1 tag missing or empty",
+   "importance": "Warning",
+   "category": "Content",
+   "crawled": 1
+  },
+  {
+   "name": "Nofollow page",
+   "importance": "Warning",
+   "category": "Indexability",
+   "crawled": 1
+  },
+  {
+   "name": "Structured data has schema.org validation error",
+   "importance": "Notice",
+   "category": "Other",
+   "crawled": 54
+  },
+  {
+   "name": "Page has nofollow and dofollow incoming internal links",
+   "importance": "Notice",
+   "category": "Links",
+   "crawled": 26
+  },
+  {
+   "name": "Noindex follow page",
+   "importance": "Notice",
+   "category": "Indexability",
+   "crawled": 12
+  },
+  {
+   "name": "H1 tag missing or empty",
+   "importance": "Notice",
+   "category": "Content",
+   "crawled": 9
+  },
+  {
+   "name": "Page has only one dofollow incoming internal link",
+   "importance": "Notice",
+   "category": "Links",
+   "crawled": 5
+  },
+  {
+   "name": "HTTP to HTTPS redirect",
+   "importance": "Notice",
+   "category": "Redirects",
+   "crawled": 2
+  },
+  {
+   "name": "Pages to submit to IndexNow",
+   "importance": "Notice",
+   "category": "Other",
+   "crawled": 1
+  },
+  {
+   "name": "Multiple H1 tags",
+   "importance": "Notice",
+   "category": "Content",
+   "crawled": 1
+  },
+  {
+   "name": "Pages have high AI content levels",
+   "importance": "Notice",
+   "category": "Content",
+   "crawled": 1
+  },
+  {
+   "name": "Noindex and nofollow page",
+   "importance": "Notice",
+   "category": "Indexability",
+   "crawled": 1
+  },
+  {
+   "name": "Noindex page became indexable",
+   "importance": "Notice",
+   "category": "Indexability",
+   "crawled": 1
+  },
+  {
+   "name": "Page has nofollow outgoing internal links",
+   "importance": "Notice",
+   "category": "Links",
+   "crawled": 1
+  },
+  {
+   "name": "Redirect chain",
+   "importance": "Notice",
+   "category": "Redirects",
+   "crawled": 1
+  },
+  {
+   "name": "Indexable page not in sitemap",
+   "importance": "Notice",
+   "category": "Sitemaps",
+   "crawled": 1
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+  "id": "3b7c86c0-be4f-4004-9e99-f6698809faec",
+  "lead_id": "7b353f1b-b4e8-4733-a6d2-09c11d87250c",
+  "version": 1,
+  "status": "building_slides",
+  "business_type": "local_services",
+  "has_locations": false,
+  "primary_service_keywords": [
+    "land clearing",
+    "forestry mulching",
+    "stump removal",
+    "grading"
+  ],
+  "funnel_classification": {
+    "decision_patterns": [
+      "/services/",
+      "/quote",
+      "/estimate",
+      "/emergency",
+      "/24-hour",
+      "near-me",
+      "land clearing",
+      "forestry mulching",
+      "stump removal",
+      "grading"
+    ],
+    "branded_patterns": [
+      "better way land management llc"
+    ],
+    "awareness_patterns": [
+      "/blog/",
+      "/how-to/",
+      "/tips/",
+      "/guide/"
+    ],
+    "consideration_patterns": [
+      "/pricing/",
+      "/compare/",
+      "/vs-"
+    ]
+  },
+  "client_domain": "betterwaylandmanagement.com",
+  "client_name": "Better Way Land Management LLC",
+  "competitor_domains": [],
+  "locations": [],
+  "slides": [
+    {
+      "id": "cover",
+      "name": "Cover",
+      "status": "completed",
+      "data": {
+        "client_name": "Better Way Land Management LLC",
+        "address": "Swanton, OH",
+        "date": "June 18, 2026",
+        "subtitle": "SEO & Local Visibility Analysis",
+        "agency_name": "22 Local Marketing"
+      }
+    },
+    {
+      "id": "executive_summary",
+      "name": "Executive Summary",
+      "status": "completed",
+      "data": {
+        "firm_name": "Better Way Land Management LLC",
+        "locations": [
+          "Swanton, OH"
+        ],
+        "challenges": [
+          "No conversion tracking is configured in GA4, so leads are not being measured yet",
+          "Most service and location pages rank position 15 to 37, which is page 2 to 3",
+          "Local visibility is weak for stump removal at 4% Share of Local Voice, despite strength elsewhere",
+          "A few thin pages remain (past-work 34 words, contact 493 words)"
+        ],
+        "strategy": [
+          "Set up conversion tracking so every lead is measured from a clean baseline",
+          "Push high-impression page-2 pages like land and lot clearing and forestry mulching into the top 5 with added depth and links",
+          "Close the stump removal local gap through GBP and on-page work",
+          "Expand thin pages and round out the service and location matrix"
+        ]
+      }
+    },
+    {
+      "id": "the_market",
+      "name": "The Market",
+      "status": "skipped"
+    },
+    {
+      "id": "organic_performance",
+      "name": "Organic Performance",
+      "status": "skipped"
+    },
+    {
+      "id": "traffic_decline",
+      "name": "Why Has Traffic Fallen?",
+      "status": "skipped"
+    },
+    {
+      "id": "marketing_funnel",
+      "name": "Marketing Funnel",
+      "status": "skipped"
+    },
+    {
+      "id": "top_pages",
+      "name": "Top Pages",
+      "status": "completed",
+      "data": {
+        "pages": [
+          {
+            "url": "/ (home)",
+            "traffic": 1367,
+            "top_keyword": "better way land management",
+            "search_volume": 0,
+            "traffic_change": 0,
+            "funnel_stage": "branded"
+          },
+          {
+            "url": "/tree-stump-grinding-removal/",
+            "traffic": 274,
+            "top_keyword": "stump removal near me",
+            "search_volume": 0,
+            "traffic_change": 0,
+            "funnel_stage": "decision"
+          },
+          {
+            "url": "/contact/",
+            "traffic": 115,
+            "top_keyword": "better way contact",
+            "search_volume": 0,
+            "traffic_change": 0,
+            "funnel_stage": "decision"
+          },
+          {
+            "url": "/land-lot-clearing/",
+            "traffic": 86,
+            "top_keyword": "land clearing",
+            "search_volume": 0,
+            "traffic_change": 0,
+            "funnel_stage": "decision"
+          },
+          {
+            "url": "/excavation/",
+            "traffic": 79,
+            "top_keyword": "excavating near me",
+            "search_volume": 0,
+            "traffic_change": 0,
+            "funnel_stage": "decision"
+          },
+          {
+            "url": "/forestry-mulching/",
+            "traffic": 55,
+            "top_keyword": "forestry mulching near me",
+            "search_volume": 0,
+            "traffic_change": 0,
+            "funnel_stage": "decision"
+          },
+          {
+            "url": "/pond-installation/",
+            "traffic": 55,
+            "top_keyword": "pond installation",
+            "search_volume": 0,
+            "traffic_change": 0,
+            "funnel_stage": "decision"
+          },
+          {
+            "url": "/grading-service/",
+            "traffic": 35,
+            "top_keyword": "land grading",
+            "search_volume": 0,
+            "traffic_change": 0,
+            "funnel_stage": "decision"
+          }
+        ],
+        "takeaways": [
+          "Tree stump grinding is the top non-brand entry page at 274 sessions in 90 days",
+          "Land and lot clearing draws 1,562 impressions but ranks position 37, the single biggest striking-distance opportunity",
+          "GA4 records 0 conversions because no key events are configured yet, so none of this traffic is being measured as leads"
+        ]
+      }
+    },
+    {
+      "id": "content_performance",
+      "name": "Content Performance",
+      "status": "skipped"
+    },
+    {
+      "id": "backlink_profile",
+      "name": "Backlink Profile",
+      "status": "skipped"
+    },
+    {
+      "id": "technical_audit",
+      "name": "Technical Audit",
+      "status": "completed",
+      "data": {
+        "items": [
+          {
+            "name": "Indexable URLs crawled",
+            "status": "pass",
+            "count": 308
+          },
+          {
+            "name": "Client errors (4xx)",
+            "status": "pass",
+            "count": 0
+          },
+          {
+            "name": "Redirects (3xx)",
+            "status": "pass",
+            "count": 1
+          },
+          {
+            "name": "Missing title tags (real pages)",
+            "status": "pass",
+            "count": 0
+          },
+          {
+            "name": "Thin content pages",
+            "status": "improvement_needed",
+            "count": 2
+          },
+          {
+            "name": "HTTPS",
+            "status": "pass",
+            "value": "All secure"
+          }
+        ]
+      }
+    },
+    {
+      "id": "analysis_recap",
+      "name": "Analysis Recap",
+      "status": "completed",
+      "data": {
+        "rows": [
+          {
+            "category": "Website Performance",
+            "status": "improvement_needed",
+            "summary": "Real organic traction for a one-year-old site: 405 Search Console clicks and 19,433 impressions in 90 days, 2,078 GA4 sessions (688 organic). Average position 21.9 keeps most pages on page 2 to 3.",
+            "metrics": [
+              "405 clicks/90d",
+              "19.4K impressions",
+              "pos 21.9 avg"
+            ]
+          },
+          {
+            "category": "Local Performance",
+            "status": "passing",
+            "summary": "Strong local visibility. 67% average Share of Local Voice across priority keywords, ranking number 1 for forestry mulching at 96% SoLV. Stump removal lags badly at 4%.",
+            "metrics": [
+              "67% SoLV avg",
+              "#1 forestry mulching",
+              "4% stump removal"
+            ]
+          },
+          {
+            "category": "Technical SEO",
+            "status": "passing",
+            "summary": "Clean crawl. 308 indexable URLs, no 4xx errors, one redirect.",
+            "metrics": [
+              "308 indexable",
+              "0 errors",
+              "1 redirect"
+            ]
+          },
+          {
+            "category": "Content Performance",
+            "status": "improvement_needed",
+            "summary": "A full service and location page matrix exists, but most pages sit position 15 to 37. Land and lot clearing has 1,562 impressions at position 37, and a couple of pages are thin.",
+            "metrics": [
+              "~50 content pages",
+              "pos 15 to 37",
+              "2 thin pages"
+            ]
+          },
+          {
+            "category": "Conversion Tracking",
+            "status": "failing",
+            "summary": "GA4 shows 0 configured conversion events, so no leads are being measured. This is the first thing to fix.",
+            "metrics": [
+              "0 conversions tracked",
+              "GA4 live",
+              "setup needed"
+            ]
+          }
+        ],
+        "bottom_line": "Better Way is winning locally and gaining organic traction fast for a site this young. The biggest levers are pushing page-2 service and location pages into the top 5, closing the stump removal local gap, and turning on conversion tracking so the results are measurable."
+      }
+    },
+    {
+      "id": "traffic_projection",
+      "name": "Traffic Projection",
+      "status": "skipped"
+    },
+    {
+      "id": "action_plan",
+      "name": "Action Plan",
+      "status": "completed",
+      "data": {
+        "phases": [
+          {
+            "title": "Foundation",
+            "period": "Month 1",
+            "tasks": [
+              "Conversion tracking and analytics audit",
+              "Baseline rank tracking and GBP insights",
+              "Technical fixes from the audit"
+            ]
+          },
+          {
+            "title": "Local and Content",
+            "period": "Months 2 to 3",
+            "tasks": [
+              "GBP optimization, citation cleanup, reviews velocity",
+              "Content strategy and gap analysis",
+              "Expand the two thin pages",
+              "Begin service and location pages for the four priority services"
+            ]
+          },
+          {
+            "title": "Authority and Growth",
+            "period": "Months 4 to 6",
+            "tasks": [
+              "Link building",
+              "Ongoing content batches",
+              "Monthly reporting and client check-ins"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "investment",
+      "name": "Investment",
+      "status": "skipped"
+    },
+    {
+      "id": "the_team",
+      "name": "The Team",
+      "status": "pending"
+    }
+  ],
+  "current_slide_index": 0,
+  "parsed_data": {
+    "traffic_history": "C:\\22 Local Marketing\\leads\\better-way-land-management-llc\\proposals\\3b7c86c0-be4f-4004-9e99-f6698809faec\\parsed\\ahrefs_traffic_history.json"
+  },
+  "input_files": {},
+  "created_at": "2026-06-18T18:30:42.728Z",
+  "updated_at": "2026-06-18T19:36:23.235Z",
+  "data_sources": {
+    "ahrefs_traffic": {
+      "source": "ahrefs",
+      "mode": "api",
+      "available": true,
+      "fetched_at": "2026-06-18T18:30:50.641Z",
+      "parsed_path": "C:\\22 Local Marketing\\leads\\better-way-land-management-llc\\proposals\\3b7c86c0-be4f-4004-9e99-f6698809faec\\parsed\\ahrefs_traffic_history.json"
+    }
+  },
+  "output_html_path": "C:\\22 Local Marketing\\leads\\better-way-land-management-llc\\proposals\\3b7c86c0-be4f-4004-9e99-f6698809faec\\output\\proposal.html"
+}

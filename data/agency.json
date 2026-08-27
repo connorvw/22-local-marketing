@@ -1,0 +1,40 @@
+{
+  "name": "22 Local Marketing",
+  "description": "Local marketing agency for home-service and contractor businesses. Full-service SEO, Google Business Profile, PPC, and websites built to make a contractor the dominant local presence in their market.",
+  "website": "https://22localmarketing.com",
+  "email": "connor@22localmarketing.com",
+  "address": {
+    "state": "NC",
+    "country": "USA"
+  },
+  "branding": {
+    "primary_color": "#FB5607",
+    "secondary_color": "#1a1a1f"
+  },
+  "services": [
+    {
+      "name": "The Iron Pipeline",
+      "slug": "iron-pipeline",
+      "description": "Bundled full-service local marketing engagement: SEO, Google Business Profile management, PPC, and website. Built to create omnipresence across maps, organic, LSA, and paid."
+    }
+  ],
+  "tagline": "The dominant local presence for contractors",
+  "differentiators": [
+    {
+      "title": "Contractor specialists",
+      "description": "We work only with contractors and home-service businesses, so the playbook is tuned to how local buyers actually search and hire."
+    },
+    {
+      "title": "Omnipresence, not just rankings",
+      "description": "Maps, organic, Local Services Ads, and paid working together so you show up wherever the customer looks."
+    },
+    {
+      "title": "Honest, measurable reporting",
+      "description": "Clear monthly reporting tied to calls and leads, not vanity metrics."
+    },
+    {
+      "title": "Real local data",
+      "description": "Grid-based local rank tracking and Search Console data drive every recommendation."
+    }
+  ]
+}

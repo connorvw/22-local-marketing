@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>22 Local Marketing Social Post Guidelines</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --blaze: #FB5607;
+  --scorch: #C13D0E;
+  --bone: #F8F6F2;
+  --white: #FFFFFF;
+  --slate: #525252;
+  --slate-light: #8A8A8A;
+  --onyx: #0A0A0A;
+  --border: #E5E2DC;
+  --border-strong: #D4D0C8;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 56px;
+  background: var(--bone);
+  color: var(--onyx);
+  font-family: "Sora", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 430px;
+  gap: 42px;
+  align-items: center;
+  margin-bottom: 46px;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  color: var(--blaze);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.dash {
+  width: 28px;
+  height: 2px;
+  background: var(--blaze);
+}
+
+h1 {
+  max-width: 720px;
+  margin: 0 0 18px;
+  font-size: 58px;
+  line-height: 0.98;
+  letter-spacing: -0.052em;
+}
+
+.intro {
+  max-width: 620px;
+  margin: 0;
+  color: var(--slate);
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.logo-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.045em;
+}
+
+.brand-dot,
+.mini-dot {
+  display: inline-block;
+  border-radius: 3px;
+  background: var(--blaze);
+}
+
+.brand-dot {
+  width: 14px;
+  height: 14px;
+}
+
+.mini-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 2px;
+}
+
+.section {
+  padding-top: 26px;
+  margin-top: 26px;
+  border-top: 1px solid var(--border);
+}
+
+.section-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 18px;
+}
+
+h2 {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+
+.section-note {
+  max-width: 460px;
+  margin: 0;
+  color: var(--slate);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.rules {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.rule {
+  min-height: 150px;
+  padding: 20px;
+  background: var(--white);
+  border: 1px solid var(--onyx);
+  border-radius: 8px;
+  box-shadow: 3px 3px 0 var(--onyx);
+}
+
+.rule b {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 13px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.rule p {
+  margin: 0;
+  color: var(--slate);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.post {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  padding: 8%;
+  background: var(--white);
+  border: 1px solid var(--onyx);
+  border-radius: 8px;
+  box-shadow: 4px 4px 0 var(--onyx);
+}
+
+.post.dark {
+  background: var(--onyx);
+  color: var(--white);
+}
+
+.post.bone {
+  background: var(--bone);
+}
+
+.post::before,
+.post::after {
+  content: "";
+  position: absolute;
+  width: 12%;
+  height: 12%;
+  border: 3px solid var(--blaze);
+  pointer-events: none;
+}
+
+.post::before {
+  top: 5.5%;
+  left: 5.5%;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.post::after {
+  right: 5.5%;
+  bottom: 5.5%;
+  border-left: 0;
+  border-top: 0;
+}
+
+.post.frame-left::before {
+  inset: 5.5% auto 5.5% 5.5%;
+  width: 0;
+  height: auto;
+  border-width: 0 0 0 6px;
+}
+
+.post.frame-left::after {
+  display: none;
+}
+
+.post.frame-band::before {
+  width: auto;
+  height: 5px;
+  top: 5.5%;
+  left: 5.5%;
+  right: 5.5%;
+  border: 0;
+  background: var(--blaze);
+}
+
+.post.frame-band::after {
+  width: 11%;
+  height: 11%;
+}
+
+.post-inner {
+  position: relative;
+  z-index: 1;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.post-top,
+.post-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.label {
+  color: var(--blaze);
+  font-size: clamp(10px, 1.1vw, 13px);
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: clamp(11px, 1.1vw, 14px);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.headline {
+  max-width: 82%;
+  margin: 0;
+  font-size: clamp(30px, 4.2vw, 58px);
+  font-weight: 800;
+  line-height: 0.96;
+  letter-spacing: -0.055em;
+}
+
+.headline .accent {
+  color: var(--blaze);
+}
+
+.subcopy {
+  max-width: 78%;
+  margin: 14px 0 0;
+  color: var(--slate);
+  font-size: clamp(13px, 1.35vw, 17px);
+  line-height: 1.45;
+  font-weight: 500;
+}
+
+.dark .subcopy {
+  color: rgba(255,255,255,0.72);
+}
+
+.metric {
+  display: grid;
+  gap: 8px;
+}
+
+.metric-value {
+  font-size: clamp(68px, 8vw, 112px);
+  font-weight: 800;
+  line-height: 0.82;
+  letter-spacing: -0.065em;
+}
+
+.metric-caption {
+  max-width: 76%;
+  color: var(--slate);
+  font-size: clamp(13px, 1.3vw, 16px);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.photo-block {
+  min-height: 45%;
+  border: 1px solid var(--onyx);
+  background:
+    linear-gradient(135deg, rgba(251,86,7,0.88), rgba(251,86,7,0.32)),
+    repeating-linear-gradient(90deg, #d8d2c8 0 12px, #eee8dd 12px 24px);
+  border-radius: 6px;
+}
+
+.post-footer {
+  color: var(--slate);
+  font-size: clamp(10px, 1vw, 12px);
+  font-weight: 700;
+}
+
+.dark .post-footer {
+  color: rgba(255,255,255,0.66);
+}
+
+.spec-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.spec {
+  padding: 18px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.spec h3 {
+  margin: 0 0 10px;
+  font-size: 15px;
+  letter-spacing: -0.015em;
+}
+
+.spec ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--slate);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.swatches {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+}
+
+.swatch {
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.color {
+  height: 72px;
+}
+
+.swatch p {
+  margin: 0;
+  padding: 10px;
+  color: var(--slate);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+@media (max-width: 980px) {
+  body { padding: 32px; }
+  .hero,
+  .post-grid,
+  .spec-grid,
+  .rules { grid-template-columns: 1fr; }
+  .swatches { grid-template-columns: repeat(2, 1fr); }
+  .section-head { display: grid; }
+}
+
+@media print {
+  body {
+    padding: 0.4in;
+    background: white;
+  }
+  .post,
+  .rule {
+    box-shadow: none;
+  }
+}
+</style>
+</head>
+<body>
+<main>
+  <header class="hero">
+    <div>
+      <div class="eyebrow"><span class="dash"></span>Social System</div>
+      <h1>Posts built for local growth.</h1>
+      <p class="intro">Use a square-first system with confident Sora typography, sharp orange accents, and enough structure that every post feels branded before anyone reads the handle.</p>
+      <div class="logo-row"><span class="brand-dot"></span>22 Local Marketing</div>
+    </div>
+    <article class="post dark frame-band" aria-label="Hero example social post">
+      <div class="post-inner">
+        <div class="post-top">
+          <span class="label">Local SEO</span>
+          <span class="brand"><span class="mini-dot"></span>22 Local</span>
+        </div>
+        <div>
+          <h2 class="headline">More calls from the map pack<span class="accent">.</span></h2>
+          <p class="subcopy">Ranking is not luck. It is a system.</p>
+        </div>
+        <div class="post-footer"><span>22localmarketing.com</span><span>01</span></div>
+      </div>
+    </article>
+  </header>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Default Format</h2>
+      <p class="section-note">Design posts at 1080 x 1080 px by default. Keep the important content inside a 10% safe zone so the frame, captions, and platform UI never crowd the message.</p>
+    </div>
+    <div class="rules">
+      <div class="rule"><b>Ratio</b><p>Default to 1:1 square. Use 1080 x 1080 px for Instagram, Facebook, LinkedIn, and general feed posts.</p></div>
+      <div class="rule"><b>Margins</b><p>Use 8% inner padding. Headlines can be large, but never touch the accent frame.</p></div>
+      <div class="rule"><b>Logo</b><p>Use the orange rounded square plus wordmark in small footer or header positions. Keep it quiet.</p></div>
+      <div class="rule"><b>Voice</b><p>Short, direct, results-minded. Avoid hype. Sound sharp, useful, and grounded.</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Accent Frames</h2>
+      <p class="section-note">Every post should use one frame treatment. The frame is the brand signal: orange, geometric, and restrained.</p>
+    </div>
+    <div class="post-grid">
+      <article class="post">
+        <div class="post-inner">
+          <div class="post-top"><span class="label">Frame A</span><span class="brand"><span class="mini-dot"></span>22 Local</span></div>
+          <div><h2 class="headline">Corner frame<span class="accent">.</span></h2><p class="subcopy">Best default for quotes, insights, and simple service posts.</p></div>
+          <div class="post-footer"><span>Primary frame</span><span>01</span></div>
+        </div>
+      </article>
+      <article class="post bone frame-left">
+        <div class="post-inner">
+          <div class="post-top"><span class="label">Frame B</span><span class="brand"><span class="mini-dot"></span>22 Local</span></div>
+          <div><h2 class="headline">Left rule<span class="accent">.</span></h2><p class="subcopy">Use for lists, quick tips, and content with more body copy.</p></div>
+          <div class="post-footer"><span>Editorial frame</span><span>02</span></div>
+        </div>
+      </article>
+      <article class="post dark frame-band">
+        <div class="post-inner">
+          <div class="post-top"><span class="label">Frame C</span><span class="brand"><span class="mini-dot"></span>22 Local</span></div>
+          <div><h2 class="headline">Top band<span class="accent">.</span></h2><p class="subcopy">Use for launches, strong opinions, and bold campaign posts.</p></div>
+          <div class="post-footer"><span>High contrast</span><span>03</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Post Templates</h2>
+      <p class="section-note">Use these as starting patterns. Keep layouts simple: one idea, one headline, one supporting proof point or call to action.</p>
+    </div>
+    <div class="post-grid">
+      <article class="post">
+        <div class="post-inner">
+          <div class="post-top"><span class="label">Insight</span><span class="brand"><span class="mini-dot"></span>22 Local</span></div>
+          <div><h2 class="headline">Your website should answer the phone first<span class="accent">.</span></h2><p class="subcopy">If a customer cannot find service area, reviews, and booking fast, the site is leaking revenue.</p></div>
+          <div class="post-footer"><span>22localmarketing.com</span><span>Insight</span></div>
+        </div>
+      </article>
+      <article class="post bone frame-left">
+        <div class="post-inner">
+          <div class="post-top"><span class="label">Result</span><span class="brand"><span class="mini-dot"></span>22 Local</span></div>
+          <div class="metric"><div class="metric-value">+32%</div><div class="metric-caption">More qualified calls after rebuilding the local landing page structure.</div></div>
+          <div class="post-footer"><span>Case study format</span><span>KPI</span></div>
+        </div>
+      </article>
+      <article class="post frame-band">
+        <div class="post-inner">
+          <div class="post-top"><span class="label">Service</span><span class="brand"><span class="mini-dot"></span>22 Local</span></div>
+          <div class="photo-block" aria-hidden="true"></div>
+          <div><h2 class="headline" style="font-size:clamp(25px,3.2vw,42px)">Websites that turn local searches into booked jobs<span class="accent">.</span></h2></div>
+          <div class="post-footer"><span>Website builds</span><span>Service</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Design Specs</h2>
+      <p class="section-note">These are the guardrails. Staying inside them keeps the feed consistent without making every post identical.</p>
+    </div>
+    <div class="spec-grid">
+      <div class="spec">
+        <h3>Typography</h3>
+        <ul>
+          <li>Font: Sora only.</li>
+          <li>Headlines: 700-800 weight, tight line-height.</li>
+          <li>Labels: uppercase, 0.12em letter spacing.</li>
+          <li>Body: 400-600 weight, Slate or light opacity on dark.</li>
+        </ul>
+      </div>
+      <div class="spec">
+        <h3>Composition</h3>
+        <ul>
+          <li>Use one dominant message per post.</li>
+          <li>Keep content aligned left in most cases.</li>
+          <li>Use the brand square as a small signal, not a large decoration.</li>
+          <li>Avoid centered motivational poster layouts.</li>
+        </ul>
+      </div>
+      <div class="spec">
+        <h3>Frame Use</h3>
+        <ul>
+          <li>Corner frame is the default.</li>
+          <li>Left rule supports longer copy.</li>
+          <li>Top band is for high-priority announcements.</li>
+          <li>Frame color is always Blaze.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Color Palette</h2>
+      <p class="section-note">Orange does the talking. Bone, White, and Onyx carry the layout. Slate is for supporting text only.</p>
+    </div>
+    <div class="swatches">
+      <div class="swatch"><div class="color" style="background:#FB5607"></div><p>Blaze<br>#FB5607</p></div>
+      <div class="swatch"><div class="color" style="background:#C13D0E"></div><p>Scorch<br>#C13D0E</p></div>
+      <div class="swatch"><div class="color" style="background:#F8F6F2;border-bottom:1px solid var(--border)"></div><p>Bone<br>#F8F6F2</p></div>
+      <div class="swatch"><div class="color" style="background:#FFFFFF;border-bottom:1px solid var(--border)"></div><p>White<br>#FFFFFF</p></div>
+      <div class="swatch"><div class="color" style="background:#525252"></div><p>Slate<br>#525252</p></div>
+      <div class="swatch"><div class="color" style="background:#0A0A0A"></div><p>Onyx<br>#0A0A0A</p></div>
+    </div>
+  </section>
+</main>
+</body>
+</html>

@@ -1,0 +1,54 @@
+[
+  {
+    "name": "Connor",
+    "email": "connor@22localmarketing.com",
+    "role": "owner",
+    "title": "Founder",
+    "bio": "Founder of 22 Local Marketing. Leads strategy and account direction for contractor and home-service clients.",
+    "skills": [
+      "SEO",
+      "Local SEO",
+      "Strategy",
+      "Web"
+    ],
+    "calendar_link": null,
+    "active": true,
+    "id": "8dccfb36-25eb-43f7-b113-6981429ba406",
+    "created_at": "2026-06-18T19:56:19.661Z",
+    "updated_at": "2026-06-18T19:56:19.661Z"
+  },
+  {
+    "name": "Abu",
+    "email": "abu@22localmarketing.com",
+    "role": "member",
+    "title": "Google Ads Specialist",
+    "bio": "Runs paid search and Local Services Ads.",
+    "skills": [
+      "Google Ads",
+      "PPC",
+      "LSA"
+    ],
+    "calendar_link": null,
+    "active": true,
+    "id": "a0753463-0600-41c4-85d4-b8b12ce7b135",
+    "created_at": "2026-06-18T19:56:21.591Z",
+    "updated_at": "2026-06-18T19:56:21.591Z"
+  },
+  {
+    "name": "Raza",
+    "email": "raza@22localmarketing.com",
+    "role": "admin",
+    "title": "Operations",
+    "bio": "Keeps delivery, reporting, and client operations on track.",
+    "skills": [
+      "Operations",
+      "Reporting",
+      "Admin"
+    ],
+    "calendar_link": null,
+    "active": true,
+    "id": "97607eb1-c2c3-4002-8f56-8fc055736868",
+    "created_at": "2026-06-18T19:56:22.999Z",
+    "updated_at": "2026-06-18T19:56:22.999Z"
+  }
+]

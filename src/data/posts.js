@@ -3,6 +3,17 @@
 
 export const posts = [
   {
+    title: "Why Contractors Should Run Facebook Ads Alongside Google Ads",
+    slug: "facebook-ads-for-contractors",
+    excerpt: "Google Ads still brings stronger buying intent. Our early results show Meta can add leads for less than half the cost. Here is why we recommend running both, and what Meta still has to prove.",
+    date: "August 12, 2026",
+    dateISO: "2026-08-12",
+    readTime: "9 min read",
+    category: "Marketing",
+    featured: true,
+    image: "/blog/facebook-ads-for-contractors.png",
+  },
+  {
     title: "Tree Service Websites Lose Storm-Season Calls To Rivals",
     slug: "tree-service-websites-lose-stormseason-calls-to",
     excerpt: "Most tree service websites are built to look polished, not to convert, and that tradeoff costs real storm-season calls. This plan audits the unglamorous parts (speed, pricing clarity, service area, proof, and click-to-call) that actually drive leads before you spend a dollar on a redesign.",
@@ -52,7 +63,7 @@ export const posts = [
     dateISO: "2026-05-23",
     readTime: "7 min read",
     category: "SEO",
-    featured: true,
+    featured: false,
     image: "/blog/google-ai-agents-local-search.png",
   },
   {
