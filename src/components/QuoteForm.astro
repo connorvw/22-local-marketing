@@ -204,9 +204,10 @@ const {
           status.innerHTML = "<strong>Got it.</strong> We'll be in touch within one business day. Look for an email confirmation in your inbox.";
         }
         if (label) label.textContent = 'Thanks, one moment...';
-        // Absolute URL on purpose: this form also runs on grow.22localmarketing.com,
+        // Un-guessable slug so the page cannot be hit directly and fire a false
+        // conversion. Absolute URL because this form also runs on grow.22localmarketing.com,
         // which does not host a thank-you page of its own.
-        window.location.assign('https://22localmarketing.com/thank-you/');
+        window.location.assign('https://22localmarketing.com/thanks-54015291f6/');
       } catch (err) {
         if (status) {
           status.hidden = false;

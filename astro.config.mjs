@@ -3,8 +3,9 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://22localmarketing.com',
-  // /thank-you/ is noindex, so it stays out of the sitemap too.
-  integrations: [sitemap({ filter: (page) => !page.includes('/thank-you') })],
+  // The thank-you page is noindex and its slug is deliberately un-guessable,
+  // so it stays out of the sitemap too.
+  integrations: [sitemap({ filter: (page) => !page.includes('/thanks-54015291f6') })],
   output: 'static',
   build: {
     format: 'directory'

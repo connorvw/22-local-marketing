@@ -1,0 +1,326 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { posts } from '../data/posts.js';
+
+const latestPosts = posts.slice(0, 3);
+
+// Real verified Google reviews, the same set the homepage carries. Never invent these.
+const reviews = [
+  { initials: 'BK', name: 'Ben Kleman', quote: 'Top marketing company for the tree service industry. Trust him to build your website and do your SEO if you are a tree company.' },
+  { initials: 'BF', name: 'Brice Fonville', quote: 'Connor is the man. Very responsive and he knows his stuff. He has helped my business grow more than I ever imagined. 10/10 would recommend.' },
+  { initials: 'RR', name: 'Robert Rangel', quote: "Super service, very easy to work with. Connor is very knowledgeable, patient and best of all isn't trying to push services you don't need. Here's to the beginning of a long business relationship." },
+  { initials: 'MV', name: 'Maximilian Van Dessel', quote: 'The knowledge he brings is unmatched to any other company I had a consultation with. For our project he was very open and explained the process simply so it was easy to follow.' },
+  { initials: 'MY', name: 'Matt Yoder', quote: 'Highly recommend Connor. Professional, extremely talented, and detail oriented. He focuses on your needs and creates a custom design.' },
+  { initials: 'DS', name: 'Dawn Sulflow', quote: "Connor's attention to detail and constant communication have made him a joy to work with. I am extremely happy for the work he has done for me and hope to have a long, lasting relationship." },
+];
+---
+
+<BaseLayout
+  title="Thanks for reaching out | 22 Local Marketing"
+  description="We received your request and will be in touch within one business day."
+>
+  <meta name="robots" content="noindex, follow" slot="head" />
+
+  <!-- ============ HERO ============ -->
+  <header class="ty-hero">
+    <div class="container">
+      <div class="ty-hero-inner">
+        <div class="eyebrow-rugged">
+          <span class="eb-dash"></span>
+          <span>Request received</span>
+        </div>
+        <h1>Thanks. We got your request.</h1>
+        <p class="ty-sub">Connor will give you a call to hear what you are working on and where you want the business to go. Expect to hear from him within one business day.</p>
+        <div class="ty-actions">
+          <a href="/blog/" class="btn btn-primary btn-lg">Read the blog <span class="btn-arrow">&#8594;</span></a>
+          <a href="/" class="btn btn-secondary btn-lg">Back to home</a>
+        </div>
+        <p class="ty-note">Need us sooner? Call or text <a href="tel:+18653483380">(865) 348-3380</a>, or email <a href="mailto:connor@22localmarketing.com">connor@22localmarketing.com</a>.</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ WHAT HAPPENS NEXT ============ -->
+  <section class="flush ty-band-bone">
+    <div class="container">
+      <div class="section-head">
+        <h2>What happens next.</h2>
+        <span class="desc">Four steps, and the first one is just a phone call.</span>
+      </div>
+      <div class="ty-steps">
+        <div class="ty-step">
+          <div class="ty-step-num">01</div>
+          <div class="ty-step-title">We give you a call</div>
+          <div class="ty-step-body">Connor calls within one business day to hear how the business runs, what is working, and what you want more of. No pitch on this one.</div>
+        </div>
+        <div class="ty-step">
+          <div class="ty-step-num">02</div>
+          <div class="ty-step-title">We look through your setup</div>
+          <div class="ty-step-body">Then we go through your website, Google Business Profile, ads, and reviews, along with what the other companies in your market are doing.</div>
+        </div>
+        <div class="ty-step">
+          <div class="ty-step-num">03</div>
+          <div class="ty-step-title">We talk about a plan</div>
+          <div class="ty-step-body">We walk you through what we found and where the clearest opportunities are, and you tell us what fits the way you want to run things.</div>
+        </div>
+        <div class="ty-step">
+          <div class="ty-step-num">04</div>
+          <div class="ty-step-title">We put the strategy together</div>
+          <div class="ty-step-body">We build it out properly and go over it with you, so you know what we are doing, in what order, and why.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section id="faq" class="ty-band-white">
+    <div class="container">
+      <div class="section-head">
+        <h2>Questions that usually come up next.</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item open"><button class="faq-q">How long until I see results?</button><div class="faq-a">It varies quite a bit depending on how much progress you have already made. If you are starting from scratch, you may see a few leads in the first month, and you should expect that number to keep growing from there. Paid ads are the exception, since a well-built account can start bringing in leads the same week. We'll give you our read on your specific situation on the first call rather than a generic number.</div></div>
+        <div class="faq-item"><button class="faq-q">I've tried a marketing agency before and it didn't work. Why would this be different?</button><div class="faq-a">That's the objection we hear most, and it's usually earned. Here's what we can point at instead of arguing. Our clients average 60-plus phone calls and 40-plus form leads a month at under $50 per lead. One land management client in Northwest Ohio went from no search presence at all to ranking for over 1,000 queries, with 160-plus of them in Google's top three, inside six months. Our own profile sits at 5.0 stars across 36 verified Google reviews.</div></div>
+        <div class="faq-item"><button class="faq-q">Do I own the website and accounts you build?</button><div class="faq-a">Yes. You own the website, the domain, the GBP, the ad accounts, the call tracking, and everything in between. If we ever part ways, you walk with everything.</div></div>
+        <div class="faq-item"><button class="faq-q">What does it actually cost?</button><div class="faq-a">Engagements are scoped to the work and your market. Most full-service clients land in the range you'd expect for an in-house marketing hire, but with a whole team behind it. We give you a flat number on the second call once we understand the scope.</div></div>
+        <div class="faq-item"><button class="faq-q">Will you work with my existing website?</button><div class="faq-a">Only in rare cases. We would almost always rather build you a new one, because the gap between a typical contractor site and one that actually turns visitors into calls is bigger than it looks from the inside. If a new site is what you need, we will build it at no extra cost when you start a program with us.</div></div>
+        <div class="faq-item"><button class="faq-q">Do you only work with tree and land companies?</button><div class="faq-a">That's where we focus, and it's where most of our clients are. The playbook came out of tree care and land management, so we know the search terms, the seasonality, and the way these jobs get bought.<br><br>We do take on other home service contractors when the fit is right. Electrical, plumbing, HVAC, roofing, landscaping, grading, and similar trades all run on the same method, since the lead is a phone call and the job happens at a property. Ask on the first call and we'll tell you whether we're the right fit.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REVIEWS ============ -->
+  <section id="reviews" class="ty-band-bone">
+    <div class="container">
+      <div class="section-head">
+        <h2>What clients actually say.</h2>
+        <span class="desc">Real reviews from owners we work with every week.</span>
+      </div>
+
+      <div class="ty-carousel">
+        <button class="ty-car-btn ty-car-prev" type="button" aria-label="Previous reviews">&#8592;</button>
+        <div class="ty-car-track" id="reviewTrack" tabindex="0" aria-label="Client reviews">
+          {reviews.map((r) => (
+            <figure class="ty-review">
+              <div class="ty-review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <blockquote class="ty-review-quote">{r.quote}</blockquote>
+              <figcaption class="ty-review-author">
+                <span class="ty-review-avatar" aria-hidden="true">{r.initials}</span>
+                <span>
+                  <span class="ty-review-name">{r.name}</span>
+                  <span class="ty-review-src">Verified Google review</span>
+                </span>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+        <button class="ty-car-btn ty-car-next" type="button" aria-label="Next reviews">&#8594;</button>
+      </div>
+
+      <div class="ty-review-summary">
+        <div class="ty-sum-left">
+          <span class="ty-sum-score">5.0</span>
+          <span>
+            <span class="ty-sum-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <span class="ty-sum-text">Across 36 verified 5-star Google reviews</span>
+          </span>
+        </div>
+        <a href="https://g.page/r/CQmMJquJoYTrEAE/review" class="btn btn-secondary" target="_blank" rel="noopener">See more reviews <span class="btn-arrow">&#8594;</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BLOG ============ -->
+  <section id="reading" class="ty-band-white">
+    <div class="container">
+      <div class="section-head">
+        <h2>Worth a read while you wait.</h2>
+        <span class="desc">The same thinking we bring to client campaigns, written down.</span>
+      </div>
+      <div class="ty-post-grid">
+        {latestPosts.map((post) => (
+          <a class="ty-post" href={`/blog/${post.slug}/`}>
+            <div class="ty-post-meta">
+              <span class="ty-post-cat">{post.category}</span>
+              <span class="ty-post-read">{post.readTime}</span>
+            </div>
+            <h3>{post.title}</h3>
+            <p>{post.excerpt}</p>
+            <span class="ty-post-link">Read article <span class="btn-arrow">&#8594;</span></span>
+          </a>
+        ))}
+      </div>
+      <div class="ty-post-all">
+        <a href="/blog/" class="btn btn-secondary">See all articles <span class="btn-arrow">&#8594;</span></a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+/* Page-scoped bumps to the shared section furniture. Deliberately not global:
+   the rest of the site keeps its own scale. */
+.section-head .desc { font-size: 16px; color: var(--onyx); }
+.eyebrow-rugged { font-size: 12px; }
+
+/* ===== SECTION BANDS (alternating) ===== */
+.ty-band-white { background: var(--white); }
+.ty-band-bone { background: var(--bone); }
+
+/* ===== HERO ===== */
+.ty-hero { padding: 150px 0 80px; background: var(--white); border-bottom: 1px solid var(--border); }
+.ty-hero-inner { max-width: 760px; }
+.ty-hero h1 {
+  font-size: clamp(34px, 5vw, 54px); line-height: 1.08; font-weight: 700;
+  letter-spacing: -0.03em; margin: 20px 0 18px;
+}
+.ty-sub { font-size: 18px; line-height: 1.65; color: var(--onyx); max-width: 620px; }
+.ty-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+.ty-note { margin-top: 26px; font-size: 15px; color: var(--slate); }
+.ty-note a { color: var(--onyx); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+.ty-note a:hover { color: var(--blaze); }
+
+/* ===== STEPS ===== */
+.ty-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.ty-step {
+  background: var(--white); border: 1px solid var(--onyx); border-radius: 10px;
+  padding: 26px 24px;
+  box-shadow: 3px 3px 0 0 var(--onyx);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.ty-step:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 0 var(--onyx); }
+.ty-step-num { font-size: 14px; font-weight: 700; color: var(--blaze); letter-spacing: 0.08em; }
+.ty-step-title { font-size: 18px; font-weight: 600; letter-spacing: -0.01em; margin: 10px 0 8px; }
+.ty-step-body { font-size: 16px; line-height: 1.65; color: var(--onyx); }
+
+/* ===== FAQ (mirrors the homepage accordion) ===== */
+.faq-list { display: grid; gap: 12px; max-width: 880px; margin: 0 auto; }
+.faq-item {
+  background: var(--white); border: 1px solid var(--onyx); border-radius: 8px;
+  overflow: hidden; box-shadow: 3px 3px 0 0 var(--onyx);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.faq-item:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 0 var(--onyx); }
+.faq-q {
+  width: 100%; text-align: left; background: none; border: 0; cursor: pointer;
+  padding: 20px 24px; font-family: inherit; font-size: 17px; font-weight: 600;
+  letter-spacing: -0.01em; color: var(--onyx);
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+}
+.faq-q::after { content: '+'; font-family: 'Sora', sans-serif; font-size: 22px; color: var(--blaze); transition: transform 0.2s; line-height: 1; }
+.faq-item.open .faq-q::after { content: '\2013'; }
+.faq-a { padding: 0 24px 24px; font-size: 16px; color: var(--onyx); line-height: 1.65; display: none; }
+.faq-item.open .faq-a { display: block; }
+
+/* ===== REVIEWS CAROUSEL ===== */
+.ty-carousel { display: flex; align-items: center; gap: 12px; }
+.ty-car-btn {
+  flex: 0 0 auto; width: 44px; height: 44px; border-radius: 8px;
+  background: var(--white); color: var(--onyx);
+  border: 1px solid var(--onyx); box-shadow: 3px 3px 0 0 var(--onyx);
+  font-family: inherit; font-size: 18px; line-height: 1; cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s, background 0.15s, color 0.15s;
+}
+.ty-car-btn:hover:not(:disabled) {
+  background: var(--blaze); color: var(--white);
+  transform: translate(1px, 1px); box-shadow: 2px 2px 0 0 var(--onyx);
+}
+.ty-car-btn:disabled { opacity: 0.35; cursor: default; }
+.ty-car-track {
+  display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 32px) / 3);
+  gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory;
+  scroll-behavior: smooth; padding: 6px 4px 10px;
+  scrollbar-width: none;
+}
+.ty-car-track::-webkit-scrollbar { display: none; }
+.ty-car-track:focus-visible { outline: 2px solid var(--blaze); outline-offset: 3px; }
+.ty-review {
+  scroll-snap-align: start; margin: 0;
+  display: flex; flex-direction: column;
+  background: var(--white); border: 1px solid var(--onyx); border-radius: 10px;
+  padding: 24px; box-shadow: 3px 3px 0 0 var(--onyx);
+}
+.ty-review-stars { color: var(--blaze); font-size: 15px; letter-spacing: 2px; }
+.ty-review-quote { margin: 14px 0 20px; font-size: 16px; line-height: 1.65; color: var(--onyx); }
+.ty-review-quote::before { content: '\201C'; }
+.ty-review-quote::after { content: '\201D'; }
+.ty-review-author { display: flex; align-items: center; gap: 12px; margin-top: auto; }
+.ty-review-avatar {
+  flex: 0 0 auto; width: 38px; height: 38px; border-radius: 50%;
+  background: var(--onyx); color: var(--white);
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 700; letter-spacing: 0.04em;
+}
+.ty-review-name { display: block; font-size: 15px; font-weight: 600; color: var(--onyx); }
+.ty-review-src { display: block; font-size: 13px; color: var(--slate); }
+.ty-review-summary {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 16px; margin-top: 28px;
+  background: var(--white); border: 1px solid var(--onyx); border-radius: 10px;
+  padding: 20px 24px; box-shadow: 3px 3px 0 0 var(--onyx);
+}
+.ty-sum-left { display: flex; align-items: center; gap: 14px; }
+.ty-sum-score { font-size: 34px; font-weight: 700; letter-spacing: -0.03em; line-height: 1; }
+.ty-sum-stars { display: block; color: var(--blaze); font-size: 15px; letter-spacing: 2px; }
+.ty-sum-text { display: block; font-size: 15px; color: var(--onyx); }
+
+/* ===== BLOG ===== */
+.ty-post-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.ty-post {
+  display: flex; flex-direction: column; background: var(--white);
+  border: 1px solid var(--onyx); border-radius: 10px; padding: 24px;
+  text-decoration: none; color: inherit;
+  box-shadow: 3px 3px 0 0 var(--onyx);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.ty-post:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 0 var(--onyx); }
+.ty-post-meta { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--slate); }
+.ty-post-cat { color: var(--blaze); font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
+.ty-post h3 { font-size: 18px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.3; margin: 12px 0 10px; }
+.ty-post p { font-size: 16px; line-height: 1.65; color: var(--onyx); margin-bottom: 18px; }
+.ty-post-link { margin-top: auto; font-size: 15px; font-weight: 600; color: var(--onyx); }
+.ty-post:hover .ty-post-link { color: var(--blaze); }
+.ty-post-all { display: flex; justify-content: center; margin-top: 28px; }
+
+@media (max-width: 1100px) {
+  .ty-steps { grid-template-columns: repeat(2, 1fr); }
+  .ty-car-track { grid-auto-columns: calc((100% - 16px) / 2); }
+}
+@media (max-width: 900px) {
+  .ty-steps, .ty-post-grid { grid-template-columns: 1fr; }
+  .ty-hero { padding: 120px 0 64px; }
+  .ty-car-track { grid-auto-columns: 100%; }
+  .ty-car-btn { display: none; }
+  .ty-review-summary { justify-content: flex-start; }
+}
+</style>
+
+<script is:inline>
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => btn.parentElement.classList.toggle('open'));
+});
+
+// Reviews carousel: scrolls one card at a time, arrows disable at the ends.
+(function () {
+  const track = document.getElementById('reviewTrack');
+  if (!track) return;
+  const prev = document.querySelector('.ty-car-prev');
+  const next = document.querySelector('.ty-car-next');
+  const step = () => {
+    const card = track.querySelector('.ty-review');
+    if (!card) return track.clientWidth;
+    const gap = parseFloat(getComputedStyle(track).columnGap || '16');
+    return card.getBoundingClientRect().width + gap;
+  };
+  const sync = () => {
+    const max = track.scrollWidth - track.clientWidth - 2;
+    if (prev) prev.disabled = track.scrollLeft <= 2;
+    if (next) next.disabled = track.scrollLeft >= max;
+  };
+  if (prev) prev.addEventListener('click', () => { track.scrollLeft -= step(); });
+  if (next) next.addEventListener('click', () => { track.scrollLeft += step(); });
+  track.addEventListener('scroll', sync, { passive: true });
+  window.addEventListener('resize', sync);
+  sync();
+})();
+</script>
