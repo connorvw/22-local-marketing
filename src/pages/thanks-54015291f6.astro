@@ -30,7 +30,7 @@ const reviews = [
           <span>Request received</span>
         </div>
         <h1>Thanks. We got your request.</h1>
-        <p class="ty-sub">Connor will give you a call to hear what you are working on and where you want the business to go. Expect to hear from him within one business day.</p>
+        <p class="ty-sub">We will give you a call to hear what you are working on and where you want the business to go. Expect to hear from us within one business day.</p>
         <div class="ty-actions">
           <a href="/blog/" class="btn btn-primary btn-lg">Read the blog <span class="btn-arrow">&#8594;</span></a>
           <a href="/" class="btn btn-secondary btn-lg">Back to home</a>
@@ -45,13 +45,13 @@ const reviews = [
     <div class="container">
       <div class="section-head">
         <h2>What happens next.</h2>
-        <span class="desc">Four steps, and the first one is just a phone call.</span>
+        <span class="desc">Three steps, and the first one is just a phone call.</span>
       </div>
       <div class="ty-steps">
         <div class="ty-step">
           <div class="ty-step-num">01</div>
           <div class="ty-step-title">We give you a call</div>
-          <div class="ty-step-body">Connor calls within one business day to hear how the business runs, what is working, and what you want more of. No pitch on this one.</div>
+          <div class="ty-step-body">We call within one business day to hear how the business runs, what is working, and what you want more of. No pitch on this one.</div>
         </div>
         <div class="ty-step">
           <div class="ty-step-num">02</div>
@@ -60,11 +60,6 @@ const reviews = [
         </div>
         <div class="ty-step">
           <div class="ty-step-num">03</div>
-          <div class="ty-step-title">We talk about a plan</div>
-          <div class="ty-step-body">We walk you through what we found and where the clearest opportunities are, and you tell us what fits the way you want to run things.</div>
-        </div>
-        <div class="ty-step">
-          <div class="ty-step-num">04</div>
           <div class="ty-step-title">We put the strategy together</div>
           <div class="ty-step-body">We build it out properly and go over it with you, so you know what we are doing, in what order, and why.</div>
         </div>
@@ -181,7 +176,7 @@ const reviews = [
 .ty-note a:hover { color: var(--blaze); }
 
 /* ===== STEPS ===== */
-.ty-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.ty-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .ty-step {
   background: var(--white); border: 1px solid var(--onyx); border-radius: 10px;
   padding: 26px 24px;
@@ -253,11 +248,13 @@ const reviews = [
 }
 .ty-review-name { display: block; font-size: 15px; font-weight: 600; color: var(--onyx); }
 .ty-review-src { display: block; font-size: 13px; color: var(--slate); }
+/* No hard shadow here on purpose. The cards above it already carry one and a
+   third shadowed block in the same section is too much. */
 .ty-review-summary {
   display: flex; align-items: center; justify-content: space-between;
   flex-wrap: wrap; gap: 16px; margin-top: 28px;
-  background: var(--white); border: 1px solid var(--onyx); border-radius: 10px;
-  padding: 20px 24px; box-shadow: 3px 3px 0 0 var(--onyx);
+  background: var(--white); border: 1px solid var(--border-strong); border-radius: 10px;
+  padding: 20px 24px;
 }
 .ty-sum-left { display: flex; align-items: center; gap: 14px; }
 .ty-sum-score { font-size: 34px; font-weight: 700; letter-spacing: -0.03em; line-height: 1; }
@@ -283,7 +280,6 @@ const reviews = [
 .ty-post-all { display: flex; justify-content: center; margin-top: 28px; }
 
 @media (max-width: 1100px) {
-  .ty-steps { grid-template-columns: repeat(2, 1fr); }
   .ty-car-track { grid-auto-columns: calc((100% - 16px) / 2); }
 }
 @media (max-width: 900px) {

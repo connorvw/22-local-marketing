@@ -1,0 +1,3 @@
+# The thank-you page moved to an un-guessable slug. Anyone hitting the old
+# public path gets sent home rather than rendering a conversion page.
+/thank-you/*  /  301
