@@ -197,11 +197,16 @@ const {
         });
         if (!res.ok) throw new Error('HTTP ' + res.status);
         form.classList.add('is-sent');
+        // Fallback only. Visible if the redirect below fails to navigate.
         if (status) {
           status.hidden = false;
           status.className = 'qf-status is-success';
           status.innerHTML = "<strong>Got it.</strong> We'll be in touch within one business day. Look for an email confirmation in your inbox.";
         }
+        if (label) label.textContent = 'Thanks, one moment...';
+        // Absolute URL on purpose: this form also runs on grow.22localmarketing.com,
+        // which does not host a thank-you page of its own.
+        window.location.assign('https://22localmarketing.com/thank-you/');
       } catch (err) {
         if (status) {
           status.hidden = false;
