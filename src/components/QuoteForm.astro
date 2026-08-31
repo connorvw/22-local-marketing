@@ -5,6 +5,8 @@ interface Props {
   title?: string;
   description?: string;
   submitLabel?: string;
+  messageLabel?: string;
+  messagePlaceholder?: string;
 }
 const {
   variant = 'card',
@@ -12,6 +14,8 @@ const {
   title = 'Get a free site & competitor audit',
   description = "We review your site, GBP, and ads. You get a 1-page action list within 48 hours.",
   submitLabel = 'Request my audit',
+  messageLabel = 'Message',
+  messagePlaceholder = 'What can we help with?',
 } = Astro.props;
 ---
 
@@ -33,7 +37,7 @@ const {
   </div>
   <div class="qf-row">
     <div class="qf-field"><label class="qf-label">Website</label><input class="qf-input" type="text" name="websiteUrl" placeholder="yourtreeservice.com"></div>
-    <div class="qf-field"><label class="qf-label">Message</label><input class="qf-input" type="text" name="message" placeholder="What can we help with?"></div>
+    <div class="qf-field"><label class="qf-label">{messageLabel}</label><input class="qf-input" type="text" name="message" placeholder={messagePlaceholder}></div>
   </div>
   <label class="qf-checkbox">
     <input type="checkbox" name="smsConsent" value="yes">
