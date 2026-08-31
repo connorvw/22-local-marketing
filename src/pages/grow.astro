@@ -314,9 +314,9 @@ const faqs = [
   .choice-label { display:inline-block; padding:6px 9px; border:1px solid currentColor; text-transform:uppercase; letter-spacing:.1em; font-size:.78rem; font-weight:700; }
   .choice-card h3 { font-size:2.5rem; line-height:.95; text-transform:uppercase; margin:28px 0; }
   .choice-card ul { list-style:none; padding:0; margin:0; }
-  .choice-card li { padding:15px 0 15px 27px; border-top:1px solid rgba(128,128,128,.35); line-height:1.45; position:relative; }
-  .choice-card li::before { content:'×'; position:absolute; left:2px; color:#ad8170; font-weight:700; font-size:1.2rem; }
-  .choice-card.own li::before { content:'✓'; color:var(--orange); }
+  .choice-card li { padding:15px 0 15px 32px; border-top:1px solid rgba(128,128,128,.35); line-height:1.45; position:relative; }
+  .choice-card li::before { content:'×'; position:absolute; left:0; top:12px; color:#c42017; font-weight:700; font-size:1.75rem; line-height:1; }
+  .choice-card.own li::before { content:'✓'; color:#17803f; font-size:1.45rem; top:14px; }
   .system { background:var(--cream); }
   .section-head { display:grid; grid-template-columns:1.2fr .8fr; gap:70px; align-items:end; margin-bottom:50px; }
   .section-head h2 { font-size:clamp(3.4rem,6vw,5.5rem); line-height:.9; text-transform:uppercase; }
@@ -437,7 +437,7 @@ const faqs = [
   .choice-card.rent { background: #f7f4ee; }
   .choice-card.own { background: #fff; border-color: #64745d; box-shadow: 5px 5px 0 #64745d; }
   .choice-card.own .choice-label { color: #4c6345; }
-  .choice-card.own li::before { color: #4c6345; }
+  .choice-card.own li::before { color: #17803f; }
 
   .reviews {
     background:
@@ -785,7 +785,8 @@ const faqs = [
   .ownership { background:radial-gradient(circle at 90% 10%,rgba(83,112,74,.12),transparent 30%),var(--sage); }
   .choice-card.rent { background:#f7f4ee; }
   .choice-card.own { background:#fff; border-color:#64745d; box-shadow:5px 5px 0 #64745d; }
-  .choice-card.own .choice-label,.choice-card.own li::before { color:#4c6345; }
+  .choice-card.own .choice-label { color:#4c6345; }
+  .choice-card.own li::before { color:#17803f; }
   .reviews { background:linear-gradient(90deg,transparent 49.8%,rgba(10,10,10,.025) 50%,transparent 50.2%) 0 0/64px 64px,#fff; }
   .review-card:nth-child(1) { background:#fff8f2; }
   .review-card:nth-child(2) { background:#f4f7f1; }
@@ -864,5 +865,134 @@ const faqs = [
     .hero-actions { width: 100%; gap: 16px; }
     .hero-actions .button { width: 100%; }
     .hero-trust { gap: 8px 16px; }
+  }
+</style>
+
+<style>
+  /* ============================================================
+     Typography and contrast pass.
+
+     Body copy across the page was running 11px to 15px in mid
+     greys, which read as faded. Every run of prose now resolves
+     to pure black on the light sections and pure white on the
+     four dark ones (video shell, case study, plan, footer), and
+     the smallest text sizes come up with it.
+
+     Deliberately untouched: the orange accents (eyebrow, section
+     labels, step numbers, the FAQ plus, the arrows, the hero
+     check) and the red and green marks in the rent/own lists.
+     ============================================================ */
+
+  /* ---------- Colour: light sections go pure black ---------- */
+  .hero-copy,
+  .text-link,
+  .hero-trust,
+  .micro-trust,
+  .proof-grid .stat > span:last-child,
+  .problem-grid h3,
+  .problem-grid p,
+  .ownership-intro p,
+  .choice-card h3,
+  .choice-card li,
+  .choice-card.rent,
+  .case-card-top,
+  .case-metric span,
+  .case-pair span,
+  .review-card p,
+  .review-author strong,
+  .review-author small,
+  .approved-head > p,
+  .section-head > p,
+  .system-card h3,
+  .system-card p,
+  .faq summary,
+  .faq p,
+  .strategy-copy > p,
+  .strategy-copy li { color: #000; }
+
+  /* ---------- Colour: dark sections go pure white ---------- */
+  .video-bar,
+  .video-time,
+  .case-copy > p,
+  .case-note,
+  .plan-steps p,
+  .plan-steps strong,
+  .footer-inner div,
+  .footer-inner a,
+  .footer-inner span { color: #fff; }
+
+  /* ---------- Size ---------- */
+  .eyebrow, .section-label { font-size: 13px; }
+  .hero-copy { font-size: 1.22rem; line-height: 1.6; }
+  .hero-trust, .micro-trust { font-size: 1rem; }
+  .video-bar { font-size: 15px; }
+  .proof-grid .stat-label { font-size: 13px; }
+  .proof-grid .stat > span:last-child { font-size: 15px; line-height: 1.5; }
+  .problem-grid h3, .system-card h3, .choice-card h3 { font-size: 1.5rem; }
+  .problem-grid p,
+  .system-card p,
+  .faq p,
+  .choice-card li,
+  .review-card p,
+  .strategy-copy li,
+  .case-pair span { font-size: 17px; line-height: 1.6; }
+  .case-copy > p, .ownership-intro p, .strategy-copy > p { font-size: 1.2rem; line-height: 1.65; }
+  .case-note { font-size: 16px; line-height: 1.55; }
+  .case-card-top { font-size: 15px; }
+  .case-metric span { font-size: 17px; }
+  .choice-label { font-size: 14px; }
+  .review-author strong { font-size: 17px; }
+  .review-author small { font-size: 14px; }
+  .approved-head > p, .section-head > p { font-size: 17px; max-width: 420px; }
+  .plan-steps p, .plan-steps strong { font-size: 17px; line-height: 1.6; }
+  .faq summary { font-size: 1.25rem; }
+  .footer-inner div { font-size: 16px; }
+
+  /* ---------- The form, scoped to this page only ---------- */
+  /* Headings were sitting on a near-black (#0a0a0a). Pure black, except the
+     two dark sections, whose headings stay white, and the orange <em> accents. */
+  .hero h1,
+  .problem h2,
+  .problem-grid h3,
+  .ownership-intro h2,
+  .choice-card h3,
+  .choice-label,
+  .approved-head h2,
+  .section-head h2,
+  .system-card h3,
+  .faq h2,
+  .faq summary,
+  .strategy h2,
+  .proof-grid strong,
+  .case-card-top,
+  .case-metric strong,
+  .case-pair strong,
+  .review-author strong { color: #000; }
+  .case-copy h2, .plan h2 { color: #fff; }
+
+  .form-wrap :global(.qf-label) { font-size: 14px; color: #000; }
+  .form-wrap :global(.qf-input) { font-size: 16px; color: #000; }
+  .form-wrap :global(.qf-input::placeholder) { color: #5c5c5c; }
+  .form-wrap :global(.qf-eyebrow) { font-size: 13px; }
+  .form-wrap :global(.qf-title) { color: #000; }
+  .form-wrap :global(.qf-desc) { font-size: 15px; color: #000; }
+  .form-wrap :global(.qf-submit) { font-size: 17px; }
+  .form-wrap :global(.qf-checkbox), .form-wrap :global(.qf-consent) { font-size: 13px; color: #000; }
+  .form-wrap :global(.qf-consent a) { color: #000; }
+
+  @media (max-width: 620px) {
+    .hero-copy { font-size: 1.08rem; }
+    .problem-grid p,
+    .system-card p,
+    .faq p,
+    .choice-card li,
+    .review-card p,
+    .strategy-copy li,
+    .case-pair span,
+    .plan-steps p,
+    .plan-steps strong { font-size: 16px; }
+    .case-copy > p, .ownership-intro p, .strategy-copy > p { font-size: 1.08rem; }
+    .approved-head > p, .section-head > p { font-size: 16px; max-width: none; }
+    .faq summary { font-size: 1.1rem; }
   }
 </style>
