@@ -3,6 +3,16 @@
 
 export const posts = [
   {
+    title: "Why Meta Ads Are a Smart Channel for Local Businesses — Especially Tree Services and Land Management",
+    slug: "meta-ads-tree-service-land-management",
+    excerpt: "Meta Ads let you reach homeowners who are not actively searching yet. For tree services and land management companies, that means getting in front of the right properties before your competitors do.",
+    date: "September 1, 2026",
+    dateISO: "2026-09-01",
+    readTime: "8 min read",
+    category: "Marketing",
+    featured: false,
+  },
+  {
     title: "Why Contractors Should Run Facebook Ads Alongside Google Ads",
     slug: "facebook-ads-for-contractors",
     excerpt: "Google Ads still brings stronger buying intent. Our early results show Meta can add leads for less than half the cost. Here is why we recommend running both, and what Meta still has to prove.",
