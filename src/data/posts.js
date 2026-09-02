@@ -3,7 +3,7 @@
 
 export const posts = [
   {
-    title: "Why Meta Ads Are a Smart Channel for Local Businesses — Especially Tree Services and Land Management",
+    title: "Why Meta Ads Are a Smart Channel for Tree Service and Land Management Companies",
     slug: "meta-ads-tree-service-land-management",
     excerpt: "Meta Ads let you reach homeowners who are not actively searching yet. For tree services and land management companies, that means getting in front of the right properties before your competitors do.",
     date: "September 1, 2026",
@@ -74,7 +74,6 @@ export const posts = [
     readTime: "7 min read",
     category: "SEO",
     featured: false,
-    image: "/blog/google-ai-agents-local-search.png",
   },
   {
     title: "Google Just Changed Its Review Policy.",
@@ -174,6 +173,16 @@ export const posts = [
     dateISO: "2026-01-15",
     readTime: "8 min read",
     category: "Google Business Profile",
+    featured: false,
+  },
+  {
+    title: "Google AI Mode Is Sending Fewer Clicks to Local Businesses",
+    slug: "ai-mode-fewer-clicks-more-leads",
+    excerpt: "AI Mode is now the default for most Google searches. Traffic reports are already showing the impact. Here's what's happening and what it means for local businesses that depend on search.",
+    date: "August 19, 2026",
+    dateISO: "2026-08-19",
+    readTime: "8 min read",
+    category: "SEO",
     featured: false,
   },
 ];
