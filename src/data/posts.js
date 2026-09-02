@@ -98,7 +98,7 @@ export const posts = [
   {
     title: "AI Search Is Changing How Customers Find Your Home Services Business",
     slug: "ai-search-tree-service",
-    excerpt: "45% of consumers now use AI tools like ChatGPT and Google Gemini to find local services. One year ago, that number was 6%. Here's what home service owners need to know about staying visible.",
+    except: "45% of consumers now use AI tools like ChatGPT and Google Gemini to find local services. One year ago, that number was 6%. Here's what home service owners need to know about staying visible.",
     date: "April 8, 2026",
     dateISO: "2026-04-08",
     readTime: "7 min read",
