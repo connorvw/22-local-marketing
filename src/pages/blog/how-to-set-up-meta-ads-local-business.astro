@@ -1,0 +1,102 @@
+---
+import BlogPostLayout from "../../layouts/BlogPostLayout.astro";
+
+const meta = {
+  title: "How to Set Up Meta Ads for a Local Service Business",
+  excerpt: "A practical walkthrough for local service businesses ready to run their first Meta Ads campaign, from account setup through your first live ad.",
+  slug: "how-to-set-up-meta-ads-local-business",
+  date: "Sepltember 2, 2026",
+  dateISO: "2026-09-02",
+  readTime: "10 min read",
+  category: "Marketing",
+  metaTitle: "How to Set Up Meta Ads for Local Businesses",
+  metaDescription: "Step-by-step guide to setting up Meta Ads for a local service business: Business Manager, pixel, campaign objective, audience, budget, and creative.",
+};
+---
+
+<BlogPostLayout {...meta}>
+  <h2>Before You Start</h2>
+  <p>This guide covers the mechanics of setting up a Meta Ads campaign. If you are still deciding whether Meta is the right channel for your business, read <a href="/blog/meta-ads-tree-service-land-management/">Why Meta Ads Are a Smart Channel for Tree Service and Land Management Companies</a> first. Setup is only worth the effort if the channel makes sense for your situation.</p>
+  <p>This walkthrough assumes you are a local service business, specifically a tree service or land management company, running your first Meta campaign. The steps apply broadly to other local trades, but the audience and creative notes are written with outdoor service companies in mind.</p>
+  <p>You will need a Facebook account, a business page for your company, and about an hour to get the account structure in place before your first ad goes live.</p>
+
+  <h2>Step 1: Set Up Meta Business Suite and Your Ad Account</h2>
+  <p>All Meta advertising runs through Meta Business Suite (formerly Facebook Business Manager). This is where your ad account, page, and billing live. If you already have a personal Facebook account, you create the business portfolio from there.</p>
+  <p>Go to <a href="https://business.facebook.com" rel="noopener noreferrer" target="_blank">business.facebook.com</a> and follow the prompts to create a business portfolio. You will need to enter your business name, your name, and a business email address.</p>
+  <p>Once the portfolio is created, add your Facebook Business Page to it. If your company does not have a Facebook page yet, create one before continuing. The page does not need to be fully built out to run ads, but it does need to exist and be connected to the ad account.</p>
+  <p>Inside Business Suite, go to Accounts and then Ad Accounts. Create a new ad account, name it something recognizable, set the currency and time zone, and add your billing information. Billing goes on the ad account, not the portfolio itself.</p>
+  <p>Add any other people who need access, such as a marketing agency or employee, using the People section. Assign roles carefully. Giving someone admin access means they can modify billing, so reserve that for people who actually need it.</p>
+
+  <h2>Step 2: Install the Meta Pixel</h2>
+  <p>The Meta Pixel is a small piece of tracking code that goes on your website. It lets Meta know when someone who saw your ad later visited your site or took an action there, such as submitting a contact form or clicking a phone number link.</p>
+  <p>Without a pixel, Meta cannot optimize for website conversions. You can still run ads without it, using lead forms that stay inside Meta, but installing the pixel gives you more flexibility and better data over time.</p>
+  <p>To install it, go to Events Manager inside Meta Business Suite. Create a new data source, choose Web, and follow the steps to generate your pixel code. Meta will give you a code snippet to paste into the head section of every page on your site, and a separate event code for specific actions like form submissions.</p>
+  <p>If your website runs on WordPress, the Meta Pixel Helper plugin handles the installation without touching code directly. If you are on a custom site or a platform like Squarespace, paste the code into the site's header section. For websites managed by an agency, send the pixel code to whoever manages the site and ask them to install it. It typically takes less than 15 minutes.</p>
+  <p>After installation, use the <a href="https://chrome.google.com/webstore/detail/meta-pixel-helper/fdgfkebogiimcoedlicjlajpkdmocckpc" rel="noopener noreferrer" target="_blank">Meta Pixel Helper Chrome extension</a> to verify the pixel is firing correctly on your site before running any ads.</p>
+
+  <h2>Step 3: Choose Your Campaign Objective</h2>
+  <p>Meta organizes campaigns by objective, and the objective you choose determines how Meta spends your budget. For local service businesses, the two most useful objectives are Leads and Traffic.</p>
+  <p><strong>Leads</strong> tells Meta to find people likely to fill out a form or call you directly. This is the right objective for most tree service and land management companies starting out, because the goal is booked jobs, not website visits.</p>
+  <p><strong>Traffic</strong> sends people to your website. It is useful for brand awareness or if you have a high-converting landing page you want to drive volume to. It is less efficient for direct lead generation than the Leads objective.</p>
+  <p>For your first campaign, start with Leads and choose between two lead destinations: an Instant Form (a form that opens inside Facebook and Instagram without leaving the app) or your website's contact or quote page.</p>
+  <p>Instant Forms convert at a higher rate because they remove the friction of clicking out to another site. The trade-off is that leads from Instant Forms sometimes have lower intent because the barrier to submitting is low. Test both and see which produces better-quality contacts for your specific business.</p>
+
+  <h2>Step 4: Define Your Audience</h2>
+  <p>Inside the ad set, you define who sees your ads. For a local service business, audience setup is straightforward but worth doing carefully.</p>
+  <p><strong>Location:</strong> Set your targeting to the geographic area you actually serve. For most tree service and land management companies, this is a radius around your base of operations, typically 20 to 50 miles, or a list of specific counties or cities. Do not target more geography than your crews can realistically cover. Wider is not better if you cannot take the calls.</p>
+  <p><strong>Age and gender:</strong> For tree service and land management, the broadest useful range is typically 30 to 65 and above. People under 30 are less likely to own property with significant tree or land management needs. Gender targeting is generally not worth restricting unless your data says otherwise.</p>
+  <p><strong>Detailed targeting:</strong> Meta lets you layer in interest and behavior signals, such as homeownership indicators, interests in home improvement, and rural geography signals. These can be useful for narrowing spend to property owners. That said, Meta's own guidance increasingly recommends broad targeting and letting the algorithm find your audience, especially as your pixel accumulates data. If your budget is limited, start with location and age and avoid over-restricting the audience.</p>
+  <p><strong>Custom and lookalike audiences:</strong> If you have a list of past customers, you can upload it as a custom audience and ask Meta to find similar people. This is worth doing once you have at least a few hundred contacts. It is not necessary for a first campaign.</p>
+
+  <h2>Step 5: Set Your Budget</h2>
+  <p>Meta gives you two budget options: daily budget and lifetime budget. For ongoing campaigns, daily budget is simpler to manage. You set how much you are willing to spend per day, and Meta tries to stay within that limit.</p>
+  <p>For a local service business testing the channel for the first time, a daily budget somewhere between $10 and $30 is enough to gather data without a large financial commitment. At $20 per day, you will spend roughly $600 per month. That is enough to run a real test, though the number of leads you see will depend heavily on your market, your creative, and the service you are promoting.</p>
+  <p>Do not set a very low budget, such as $3 to $5 per day, and expect meaningful results. Meta needs enough daily spend to exit its learning phase within a reasonable timeframe. Very small budgets extend the learning phase and produce noisy data.</p>
+  <p>On bidding: leave it on the default (Lowest Cost) when starting out. Manual bidding is for accounts with a lot of historical data, and the default works well for most local campaigns.</p>
+
+  <h2>Step 6: Build Your Ad Creative</h2>
+  <p>This is where most local service campaigns either work or fail. The creative is what people actually see, and the difference in performance between a well-made ad and a poorly made one is significant.</p>
+  <p>For tree service and land management, short video consistently outperforms static images. A 30 to 60 second video filmed on a phone at a real job site, showing actual work being done, performs well on this platform. It does not need to be edited or produced. Authenticity matters more than polish on Meta.</p>
+  <p>Useful video formats for local service ads:</p>
+  <ul>
+    <li>Before and after footage of a removal, clearing job, or stump grinding</li>
+    <li>The owner speaking directly to camera for 30 to 45 seconds, explaining what the company does and why a homeowner should call</li>
+    <li>Crew arriving, working, and leaving a clean site</li>
+    <li>A satisfied customer speaking briefly about their experience, if they consent on camera</li>
+  </ul>
+  <p>If you do not have video yet, a carousel of real job-site photos is a reasonable starting point. Avoid graphics made from stock photos or generic imagery. Meta's algorithm deprioritizes content that looks like advertising, and audiences scroll past it faster.</p>
+  <p>For the ad copy, keep it short. The first two lines of text are what most people see before they have to tap to expand. Use those lines to say what you do and where, and give people a reason to stop scrolling. A clear call to action at the end, such as "Request a free estimate" or "Call us for availability", helps close the gap between attention and action.</p>
+
+  <h2>Step 7: Set Up Your Lead Destination</h2>
+  <p>If you chose the Leads objective and an Instant Form, you need to build the form inside Meta Ads Manager. Keep it short. Name, phone number, and service type are usually enough for a first contact. Every additional field reduces the completion rate.</p>
+  <p>If you are sending traffic to your website instead, make sure the landing page loads fast and has a clear, prominent contact form or click-to-call button above the fold. A slow or confusing landing page will waste ad spend regardless of how good the creative is.</p>
+  <p>In either case, set up a way to receive and respond to leads quickly. Meta lead form submissions can be connected to a CRM or email notification via integrations like Zapier. If you are using your website's contact form, make sure the confirmation email goes to someone who checks it the same day. Speed of follow-up matters for lead quality more than most businesses realize.</p>
+
+  <h2>The First Two Weeks</h2>
+  <p>Once your campaign goes live, Meta enters a learning phase. During this period, the algorithm is testing your audience, creative, and placements to figure out who is most likely to respond. Performance during the learning phase is typically not representative of what you will see after it exits.</p>
+  <p>A campaign usually exits the learning phase after it receives around 50 optimization events (form submissions, calls, or clicks, depending on your objective). At a $20 per day budget, this can take anywhere from one to three weeks depending on your market and creative performance.</p>
+  <p>Resist the urge to make changes during the learning phase. Changing the audience, budget significantly, or creative resets the learning and extends the period before you get stable data. Make a note of what you want to test, and wait until the campaign has exited learning before adjusting.</p>
+  <p>Check your results weekly, not daily. Daily fluctuations in lead volume are normal and are not a signal to change anything. Weekly trends are more meaningful.</p>
+
+  <h2>What to Watch After Launch</h2>
+  <p>The metrics worth tracking for a local service Meta campaign:</p>
+  <ul>
+    <li><strong>Cost per lead:</strong> what you are paying for each form submission or call. This is the primary signal of whether the campaign is efficient.</li>
+    <li><strong>Lead quality:</strong> not all leads are equally valuable. Track how many of your Meta leads actually book work, so you can compare the cost per booked job, not just cost per lead.</li>
+    <li><strong>Frequency:</strong> how often the same person sees your ad. When frequency climbs above 3 to 4, your audience has likely seen the ad enough and performance will start to drop. This is a signal to refresh creative or expand your audience.</li>
+    <li><strong>Click-through rate:</strong> a rough indicator of whether the creative is resonating. A very low rate suggests the ad is not stopping people in their feed.</li>
+  </ul>
+  <p>Do not optimize for impressions or reach. Those numbers look large but do not connect to actual business results. Leads and booked jobs are the only metrics that matter for a service business.</p>
+
+  <h2>Getting Help With Setup</h2>
+  <p>If you want to run Meta Ads but do not want to manage the setup and ongoing optimization yourself, that is a reasonable place to be. It takes time to learn the platform well enough to avoid wasting budget on poor audience and creative decisions.</p>
+  <p>We manage Meta Ads for tree service and land management companies as part of our marketing system. If you want to talk through what a campaign would look like for your company and market, <a href="/#contact">reach out for a free strategy call</a>. We will tell you honestly whether it is worth starting now or whether another channel should come first.</p>
+
+  <h2>Sources and Notes</h2>
+  <ul>
+    <li>Meta Ads Manager interface and feature descriptions based on the platform as of September 2026. Meta updates its interface and ad products regularly; specific menu locations may change.</li>
+    <li>Campaign objective descriptions and learning phase behavior based on <a href="https://www.facebook.com/business/help" rel="noopener noreferrer" target="_blank">Meta for Business Help Center</a> documentation.</li>
+    <li>Budget and audience guidance reflects general best practices for local service campaigns. Results vary by market, creative quality, and offer. No specific performance outcomes are guaranteed or implied.</li>
+    <li>Strategic commentary provided by Connor Dann, Founder, 22 Local Marketing.</li>
+  </ul>
+</BlogPostLayout>
